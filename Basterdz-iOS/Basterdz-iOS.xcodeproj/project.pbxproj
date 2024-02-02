@@ -36,6 +36,7 @@
 		7798FD872B6BC15D0053A556 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD862B6BC15D0053A556 /* AppCoordinator.swift */; };
 		7798FD942B6CA97A0053A556 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD932B6CA97A0053A556 /* Color+.swift */; };
 		7798FD9C2B6CB3C40053A556 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 7798FD9B2B6CB3C40053A556 /* Moya */; };
+		7798FD9F2B6CE4FA0053A556 /* BasterdzColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD9E2B6CE4FA0053A556 /* BasterdzColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		7798FD8C2B6BC1960053A556 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		7798FD932B6CA97A0053A556 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		7798FD9D2B6CB8390053A556 /* Basterdz-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Basterdz-iOS.entitlements"; sourceTree = "<group>"; };
+		7798FD9E2B6CE4FA0053A556 /* BasterdzColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -407,7 +409,7 @@
 		7798FD3A2B6BB42F0053A556 /* Constant */ = {
 			isa = PBXGroup;
 			children = (
-				7798FD622B6BBF3B0053A556 /* .gitkeep */,
+				7798FD9E2B6CE4FA0053A556 /* BasterdzColor.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -708,7 +710,7 @@
 				7798FD552B6BBE9B0053A556 /* network.swift in Sources */,
 				7798FD712B6BBFCF0053A556 /* LoginViewModel.swift in Sources */,
 				7798FCF42B6B9C050053A556 /* Basterdz_iOSApp.swift in Sources */,
-				7798FD942B6CA97A0053A556 /* Color+.swift in Sources */,
+				7798FD9F2B6CE4FA0053A556 /* BasterdzColor.swift in Sources */,
 				7798FD742B6BBFE30053A556 /* LoginCoordinator.swift in Sources */,
 				7798FD762B6BBFF10053A556 /* RoomView.swift in Sources */,
 				7798FD802B6BC0290053A556 /* BoosterCoordinator.swift in Sources */,
