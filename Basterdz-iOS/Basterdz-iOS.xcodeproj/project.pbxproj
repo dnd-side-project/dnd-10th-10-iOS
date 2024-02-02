@@ -35,6 +35,7 @@
 		7798FD842B6BC1380053A556 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD832B6BC1380053A556 /* HomeCoordinator.swift */; };
 		7798FD872B6BC15D0053A556 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD862B6BC15D0053A556 /* AppCoordinator.swift */; };
 		7798FD942B6CA97A0053A556 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD932B6CA97A0053A556 /* Color+.swift */; };
+		7798FD9C2B6CB3C40053A556 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 7798FD9B2B6CB3C40053A556 /* Moya */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7798FD9C2B6CB3C40053A556 /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,6 +570,9 @@
 			dependencies = (
 			);
 			name = "Basterdz-iOS";
+			packageProductDependencies = (
+				7798FD9B2B6CB3C40053A556 /* Moya */,
+			);
 			productName = "Basterdz-iOS";
 			productReference = 7798FCF02B6B9C050053A556 /* Basterdz-iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -640,6 +645,9 @@
 				Base,
 			);
 			mainGroup = 7798FCE72B6B9C050053A556;
+			packageReferences = (
+				7798FD9A2B6CB3C40053A556 /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			productRefGroup = 7798FCF12B6B9C050053A556 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1031,6 +1039,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7798FD9A2B6CB3C40053A556 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7798FD9B2B6CB3C40053A556 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7798FD9A2B6CB3C40053A556 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7798FCE82B6B9C050053A556 /* Project object */;
 }
