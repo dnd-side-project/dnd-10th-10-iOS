@@ -37,6 +37,9 @@
 		7798FD942B6CA97A0053A556 /* ShapeStyle+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD932B6CA97A0053A556 /* ShapeStyle+.swift */; };
 		7798FD9C2B6CB3C40053A556 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 7798FD9B2B6CB3C40053A556 /* Moya */; };
 		7798FD9F2B6CE4FA0053A556 /* BasterdzColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD9E2B6CE4FA0053A556 /* BasterdzColor.swift */; };
+		D64ED50E2B6E1A2900A64D68 /* CommonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED50D2B6E1A2900A64D68 /* CommonButton.swift */; };
+		D64ED5102B6E224000A64D68 /* TestCommonButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED50F2B6E224000A64D68 /* TestCommonButtonView.swift */; };
+		D64ED5132B6E22C800A64D68 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED5122B6E22C800A64D68 /* TabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +104,9 @@
 		7798FD932B6CA97A0053A556 /* ShapeStyle+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShapeStyle+.swift"; sourceTree = "<group>"; };
 		7798FD9D2B6CB8390053A556 /* Basterdz-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Basterdz-iOS.entitlements"; sourceTree = "<group>"; };
 		7798FD9E2B6CE4FA0053A556 /* BasterdzColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzColor.swift; sourceTree = "<group>"; };
+		D64ED50D2B6E1A2900A64D68 /* CommonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonButton.swift; sourceTree = "<group>"; };
+		D64ED50F2B6E224000A64D68 /* TestCommonButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCommonButtonView.swift; sourceTree = "<group>"; };
+		D64ED5122B6E22C800A64D68 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				7798FD292B6BB11E0053A556 /* Login */,
+				D64ED5112B6E22B800A64D68 /* Tab */,
 				7798FD352B6BB2DF0053A556 /* Room */,
 				7798FD312B6BB29A0053A556 /* Booster */,
 				7798FD2D2B6BB1AF0053A556 /* Home */,
@@ -542,6 +549,8 @@
 		7798FD532B6BBE430053A556 /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				D64ED50F2B6E224000A64D68 /* TestCommonButtonView.swift */,
+				D64ED50C2B6E1A1200A64D68 /* Component */,
 				7798FD562B6BBEBE0053A556 /* Font+.swift */,
 			);
 			path = DesignSystem;
@@ -553,6 +562,22 @@
 				7798FD862B6BC15D0053A556 /* AppCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		D64ED50C2B6E1A1200A64D68 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				D64ED50D2B6E1A2900A64D68 /* CommonButton.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		D64ED5112B6E22B800A64D68 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				D64ED5122B6E22C800A64D68 /* TabView.swift */,
+			);
+			path = Tab;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -700,8 +725,10 @@
 				7798FD7A2B6BC0060053A556 /* RoomCoordinator.swift in Sources */,
 				7798FD842B6BC1380053A556 /* HomeCoordinator.swift in Sources */,
 				7798FD822B6BC12B0053A556 /* HomeVIewModel.swift in Sources */,
+				D64ED5102B6E224000A64D68 /* TestCommonButtonView.swift in Sources */,
 				7798FD6F2B6BBFBD0053A556 /* LoginView.swift in Sources */,
 				7798FD872B6BC15D0053A556 /* AppCoordinator.swift in Sources */,
+				D64ED50E2B6E1A2900A64D68 /* CommonButton.swift in Sources */,
 				7798FCF62B6B9C050053A556 /* HomeView.swift in Sources */,
 				7798FD7E2B6BC01E0053A556 /* BoosterViewModel.swift in Sources */,
 				7798FD552B6BBE9B0053A556 /* network.swift in Sources */,
@@ -713,6 +740,7 @@
 				7798FD762B6BBFF10053A556 /* RoomView.swift in Sources */,
 				7798FD802B6BC0290053A556 /* BoosterCoordinator.swift in Sources */,
 				7798FD572B6BBEBE0053A556 /* Font+.swift in Sources */,
+				D64ED5132B6E22C800A64D68 /* TabView.swift in Sources */,
 				7798FD782B6BBFFD0053A556 /* RoomViewModel.swift in Sources */,
 				7798FD1F2B6BB0570053A556 /* SceneDelegate.swift in Sources */,
 			);
