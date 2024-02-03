@@ -40,6 +40,14 @@
 		D64ED50E2B6E1A2900A64D68 /* CommonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED50D2B6E1A2900A64D68 /* CommonButton.swift */; };
 		D64ED5102B6E224000A64D68 /* TestCommonButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED50F2B6E224000A64D68 /* TestCommonButtonView.swift */; };
 		D64ED5132B6E22C800A64D68 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED5122B6E22C800A64D68 /* TabView.swift */; };
+		D64ED5152B6E2C7300A64D68 /* EnterRoomNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED5142B6E2C7300A64D68 /* EnterRoomNameView.swift */; };
+		D64ED5172B6E322A00A64D68 /* EnterRoomDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED5162B6E322A00A64D68 /* EnterRoomDescriptionView.swift */; };
+		D64ED5192B6E327000A64D68 /* CenterTextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED5182B6E327000A64D68 /* CenterTextInputView.swift */; };
+		D64ED51B2B6E35AF00A64D68 /* TextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED51A2B6E35AF00A64D68 /* TextInputView.swift */; };
+		D64ED51D2B6E377B00A64D68 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED51C2B6E377B00A64D68 /* View+.swift */; };
+		D64ED51F2B6E3DB500A64D68 /* InputButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED51E2B6E3DB500A64D68 /* InputButton.swift */; };
+		D64ED5212B6E408300A64D68 /* RoomEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED5202B6E408300A64D68 /* RoomEntity.swift */; };
+		D64ED5232B6E421E00A64D68 /* RoomMainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED5222B6E421E00A64D68 /* RoomMainButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,7 +91,6 @@
 		7798FD5E2B6BBF230053A556 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		7798FD602B6BBF2E0053A556 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		7798FD642B6BBF480053A556 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		7798FD682B6BBF7E0053A556 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		7798FD6A2B6BBF8B0053A556 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		7798FD6C2B6BBF980053A556 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		7798FD6E2B6BBFBD0053A556 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -107,6 +114,14 @@
 		D64ED50D2B6E1A2900A64D68 /* CommonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonButton.swift; sourceTree = "<group>"; };
 		D64ED50F2B6E224000A64D68 /* TestCommonButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCommonButtonView.swift; sourceTree = "<group>"; };
 		D64ED5122B6E22C800A64D68 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		D64ED5142B6E2C7300A64D68 /* EnterRoomNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterRoomNameView.swift; sourceTree = "<group>"; };
+		D64ED5162B6E322A00A64D68 /* EnterRoomDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterRoomDescriptionView.swift; sourceTree = "<group>"; };
+		D64ED5182B6E327000A64D68 /* CenterTextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterTextInputView.swift; sourceTree = "<group>"; };
+		D64ED51A2B6E35AF00A64D68 /* TextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputView.swift; sourceTree = "<group>"; };
+		D64ED51C2B6E377B00A64D68 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
+		D64ED51E2B6E3DB500A64D68 /* InputButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputButton.swift; sourceTree = "<group>"; };
+		D64ED5202B6E408300A64D68 /* RoomEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomEntity.swift; sourceTree = "<group>"; };
+		D64ED5222B6E421E00A64D68 /* RoomMainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomMainButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,7 +227,7 @@
 		7798FD232B6BB0930053A556 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				7798FD682B6BBF7E0053A556 /* .gitkeep */,
+				D64ED5202B6E408300A64D68 /* RoomEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -399,6 +414,8 @@
 			isa = PBXGroup;
 			children = (
 				7798FD752B6BBFF10053A556 /* RoomView.swift */,
+				D64ED5142B6E2C7300A64D68 /* EnterRoomNameView.swift */,
+				D64ED5162B6E322A00A64D68 /* EnterRoomDescriptionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -552,6 +569,7 @@
 				D64ED50F2B6E224000A64D68 /* TestCommonButtonView.swift */,
 				D64ED50C2B6E1A1200A64D68 /* Component */,
 				7798FD562B6BBEBE0053A556 /* Font+.swift */,
+				D64ED51C2B6E377B00A64D68 /* View+.swift */,
 			);
 			path = DesignSystem;
 			sourceTree = "<group>";
@@ -568,6 +586,10 @@
 			isa = PBXGroup;
 			children = (
 				D64ED50D2B6E1A2900A64D68 /* CommonButton.swift */,
+				D64ED5182B6E327000A64D68 /* CenterTextInputView.swift */,
+				D64ED51A2B6E35AF00A64D68 /* TextInputView.swift */,
+				D64ED51E2B6E3DB500A64D68 /* InputButton.swift */,
+				D64ED5222B6E421E00A64D68 /* RoomMainButton.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -724,14 +746,20 @@
 				7798FD7C2B6BC0120053A556 /* BoosterView.swift in Sources */,
 				7798FD7A2B6BC0060053A556 /* RoomCoordinator.swift in Sources */,
 				7798FD842B6BC1380053A556 /* HomeCoordinator.swift in Sources */,
+				D64ED51D2B6E377B00A64D68 /* View+.swift in Sources */,
 				7798FD822B6BC12B0053A556 /* HomeVIewModel.swift in Sources */,
 				D64ED5102B6E224000A64D68 /* TestCommonButtonView.swift in Sources */,
 				7798FD6F2B6BBFBD0053A556 /* LoginView.swift in Sources */,
 				7798FD872B6BC15D0053A556 /* AppCoordinator.swift in Sources */,
+				D64ED51B2B6E35AF00A64D68 /* TextInputView.swift in Sources */,
 				D64ED50E2B6E1A2900A64D68 /* CommonButton.swift in Sources */,
+				D64ED51F2B6E3DB500A64D68 /* InputButton.swift in Sources */,
+				D64ED5172B6E322A00A64D68 /* EnterRoomDescriptionView.swift in Sources */,
+				D64ED5152B6E2C7300A64D68 /* EnterRoomNameView.swift in Sources */,
 				7798FCF62B6B9C050053A556 /* HomeView.swift in Sources */,
 				7798FD7E2B6BC01E0053A556 /* BoosterViewModel.swift in Sources */,
 				7798FD552B6BBE9B0053A556 /* network.swift in Sources */,
+				D64ED5232B6E421E00A64D68 /* RoomMainButton.swift in Sources */,
 				7798FD712B6BBFCF0053A556 /* LoginViewModel.swift in Sources */,
 				7798FCF42B6B9C050053A556 /* Basterdz_iOSApp.swift in Sources */,
 				7798FD9F2B6CE4FA0053A556 /* BasterdzColor.swift in Sources */,
@@ -740,9 +768,11 @@
 				7798FD762B6BBFF10053A556 /* RoomView.swift in Sources */,
 				7798FD802B6BC0290053A556 /* BoosterCoordinator.swift in Sources */,
 				7798FD572B6BBEBE0053A556 /* Font+.swift in Sources */,
+				D64ED5192B6E327000A64D68 /* CenterTextInputView.swift in Sources */,
 				D64ED5132B6E22C800A64D68 /* TabView.swift in Sources */,
 				7798FD782B6BBFFD0053A556 /* RoomViewModel.swift in Sources */,
 				7798FD1F2B6BB0570053A556 /* SceneDelegate.swift in Sources */,
+				D64ED5212B6E408300A64D68 /* RoomEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
