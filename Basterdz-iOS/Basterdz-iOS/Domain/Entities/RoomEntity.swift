@@ -6,6 +6,14 @@
 //
 
 import Foundation
+enum RestrictAppType: String, CaseIterable {
+    case instagram = "인스타그램"
+    case youtube = "유투브"
+    case tictok = "틱톡"
+    case netflix = "넷플릭스"
+    case x = "트위터"
+}
+
 struct RoomEntity {
     var name: String = ""
     var goal: String = ""
@@ -13,13 +21,7 @@ struct RoomEntity {
     var startTimeStamp: String = ""
     var endTimeStamp: String = ""
     
-    enum RestrictAppType: String {
-        case instagram
-        case youtube
-        case tictok
-        case netflix
-        case x
-    }
+    
     
 
 }

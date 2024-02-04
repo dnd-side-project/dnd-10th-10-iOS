@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+class RoomViewModel: ObservableObject {
+    
+    @Published var path: [RoomFlowPath] = []
+    
+    @Published var roomEntity: RoomEntity = RoomEntity()
+}

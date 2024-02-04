@@ -32,6 +32,7 @@ public struct CommonButton: View {
         self.style = style
         self.action = action
         self.isActive = isActive
+        
     }
     
     public var body: some View {
@@ -150,4 +151,5 @@ public enum CommonButtonSize {
             return 10
         }
     }
+    
 }

@@ -9,15 +9,21 @@ import SwiftUI
 
 struct EnterRoomDescriptionView: View {
     
-    @State var roomEntity: RoomEntity
+    @ObservedObject var viewModel: RoomViewModel
     @FocusState var focusState: FocusItem?
+    @State var showModal: Bool = false
+    @State var showContent: BottomSheetContent = .restrictApp
     
     enum FocusItem {
         case goal, restrictApp, time, restrictTime, maxPeopleCount
     }
     
-    init() {
-        self.roomEntity = RoomEntity()
+    enum BottomSheetContent {
+        case restrictApp, restrictTime, maxPeople
+    }
+    
+    init(viewModel: RoomViewModel) {
+        self.viewModel = viewModel
         self.focusState = .goal
     }
     
@@ -30,16 +36,19 @@ struct EnterRoomDescriptionView: View {
                     isActive: false
                 )
                 TextInputView(
-                    text: $roomEntity.goal, 
+                    text: $viewModel.roomEntity.goal,
                     isFocused: $focusState,
                     focusValue: .goal,
                     placeholder: "도전하는 목표를 작성해보세요",
-                    trailingText: "\(roomEntity.goal.count)/20"
+                    trailingText: "\(viewModel.roomEntity.goal.count)/20"
                 )
                 
                 numberView(number: 2, title: "제한 앱 설정", isActive: false)
                 
-                InputButton(isActive: false, action: {}, label: "인스타그램")
+                InputButton(isActive: false, action: {
+                    showModal.toggle()
+                    showContent = .restrictApp
+                }, label: "인스타그램")
                 
                 
                 numberView(number: 3, title: "기간을 설정해주세요", isActive: false)
@@ -51,7 +60,10 @@ struct EnterRoomDescriptionView: View {
                         title: "하루 총 제한 시간",
                         isActive: false
                     )
-                    InputButton(isActive: false, action: {}, label: "1시간")
+                    InputButton(isActive: false, action: {
+                        showModal.toggle()
+                        showContent = .restrictTime
+                    }, label: "1시간")
                         .frame(width: 124)
                 }
                 HStack {
@@ -61,11 +73,33 @@ struct EnterRoomDescriptionView: View {
                         subtitle: "최대 6명",
                         isActive: false
                     )
-                    InputButton(isActive: false, action: {}, label: "1명")
+                    InputButton(isActive: false, action: {
+                        showModal.toggle()
+                        showContent = .maxPeople
+                    }, label: "1명")
                         .frame(width: 124)
                 }
             }
             .padding(20)
+        }
+        .sheet(isPresented: $showModal, content: {
+            showModalContent()
+                .presentationDetents(
+                    [.height(UIScreen.main.bounds.height * 0.4)]
+                )
+        })
+        
+    }
+   
+    
+    @ViewBuilder func showModalContent() -> some View {
+        switch showContent {
+        case .restrictApp:
+            SelectRestrictAppView()
+        case .restrictTime:
+            SelectRestrictTimeView()
+        case .maxPeople:
+            SelectMaxPeopleView()
         }
     }
     
@@ -113,5 +147,5 @@ struct EnterRoomDescriptionView: View {
 }
 
 #Preview {
-    EnterRoomDescriptionView()
+    EnterRoomDescriptionView(viewModel: RoomViewModel())
 }

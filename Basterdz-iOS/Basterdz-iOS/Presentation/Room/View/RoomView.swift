@@ -8,12 +8,11 @@
 import SwiftUI
 
 struct RoomView: View {
-    
-    // push하는 방식을 UIKit로 할지 NavigationStack으로 할지 고민입니다 ㅠ
-    @State var path: [NextViewContent] = []
+ 
+    @StateObject var viewModel: RoomViewModel = RoomViewModel()
     
     var body: some View {
-        NavigationStack(path: $path) {
+        NavigationStack(path: $viewModel.path) {
             VStack {
                 Text("도파민 탈출, 바스터즈와\n함께 시작해볼까요?")
                     .font(.pretendardB(24))
@@ -25,8 +24,8 @@ struct RoomView: View {
                         title: "방만들기",
                         description: "내가 방을 만들거에요!",
                         action: {
-                            path.append(
-                                NextViewContent(type: .createRoom)
+                            viewModel.path.append(RoomFlowPath.createRoom
+                                
                             )
                         }
                     )
@@ -36,36 +35,40 @@ struct RoomView: View {
                         title: "초대코드",
                         description: "친구 방에 들어갈거에요!",
                         action: {
-                            path.append(
-                                NextViewContent(type: .enterInviteCode)
+                            viewModel.path.append(
+                                RoomFlowPath.enterInviteCode
                             )
                         }
                     )
                     
                 }.padding(.horizontal, 16)
             }
-        }
-        .navigationDestination(for: NextViewContent.self) { next in
-            switch next.type {
-            case .createRoom:
-                EnterRoomNameView()
-            case .enterInviteCode:
-                EnterRoomNameView()
+    
+            .navigationDestination(for: RoomFlowPath.self) { next in
+                switch next {
+                case .createRoom:
+                    EnterRoomNameView(viewModel: viewModel)
+                        .toolbar(.hidden, for: .tabBar)
+                case .enterInviteCode:
+                    // https://github.com/exyte/PopupView 이라는 걸 많이 이용하시던데 어떠신가요?
+                    EnterInviteCodeView()
+                        .toolbar(.hidden, for: .tabBar)
+                case .enterRoomDescription:
+                    EnterRoomDescriptionView(viewModel: viewModel)
+                }
             }
         }
+        
     }
     
     
     
 }
 
-struct NextViewContent: Hashable {
-    let type: RoomType
-    
-    enum RoomType {
-        case createRoom
-        case enterInviteCode
-    }
+enum RoomFlowPath : String, Hashable{
+    case createRoom
+    case enterInviteCode
+    case enterRoomDescription
 }
 
 

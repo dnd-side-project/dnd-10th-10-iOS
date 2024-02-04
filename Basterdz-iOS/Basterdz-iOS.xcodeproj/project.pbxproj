@@ -48,6 +48,10 @@
 		D64ED51F2B6E3DB500A64D68 /* InputButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED51E2B6E3DB500A64D68 /* InputButton.swift */; };
 		D64ED5212B6E408300A64D68 /* RoomEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED5202B6E408300A64D68 /* RoomEntity.swift */; };
 		D64ED5232B6E421E00A64D68 /* RoomMainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED5222B6E421E00A64D68 /* RoomMainButton.swift */; };
+		D64ED5272B6F3E2100A64D68 /* EnterInviteCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED5262B6F3E2100A64D68 /* EnterInviteCodeView.swift */; };
+		D64ED52A2B6F3FB800A64D68 /* SelectRestrictAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED5292B6F3FB800A64D68 /* SelectRestrictAppView.swift */; };
+		D64ED52C2B6F41FE00A64D68 /* SelectRestrictTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED52B2B6F41FE00A64D68 /* SelectRestrictTimeView.swift */; };
+		D64ED52E2B6F43BD00A64D68 /* SelectMaxPeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED52D2B6F43BD00A64D68 /* SelectMaxPeopleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +126,10 @@
 		D64ED51E2B6E3DB500A64D68 /* InputButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputButton.swift; sourceTree = "<group>"; };
 		D64ED5202B6E408300A64D68 /* RoomEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomEntity.swift; sourceTree = "<group>"; };
 		D64ED5222B6E421E00A64D68 /* RoomMainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomMainButton.swift; sourceTree = "<group>"; };
+		D64ED5262B6F3E2100A64D68 /* EnterInviteCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterInviteCodeView.swift; sourceTree = "<group>"; };
+		D64ED5292B6F3FB800A64D68 /* SelectRestrictAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRestrictAppView.swift; sourceTree = "<group>"; };
+		D64ED52B2B6F41FE00A64D68 /* SelectRestrictTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectRestrictTimeView.swift; sourceTree = "<group>"; };
+		D64ED52D2B6F43BD00A64D68 /* SelectMaxPeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMaxPeopleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -413,9 +421,10 @@
 		7798FD382B6BB32F0053A556 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D64ED5282B6F3F9F00A64D68 /* BottomSheet */,
 				7798FD752B6BBFF10053A556 /* RoomView.swift */,
-				D64ED5142B6E2C7300A64D68 /* EnterRoomNameView.swift */,
-				D64ED5162B6E322A00A64D68 /* EnterRoomDescriptionView.swift */,
+				D64ED5242B6F3DA700A64D68 /* CreateRoom */,
+				D64ED5252B6F3DB800A64D68 /* EnterInviteCode */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -602,6 +611,33 @@
 			path = Tab;
 			sourceTree = "<group>";
 		};
+		D64ED5242B6F3DA700A64D68 /* CreateRoom */ = {
+			isa = PBXGroup;
+			children = (
+				D64ED5142B6E2C7300A64D68 /* EnterRoomNameView.swift */,
+				D64ED5162B6E322A00A64D68 /* EnterRoomDescriptionView.swift */,
+			);
+			path = CreateRoom;
+			sourceTree = "<group>";
+		};
+		D64ED5252B6F3DB800A64D68 /* EnterInviteCode */ = {
+			isa = PBXGroup;
+			children = (
+				D64ED5262B6F3E2100A64D68 /* EnterInviteCodeView.swift */,
+			);
+			path = EnterInviteCode;
+			sourceTree = "<group>";
+		};
+		D64ED5282B6F3F9F00A64D68 /* BottomSheet */ = {
+			isa = PBXGroup;
+			children = (
+				D64ED5292B6F3FB800A64D68 /* SelectRestrictAppView.swift */,
+				D64ED52B2B6F41FE00A64D68 /* SelectRestrictTimeView.swift */,
+				D64ED52D2B6F43BD00A64D68 /* SelectMaxPeopleView.swift */,
+			);
+			path = BottomSheet;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -747,6 +783,8 @@
 				7798FD7A2B6BC0060053A556 /* RoomCoordinator.swift in Sources */,
 				7798FD842B6BC1380053A556 /* HomeCoordinator.swift in Sources */,
 				D64ED51D2B6E377B00A64D68 /* View+.swift in Sources */,
+				D64ED52C2B6F41FE00A64D68 /* SelectRestrictTimeView.swift in Sources */,
+				D64ED52A2B6F3FB800A64D68 /* SelectRestrictAppView.swift in Sources */,
 				7798FD822B6BC12B0053A556 /* HomeVIewModel.swift in Sources */,
 				D64ED5102B6E224000A64D68 /* TestCommonButtonView.swift in Sources */,
 				7798FD6F2B6BBFBD0053A556 /* LoginView.swift in Sources */,
@@ -765,8 +803,10 @@
 				7798FD9F2B6CE4FA0053A556 /* BasterdzColor.swift in Sources */,
 				7798FD942B6CA97A0053A556 /* ShapeStyle+.swift in Sources */,
 				7798FD742B6BBFE30053A556 /* LoginCoordinator.swift in Sources */,
+				D64ED5272B6F3E2100A64D68 /* EnterInviteCodeView.swift in Sources */,
 				7798FD762B6BBFF10053A556 /* RoomView.swift in Sources */,
 				7798FD802B6BC0290053A556 /* BoosterCoordinator.swift in Sources */,
+				D64ED52E2B6F43BD00A64D68 /* SelectMaxPeopleView.swift in Sources */,
 				7798FD572B6BBEBE0053A556 /* Font+.swift in Sources */,
 				D64ED5192B6E327000A64D68 /* CenterTextInputView.swift in Sources */,
 				D64ED5132B6E22C800A64D68 /* TabView.swift in Sources */,
