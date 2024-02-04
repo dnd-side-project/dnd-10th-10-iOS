@@ -18,7 +18,7 @@ struct InputButton: View {
         isActive: Bool,
         action: @escaping () -> Void,
         label: String,
-        image: String = "chevron.compact.down"
+        image: String = "arrow_down"
     ) {
         self.isActive = isActive
         self.action = action
@@ -38,7 +38,7 @@ struct InputButton: View {
                             Color(.grey2)
                     )
                 Spacer()
-                Image(systemName: image)
+                Image(image, bundle: nil)
                     .resizable()
                     .scaledToFit()
                     .foregroundStyle(Color(.mainBlack))
@@ -50,4 +50,13 @@ struct InputButton: View {
         .background(Color(.grey1))
         .clipShape(RoundedRectangle(cornerRadius: 15))
     }
+}
+
+#Preview {
+    InputButton(
+        isActive: true,
+        action: {},
+        label: "인스타그램"
+    )
+    .padding(20)
 }

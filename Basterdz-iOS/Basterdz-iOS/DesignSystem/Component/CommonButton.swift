@@ -14,6 +14,7 @@ import SwiftUI
 public struct CommonButton: View {
     
     let title: String
+    let image: Image?
     let size: CommonButtonSize
     let style: CommonButtonColor
     let isActive: Bool
@@ -22,12 +23,14 @@ public struct CommonButton: View {
     
     public init(
         title: String,
+        image: Image? = .none,
         size: CommonButtonSize = .large,
         style: CommonButtonColor = .black,
         action: @escaping () -> Void,
         isActive: Bool = false
     ) {
         self.title = title
+        self.image = image
         self.size = size
         self.style = style
         self.action = action
@@ -38,7 +41,13 @@ public struct CommonButton: View {
         Button(action: {
             action()
         }, label: {
-            HStack(spacing: 4) {
+            HStack(spacing: 8) {
+                if let image {
+                    image
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 28, height: 28)
+                }
                 Text(title)
                     .font(size.font)
             }
@@ -150,4 +159,16 @@ public enum CommonButtonSize {
             return 10
         }
     }
+}
+
+
+#Preview {
+    CommonButton(
+        title: "인스타그램",
+        image: Image(systemName: "square.and.arrow.up"),
+        size: .large,
+        style: .red,
+        action: {},
+        isActive: true
+    ).padding(20)
 }

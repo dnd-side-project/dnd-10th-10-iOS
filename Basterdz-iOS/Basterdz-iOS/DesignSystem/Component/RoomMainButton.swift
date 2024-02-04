@@ -18,7 +18,7 @@ struct RoomMainButton: View {
             action()
         }, label: {
             VStack(spacing: 8) {
-                Image(systemName: image)
+                Image(image, bundle: nil)
                     .resizable()
                     .scaledToFit()
                     .foregroundStyle(
@@ -55,4 +55,22 @@ struct RoomMainButtonStyle: ButtonStyle {
             .cornerRadius(15)
     }
     
+}
+
+
+#Preview {
+    HStack {
+        RoomMainButton(
+            image: "createRoom",
+            title: "방 만들기",
+            description: "방을 만들어보세요",
+            action: {}
+        )
+        RoomMainButton(
+            image: "enterInviteCode",
+            title: "방 만들기",
+            description: "방을 만들어보세요",
+            action: {}
+        )
+    }.padding(20)
 }

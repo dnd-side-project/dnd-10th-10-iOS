@@ -40,3 +40,8 @@ public struct CenterTextInputView: View {
             .padding(16)
     }
 }
+
+#Preview {
+    @State var text = ""
+    return CenterTextInputView(text: $text, placeholder: "미리보기")
+}
