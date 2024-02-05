@@ -8,12 +8,12 @@
 import SwiftUI
 
 /// center로 input을 받는 inputView
-public struct CenterTextInputView: View {
+struct CenterTextInputView: View {
     
     @Binding var text: String
     let placeholder : String
     
-    public init(
+    init(
         text: Binding<String>,
         placeholder: String
     ) {
@@ -21,7 +21,7 @@ public struct CenterTextInputView: View {
         self.placeholder = placeholder
     }
     
-    public var body: some View {
+    var body: some View {
         TextEditor(text: $text)
             .font(.pretendardB(20))
             .scrollContentBackground(.hidden)

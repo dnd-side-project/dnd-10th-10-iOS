@@ -8,7 +8,7 @@
 import SwiftUI
 
 /// input을 입력받는 textField
-public struct TextInputView<T: Hashable>: View {
+struct TextInputView<T: Hashable>: View {
     
     @Binding var text: String
     let isFocused: FocusState<T>.Binding
@@ -19,7 +19,7 @@ public struct TextInputView<T: Hashable>: View {
     let trailingButton: (String, () -> Void)? // 지금은 미사용이지만 나중에 들어갈까봐 일단 추가해놓음
     let errorMessage: String?
     
-    public init(
+    init(
         text: Binding<String>,
         isFocused: FocusState<T>.Binding,
         focusValue: T = true,
@@ -40,7 +40,7 @@ public struct TextInputView<T: Hashable>: View {
         self.errorMessage = errorMessage
     }
     
-    public var body: some View {
+    var body: some View {
         VStack(alignment: .leading, spacing: 4) {
             TextField(placeholder, text: $text)
                 .font(.pretendardB(16))
