@@ -7,16 +7,16 @@
 import SwiftUI
 
 struct BasterdzOptionButton: View {
-    let isActive: Bool
-    let action: () -> Void
-    let label: String
-    let image: String
+    private let isActive: Bool
+    private let action: () -> Void
+    private let label: String
+    private let image: String
     
     init(
         isActive: Bool,
         action: @escaping () -> Void,
         label: String,
-        image: String = "arrow_down"
+        image: String = Images.arrow_down.rawValue
     ) {
         self.isActive = isActive
         self.action = action

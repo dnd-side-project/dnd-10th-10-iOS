@@ -45,6 +45,8 @@
 		D64ED51F2B6E3DB500A64D68 /* BasterdzOptionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED51E2B6E3DB500A64D68 /* BasterdzOptionButton.swift */; };
 		D64ED5212B6E408300A64D68 /* RoomEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED5202B6E408300A64D68 /* RoomEntity.swift */; };
 		D64ED5232B6E421E00A64D68 /* BasterdzLargeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED5222B6E421E00A64D68 /* BasterdzLargeButton.swift */; };
+		D66E9DE82B70A75E00B8ED92 /* RestrictApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66E9DE72B70A75E00B8ED92 /* RestrictApp.swift */; };
+		D66E9DEA2B70A79700B8ED92 /* Image+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66E9DE92B70A79700B8ED92 /* Image+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +118,8 @@
 		D64ED51E2B6E3DB500A64D68 /* BasterdzOptionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzOptionButton.swift; sourceTree = "<group>"; };
 		D64ED5202B6E408300A64D68 /* RoomEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomEntity.swift; sourceTree = "<group>"; };
 		D64ED5222B6E421E00A64D68 /* BasterdzLargeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzLargeButton.swift; sourceTree = "<group>"; };
+		D66E9DE72B70A75E00B8ED92 /* RestrictApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestrictApp.swift; sourceTree = "<group>"; };
+		D66E9DE92B70A79700B8ED92 /* Image+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -415,6 +419,7 @@
 		7798FD392B6BB4160053A556 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				D64ED51C2B6E377B00A64D68 /* View+.swift */,
 				7798FD932B6CA97A0053A556 /* ShapeStyle+.swift */,
 			);
 			path = Extension;
@@ -424,6 +429,7 @@
 			isa = PBXGroup;
 			children = (
 				7798FD9E2B6CE4FA0053A556 /* BasterdzColor.swift */,
+				D66E9DE72B70A75E00B8ED92 /* RestrictApp.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -560,7 +566,7 @@
 			children = (
 				D64ED50C2B6E1A1200A64D68 /* Component */,
 				7798FD562B6BBEBE0053A556 /* Font+.swift */,
-				D64ED51C2B6E377B00A64D68 /* View+.swift */,
+				D66E9DE92B70A79700B8ED92 /* Image+.swift */,
 			);
 			path = DesignSystem;
 			sourceTree = "<group>";
@@ -740,7 +746,9 @@
 				D64ED51D2B6E377B00A64D68 /* View+.swift in Sources */,
 				7798FD822B6BC12B0053A556 /* HomeVIewModel.swift in Sources */,
 				7798FD6F2B6BBFBD0053A556 /* LoginView.swift in Sources */,
+				D66E9DEA2B70A79700B8ED92 /* Image+.swift in Sources */,
 				7798FD872B6BC15D0053A556 /* AppCoordinator.swift in Sources */,
+				D66E9DE82B70A75E00B8ED92 /* RestrictApp.swift in Sources */,
 				D64ED51B2B6E35AF00A64D68 /* BasterdzTextView.swift in Sources */,
 				D64ED50E2B6E1A2900A64D68 /* BasterdzCommonButton.swift in Sources */,
 				D64ED51F2B6E3DB500A64D68 /* BasterdzOptionButton.swift in Sources */,

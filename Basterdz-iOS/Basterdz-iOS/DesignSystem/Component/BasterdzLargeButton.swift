@@ -7,10 +7,17 @@
 import SwiftUI
 
 struct BasterdzLargeButton: View {
-    let image: String
-    let title: String
-    let description: String
-    let action: () -> Void
+    private let image: String
+    private let title: String
+    private let description: String
+    private let action: () -> Void
+    
+    init(image: String, title: String, description: String, action: @escaping () -> Void) {
+        self.image = image
+        self.title = title
+        self.description = description
+        self.action = action
+    }
     
     var body: some View {
         Button(action: {

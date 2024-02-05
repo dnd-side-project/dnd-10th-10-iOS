@@ -10,7 +10,7 @@ import SwiftUI
 struct BasterdzCenterTextField: View {
     
     @Binding var text: String
-    let placeholder : String
+    private let placeholder : String
     
     init(
         text: Binding<String>,

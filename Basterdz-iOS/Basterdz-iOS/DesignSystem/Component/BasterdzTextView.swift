@@ -10,12 +10,12 @@ import SwiftUI
 struct BasterdzTextView<T: Hashable>: View {
     
     @Binding var text: String
-    let isFocused: FocusState<T>.Binding
-    let focusValue: T
-    let placeholder : String
-    let trailingText: String?
-    let trailingButton: (String, () -> Void)? // 지금은 미사용이지만 나중에 들어갈까봐 일단 추가해놓음
-    let errorMessage: String?
+    private let isFocused: FocusState<T>.Binding
+    private let focusValue: T
+    private let placeholder : String
+    private let trailingText: String?
+    private let trailingButton: (String, () -> Void)? // 지금은 미사용이지만 나중에 들어갈까봐 일단 추가해놓음
+    private let errorMessage: String?
     
     init(
         text: Binding<String>,
