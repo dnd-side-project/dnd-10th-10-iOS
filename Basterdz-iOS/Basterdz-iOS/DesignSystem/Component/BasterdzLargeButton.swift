@@ -7,12 +7,12 @@
 import SwiftUI
 
 struct BasterdzLargeButton: View {
-    private let image: String
+    private let image: BasterdzImage
     private let title: String
     private let description: String
     private let action: () -> Void
     
-    init(image: String, title: String, description: String, action: @escaping () -> Void) {
+    init(image: BasterdzImage, title: String, description: String, action: @escaping () -> Void) {
         self.image = image
         self.title = title
         self.description = description
@@ -24,10 +24,9 @@ struct BasterdzLargeButton: View {
             action()
         }, label: {
             VStack(spacing: 8) {
-                Image(image, bundle: nil)
+                Image(image)
                     .resizable()
                     .scaledToFit()
-                    .foregroundStyle(Color(.white))
                     .frame(width: 80, height: 80)
                 
                 Text(title)
@@ -50,7 +49,11 @@ struct BasterdzLargeButtonStyle: ButtonStyle {
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .foregroundStyle(Color(.white))
+            .foregroundStyle(
+                configuration.isPressed ?
+                Color(.white) :
+                Color(.red)
+            )
             .background(
                 configuration.isPressed ?
                 Color(.red) :
@@ -64,13 +67,13 @@ struct BasterdzLargeButtonStyle: ButtonStyle {
 #Preview {
     HStack {
         BasterdzLargeButton(
-            image: "createRoom",
+            image: .createRoom,
             title: "방 만들기",
             description: "방을 만들어보세요",
             action: {}
         )
         BasterdzLargeButton(
-            image: "enterInviteCode",
+            image: .enterInviteCode,
             title: "방 만들기",
             description: "방을 만들어보세요",
             action: {}

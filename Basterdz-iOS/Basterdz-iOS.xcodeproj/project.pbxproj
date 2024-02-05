@@ -47,6 +47,8 @@
 		D64ED5232B6E421E00A64D68 /* BasterdzLargeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED5222B6E421E00A64D68 /* BasterdzLargeButton.swift */; };
 		D66E9DE82B70A75E00B8ED92 /* RestrictApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66E9DE72B70A75E00B8ED92 /* RestrictApp.swift */; };
 		D66E9DEA2B70A79700B8ED92 /* Image+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66E9DE92B70A79700B8ED92 /* Image+.swift */; };
+		D66E9DFF2B70D2F500B8ED92 /* BasterdzNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66E9DFE2B70D2F500B8ED92 /* BasterdzNavigationBar.swift */; };
+		D66E9E042B70D8AD00B8ED92 /* EnterRoomNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66E9E032B70D8AD00B8ED92 /* EnterRoomNameView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +122,8 @@
 		D64ED5222B6E421E00A64D68 /* BasterdzLargeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzLargeButton.swift; sourceTree = "<group>"; };
 		D66E9DE72B70A75E00B8ED92 /* RestrictApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestrictApp.swift; sourceTree = "<group>"; };
 		D66E9DE92B70A79700B8ED92 /* Image+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+.swift"; sourceTree = "<group>"; };
+		D66E9DFE2B70D2F500B8ED92 /* BasterdzNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzNavigationBar.swift; sourceTree = "<group>"; };
+		D66E9E032B70D8AD00B8ED92 /* EnterRoomNameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnterRoomNameView.swift; path = CreateRoom/EnterRoomNameView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -411,6 +415,7 @@
 		7798FD382B6BB32F0053A556 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D66E9E032B70D8AD00B8ED92 /* EnterRoomNameView.swift */,
 				7798FD752B6BBFF10053A556 /* RoomView.swift */,
 			);
 			path = View;
@@ -587,6 +592,7 @@
 				D64ED51A2B6E35AF00A64D68 /* BasterdzTextView.swift */,
 				D64ED51E2B6E3DB500A64D68 /* BasterdzOptionButton.swift */,
 				D64ED5222B6E421E00A64D68 /* BasterdzLargeButton.swift */,
+				D66E9DFE2B70D2F500B8ED92 /* BasterdzNavigationBar.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -748,6 +754,7 @@
 				7798FD6F2B6BBFBD0053A556 /* LoginView.swift in Sources */,
 				D66E9DEA2B70A79700B8ED92 /* Image+.swift in Sources */,
 				7798FD872B6BC15D0053A556 /* AppCoordinator.swift in Sources */,
+				D66E9E042B70D8AD00B8ED92 /* EnterRoomNameView.swift in Sources */,
 				D66E9DE82B70A75E00B8ED92 /* RestrictApp.swift in Sources */,
 				D64ED51B2B6E35AF00A64D68 /* BasterdzTextView.swift in Sources */,
 				D64ED50E2B6E1A2900A64D68 /* BasterdzCommonButton.swift in Sources */,
@@ -764,6 +771,7 @@
 				7798FD762B6BBFF10053A556 /* RoomView.swift in Sources */,
 				7798FD802B6BC0290053A556 /* BoosterCoordinator.swift in Sources */,
 				7798FD572B6BBEBE0053A556 /* Font+.swift in Sources */,
+				D66E9DFF2B70D2F500B8ED92 /* BasterdzNavigationBar.swift in Sources */,
 				D64ED5192B6E327000A64D68 /* BasterdzCenterTextField.swift in Sources */,
 				D64ED5132B6E22C800A64D68 /* TabView.swift in Sources */,
 				7798FD782B6BBFFD0053A556 /* RoomViewModel.swift in Sources */,
