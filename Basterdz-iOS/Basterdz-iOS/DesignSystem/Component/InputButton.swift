@@ -26,7 +26,6 @@ struct InputButton: View {
         self.image = image
     }
     
-    
     var body: some View {
         Button(action: action, label: {
             HStack {

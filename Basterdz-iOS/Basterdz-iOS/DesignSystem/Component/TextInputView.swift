@@ -24,17 +24,14 @@ struct TextInputView<T: Hashable>: View {
         isFocused: FocusState<T>.Binding,
         focusValue: T = true,
         placeholder: String,
-        
         trailingText: String? = .none,
         trailingButton: (String, () -> Void)? = .none,
         errorMessage: String? = .none
     ) {
         self._text = text
-        
         self.isFocused = isFocused
         self.focusValue = focusValue
         self.placeholder = placeholder
-        
         self.trailingText = trailingText
         self.trailingButton = trailingButton
         self.errorMessage = errorMessage
@@ -80,10 +77,7 @@ struct TextInputView<T: Hashable>: View {
         }
         .frame(maxWidth: .infinity)
     }
-    
-    
 }
-
 
 #Preview {
     @State var text = ""

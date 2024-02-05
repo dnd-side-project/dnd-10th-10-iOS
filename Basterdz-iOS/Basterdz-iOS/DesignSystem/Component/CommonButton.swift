@@ -12,7 +12,6 @@ import SwiftUI
 /// common button
 /// button의 사이즈의 경우 width는 뷰에 따라 달라져서 infinity로 설정
 struct CommonButton: View {
-    
     let title: String
     let image: Image?
     let size: CommonButtonSize
@@ -55,7 +54,7 @@ struct CommonButton: View {
             .frame(maxWidth: .infinity)
         })
         .buttonStyle(CommonButtonStyle(
-            foregroundColor: style.disactiveForeground,
+            foregroundColor: style.inactiveForeground,
             color: style,
             radius: size.radius,
             isActive: isActive
@@ -75,23 +74,22 @@ struct CommonButtonStyle: ButtonStyle {
             .foregroundStyle(
                 isActive ?
                 color.activeForeground :
-                    color.disactiveForeground
+                    color.inactiveForeground
             )
             .background(
                 isActive ?
                 color.activeBackground :
-                    color.disactiveBackground
+                    color.inactiveBackground
             )
             .cornerRadius(radius)
     }
-    
 }
 
 enum CommonButtonColor {
     
     case black, red
     
-    var disactiveForeground: Color {
+    var inactiveForeground: Color {
         switch self {
         case .black:
             return BasterdzColor.mainBlack.color
@@ -110,7 +108,7 @@ enum CommonButtonColor {
     }
     
     
-    var disactiveBackground: Color {
+    var inactiveBackground: Color {
         switch self {
         case .black:
             return BasterdzColor.grey1.color
@@ -127,7 +125,6 @@ enum CommonButtonColor {
             return BasterdzColor.mainRed.color
         }
     }
-    
 }
 
 enum CommonButtonSize {
@@ -150,7 +147,6 @@ enum CommonButtonSize {
         }
     }
     
-    
     var radius: CGFloat {
         switch self {
         case .large:
@@ -160,7 +156,6 @@ enum CommonButtonSize {
         }
     }
 }
-
 
 #Preview {
     CommonButton(
