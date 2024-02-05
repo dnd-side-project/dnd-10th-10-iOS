@@ -8,17 +8,13 @@
 import SwiftUI
 
 struct RoomView: View {
-    
-    
+
     var body: some View {
         Text("room")
+
     }
-    
-    
-    
+
 }
-
-
 
 
 #Preview {

@@ -11,7 +11,7 @@ import SwiftUI
 
 /// common button
 /// button의 사이즈의 경우 width는 뷰에 따라 달라져서 infinity로 설정
-struct CommonButton: View {
+struct BasterdzCommonButton: View {
     let title: String
     let image: Image?
     let size: CommonButtonSize
@@ -155,10 +155,11 @@ enum CommonButtonSize {
             return 10
         }
     }
+    
 }
 
 #Preview {
-    CommonButton(
+    BasterdzCommonButton(
         title: "인스타그램",
         image: Image(systemName: "square.and.arrow.up"),
         size: .large,

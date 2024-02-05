@@ -8,13 +8,12 @@
 import SwiftUI
 
 /// input을 입력받는 textField
-struct TextInputView<T: Hashable>: View {
+struct BasterdzTextView<T: Hashable>: View {
     
     @Binding var text: String
     let isFocused: FocusState<T>.Binding
     let focusValue: T
     let placeholder : String
-    
     let trailingText: String?
     let trailingButton: (String, () -> Void)? // 지금은 미사용이지만 나중에 들어갈까봐 일단 추가해놓음
     let errorMessage: String?
@@ -83,7 +82,7 @@ struct TextInputView<T: Hashable>: View {
     @State var text = ""
     @FocusState var isFocus
     
-    return TextInputView(
+    return BasterdzTextView(
         text: $text,
         isFocused: $isFocus,
         focusValue: true,

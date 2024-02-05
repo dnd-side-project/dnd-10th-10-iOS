@@ -1,5 +1,5 @@
 //
-//  RoomMainButton.swift
+//  BasterdzLargeButton.swift
 //  Basterdz-iOS
 //
 //  Created by 현수빈 on 2/3/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RoomMainButton: View {
+struct BasterdzLargeButton: View {
     let image: String
     let title: String
     let description: String
@@ -21,9 +21,7 @@ struct RoomMainButton: View {
                 Image(image, bundle: nil)
                     .resizable()
                     .scaledToFit()
-                    .foregroundStyle(
-                        Color(.white)
-                    )
+                    .foregroundStyle(Color(.white))
                     .frame(width: 80, height: 80)
                 
                 Text(title)
@@ -37,11 +35,11 @@ struct RoomMainButton: View {
         })
         .frame(maxWidth: .infinity)
         .frame(height: 210)
-        .buttonStyle(RoomMainButtonStyle())
+        .buttonStyle(BasterdzLargeButtonStyle())
     }
 }
 
-struct RoomMainButtonStyle: ButtonStyle {
+struct BasterdzLargeButtonStyle: ButtonStyle {
     
     func makeBody(configuration: Self.Configuration) -> some View {
         configuration.label
@@ -54,19 +52,18 @@ struct RoomMainButtonStyle: ButtonStyle {
             )
             .cornerRadius(15)
     }
-    
 }
 
 
 #Preview {
     HStack {
-        RoomMainButton(
+        BasterdzLargeButton(
             image: "createRoom",
             title: "방 만들기",
             description: "방을 만들어보세요",
             action: {}
         )
-        RoomMainButton(
+        BasterdzLargeButton(
             image: "enterInviteCode",
             title: "방 만들기",
             description: "방을 만들어보세요",

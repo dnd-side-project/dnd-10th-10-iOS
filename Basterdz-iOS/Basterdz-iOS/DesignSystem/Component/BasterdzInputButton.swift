@@ -8,7 +8,7 @@
 import SwiftUI
 
 /// inputView처럼 생겼지만 누르면 bottom sheet가 올라오는 게 동작 전부여서 button으로 생성했습니다 애매해서 확인 부탁드려요
-struct InputButton: View {
+struct BasterdzInputButton: View {
     let isActive: Bool
     let action: () -> Void
     let label: String
@@ -52,7 +52,7 @@ struct InputButton: View {
 }
 
 #Preview {
-    InputButton(
+    BasterdzInputButton(
         isActive: true,
         action: {},
         label: "인스타그램"
