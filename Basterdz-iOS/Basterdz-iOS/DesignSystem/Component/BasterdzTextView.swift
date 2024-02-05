@@ -4,7 +4,6 @@
 //
 //  Created by 현수빈 on 2/3/24.
 //
-
 import SwiftUI
 
 /// input을 입력받는 textField

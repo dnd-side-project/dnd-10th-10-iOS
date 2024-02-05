@@ -4,7 +4,6 @@
 //
 //  Created by 현수빈 on 2/3/24.
 //
-
 import SwiftUI
 
 /// center로 input을 받는 inputView

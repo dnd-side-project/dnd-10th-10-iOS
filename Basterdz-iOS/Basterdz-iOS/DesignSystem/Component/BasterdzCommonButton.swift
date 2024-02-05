@@ -4,13 +4,9 @@
 //
 //  Created by 현수빈 on 2/3/24.
 //
-
-import Foundation
-
 import SwiftUI
 
-/// common button
-/// button의 사이즈의 경우 width는 뷰에 따라 달라져서 infinity로 설정
+/// CommonButton, button의 사이즈의 경우 width는 뷰에 따라 달라져서 infinity로 설정
 struct BasterdzCommonButton: View {
     let title: String
     let image: Image?

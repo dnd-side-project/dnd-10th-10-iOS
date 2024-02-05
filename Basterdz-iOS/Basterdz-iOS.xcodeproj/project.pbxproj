@@ -42,7 +42,7 @@
 		D64ED5192B6E327000A64D68 /* BasterdzCenterTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED5182B6E327000A64D68 /* BasterdzCenterTextField.swift */; };
 		D64ED51B2B6E35AF00A64D68 /* BasterdzTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED51A2B6E35AF00A64D68 /* BasterdzTextView.swift */; };
 		D64ED51D2B6E377B00A64D68 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED51C2B6E377B00A64D68 /* View+.swift */; };
-		D64ED51F2B6E3DB500A64D68 /* BasterdzInputButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED51E2B6E3DB500A64D68 /* BasterdzInputButton.swift */; };
+		D64ED51F2B6E3DB500A64D68 /* BasterdzOptionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED51E2B6E3DB500A64D68 /* BasterdzOptionButton.swift */; };
 		D64ED5212B6E408300A64D68 /* RoomEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED5202B6E408300A64D68 /* RoomEntity.swift */; };
 		D64ED5232B6E421E00A64D68 /* BasterdzLargeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED5222B6E421E00A64D68 /* BasterdzLargeButton.swift */; };
 /* End PBXBuildFile section */
@@ -113,7 +113,7 @@
 		D64ED5182B6E327000A64D68 /* BasterdzCenterTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzCenterTextField.swift; sourceTree = "<group>"; };
 		D64ED51A2B6E35AF00A64D68 /* BasterdzTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzTextView.swift; sourceTree = "<group>"; };
 		D64ED51C2B6E377B00A64D68 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
-		D64ED51E2B6E3DB500A64D68 /* BasterdzInputButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzInputButton.swift; sourceTree = "<group>"; };
+		D64ED51E2B6E3DB500A64D68 /* BasterdzOptionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzOptionButton.swift; sourceTree = "<group>"; };
 		D64ED5202B6E408300A64D68 /* RoomEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomEntity.swift; sourceTree = "<group>"; };
 		D64ED5222B6E421E00A64D68 /* BasterdzLargeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzLargeButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -579,7 +579,7 @@
 				D64ED50D2B6E1A2900A64D68 /* BasterdzCommonButton.swift */,
 				D64ED5182B6E327000A64D68 /* BasterdzCenterTextField.swift */,
 				D64ED51A2B6E35AF00A64D68 /* BasterdzTextView.swift */,
-				D64ED51E2B6E3DB500A64D68 /* BasterdzInputButton.swift */,
+				D64ED51E2B6E3DB500A64D68 /* BasterdzOptionButton.swift */,
 				D64ED5222B6E421E00A64D68 /* BasterdzLargeButton.swift */,
 			);
 			path = Component;
@@ -743,7 +743,7 @@
 				7798FD872B6BC15D0053A556 /* AppCoordinator.swift in Sources */,
 				D64ED51B2B6E35AF00A64D68 /* BasterdzTextView.swift in Sources */,
 				D64ED50E2B6E1A2900A64D68 /* BasterdzCommonButton.swift in Sources */,
-				D64ED51F2B6E3DB500A64D68 /* BasterdzInputButton.swift in Sources */,
+				D64ED51F2B6E3DB500A64D68 /* BasterdzOptionButton.swift in Sources */,
 				7798FCF62B6B9C050053A556 /* HomeView.swift in Sources */,
 				7798FD7E2B6BC01E0053A556 /* BoosterViewModel.swift in Sources */,
 				7798FD552B6BBE9B0053A556 /* network.swift in Sources */,
