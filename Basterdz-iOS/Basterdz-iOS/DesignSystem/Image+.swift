@@ -8,11 +8,11 @@
 import SwiftUI
 
 extension Image {
-    init(_ imageName: Images) {
+    init(_ imageName: BasterdzImage) {
         self = Image(imageName.rawValue, bundle: nil)
     }
 }
 
-enum Images: String {
+enum BasterdzImage: String {
     case arrow_down
 }

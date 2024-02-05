@@ -16,7 +16,7 @@ struct BasterdzOptionButton: View {
         isActive: Bool,
         action: @escaping () -> Void,
         label: String,
-        image: String = Images.arrow_down.rawValue
+        image: String = BasterdzImage.arrow_down.rawValue
     ) {
         self.isActive = isActive
         self.action = action

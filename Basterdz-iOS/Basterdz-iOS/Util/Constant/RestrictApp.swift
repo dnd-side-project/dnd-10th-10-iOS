@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 enum RestrictApp: String, CaseIterable {
     case instagram = "인스타그램"
     case youtube = "유투브"
