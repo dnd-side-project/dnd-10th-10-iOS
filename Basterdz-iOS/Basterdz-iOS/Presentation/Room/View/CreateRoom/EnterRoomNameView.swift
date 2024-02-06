@@ -28,8 +28,6 @@ struct EnterRoomNameView: View {
             Text("도파민 탈출을 위한\n 방 이름을 만들어주세요!")
                 .font(.pretendardB(20))
                 .multilineTextAlignment(.center)
-            
-            
             BasterdzCenterTextField(text: $roomName, placeholder: "방 이름 입력하기")
             Spacer()
             
@@ -39,9 +37,6 @@ struct EnterRoomNameView: View {
             .padding(20)
         }
     }
-    
-    
-    
 }
 
 #Preview {
