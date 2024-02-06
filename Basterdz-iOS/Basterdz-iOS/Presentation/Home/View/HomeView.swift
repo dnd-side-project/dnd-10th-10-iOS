@@ -17,7 +17,8 @@ struct HomeView: View {
                 BasterdzNavigationBar(
                     leadingItem: (.basterdz, {}),
                     trailingItemList: [
-                        (.mypage, {})
+                        (.mypage, {
+                        })
                     ]
                 )
                 Spacer()

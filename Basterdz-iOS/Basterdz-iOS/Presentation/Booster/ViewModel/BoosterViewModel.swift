@@ -15,6 +15,4 @@ enum BoosterFlowPath {
 
 final class BoosterViewModel: ObservableObject {
     @Published var path: [BoosterFlowPath] = []
-    
-    
 }
