@@ -32,11 +32,19 @@ struct BasterdzNavigationBar: View {
                 Button(action: {
                     leadingItem.1()
                 }, label: {
+                    if leadingItem.0 == .basterdz {
                         Image(leadingItem.0)
                             .resizable()
                             .scaledToFit()
                             .frame(height: 48)
                             .frame(maxWidth: 120)
+                    } else {
+                        Image(leadingItem.0)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 24, height: 24)
+                    }
+                        
                     
                 })
             }
