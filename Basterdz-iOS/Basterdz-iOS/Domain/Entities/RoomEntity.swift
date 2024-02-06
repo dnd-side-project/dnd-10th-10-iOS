@@ -10,7 +10,8 @@ import Foundation
 struct RoomEntity {
     var name: String = ""
     var goal: String = ""
-    var restrictAppType: RestrictApp = .instagram
-    var startTimeStamp: String = ""
-    var endTimeStamp: String = ""
+    var restrictAppType: RestrictApp = .none
+    var restrictAppTime: Int = 0
+    var endTimeStamp: Date = Date()
+    var maxPeople: Int = 0
 }

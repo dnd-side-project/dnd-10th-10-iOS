@@ -15,16 +15,27 @@ struct HomeView: View {
         NavigationStack(path: $viewModel.path) {
             VStack {
                 BasterdzNavigationBar(
-                    leadingItem: (.basterdz, {}),
-                    trailingItemList: [
-                        (.mypage, {
-                        })
-                    ]
+                    leadingItem: (.basterdz, {})
                 )
                 Spacer()
+                
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        viewModel.path.append(.plusButton)
+                    }, label: {
+                        Image(BasterdzImage.plus)
+                            .resizable()
+                            .frame(width: 48, height: 48)
+                    })
+                    .padding(20)
+                }
             }
-        }.navigationDestination(for: BoosterFlowPath.self) { path in
-            EmptyView()
+        }.navigationDestination(for: HomeFlowPath.self) { path in
+            switch path {
+            case .plusButton:
+                RoomView(viewModel: RoomViewModel())
+            }
         }
     }
 }

@@ -8,6 +8,7 @@
 import Foundation
 
 enum RestrictApp: String, CaseIterable {
+    case none = ""
     case instagram = "인스타그램"
     case youtube = "유투브"
     case tictok = "틱톡"

@@ -14,10 +14,7 @@ struct BoosterView: View {
         NavigationStack(path: $viewModel.path) {
             VStack {
                 BasterdzNavigationBar(
-                    leadingTitle: "부스터",
-                    trailingItemList: [
-                        (.mypage, {})
-                    ]
+                    leadingTitle: "부스터"
                 )
                 Spacer()
             }

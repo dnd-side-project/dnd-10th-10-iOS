@@ -48,7 +48,13 @@
 		D66E9DE82B70A75E00B8ED92 /* RestrictApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66E9DE72B70A75E00B8ED92 /* RestrictApp.swift */; };
 		D66E9DEA2B70A79700B8ED92 /* Image+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66E9DE92B70A79700B8ED92 /* Image+.swift */; };
 		D66E9DFF2B70D2F500B8ED92 /* BasterdzNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66E9DFE2B70D2F500B8ED92 /* BasterdzNavigationBar.swift */; };
-		D66E9E042B70D8AD00B8ED92 /* EnterRoomNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66E9E032B70D8AD00B8ED92 /* EnterRoomNameView.swift */; };
+		D66E9E192B720FF700B8ED92 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66E9E182B720FF700B8ED92 /* String+.swift */; };
+		D6E7378D2B72719F005FB8CA /* EnterRoomDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E7378B2B72719F005FB8CA /* EnterRoomDescriptionView.swift */; };
+		D6E7378E2B72719F005FB8CA /* EnterRoomNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E7378C2B72719F005FB8CA /* EnterRoomNameView.swift */; };
+		D6E737932B7271AC005FB8CA /* SelectRestrictAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E737902B7271AB005FB8CA /* SelectRestrictAppView.swift */; };
+		D6E737942B7271AC005FB8CA /* SelectMaxPeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E737912B7271AB005FB8CA /* SelectMaxPeopleView.swift */; };
+		D6E737952B7271AC005FB8CA /* SelectRestrictTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E737922B7271AB005FB8CA /* SelectRestrictTimeView.swift */; };
+		D6E7379A2B727A12005FB8CA /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E737992B727A12005FB8CA /* MyPageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,7 +129,13 @@
 		D66E9DE72B70A75E00B8ED92 /* RestrictApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestrictApp.swift; sourceTree = "<group>"; };
 		D66E9DE92B70A79700B8ED92 /* Image+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+.swift"; sourceTree = "<group>"; };
 		D66E9DFE2B70D2F500B8ED92 /* BasterdzNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzNavigationBar.swift; sourceTree = "<group>"; };
-		D66E9E032B70D8AD00B8ED92 /* EnterRoomNameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnterRoomNameView.swift; path = CreateRoom/EnterRoomNameView.swift; sourceTree = "<group>"; };
+		D66E9E182B720FF700B8ED92 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		D6E7378B2B72719F005FB8CA /* EnterRoomDescriptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterRoomDescriptionView.swift; sourceTree = "<group>"; };
+		D6E7378C2B72719F005FB8CA /* EnterRoomNameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterRoomNameView.swift; sourceTree = "<group>"; };
+		D6E737902B7271AB005FB8CA /* SelectRestrictAppView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectRestrictAppView.swift; sourceTree = "<group>"; };
+		D6E737912B7271AB005FB8CA /* SelectMaxPeopleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectMaxPeopleView.swift; sourceTree = "<group>"; };
+		D6E737922B7271AB005FB8CA /* SelectRestrictTimeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectRestrictTimeView.swift; sourceTree = "<group>"; };
+		D6E737992B727A12005FB8CA /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +278,7 @@
 				7798FD352B6BB2DF0053A556 /* Room */,
 				7798FD312B6BB29A0053A556 /* Booster */,
 				7798FD2D2B6BB1AF0053A556 /* Home */,
+				D6E737962B7278F9005FB8CA /* MyPage */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -415,7 +428,8 @@
 		7798FD382B6BB32F0053A556 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D66E9E032B70D8AD00B8ED92 /* EnterRoomNameView.swift */,
+				D6E7378F2B7271AB005FB8CA /* BottomSheet */,
+				D6E7378A2B72719F005FB8CA /* CreateRoom */,
 				7798FD752B6BBFF10053A556 /* RoomView.swift */,
 			);
 			path = View;
@@ -426,6 +440,7 @@
 			children = (
 				D64ED51C2B6E377B00A64D68 /* View+.swift */,
 				7798FD932B6CA97A0053A556 /* ShapeStyle+.swift */,
+				D66E9E182B720FF700B8ED92 /* String+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -605,6 +620,49 @@
 			path = Tab;
 			sourceTree = "<group>";
 		};
+		D6E7378A2B72719F005FB8CA /* CreateRoom */ = {
+			isa = PBXGroup;
+			children = (
+				D6E7378B2B72719F005FB8CA /* EnterRoomDescriptionView.swift */,
+				D6E7378C2B72719F005FB8CA /* EnterRoomNameView.swift */,
+			);
+			path = CreateRoom;
+			sourceTree = "<group>";
+		};
+		D6E7378F2B7271AB005FB8CA /* BottomSheet */ = {
+			isa = PBXGroup;
+			children = (
+				D6E737902B7271AB005FB8CA /* SelectRestrictAppView.swift */,
+				D6E737912B7271AB005FB8CA /* SelectMaxPeopleView.swift */,
+				D6E737922B7271AB005FB8CA /* SelectRestrictTimeView.swift */,
+			);
+			path = BottomSheet;
+			sourceTree = "<group>";
+		};
+		D6E737962B7278F9005FB8CA /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				D6E737982B727A06005FB8CA /* ViewModel */,
+				D6E737972B727A03005FB8CA /* View */,
+			);
+			path = MyPage;
+			sourceTree = "<group>";
+		};
+		D6E737972B727A03005FB8CA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D6E737992B727A12005FB8CA /* MyPageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D6E737982B727A06005FB8CA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -748,23 +806,28 @@
 				7798FD212B6BB0630053A556 /* AppDelegate.swift in Sources */,
 				7798FD7C2B6BC0120053A556 /* BoosterView.swift in Sources */,
 				7798FD7A2B6BC0060053A556 /* RoomCoordinator.swift in Sources */,
+				D6E737932B7271AC005FB8CA /* SelectRestrictAppView.swift in Sources */,
 				7798FD842B6BC1380053A556 /* HomeCoordinator.swift in Sources */,
+				D6E737952B7271AC005FB8CA /* SelectRestrictTimeView.swift in Sources */,
 				D64ED51D2B6E377B00A64D68 /* View+.swift in Sources */,
 				7798FD822B6BC12B0053A556 /* HomeVIewModel.swift in Sources */,
 				7798FD6F2B6BBFBD0053A556 /* LoginView.swift in Sources */,
 				D66E9DEA2B70A79700B8ED92 /* Image+.swift in Sources */,
 				7798FD872B6BC15D0053A556 /* AppCoordinator.swift in Sources */,
-				D66E9E042B70D8AD00B8ED92 /* EnterRoomNameView.swift in Sources */,
+				D6E737942B7271AC005FB8CA /* SelectMaxPeopleView.swift in Sources */,
 				D66E9DE82B70A75E00B8ED92 /* RestrictApp.swift in Sources */,
 				D64ED51B2B6E35AF00A64D68 /* BasterdzTextView.swift in Sources */,
+				D6E7378E2B72719F005FB8CA /* EnterRoomNameView.swift in Sources */,
 				D64ED50E2B6E1A2900A64D68 /* BasterdzCommonButton.swift in Sources */,
 				D64ED51F2B6E3DB500A64D68 /* BasterdzOptionButton.swift in Sources */,
 				7798FCF62B6B9C050053A556 /* HomeView.swift in Sources */,
+				D6E7378D2B72719F005FB8CA /* EnterRoomDescriptionView.swift in Sources */,
 				7798FD7E2B6BC01E0053A556 /* BoosterViewModel.swift in Sources */,
 				7798FD552B6BBE9B0053A556 /* network.swift in Sources */,
 				D64ED5232B6E421E00A64D68 /* BasterdzLargeButton.swift in Sources */,
 				7798FD712B6BBFCF0053A556 /* LoginViewModel.swift in Sources */,
 				7798FCF42B6B9C050053A556 /* Basterdz_iOSApp.swift in Sources */,
+				D66E9E192B720FF700B8ED92 /* String+.swift in Sources */,
 				7798FD9F2B6CE4FA0053A556 /* BasterdzColor.swift in Sources */,
 				7798FD942B6CA97A0053A556 /* ShapeStyle+.swift in Sources */,
 				7798FD742B6BBFE30053A556 /* LoginCoordinator.swift in Sources */,
@@ -777,6 +840,7 @@
 				7798FD782B6BBFFD0053A556 /* RoomViewModel.swift in Sources */,
 				7798FD1F2B6BB0570053A556 /* SceneDelegate.swift in Sources */,
 				D64ED5212B6E408300A64D68 /* RoomEntity.swift in Sources */,
+				D6E7379A2B727A12005FB8CA /* MyPageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

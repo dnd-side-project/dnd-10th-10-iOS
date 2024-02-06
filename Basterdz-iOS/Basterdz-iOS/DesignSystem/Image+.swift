@@ -21,6 +21,7 @@ enum BasterdzImage: String {
     case home
     case plus
     case booster
+    case calendar
     
     // image
     case createRoom
