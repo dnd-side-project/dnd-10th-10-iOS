@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 enum HomeFlowPath : String, Hashable{
     case detail
 }

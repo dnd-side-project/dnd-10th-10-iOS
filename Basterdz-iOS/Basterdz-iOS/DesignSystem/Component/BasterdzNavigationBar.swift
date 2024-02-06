@@ -9,10 +9,10 @@ import SwiftUI
 
 struct BasterdzNavigationBar: View {
 
-    let leadingTitle: String?
-    let centerTitle: String?
-    let leadingItem: (BasterdzImage, () -> Void)?
-    let trailingItemList: [(BasterdzImage, () -> Void)]?
+    private let leadingTitle: String?
+    private let centerTitle: String?
+    private let leadingItem: (BasterdzImage, () -> Void)?
+    private let trailingItemList: [(BasterdzImage, () -> Void)]?
     
     init(
         leadingTitle: String? = .none,
@@ -44,8 +44,6 @@ struct BasterdzNavigationBar: View {
                             .scaledToFit()
                             .frame(width: 24, height: 24)
                     }
-                        
-                    
                 })
             }
             if let leadingTitle {
