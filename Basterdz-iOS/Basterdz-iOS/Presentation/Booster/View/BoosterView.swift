@@ -8,13 +8,25 @@
 import SwiftUI
 
 struct BoosterView: View {
+    @StateObject var viewModel: BoosterViewModel
+    
     var body: some View {
-        Text("booster")
+        NavigationStack(path: $viewModel.path) {
+            VStack {
+                BasterdzNavigationBar(
+                    leadingTitle: "부스터",
+                    trailingItemList: [
+                        (.mypage, {})
+                    ]
+                )
+                Spacer()
+            }
+        }.navigationDestination(for: BoosterFlowPath.self) { path in
+            EmptyView()
+        }
     }
 }
 
-struct BoosterView_Previews: PreviewProvider {
-    static var previews: some View {
-        BoosterView()
-    }
+#Preview {
+    BoosterView(viewModel: BoosterViewModel())
 }

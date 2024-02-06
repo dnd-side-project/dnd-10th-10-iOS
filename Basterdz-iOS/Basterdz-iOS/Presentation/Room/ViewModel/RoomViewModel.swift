@@ -7,6 +7,13 @@
 
 import Foundation
 
+enum RoomFlowPath : String, Hashable{
+    case createRoom
+    case enterInviteCode
+    case enterRoomDescription
+}
+
 class RoomViewModel: ObservableObject {
-    
+    @Published var path: [RoomFlowPath] = []
+    @Published var roomEntity: RoomEntity = RoomEntity()
 }

@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+enum HomeFlowPath : String, Hashable{
+    case detail
+}
+
+final class HomeViewModel: ObservableObject {
+    @Published var path: [HomeFlowPath] = []
+}

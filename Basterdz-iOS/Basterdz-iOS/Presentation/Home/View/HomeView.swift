@@ -9,13 +9,26 @@ import SwiftUI
 
 struct HomeView: View {
     
+    @StateObject var viewModel: HomeViewModel
+    
     var body: some View {
-        VStack {
-            Text("home")
+        NavigationStack(path: $viewModel.path) {
+            VStack {
+                BasterdzNavigationBar(
+                    leadingItem: (.basterdz, {}),
+                    trailingItemList: [
+                        (.mypage, {
+                        })
+                    ]
+                )
+                Spacer()
+            }
+        }.navigationDestination(for: BoosterFlowPath.self) { path in
+            EmptyView()
         }
     }
 }
 
 #Preview {
-    HomeView()
+    HomeView(viewModel: HomeViewModel())
 }

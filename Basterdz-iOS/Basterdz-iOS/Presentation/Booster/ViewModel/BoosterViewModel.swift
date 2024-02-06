@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+enum BoosterFlowPath {
+    case selectBoosterReceiver
+    case enterMessage
+    case pushSuccess
+}
+
+final class BoosterViewModel: ObservableObject {
+    @Published var path: [BoosterFlowPath] = []
+}

@@ -19,23 +19,24 @@ struct EnterRoomNameView: View {
     
     var body: some View {
         VStack(spacing: 40) {
+            BasterdzNavigationBar(
+                centerTitle: "방 만들기",
+                leadingItem: (.arrow_back, {
+                    viewModel.path.removeLast()
+                })
+            )
             Text("도파민 탈출을 위한\n 방 이름을 만들어주세요!")
                 .font(.pretendardB(20))
                 .multilineTextAlignment(.center)
-            
-            
-            CenterTextInputView(text: $roomName, placeholder: "방 이름 입력하기")
+            BasterdzCenterTextField(text: $roomName, placeholder: "방 이름 입력하기")
             Spacer()
             
-            CommonButton(title: "다음으로", action: {
+            BasterdzCommonButton(title: "다음으로", action: {
                 viewModel.path.append(RoomFlowPath.enterRoomDescription)
             })
             .padding(20)
-        }.navigationTitle("방 만들기")
+        }
     }
-    
-    
-    
 }
 
 #Preview {
