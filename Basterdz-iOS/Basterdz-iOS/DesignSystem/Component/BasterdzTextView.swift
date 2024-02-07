@@ -76,18 +76,3 @@ struct BasterdzTextView<T: Hashable>: View {
         .frame(maxWidth: .infinity)
     }
 }
-
-#Preview {
-    @State var text = ""
-    @FocusState var isFocus
-    
-    return BasterdzTextView(
-        text: $text,
-        isFocused: $isFocus,
-        focusValue: true,
-        placeholder: "입력하시오", 
-        trailingText: "4/20",
-        trailingButton: nil,
-        errorMessage: "에러"
-    ).padding(20)
-}

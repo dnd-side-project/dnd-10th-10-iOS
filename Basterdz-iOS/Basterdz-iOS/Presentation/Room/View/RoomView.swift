@@ -47,7 +47,3 @@ struct RoomView: View {
     }
     
 }
-
-#Preview {
-    RoomView(viewModel: RoomViewModel())
-}

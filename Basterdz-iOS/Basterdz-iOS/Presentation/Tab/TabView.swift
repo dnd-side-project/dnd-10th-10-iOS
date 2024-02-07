@@ -50,7 +50,3 @@ struct TabbarView: View {
         }
     }
 }
-
-#Preview {
-    TabbarView()
-}

@@ -38,7 +38,3 @@ struct EnterRoomNameView: View {
         }
     }
 }
-
-#Preview {
-    EnterRoomNameView(viewModel: RoomViewModel())
-}

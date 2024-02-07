@@ -27,6 +27,6 @@ struct BoosterView: View {
     }
 }
 
-#Preview {
-    BoosterView(viewModel: BoosterViewModel())
-}
+//#Preview {
+//    BoosterView(viewModel: BoosterViewModel())
+//}

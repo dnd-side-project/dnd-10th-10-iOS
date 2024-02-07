@@ -40,7 +40,7 @@ struct BasterdzCenterTextField: View {
     }
 }
 
-#Preview {
-    @State var text = ""
-    return BasterdzCenterTextField(text: $text, placeholder: "미리보기")
-}
+//#Preview {
+//    @State var text = ""
+//    return BasterdzCenterTextField(text: $text, placeholder: "미리보기")
+//}

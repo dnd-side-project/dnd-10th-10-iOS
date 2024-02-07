@@ -160,13 +160,13 @@ enum CommonButtonSize {
     
 }
 
-#Preview {
-    BasterdzCommonButton(
-        title: "인스타그램",
-        image: Image(systemName: "square.and.arrow.up"),
-        size: .large,
-        style: .red,
-        action: {},
-        isActive: true
-    ).padding(20)
-}
+//#Preview {
+//    BasterdzCommonButton(
+//        title: "인스타그램",
+//        image: Image(systemName: "square.and.arrow.up"),
+//        size: .large,
+//        style: .red,
+//        action: {},
+//        isActive: true
+//    ).padding(20)
+//}

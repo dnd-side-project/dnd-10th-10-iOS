@@ -29,6 +29,6 @@ struct HomeView: View {
     }
 }
 
-#Preview {
-    HomeView(viewModel: HomeViewModel())
-}
+//#Preview {
+//    HomeView(viewModel: HomeViewModel())
+//}
