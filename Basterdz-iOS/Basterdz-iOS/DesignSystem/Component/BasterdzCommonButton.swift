@@ -109,7 +109,6 @@ enum CommonButtonColor {
         }
     }
     
-    
     var inactiveBackground: Color {
         switch self {
         case .black:

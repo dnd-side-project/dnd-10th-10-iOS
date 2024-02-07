@@ -38,7 +38,7 @@ struct RoomView: View {
                 }.padding(.horizontal, 16)
             }
             .navigationBarBackButtonHidden()
-            .navigationDestination(for: RoomFlowPath.self) { next in
+            .navigationDestination(for: RoomFlowPath.self) { _ in
                 EnterRoomNameView(viewModel: viewModel)
                     .toolbar(.hidden, for: .tabBar)
                     .navigationBarBackButtonHidden()

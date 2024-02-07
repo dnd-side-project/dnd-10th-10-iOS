@@ -12,10 +12,9 @@ struct EnterRoomNameView: View {
     
     @State var roomName: String = ""
     
-    init(viewModel: RoomViewModel){
+    init(viewModel: RoomViewModel) {
         self._viewModel = ObservedObject(wrappedValue: viewModel)
     }
-    
     
     var body: some View {
         VStack(spacing: 40) {
