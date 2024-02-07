@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		779677572B739B72007315E8 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 779677562B739B72007315E8 /* .swiftlint.yml */; };
 		7798FCF42B6B9C050053A556 /* Basterdz_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FCF32B6B9C050053A556 /* Basterdz_iOSApp.swift */; };
 		7798FCF62B6B9C050053A556 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FCF52B6B9C050053A556 /* HomeView.swift */; };
 		7798FCF82B6B9C0E0053A556 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7798FCF72B6B9C0E0053A556 /* Assets.xcassets */; };
@@ -69,6 +70,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		779677562B739B72007315E8 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		7798FCF02B6B9C050053A556 /* Basterdz-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Basterdz-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7798FCF32B6B9C050053A556 /* Basterdz_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basterdz_iOSApp.swift; sourceTree = "<group>"; };
 		7798FCF52B6B9C050053A556 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 		7798FCE72B6B9C050053A556 = {
 			isa = PBXGroup;
 			children = (
+				779677562B739B72007315E8 /* .swiftlint.yml */,
 				7798FCF22B6B9C050053A556 /* Basterdz-iOS */,
 				7798FD032B6B9C0F0053A556 /* Basterdz-iOSTests */,
 				7798FD0D2B6B9C0F0053A556 /* Basterdz-iOSUITests */,
@@ -612,6 +615,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7798FD142B6B9C0F0053A556 /* Build configuration list for PBXNativeTarget "Basterdz-iOS" */;
 			buildPhases = (
+				779677552B7399FD007315E8 /* Run SwiftLint Script */,
 				7798FCEC2B6B9C050053A556 /* Sources */,
 				7798FCED2B6B9C050053A556 /* Frameworks */,
 				7798FCEE2B6B9C050053A556 /* Resources */,
@@ -718,6 +722,7 @@
 				7798FD442B6BB8C90053A556 /* Color.xcassets in Resources */,
 				7798FD4A2B6BBA430053A556 /* Pretendard-Regular.otf in Resources */,
 				7798FD482B6BBA390053A556 /* Pretendard-Medium.otf in Resources */,
+				779677572B739B72007315E8 /* .swiftlint.yml in Resources */,
 				7798FD462B6BBA2B0053A556 /* Pretendard-Bold.otf in Resources */,
 				7798FCFB2B6B9C0E0053A556 /* Preview Assets.xcassets in Resources */,
 				7798FCF82B6B9C0E0053A556 /* Assets.xcassets in Resources */,
@@ -739,6 +744,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		779677552B7399FD007315E8 /* Run SwiftLint Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif test -d \"/opt/homebrew/bin/\"; then\n  PATH=\"/opt/homebrew/bin/:${PATH}\"\nfi\n\nexport PATH\n\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7798FCEC2B6B9C050053A556 /* Sources */ = {
