@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		779677572B739B72007315E8 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 779677562B739B72007315E8 /* .swiftlint.yml */; };
+		779677592B73A54D007315E8 /* BasterdzImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779677582B73A54D007315E8 /* BasterdzImage.swift */; };
 		7798FCF42B6B9C050053A556 /* Basterdz_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FCF32B6B9C050053A556 /* Basterdz_iOSApp.swift */; };
 		7798FCF62B6B9C050053A556 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FCF52B6B9C050053A556 /* HomeView.swift */; };
 		7798FCF82B6B9C0E0053A556 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7798FCF72B6B9C0E0053A556 /* Assets.xcassets */; };
@@ -71,6 +72,7 @@
 
 /* Begin PBXFileReference section */
 		779677562B739B72007315E8 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		779677582B73A54D007315E8 /* BasterdzImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzImage.swift; sourceTree = "<group>"; };
 		7798FCF02B6B9C050053A556 /* Basterdz-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Basterdz-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7798FCF32B6B9C050053A556 /* Basterdz_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basterdz_iOSApp.swift; sourceTree = "<group>"; };
 		7798FCF52B6B9C050053A556 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -427,6 +429,7 @@
 		7798FD392B6BB4160053A556 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				D66E9DE92B70A79700B8ED92 /* Image+.swift */,
 				D64ED51C2B6E377B00A64D68 /* View+.swift */,
 				7798FD932B6CA97A0053A556 /* ShapeStyle+.swift */,
 			);
@@ -438,6 +441,7 @@
 			children = (
 				7798FD9E2B6CE4FA0053A556 /* BasterdzColor.swift */,
 				D66E9DE72B70A75E00B8ED92 /* RestrictApp.swift */,
+				779677582B73A54D007315E8 /* BasterdzImage.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -574,7 +578,6 @@
 			children = (
 				D64ED50C2B6E1A1200A64D68 /* Component */,
 				7798FD562B6BBEBE0053A556 /* Font+.swift */,
-				D66E9DE92B70A79700B8ED92 /* Image+.swift */,
 			);
 			path = DesignSystem;
 			sourceTree = "<group>";
@@ -791,6 +794,7 @@
 				7798FD552B6BBE9B0053A556 /* network.swift in Sources */,
 				D64ED5232B6E421E00A64D68 /* BasterdzLargeButton.swift in Sources */,
 				7798FD712B6BBFCF0053A556 /* LoginViewModel.swift in Sources */,
+				779677592B73A54D007315E8 /* BasterdzImage.swift in Sources */,
 				7798FCF42B6B9C050053A556 /* Basterdz_iOSApp.swift in Sources */,
 				7798FD9F2B6CE4FA0053A556 /* BasterdzColor.swift in Sources */,
 				7798FD942B6CA97A0053A556 /* ShapeStyle+.swift in Sources */,
