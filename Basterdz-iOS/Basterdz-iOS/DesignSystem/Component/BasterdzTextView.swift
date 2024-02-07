@@ -12,7 +12,7 @@ struct BasterdzTextView<T: Hashable>: View {
     @Binding var text: String
     private let isFocused: FocusState<T>.Binding
     private let focusValue: T
-    private let placeholder : String
+    private let placeholder: String
     private let trailingText: String?
     private let trailingButton: (String, () -> Void)? // 지금은 미사용이지만 나중에 들어갈까봐 일단 추가해놓음
     private let errorMessage: String?

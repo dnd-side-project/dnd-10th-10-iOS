@@ -39,8 +39,3 @@ struct BasterdzCenterTextField: View {
             .padding(16)
     }
 }
-
-//#Preview {
-//    @State var text = ""
-//    return BasterdzCenterTextField(text: $text, placeholder: "미리보기")
-//}

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum HomeFlowPath : String, Hashable{
+enum HomeFlowPath: String, Hashable {
     case detail
 }
 
