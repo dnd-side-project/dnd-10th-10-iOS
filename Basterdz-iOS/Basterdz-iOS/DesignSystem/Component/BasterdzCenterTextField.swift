@@ -10,7 +10,7 @@ import SwiftUI
 struct BasterdzCenterTextField: View {
     
     @Binding var text: String
-    private let placeholder : String
+    private let placeholder: String
     
     init(
         text: Binding<String>,
@@ -38,9 +38,4 @@ struct BasterdzCenterTextField: View {
             .clipShape(RoundedRectangle(cornerRadius: 15))
             .padding(16)
     }
-}
-
-#Preview {
-    @State var text = ""
-    return BasterdzCenterTextField(text: $text, placeholder: "미리보기")
 }

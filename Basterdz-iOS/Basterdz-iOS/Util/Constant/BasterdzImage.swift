@@ -1,17 +1,11 @@
 //
-//  Image+.swift
+//  BasterdzImage.swift
 //  Basterdz-iOS
 //
-//  Created by 현수빈 on 2/5/24.
+//  Created by EUNJU on 2024/02/07.
 //
 
-import SwiftUI
-
-extension Image {
-    init(_ imageName: BasterdzImage) {
-        self = Image(imageName.rawValue, bundle: nil)
-    }
-}
+import Foundation
 
 enum BasterdzImage: String {
     // icon

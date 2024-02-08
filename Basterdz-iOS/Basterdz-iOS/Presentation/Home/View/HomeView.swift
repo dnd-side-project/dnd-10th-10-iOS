@@ -23,12 +23,8 @@ struct HomeView: View {
                 )
                 Spacer()
             }
-        }.navigationDestination(for: BoosterFlowPath.self) { path in
+        }.navigationDestination(for: BoosterFlowPath.self) { _ in
             EmptyView()
         }
     }
-}
-
-#Preview {
-    HomeView(viewModel: HomeViewModel())
 }

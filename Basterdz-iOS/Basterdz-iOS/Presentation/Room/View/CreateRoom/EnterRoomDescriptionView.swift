@@ -49,11 +49,9 @@ struct EnterRoomDescriptionView: View {
                     showModal.toggle()
                     showContent = .restrictApp
                 }, label: "인스타그램")
-                
-                
+        
                 numberView(number: 3, title: "기간을 설정해주세요", isActive: false)
                 // TODO
-                
                 HStack {
                     numberView(
                         number: 4,
@@ -91,7 +89,6 @@ struct EnterRoomDescriptionView: View {
         
     }
    
-    
     @ViewBuilder func showModalContent() -> some View {
         switch showContent {
         case .restrictApp:
@@ -144,8 +141,4 @@ struct EnterRoomDescriptionView: View {
             Spacer()
         }
     }
-}
-
-#Preview {
-    EnterRoomDescriptionView(viewModel: RoomViewModel())
 }

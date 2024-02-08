@@ -48,12 +48,3 @@ struct BasterdzOptionButton: View {
         .clipShape(RoundedRectangle(cornerRadius: 15))
     }
 }
-
-#Preview {
-    BasterdzOptionButton(
-        isActive: true,
-        action: {},
-        label: "인스타그램"
-    )
-    .padding(20)
-}

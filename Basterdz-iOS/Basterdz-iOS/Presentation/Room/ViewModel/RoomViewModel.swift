@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum RoomFlowPath : String, Hashable{
+enum RoomFlowPath: String, Hashable {
     case createRoom
     case enterInviteCode
     case enterRoomDescription
