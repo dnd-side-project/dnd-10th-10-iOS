@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		772025572B79202F00439CFD /* EnterInviteCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772025562B79202F00439CFD /* EnterInviteCodeView.swift */; };
 		7720255B2B79F3C000439CFD /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7720255A2B79F3C000439CFD /* String+.swift */; };
 		779677572B739B72007315E8 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 779677562B739B72007315E8 /* .swiftlint.yml */; };
 		779677592B73A54D007315E8 /* BasterdzImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779677582B73A54D007315E8 /* BasterdzImage.swift */; };
@@ -72,6 +73,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		772025562B79202F00439CFD /* EnterInviteCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterInviteCodeView.swift; sourceTree = "<group>"; };
 		7720255A2B79F3C000439CFD /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		779677562B739B72007315E8 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		779677582B73A54D007315E8 /* BasterdzImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzImage.swift; sourceTree = "<group>"; };
@@ -423,6 +425,7 @@
 			isa = PBXGroup;
 			children = (
 				D66E9E032B70D8AD00B8ED92 /* EnterRoomNameView.swift */,
+				772025562B79202F00439CFD /* EnterInviteCodeView.swift */,
 				7798FD752B6BBFF10053A556 /* RoomView.swift */,
 			);
 			path = View;
@@ -783,6 +786,7 @@
 				7798FD7A2B6BC0060053A556 /* RoomCoordinator.swift in Sources */,
 				7798FD842B6BC1380053A556 /* HomeCoordinator.swift in Sources */,
 				D64ED51D2B6E377B00A64D68 /* View+.swift in Sources */,
+				772025572B79202F00439CFD /* EnterInviteCodeView.swift in Sources */,
 				7798FD822B6BC12B0053A556 /* HomeVIewModel.swift in Sources */,
 				7798FD6F2B6BBFBD0053A556 /* LoginView.swift in Sources */,
 				D66E9DEA2B70A79700B8ED92 /* Image+.swift in Sources */,
