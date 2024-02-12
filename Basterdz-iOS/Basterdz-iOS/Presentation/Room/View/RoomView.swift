@@ -38,12 +38,17 @@ struct RoomView: View {
                 }.padding(.horizontal, 16)
             }
             .navigationBarBackButtonHidden()
-            .navigationDestination(for: RoomFlowPath.self) { _ in
-                EnterRoomNameView(viewModel: viewModel)
-                    .toolbar(.hidden, for: .tabBar)
-                    .navigationBarBackButtonHidden()
+            .navigationDestination(for: RoomFlowPath.self) { path in
+                switch path {
+                case .createRoom:
+                    EnterRoomNameView(viewModel: viewModel)
+                case .enterInviteCode:
+                    EnterInviteCodeView(viewModel: viewModel)
+                case .enterRoomDescription:
+                    // TODO: destinationView 수정 필요
+                    EnterInviteCodeView(viewModel: viewModel)
+                }
             }
         }
     }
-    
 }
