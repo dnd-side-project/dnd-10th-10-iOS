@@ -130,6 +130,7 @@ enum CommonButtonColor {
 
 enum CommonButtonSize {
     case large, small
+    
     var font: Font {
         switch self {
         case .large:
