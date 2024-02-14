@@ -20,4 +20,5 @@ enum BasterdzImage: String {
     case createRoom
     case enterInviteCode
     case basterdz
+    case inviteCode
 }

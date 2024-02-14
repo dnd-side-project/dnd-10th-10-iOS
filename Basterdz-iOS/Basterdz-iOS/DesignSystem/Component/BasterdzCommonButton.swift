@@ -94,7 +94,7 @@ enum CommonButtonColor {
     var inactiveForeground: Color {
         switch self {
         case .black:
-            return BasterdzColor.mainBlack.color
+            return BasterdzColor.white.color
         case .red:
             return BasterdzColor.white.color
         }
@@ -130,6 +130,7 @@ enum CommonButtonColor {
 
 enum CommonButtonSize {
     case large, small
+    
     var font: Font {
         switch self {
         case .large:
@@ -144,7 +145,7 @@ enum CommonButtonSize {
         case .large:
             return 60
         case .small:
-            return 55
+            return 50
         }
     }
     
@@ -153,7 +154,7 @@ enum CommonButtonSize {
         case .large:
             return 15
         case .small:
-            return 10
+            return 15
         }
     }
     

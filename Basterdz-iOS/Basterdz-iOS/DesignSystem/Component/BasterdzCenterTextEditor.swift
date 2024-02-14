@@ -7,7 +7,7 @@
 import SwiftUI
 
 /// center로 input을 받는 inputView
-struct BasterdzCenterTextField: View {
+struct BasterdzCenterTextEditor: View {
     
     @Binding var text: String
     private let placeholder: String

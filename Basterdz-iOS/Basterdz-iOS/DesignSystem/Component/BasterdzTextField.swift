@@ -7,7 +7,7 @@
 import SwiftUI
 
 /// input을 입력받는 textField
-struct BasterdzTextView<T: Hashable>: View {
+struct BasterdzTextField<T: Hashable>: View {
     
     @Binding var text: String
     private let isFocused: FocusState<T>.Binding
