@@ -6,19 +6,25 @@
 //
 import SwiftUI
 
-struct BasterdzOptionButton: View {
+struct BasterdzOptionButton<T: Hashable>: View {
     private let isActive: Bool
+    private let isFocused: FocusState<T>.Binding?
+    private let focusValue: T?
     private let action: () -> Void
     private let label: String
     private let image: String
     
     init(
         isActive: Bool,
+        isFocused: FocusState<T>.Binding? = nil,
+        focusValue: T = true,
         action: @escaping () -> Void,
         label: String,
         image: String = BasterdzImage.arrow_down.rawValue
     ) {
         self.isActive = isActive
+        self.isFocused = isFocused
+        self.focusValue = focusValue
         self.action = action
         self.label = label
         self.image = image
@@ -29,31 +35,41 @@ struct BasterdzOptionButton: View {
             HStack {
                 Text(label)
                     .font(.pretendardB(16))
-                    .foregroundStyle(
-                        isActive ?
-                        Color(.mainBlack) :
-                            Color(.grey2)
-                    )
                 Spacer()
                 Image(image, bundle: nil)
                     .resizable()
                     .scaledToFit()
-                    .foregroundStyle(Color(.mainBlack))
+                    .foregroundStyle(Color(.grey4))
                     .frame(width: 14, height: 14)
-            }
+            }.padding()
         })
-        .padding()
-        .frame(height: 56)
-        .background(Color(.grey1))
-        .clipShape(RoundedRectangle(cornerRadius: 15))
+        .buttonStyle(
+            OptionButtonStyle(isActive: isActive)
+        )
+        .frame(height: 50)
     }
 }
 
-#Preview {
-    BasterdzOptionButton(
-        isActive: true,
-        action: {},
-        label: "인스타그램"
-    )
-    .padding(20)
+struct OptionButtonStyle: ButtonStyle {
+
+    private let isActive: Bool
+    
+    init(isActive: Bool) {
+        self.isActive = isActive
+    }
+    
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .foregroundStyle(
+                configuration.isPressed ? BasterdzColor.mainBlack.color : BasterdzColor.grey3.color
+            )
+            .background(
+                isActive ? Color(.white) : Color(.grey1)
+            )
+            .clipShape(RoundedRectangle(cornerRadius: 15))
+            .frame(height: 50)
+            .roundedBorder(
+                configuration.isPressed ? BasterdzColor.mainBlack.color : BasterdzColor.grey3.color
+            )
+    }
 }

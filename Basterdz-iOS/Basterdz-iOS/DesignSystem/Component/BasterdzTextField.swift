@@ -7,26 +7,29 @@
 import SwiftUI
 
 /// input을 입력받는 textField
-struct BasterdzTextView<T: Hashable>: View {
+struct BasterdzTextField<T: Hashable>: View {
     
     @Binding var text: String
+    private let isActive: Bool
     private let isFocused: FocusState<T>.Binding
     private let focusValue: T
-    private let placeholder : String
+    private let placeholder: String
     private let trailingText: String?
-    private let trailingButton: (String, () -> Void)? // 지금은 미사용이지만 나중에 들어갈까봐 일단 추가해놓음
-    private let errorMessage: String?
+    private let trailingButton: (String, () -> Void)?
+    private let errorMessage: String
     
     init(
         text: Binding<String>,
+        isActive: Bool,
         isFocused: FocusState<T>.Binding,
         focusValue: T = true,
         placeholder: String,
         trailingText: String? = .none,
         trailingButton: (String, () -> Void)? = .none,
-        errorMessage: String? = .none
+        errorMessage: String = ""
     ) {
         self._text = text
+        self.isActive = isActive
         self.isFocused = isFocused
         self.focusValue = focusValue
         self.placeholder = placeholder
@@ -38,17 +41,24 @@ struct BasterdzTextView<T: Hashable>: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
             TextField(placeholder, text: $text)
+                .autocorrectionDisabled()
                 .font(.pretendardB(16))
                 .foregroundStyle(Color(.mainBlack))
                 .focused(isFocused, equals: focusValue)
                 .padding(.horizontal, 16)
                 .frame(height: 56)
-                .background(Color(.grey1))
+                .background(
+                    isActive ? Color(.white) : Color(.grey1)
+                )
                 .clipShape(RoundedRectangle(cornerRadius: 15))
                 .roundedBorder(
                     isFocused.wrappedValue == focusValue ?
-                    BasterdzColor.mainBlack.color :
-                        BasterdzColor.white.color
+                    (
+                        errorMessage.isNotEmpty ?
+                        BasterdzColor.mainRed.color :
+                            BasterdzColor.mainBlack.color
+                    )
+                    :   BasterdzColor.grey3.color
                 )
                 .overlay(alignment: .trailing) {
                     if let trailingText {
@@ -66,28 +76,13 @@ struct BasterdzTextView<T: Hashable>: View {
                         })
                     }
                 }
-            if let errorMessage {
+            if errorMessage.isNotEmpty {
                 Text(errorMessage)
                     .font(.pretendardM(13))
                     .foregroundStyle(Color(.mainRed))
-                    .frame(height: 16)
+                    .frame(height: 16, alignment: .trailing)
             }
         }
         .frame(maxWidth: .infinity)
     }
-}
-
-#Preview {
-    @State var text = ""
-    @FocusState var isFocus
-    
-    return BasterdzTextView(
-        text: $text,
-        isFocused: $isFocus,
-        focusValue: true,
-        placeholder: "입력하시오", 
-        trailingText: "4/20",
-        trailingButton: nil,
-        errorMessage: "에러"
-    ).padding(20)
 }

@@ -6,3 +6,14 @@
 //
 
 import Foundation
+import SwiftUI
+
+enum RoomCoordinatorAction {
+    case createRoom,
+         enterInviteCode,
+         enterRoomDescription,
+         successCreateRoom
+}
+
+class RoomCoordinator {
+}

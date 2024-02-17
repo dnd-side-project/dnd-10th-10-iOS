@@ -1,0 +1,30 @@
+disabled_rules:
+    - trailing_whitespace
+    - function_body_length
+    - line_length
+    - orphaned_doc_comment
+    - nesting
+    - todo
+    
+opt_in_rules:
+    - let_var_whitespace
+
+excluded:
+    - Basterdz-iOS/Application/Basterdz_iOSApp.swift
+    - Basterdz-iOS/Application/AppDelegate.swift
+    - Basterdz-iOS/Application/SceneDelegate.swift
+    - Basterdz-iOS/Util/Constant/BasterdzImage.swift
+    - Basterdz-iOSTests
+    - Basterdz-iOSUITests
+
+file_length:
+    warning: 300
+    error: 400
+
+type_name:
+    min_length: 2
+    
+identifier_name:
+    min_length: 2
+
+force_cast: warning

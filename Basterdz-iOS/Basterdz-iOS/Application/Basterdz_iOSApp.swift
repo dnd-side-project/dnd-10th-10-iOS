@@ -12,6 +12,7 @@ struct Basterdz_iOSApp: App {
     var body: some Scene {
         WindowGroup {
             TabbarView()
+                .accentColor(Color(.mainBlack))
         }
     }
 }

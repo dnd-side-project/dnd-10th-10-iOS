@@ -62,21 +62,3 @@ struct BasterdzLargeButtonStyle: ButtonStyle {
             .cornerRadius(15)
     }
 }
-
-
-#Preview {
-    HStack {
-        BasterdzLargeButton(
-            image: .createRoom,
-            title: "방 만들기",
-            description: "방을 만들어보세요",
-            action: {}
-        )
-        BasterdzLargeButton(
-            image: .enterInviteCode,
-            title: "방 만들기",
-            description: "방을 만들어보세요",
-            action: {}
-        )
-    }.padding(20)
-}

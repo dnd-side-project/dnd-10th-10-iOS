@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     
     @StateObject var viewModel: HomeViewModel
+    @State private var plusButtonTap = false
     
     var body: some View {
         NavigationStack(path: $viewModel.path) {
@@ -22,7 +23,7 @@ struct HomeView: View {
                 HStack {
                     Spacer()
                     Button(action: {
-                        viewModel.path.append(.plusButton)
+                        plusButtonTap.toggle()
                     }, label: {
                         Image(BasterdzImage.plus)
                             .resizable()
@@ -31,14 +32,10 @@ struct HomeView: View {
                     .padding(20)
                 }
             }
-            .navigationDestination(for: HomeFlowPath.self) { path in
-                switch path {
-                case .plusButton:
-                    RoomView(viewModel: RoomViewModel())
-                        .toolbar(.hidden, for: .tabBar)
-                        .navigationBarBackButtonHidden()
-                }
+            .fullScreenCover(isPresented: $plusButtonTap) {
+                RoomView(viewModel: CreateRoomViewModel())
             }
         }
+       
     }
 }

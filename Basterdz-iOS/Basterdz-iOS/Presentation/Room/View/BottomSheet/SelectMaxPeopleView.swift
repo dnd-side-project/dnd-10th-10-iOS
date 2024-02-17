@@ -9,36 +9,43 @@ import SwiftUI
 
 struct SelectMaxPeopleView: View {
     
-    @StateObject var viewModel: RoomViewModel
+    @StateObject var viewModel: CreateRoomViewModel
     @Binding var showModal: Bool
     
     var columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
     
-    
     var body: some View {
-        VStack(spacing: 16){
+        VStack(spacing: 16) {
             Text("참여인원을 설정해주세요.")
                 .font(.pretendardB(16))
                 .foregroundStyle(Color(.mainBlack))
                 .padding(20)
             LazyVGrid(columns: columns) {
                 ForEach(1..<7) { item in
-                    BasterdzCommonButton(title: "\(item)인", action: {
-                        viewModel.roomEntity.maxPeople = item
-                        showModal.toggle()
-                    })
+                    BasterdzCommonButton(
+                        title: "\(item)인",
+                        action: {
+                            viewModel.roomEntity.maxPeople = item
+                        }, 
+                        isActive: true
+                    )
                 }
             }
             .padding(.horizontal, 16)
             
             Spacer()
             HStack {
-                BasterdzCommonButton(title: "닫기", action: {
+                BasterdzBorderButton(title: "닫기", action: {
                     showModal.toggle()
                 })
-                BasterdzCommonButton(title: "완료", style: .red, action: {
+                BasterdzCommonButton(
+                    title: "완료",
+                    style: .red,
+                    action: {
                     showModal.toggle()
-                })
+                    },
+                    isActive: true
+                )
             }
             .padding(20)
         }

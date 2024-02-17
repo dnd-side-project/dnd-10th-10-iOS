@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		772025572B79202F00439CFD /* EnterInviteCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772025562B79202F00439CFD /* EnterInviteCodeView.swift */; };
+		7720255B2B79F3C000439CFD /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7720255A2B79F3C000439CFD /* String+.swift */; };
+		779677572B739B72007315E8 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 779677562B739B72007315E8 /* .swiftlint.yml */; };
+		779677592B73A54D007315E8 /* BasterdzImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779677582B73A54D007315E8 /* BasterdzImage.swift */; };
 		7798FCF42B6B9C050053A556 /* Basterdz_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FCF32B6B9C050053A556 /* Basterdz_iOSApp.swift */; };
 		7798FCF62B6B9C050053A556 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FCF52B6B9C050053A556 /* HomeView.swift */; };
 		7798FCF82B6B9C0E0053A556 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7798FCF72B6B9C0E0053A556 /* Assets.xcassets */; };
@@ -26,7 +30,7 @@
 		7798FD712B6BBFCF0053A556 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD702B6BBFCF0053A556 /* LoginViewModel.swift */; };
 		7798FD742B6BBFE30053A556 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD732B6BBFE30053A556 /* LoginCoordinator.swift */; };
 		7798FD762B6BBFF10053A556 /* RoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD752B6BBFF10053A556 /* RoomView.swift */; };
-		7798FD782B6BBFFD0053A556 /* RoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD772B6BBFFD0053A556 /* RoomViewModel.swift */; };
+		7798FD782B6BBFFD0053A556 /* CreateRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD772B6BBFFD0053A556 /* CreateRoomViewModel.swift */; };
 		7798FD7A2B6BC0060053A556 /* RoomCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD792B6BC0060053A556 /* RoomCoordinator.swift */; };
 		7798FD7C2B6BC0120053A556 /* BoosterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD7B2B6BC0120053A556 /* BoosterView.swift */; };
 		7798FD7E2B6BC01E0053A556 /* BoosterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD7D2B6BC01E0053A556 /* BoosterViewModel.swift */; };
@@ -39,8 +43,8 @@
 		7798FD9F2B6CE4FA0053A556 /* BasterdzColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD9E2B6CE4FA0053A556 /* BasterdzColor.swift */; };
 		D64ED50E2B6E1A2900A64D68 /* BasterdzCommonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED50D2B6E1A2900A64D68 /* BasterdzCommonButton.swift */; };
 		D64ED5132B6E22C800A64D68 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED5122B6E22C800A64D68 /* TabView.swift */; };
-		D64ED5192B6E327000A64D68 /* BasterdzCenterTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED5182B6E327000A64D68 /* BasterdzCenterTextField.swift */; };
-		D64ED51B2B6E35AF00A64D68 /* BasterdzTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED51A2B6E35AF00A64D68 /* BasterdzTextView.swift */; };
+		D64ED5192B6E327000A64D68 /* BasterdzCenterTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED5182B6E327000A64D68 /* BasterdzCenterTextEditor.swift */; };
+		D64ED51B2B6E35AF00A64D68 /* BasterdzTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED51A2B6E35AF00A64D68 /* BasterdzTextField.swift */; };
 		D64ED51D2B6E377B00A64D68 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED51C2B6E377B00A64D68 /* View+.swift */; };
 		D64ED51F2B6E3DB500A64D68 /* BasterdzOptionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED51E2B6E3DB500A64D68 /* BasterdzOptionButton.swift */; };
 		D64ED5212B6E408300A64D68 /* RoomEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED5202B6E408300A64D68 /* RoomEntity.swift */; };
@@ -49,12 +53,17 @@
 		D66E9DEA2B70A79700B8ED92 /* Image+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66E9DE92B70A79700B8ED92 /* Image+.swift */; };
 		D66E9DFF2B70D2F500B8ED92 /* BasterdzNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66E9DFE2B70D2F500B8ED92 /* BasterdzNavigationBar.swift */; };
 		D66E9E192B720FF700B8ED92 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66E9E182B720FF700B8ED92 /* String+.swift */; };
+		D67157482B80B339002BA1E5 /* ShowInviteCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67157472B80B339002BA1E5 /* ShowInviteCodeView.swift */; };
 		D6E7378D2B72719F005FB8CA /* EnterRoomDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E7378B2B72719F005FB8CA /* EnterRoomDescriptionView.swift */; };
 		D6E7378E2B72719F005FB8CA /* EnterRoomNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E7378C2B72719F005FB8CA /* EnterRoomNameView.swift */; };
 		D6E737932B7271AC005FB8CA /* SelectRestrictAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E737902B7271AB005FB8CA /* SelectRestrictAppView.swift */; };
 		D6E737942B7271AC005FB8CA /* SelectMaxPeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E737912B7271AB005FB8CA /* SelectMaxPeopleView.swift */; };
 		D6E737952B7271AC005FB8CA /* SelectRestrictTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E737922B7271AB005FB8CA /* SelectRestrictTimeView.swift */; };
 		D6E7379A2B727A12005FB8CA /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E737992B727A12005FB8CA /* MyPageView.swift */; };
+		D6F139C12B8083BE007EF029 /* ViewModelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F139C02B8083BE007EF029 /* ViewModelable.swift */; };
+		D6F139C42B808405007EF029 /* Redueable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F139C32B808405007EF029 /* Redueable.swift */; };
+		D6F139C82B80950D007EF029 /* CreateRoomSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F139C72B80950D007EF029 /* CreateRoomSuccessView.swift */; };
+		D6F139CA2B809B62007EF029 /* BasterdzBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F139C92B809B62007EF029 /* BasterdzBorderButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +84,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		772025562B79202F00439CFD /* EnterInviteCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterInviteCodeView.swift; sourceTree = "<group>"; };
+		7720255A2B79F3C000439CFD /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		779677562B739B72007315E8 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		779677582B73A54D007315E8 /* BasterdzImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzImage.swift; sourceTree = "<group>"; };
 		7798FCF02B6B9C050053A556 /* Basterdz-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Basterdz-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7798FCF32B6B9C050053A556 /* Basterdz_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basterdz_iOSApp.swift; sourceTree = "<group>"; };
 		7798FCF52B6B9C050053A556 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -104,7 +117,7 @@
 		7798FD702B6BBFCF0053A556 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		7798FD732B6BBFE30053A556 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		7798FD752B6BBFF10053A556 /* RoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomView.swift; sourceTree = "<group>"; };
-		7798FD772B6BBFFD0053A556 /* RoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewModel.swift; sourceTree = "<group>"; };
+		7798FD772B6BBFFD0053A556 /* CreateRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomViewModel.swift; sourceTree = "<group>"; };
 		7798FD792B6BC0060053A556 /* RoomCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCoordinator.swift; sourceTree = "<group>"; };
 		7798FD7B2B6BC0120053A556 /* BoosterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoosterView.swift; sourceTree = "<group>"; };
 		7798FD7D2B6BC01E0053A556 /* BoosterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoosterViewModel.swift; sourceTree = "<group>"; };
@@ -120,8 +133,8 @@
 		7798FD9E2B6CE4FA0053A556 /* BasterdzColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzColor.swift; sourceTree = "<group>"; };
 		D64ED50D2B6E1A2900A64D68 /* BasterdzCommonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzCommonButton.swift; sourceTree = "<group>"; };
 		D64ED5122B6E22C800A64D68 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
-		D64ED5182B6E327000A64D68 /* BasterdzCenterTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzCenterTextField.swift; sourceTree = "<group>"; };
-		D64ED51A2B6E35AF00A64D68 /* BasterdzTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzTextView.swift; sourceTree = "<group>"; };
+		D64ED5182B6E327000A64D68 /* BasterdzCenterTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzCenterTextEditor.swift; sourceTree = "<group>"; };
+		D64ED51A2B6E35AF00A64D68 /* BasterdzTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzTextField.swift; sourceTree = "<group>"; };
 		D64ED51C2B6E377B00A64D68 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 		D64ED51E2B6E3DB500A64D68 /* BasterdzOptionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzOptionButton.swift; sourceTree = "<group>"; };
 		D64ED5202B6E408300A64D68 /* RoomEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomEntity.swift; sourceTree = "<group>"; };
@@ -130,12 +143,17 @@
 		D66E9DE92B70A79700B8ED92 /* Image+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+.swift"; sourceTree = "<group>"; };
 		D66E9DFE2B70D2F500B8ED92 /* BasterdzNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzNavigationBar.swift; sourceTree = "<group>"; };
 		D66E9E182B720FF700B8ED92 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		D67157472B80B339002BA1E5 /* ShowInviteCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowInviteCodeView.swift; sourceTree = "<group>"; };
 		D6E7378B2B72719F005FB8CA /* EnterRoomDescriptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterRoomDescriptionView.swift; sourceTree = "<group>"; };
 		D6E7378C2B72719F005FB8CA /* EnterRoomNameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterRoomNameView.swift; sourceTree = "<group>"; };
 		D6E737902B7271AB005FB8CA /* SelectRestrictAppView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectRestrictAppView.swift; sourceTree = "<group>"; };
 		D6E737912B7271AB005FB8CA /* SelectMaxPeopleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectMaxPeopleView.swift; sourceTree = "<group>"; };
 		D6E737922B7271AB005FB8CA /* SelectRestrictTimeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectRestrictTimeView.swift; sourceTree = "<group>"; };
 		D6E737992B727A12005FB8CA /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
+		D6F139C02B8083BE007EF029 /* ViewModelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelable.swift; sourceTree = "<group>"; };
+		D6F139C32B808405007EF029 /* Redueable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Redueable.swift; sourceTree = "<group>"; };
+		D6F139C72B80950D007EF029 /* CreateRoomSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomSuccessView.swift; sourceTree = "<group>"; };
+		D6F139C92B809B62007EF029 /* BasterdzBorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzBorderButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +185,7 @@
 		7798FCE72B6B9C050053A556 = {
 			isa = PBXGroup;
 			children = (
+				779677562B739B72007315E8 /* .swiftlint.yml */,
 				7798FCF22B6B9C050053A556 /* Basterdz-iOS */,
 				7798FD032B6B9C0F0053A556 /* Basterdz-iOSTests */,
 				7798FD0D2B6B9C0F0053A556 /* Basterdz-iOSUITests */,
@@ -286,6 +305,7 @@
 		7798FD282B6BB10F0053A556 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				D6F139C22B8083C1007EF029 /* Interface */,
 				7798FD852B6BC14C0053A556 /* Coordinator */,
 				7798FD3C2B6BB4520053A556 /* Factory */,
 				7798FD3B2B6BB4420053A556 /* Error */,
@@ -420,7 +440,7 @@
 		7798FD372B6BB3280053A556 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				7798FD772B6BBFFD0053A556 /* RoomViewModel.swift */,
+				7798FD772B6BBFFD0053A556 /* CreateRoomViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -428,9 +448,10 @@
 		7798FD382B6BB32F0053A556 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7798FD752B6BBFF10053A556 /* RoomView.swift */,
 				D6E7378F2B7271AB005FB8CA /* BottomSheet */,
 				D6E7378A2B72719F005FB8CA /* CreateRoom */,
-				7798FD752B6BBFF10053A556 /* RoomView.swift */,
+				772025562B79202F00439CFD /* EnterInviteCodeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -438,9 +459,11 @@
 		7798FD392B6BB4160053A556 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				D66E9DE92B70A79700B8ED92 /* Image+.swift */,
 				D64ED51C2B6E377B00A64D68 /* View+.swift */,
 				7798FD932B6CA97A0053A556 /* ShapeStyle+.swift */,
 				D66E9E182B720FF700B8ED92 /* String+.swift */,
+				7720255A2B79F3C000439CFD /* String+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -450,6 +473,7 @@
 			children = (
 				7798FD9E2B6CE4FA0053A556 /* BasterdzColor.swift */,
 				D66E9DE72B70A75E00B8ED92 /* RestrictApp.swift */,
+				779677582B73A54D007315E8 /* BasterdzImage.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -586,7 +610,6 @@
 			children = (
 				D64ED50C2B6E1A1200A64D68 /* Component */,
 				7798FD562B6BBEBE0053A556 /* Font+.swift */,
-				D66E9DE92B70A79700B8ED92 /* Image+.swift */,
 			);
 			path = DesignSystem;
 			sourceTree = "<group>";
@@ -603,11 +626,12 @@
 			isa = PBXGroup;
 			children = (
 				D64ED50D2B6E1A2900A64D68 /* BasterdzCommonButton.swift */,
-				D64ED5182B6E327000A64D68 /* BasterdzCenterTextField.swift */,
-				D64ED51A2B6E35AF00A64D68 /* BasterdzTextView.swift */,
+				D64ED5182B6E327000A64D68 /* BasterdzCenterTextEditor.swift */,
+				D64ED51A2B6E35AF00A64D68 /* BasterdzTextField.swift */,
 				D64ED51E2B6E3DB500A64D68 /* BasterdzOptionButton.swift */,
 				D64ED5222B6E421E00A64D68 /* BasterdzLargeButton.swift */,
 				D66E9DFE2B70D2F500B8ED92 /* BasterdzNavigationBar.swift */,
+				D6F139C92B809B62007EF029 /* BasterdzBorderButton.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -623,8 +647,10 @@
 		D6E7378A2B72719F005FB8CA /* CreateRoom */ = {
 			isa = PBXGroup;
 			children = (
-				D6E7378B2B72719F005FB8CA /* EnterRoomDescriptionView.swift */,
 				D6E7378C2B72719F005FB8CA /* EnterRoomNameView.swift */,
+				D6E7378B2B72719F005FB8CA /* EnterRoomDescriptionView.swift */,
+				D6F139C72B80950D007EF029 /* CreateRoomSuccessView.swift */,
+				D67157472B80B339002BA1E5 /* ShowInviteCodeView.swift */,
 			);
 			path = CreateRoom;
 			sourceTree = "<group>";
@@ -663,6 +689,15 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		D6F139C22B8083C1007EF029 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				D6F139C02B8083BE007EF029 /* ViewModelable.swift */,
+				D6F139C32B808405007EF029 /* Redueable.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -670,6 +705,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7798FD142B6B9C0F0053A556 /* Build configuration list for PBXNativeTarget "Basterdz-iOS" */;
 			buildPhases = (
+				779677552B7399FD007315E8 /* Run SwiftLint Script */,
 				7798FCEC2B6B9C050053A556 /* Sources */,
 				7798FCED2B6B9C050053A556 /* Frameworks */,
 				7798FCEE2B6B9C050053A556 /* Resources */,
@@ -776,6 +812,7 @@
 				7798FD442B6BB8C90053A556 /* Color.xcassets in Resources */,
 				7798FD4A2B6BBA430053A556 /* Pretendard-Regular.otf in Resources */,
 				7798FD482B6BBA390053A556 /* Pretendard-Medium.otf in Resources */,
+				779677572B739B72007315E8 /* .swiftlint.yml in Resources */,
 				7798FD462B6BBA2B0053A556 /* Pretendard-Bold.otf in Resources */,
 				7798FCFB2B6B9C0E0053A556 /* Preview Assets.xcassets in Resources */,
 				7798FCF82B6B9C0E0053A556 /* Assets.xcassets in Resources */,
@@ -798,6 +835,28 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		779677552B7399FD007315E8 /* Run SwiftLint Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif test -d \"/opt/homebrew/bin/\"; then\n  PATH=\"/opt/homebrew/bin/:${PATH}\"\nfi\n\nexport PATH\n\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7798FCEC2B6B9C050053A556 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -810,14 +869,17 @@
 				7798FD842B6BC1380053A556 /* HomeCoordinator.swift in Sources */,
 				D6E737952B7271AC005FB8CA /* SelectRestrictTimeView.swift in Sources */,
 				D64ED51D2B6E377B00A64D68 /* View+.swift in Sources */,
+				772025572B79202F00439CFD /* EnterInviteCodeView.swift in Sources */,
+				D6F139CA2B809B62007EF029 /* BasterdzBorderButton.swift in Sources */,
 				7798FD822B6BC12B0053A556 /* HomeVIewModel.swift in Sources */,
 				7798FD6F2B6BBFBD0053A556 /* LoginView.swift in Sources */,
 				D66E9DEA2B70A79700B8ED92 /* Image+.swift in Sources */,
 				7798FD872B6BC15D0053A556 /* AppCoordinator.swift in Sources */,
 				D6E737942B7271AC005FB8CA /* SelectMaxPeopleView.swift in Sources */,
 				D66E9DE82B70A75E00B8ED92 /* RestrictApp.swift in Sources */,
-				D64ED51B2B6E35AF00A64D68 /* BasterdzTextView.swift in Sources */,
+				D64ED51B2B6E35AF00A64D68 /* BasterdzTextField.swift in Sources */,
 				D6E7378E2B72719F005FB8CA /* EnterRoomNameView.swift in Sources */,
+				D64ED51B2B6E35AF00A64D68 /* BasterdzTextField.swift in Sources */,
 				D64ED50E2B6E1A2900A64D68 /* BasterdzCommonButton.swift in Sources */,
 				D64ED51F2B6E3DB500A64D68 /* BasterdzOptionButton.swift in Sources */,
 				7798FCF62B6B9C050053A556 /* HomeView.swift in Sources */,
@@ -825,8 +887,11 @@
 				7798FD7E2B6BC01E0053A556 /* BoosterViewModel.swift in Sources */,
 				7798FD552B6BBE9B0053A556 /* network.swift in Sources */,
 				D64ED5232B6E421E00A64D68 /* BasterdzLargeButton.swift in Sources */,
+				D6F139C82B80950D007EF029 /* CreateRoomSuccessView.swift in Sources */,
 				7798FD712B6BBFCF0053A556 /* LoginViewModel.swift in Sources */,
+				779677592B73A54D007315E8 /* BasterdzImage.swift in Sources */,
 				7798FCF42B6B9C050053A556 /* Basterdz_iOSApp.swift in Sources */,
+				D67157482B80B339002BA1E5 /* ShowInviteCodeView.swift in Sources */,
 				D66E9E192B720FF700B8ED92 /* String+.swift in Sources */,
 				7798FD9F2B6CE4FA0053A556 /* BasterdzColor.swift in Sources */,
 				7798FD942B6CA97A0053A556 /* ShapeStyle+.swift in Sources */,
@@ -835,9 +900,12 @@
 				7798FD802B6BC0290053A556 /* BoosterCoordinator.swift in Sources */,
 				7798FD572B6BBEBE0053A556 /* Font+.swift in Sources */,
 				D66E9DFF2B70D2F500B8ED92 /* BasterdzNavigationBar.swift in Sources */,
-				D64ED5192B6E327000A64D68 /* BasterdzCenterTextField.swift in Sources */,
+				D6F139C12B8083BE007EF029 /* ViewModelable.swift in Sources */,
+				D64ED5192B6E327000A64D68 /* BasterdzCenterTextEditor.swift in Sources */,
 				D64ED5132B6E22C800A64D68 /* TabView.swift in Sources */,
-				7798FD782B6BBFFD0053A556 /* RoomViewModel.swift in Sources */,
+				7720255B2B79F3C000439CFD /* String+.swift in Sources */,
+				D6F139C42B808405007EF029 /* Redueable.swift in Sources */,
+				7798FD782B6BBFFD0053A556 /* CreateRoomViewModel.swift in Sources */,
 				7798FD1F2B6BB0570053A556 /* SceneDelegate.swift in Sources */,
 				D64ED5212B6E408300A64D68 /* RoomEntity.swift in Sources */,
 				D6E7379A2B727A12005FB8CA /* MyPageView.swift in Sources */,
@@ -1001,7 +1069,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Basterdz-iOS/Resource/Image\"";
-				DEVELOPMENT_TEAM = 2YJXRFH75A;
+				DEVELOPMENT_TEAM = 397WA8BG8W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Basterdz-iOS/Support/Info.plist";

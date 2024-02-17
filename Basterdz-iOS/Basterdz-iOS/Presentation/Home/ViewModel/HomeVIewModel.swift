@@ -7,8 +7,9 @@
 
 import Foundation
 
-enum HomeFlowPath : String, Hashable{
+enum HomeFlowPath: String, Hashable {
     case plusButton
+    case detail
 }
 
 final class HomeViewModel: ObservableObject {
