@@ -13,7 +13,8 @@ class CreateRoomViewModel: ViewModelable {
     @Published var roomEntity: RoomEntity = RoomEntity()
     @Published var path: [RoomCoordinatorAction] = []
     @Published var roomError: Bool = false
-    @Published var errorMessage = ""
+    @Published var roomNameErrorMessage = ""
+    @Published var goalErrorMessage = ""
     @Published var inviteCode = "YXKRN95"
     
     var isCreateRoomButtonActive: Bool {
@@ -42,15 +43,15 @@ class CreateRoomViewModel: ViewModelable {
             // 방이름
             self.roomError = $0.name.count > 15
             if  $0.name.count > 15 {
-                self.errorMessage = "15자 이하만 입력가능합니다"
+                self.roomNameErrorMessage = "15자 이하만 입력가능합니다"
             } else {
-                self.errorMessage = ""
+                self.roomNameErrorMessage = ""
             }
             // 목표 한마디
             if  $0.goal.count > 20 {
-                self.errorMessage = "20자 이하만 입력가능합니다"
+                self.goalErrorMessage = "20자 이하만 입력가능합니다"
             } else {
-                self.errorMessage = ""
+                self.goalErrorMessage = ""
             }
             
         }.store(in: &store)

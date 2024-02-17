@@ -1,5 +1,5 @@
 //
-//  SelectRestrictTimeView.swift
+//  SelectRestrictTimeBottomView.swift
 //  Basterdz-iOS
 //
 //  Created by 현수빈 on 2/4/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SelectRestrictTimeView: View {
+struct SelectRestrictTimeBottomView: View {
     @StateObject var viewModel: CreateRoomViewModel
     @Binding var showModal: Bool
     
@@ -34,6 +34,7 @@ struct SelectRestrictTimeView: View {
             Spacer()
             HStack {
                 BasterdzBorderButton(title: "닫기", action: {
+                    viewModel.roomEntity.restrictAppTime = 0
                     showModal.toggle()
                 })
                 BasterdzCommonButton(

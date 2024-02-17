@@ -46,7 +46,7 @@ struct CreateRoomSuccessView: View {
                 }
                 .padding(10)
                 .background(Color(.grey6))
-                .clipShape(RoundedRectangle(cornerRadius: 15))
+                .clipShape(RoundedRectangle(cornerRadius: 20))
                 .frame(height: 30)
                 
                 Text("\(viewModel.roomEntity.restrictAppTime)시간")

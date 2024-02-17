@@ -36,13 +36,13 @@ struct EnterRoomNameView: View {
                     placeholder: "방 이름 입력하기", 
                     textError: $viewModel.roomError
                 )
-                if viewModel.errorMessage.isEmpty {
+                if viewModel.roomNameErrorMessage.isEmpty {
                     Text("\(viewModel.roomEntity.name.count)/15자 이내")
                         .font(.pretendardM(14))
                         .foregroundStyle(Color(.grey3))
                         .padding(.trailing, 16)
                 } else {
-                    Text(viewModel.errorMessage)
+                    Text(viewModel.roomNameErrorMessage)
                         .font(.pretendardM(14))
                         .foregroundStyle(Color(.mainRed))
                         .padding(.trailing, 16)
@@ -56,7 +56,7 @@ struct EnterRoomNameView: View {
                 action: {
                     viewModel.reduce(.enterRoomDescriptionButtonTap)
                 },
-                isActive: viewModel.roomEntity.name.isNotEmpty && viewModel.errorMessage.isEmpty
+                isActive: viewModel.roomEntity.name.isNotEmpty && viewModel.roomNameErrorMessage.isEmpty
             )
             .padding(20)
         }

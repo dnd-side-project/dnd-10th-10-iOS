@@ -1,41 +1,37 @@
 //
-//  SelectMaxPeopleView.swift
+//  SelectEndDateBottomView.swift
 //  Basterdz-iOS
 //
-//  Created by 현수빈 on 2/4/24.
+//  Created by 현수빈 on 2/17/24.
 //
 
 import SwiftUI
 
-struct SelectMaxPeopleView: View {
+struct SelectEndDateBottomView: View {
     
     @StateObject var viewModel: CreateRoomViewModel
     @Binding var showModal: Bool
     
     var columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
-    
     var body: some View {
         VStack(spacing: 16) {
-            Text("참여인원을 설정해주세요.")
+            Text("디데이 기간을 설정하세요")
                 .font(.pretendardB(16))
                 .foregroundStyle(Color(.mainBlack))
                 .padding(20)
-            LazyVGrid(columns: columns) {
-                ForEach(1..<7) { item in
-                    BasterdzCommonButton(
-                        title: "\(item)인",
-                        action: {
-                            viewModel.roomEntity.maxPeople = item
-                        }, 
-                        isActive: true
-                    )
-                }
-            }
-            .padding(.horizontal, 16)
+           
+            DatePicker(
+                selection: $viewModel.roomEntity.endTimeStamp,
+                in: Date()...,
+                displayedComponents: .date,
+                label: {EmptyView()}
+            )
+            .datePickerStyle(.wheel)
             
             Spacer()
             HStack {
                 BasterdzBorderButton(title: "닫기", action: {
+                    viewModel.roomEntity.endTimeStamp = Date()
                     showModal.toggle()
                 })
                 BasterdzCommonButton(

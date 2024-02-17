@@ -19,7 +19,7 @@ struct EnterRoomDescriptionView: View {
     }
     
     enum BottomSheetContent {
-        case restrictApp, restrictTime, maxPeople
+        case restrictApp, endTime, restrictTime, maxPeople
     }
     
     init(viewModel: CreateRoomViewModel) {
@@ -49,7 +49,7 @@ struct EnterRoomDescriptionView: View {
                     focusValue: .goal,
                     placeholder: "도전하는 목표를 작성해보세요",
                     trailingText: "\(viewModel.roomEntity.goal.count)/20",
-                    errorMessage: viewModel.errorMessage
+                    errorMessage: viewModel.goalErrorMessage
                 )
                 .focused($focusState, equals: .goal)
                 
@@ -59,29 +59,32 @@ struct EnterRoomDescriptionView: View {
                 BasterdzOptionButton(
                     isActive: viewModel.roomEntity.restrictAppType == .none,
                     action: {
-                        showModal.toggle()
                         showContent = .restrictApp
+                        showModal = true
                     },
                     label: viewModel.roomEntity.restrictAppType.rawValue
                 )
                 .focused($focusState, equals: .restrictApp)
                 
                 // MARK: 3번 스크린 타임 제한 기간 설정
-                HStack {
+                VStack {
                     numberView(
                         number: 3,
                         title: "스크린 타임 제한 기간 설정",
                         isActive: viewModel.roomEntity.endTimeStamp > Date()
                     )
-                    DatePicker(
-                        selection: $viewModel.roomEntity.endTimeStamp,
-                        in: Date()...,
-                        displayedComponents: .date,
-                        label: {EmptyView()}
+                    BasterdzOptionButton(
+                        isActive: viewModel.roomEntity.endTimeStamp > Date(),
+                        action: {
+                            showContent = .endTime
+                            showModal = true
+                        },
+                        label: viewModel.roomEntity.endTimeStamp > Date() ? viewModel.roomEntity.endTimeStamp.toDateFormmated : "종료일을 설정해보세요",
+                        image: BasterdzImage.calendar.rawValue
                     )
-                    .frame(height: 50)
+                    .focused($focusState, equals: .restrictTime)
+                    
                 }
-                .focused($focusState, equals: .restrictTime)
                 
                 // MARK: 4번 하루 총 제한 시간
                 HStack {
@@ -93,8 +96,8 @@ struct EnterRoomDescriptionView: View {
                     BasterdzOptionButton(
                         isActive: viewModel.roomEntity.restrictAppTime == 0,
                         action: {
-                            showModal.toggle()
                             showContent = .restrictTime
+                            showModal = true
                         },
                         label: viewModel.roomEntity.restrictAppTime == 0 ? "":
                             "\(viewModel.roomEntity.restrictAppTime)시간"
@@ -114,8 +117,8 @@ struct EnterRoomDescriptionView: View {
                     BasterdzOptionButton(
                         isActive: viewModel.roomEntity.maxPeople == 0,
                         action: {
-                            showModal.toggle()
                             showContent = .maxPeople
+                            showModal = true
                         }, label: viewModel.roomEntity.maxPeople == 0 ? "" :
                             "\(viewModel.roomEntity.maxPeople)명"
                     )
@@ -147,11 +150,13 @@ struct EnterRoomDescriptionView: View {
     @ViewBuilder func showModalContent() -> some View {
         switch showContent {
         case .restrictApp:
-            SelectRestrictAppView(viewModel: viewModel, showModal: $showModal)
+            SelectRestrictAppBottomView(viewModel: viewModel, showModal: $showModal)
         case .restrictTime:
-            SelectRestrictTimeView(viewModel: viewModel, showModal: $showModal)
+            SelectRestrictTimeBottomView(viewModel: viewModel, showModal: $showModal)
         case .maxPeople:
-            SelectMaxPeopleView(viewModel: viewModel, showModal: $showModal)
+            SelectMaxPeopleBottomView(viewModel: viewModel, showModal: $showModal)
+        case .endTime:
+            SelectEndDateBottomView(viewModel: viewModel, showModal: $showModal)
         }
     }
     
@@ -197,4 +202,8 @@ struct EnterRoomDescriptionView: View {
             Spacer()
         }
     }
+}
+
+#Preview {
+    EnterRoomDescriptionView(viewModel: CreateRoomViewModel())
 }
