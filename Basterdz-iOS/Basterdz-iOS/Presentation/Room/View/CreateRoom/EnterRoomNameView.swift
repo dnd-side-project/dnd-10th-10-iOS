@@ -8,11 +8,10 @@
 import SwiftUI
 
 struct EnterRoomNameView: View {
+    @StateObject var viewModel: EnterRoomNameViewModel
     
-    @ObservedObject var viewModel: CreateRoomViewModel
-    
-    init(viewModel: CreateRoomViewModel) {
-        self._viewModel = ObservedObject(wrappedValue: viewModel)
+    init(viewModel: EnterRoomNameViewModel) {
+        self._viewModel = .init(wrappedValue: viewModel)
     }
     
     var body: some View {
@@ -20,7 +19,7 @@ struct EnterRoomNameView: View {
             BasterdzNavigationBar(
                 centerTitle: "방 만들기",
                 leadingItem: (.arrow_back, {
-                    viewModel.path.removeLast()
+                    viewModel.coordinator?.path.removeLast()
                 })
             )
             Text("도파민 탈출을 위한\n 방 이름을 만들어주세요!"
@@ -32,12 +31,12 @@ struct EnterRoomNameView: View {
                 .multilineTextAlignment(.center)
             VStack(alignment: .trailing, spacing: 12) {
                 BasterdzCenterTextEditor(
-                    text: $viewModel.roomEntity.name,
-                    placeholder: "방 이름 입력하기", 
-                    textError: $viewModel.roomError
+                    text: $viewModel.roomName,
+                    placeholder: "방 이름 입력하기",
+                    textError: viewModel.roomNameErrorMessage.isNotEmpty
                 )
                 if viewModel.roomNameErrorMessage.isEmpty {
-                    Text("\(viewModel.roomEntity.name.count)/15자 이내")
+                    Text("\(viewModel.roomName.count)/\(BasterdzInt.roomNmaeCount.rawValue)자 이내")
                         .font(.pretendardM(14))
                         .foregroundStyle(Color(.grey3))
                         .padding(.trailing, 16)
@@ -54,9 +53,9 @@ struct EnterRoomNameView: View {
                 title: "다음으로",
                 style: .red,
                 action: {
-                    viewModel.reduce(.enterRoomDescriptionButtonTap)
+                    viewModel.reduce(.bottomButtonTap)
                 },
-                isActive: viewModel.roomEntity.name.isNotEmpty && viewModel.roomNameErrorMessage.isEmpty
+                isActive: viewModel.roomName.isNotEmpty && viewModel.roomNameErrorMessage.isEmpty
             )
             .padding(20)
         }

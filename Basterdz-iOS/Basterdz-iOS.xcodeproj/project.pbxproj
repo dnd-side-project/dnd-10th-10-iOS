@@ -56,6 +56,12 @@
 		D67157482B80B339002BA1E5 /* ShowInviteCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67157472B80B339002BA1E5 /* ShowInviteCodeView.swift */; };
 		D671574C2B80C2CB002BA1E5 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671574B2B80C2CB002BA1E5 /* Date+.swift */; };
 		D671574E2B80C30D002BA1E5 /* SelectEndDateBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671574D2B80C30D002BA1E5 /* SelectEndDateBottomView.swift */; };
+		D6CE28662B80F92300E23264 /* EnterRoomNameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CE28652B80F92300E23264 /* EnterRoomNameViewModel.swift */; };
+		D6CE28682B80F96A00E23264 /* EnterInviteCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CE28672B80F96A00E23264 /* EnterInviteCodeViewModel.swift */; };
+		D6CE286A2B80FFEE00E23264 /* AfterCreateRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CE28692B80FFEE00E23264 /* AfterCreateRoomViewModel.swift */; };
+		D6CE286D2B8102A100E23264 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CE286C2B8102A100E23264 /* BaseCoordinator.swift */; };
+		D6CE286F2B81041900E23264 /* BasterdzInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CE286E2B81041900E23264 /* BasterdzInt.swift */; };
+		D6CE28712B81074200E23264 /* UIApplication+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CE28702B81074200E23264 /* UIApplication+.swift */; };
 		D6E7378D2B72719F005FB8CA /* EnterRoomDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E7378B2B72719F005FB8CA /* EnterRoomDescriptionView.swift */; };
 		D6E7378E2B72719F005FB8CA /* EnterRoomNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E7378C2B72719F005FB8CA /* EnterRoomNameView.swift */; };
 		D6E737932B7271AC005FB8CA /* SelectRestrictAppBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E737902B7271AB005FB8CA /* SelectRestrictAppBottomView.swift */; };
@@ -148,6 +154,12 @@
 		D67157472B80B339002BA1E5 /* ShowInviteCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowInviteCodeView.swift; sourceTree = "<group>"; };
 		D671574B2B80C2CB002BA1E5 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		D671574D2B80C30D002BA1E5 /* SelectEndDateBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectEndDateBottomView.swift; sourceTree = "<group>"; };
+		D6CE28652B80F92300E23264 /* EnterRoomNameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterRoomNameViewModel.swift; sourceTree = "<group>"; };
+		D6CE28672B80F96A00E23264 /* EnterInviteCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterInviteCodeViewModel.swift; sourceTree = "<group>"; };
+		D6CE28692B80FFEE00E23264 /* AfterCreateRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterCreateRoomViewModel.swift; sourceTree = "<group>"; };
+		D6CE286C2B8102A100E23264 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		D6CE286E2B81041900E23264 /* BasterdzInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzInt.swift; sourceTree = "<group>"; };
+		D6CE28702B81074200E23264 /* UIApplication+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+.swift"; sourceTree = "<group>"; };
 		D6E7378B2B72719F005FB8CA /* EnterRoomDescriptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterRoomDescriptionView.swift; sourceTree = "<group>"; };
 		D6E7378C2B72719F005FB8CA /* EnterRoomNameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterRoomNameView.swift; sourceTree = "<group>"; };
 		D6E737902B7271AB005FB8CA /* SelectRestrictAppBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectRestrictAppBottomView.swift; sourceTree = "<group>"; };
@@ -444,7 +456,8 @@
 		7798FD372B6BB3280053A556 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				7798FD772B6BBFFD0053A556 /* CreateRoomViewModel.swift */,
+				D6CE286B2B81014600E23264 /* CreateRoom */,
+				D6CE28672B80F96A00E23264 /* EnterInviteCodeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -469,6 +482,7 @@
 				D66E9E182B720FF700B8ED92 /* String+.swift */,
 				7720255A2B79F3C000439CFD /* String+.swift */,
 				D671574B2B80C2CB002BA1E5 /* Date+.swift */,
+				D6CE28702B81074200E23264 /* UIApplication+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -479,6 +493,7 @@
 				7798FD9E2B6CE4FA0053A556 /* BasterdzColor.swift */,
 				D66E9DE72B70A75E00B8ED92 /* RestrictApp.swift */,
 				779677582B73A54D007315E8 /* BasterdzImage.swift */,
+				D6CE286E2B81041900E23264 /* BasterdzInt.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -623,6 +638,7 @@
 			isa = PBXGroup;
 			children = (
 				7798FD862B6BC15D0053A556 /* AppCoordinator.swift */,
+				D6CE286C2B8102A100E23264 /* BaseCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -647,6 +663,16 @@
 				D64ED5122B6E22C800A64D68 /* TabView.swift */,
 			);
 			path = Tab;
+			sourceTree = "<group>";
+		};
+		D6CE286B2B81014600E23264 /* CreateRoom */ = {
+			isa = PBXGroup;
+			children = (
+				D6CE28652B80F92300E23264 /* EnterRoomNameViewModel.swift */,
+				7798FD772B6BBFFD0053A556 /* CreateRoomViewModel.swift */,
+				D6CE28692B80FFEE00E23264 /* AfterCreateRoomViewModel.swift */,
+			);
+			path = CreateRoom;
 			sourceTree = "<group>";
 		};
 		D6E7378A2B72719F005FB8CA /* CreateRoom */ = {
@@ -876,8 +902,10 @@
 				D6E737952B7271AC005FB8CA /* SelectRestrictTimeBottomView.swift in Sources */,
 				D64ED51D2B6E377B00A64D68 /* View+.swift in Sources */,
 				772025572B79202F00439CFD /* EnterInviteCodeView.swift in Sources */,
+				D6CE286D2B8102A100E23264 /* BaseCoordinator.swift in Sources */,
 				D6F139CA2B809B62007EF029 /* BasterdzBorderButton.swift in Sources */,
 				7798FD822B6BC12B0053A556 /* HomeVIewModel.swift in Sources */,
+				D6CE28682B80F96A00E23264 /* EnterInviteCodeViewModel.swift in Sources */,
 				7798FD6F2B6BBFBD0053A556 /* LoginView.swift in Sources */,
 				D66E9DEA2B70A79700B8ED92 /* Image+.swift in Sources */,
 				7798FD872B6BC15D0053A556 /* AppCoordinator.swift in Sources */,
@@ -896,12 +924,16 @@
 				7798FD552B6BBE9B0053A556 /* network.swift in Sources */,
 				D64ED5232B6E421E00A64D68 /* BasterdzLargeButton.swift in Sources */,
 				D6F139C82B80950D007EF029 /* CreateRoomSuccessView.swift in Sources */,
+				D6CE28712B81074200E23264 /* UIApplication+.swift in Sources */,
 				7798FD712B6BBFCF0053A556 /* LoginViewModel.swift in Sources */,
 				779677592B73A54D007315E8 /* BasterdzImage.swift in Sources */,
 				7798FCF42B6B9C050053A556 /* Basterdz_iOSApp.swift in Sources */,
+				D6CE28662B80F92300E23264 /* EnterRoomNameViewModel.swift in Sources */,
 				D67157482B80B339002BA1E5 /* ShowInviteCodeView.swift in Sources */,
 				D66E9E192B720FF700B8ED92 /* String+.swift in Sources */,
+				D6CE286A2B80FFEE00E23264 /* AfterCreateRoomViewModel.swift in Sources */,
 				7798FD9F2B6CE4FA0053A556 /* BasterdzColor.swift in Sources */,
+				D6CE286F2B81041900E23264 /* BasterdzInt.swift in Sources */,
 				7798FD942B6CA97A0053A556 /* ShapeStyle+.swift in Sources */,
 				7798FD742B6BBFE30053A556 /* LoginCoordinator.swift in Sources */,
 				7798FD762B6BBFF10053A556 /* RoomView.swift in Sources */,
@@ -1074,10 +1106,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Basterdz-iOS/Basterdz-iOS.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Basterdz-iOS/Resource/Image\"";
-				DEVELOPMENT_TEAM = 397WA8BG8W;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 397WA8BG8W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Basterdz-iOS/Support/Info.plist";
@@ -1093,6 +1127,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.basterdz.basterdz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Basterdz-Debug";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1106,10 +1141,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Basterdz-iOS/Basterdz-iOS.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Basterdz-iOS/Resource/Image\"";
-				DEVELOPMENT_TEAM = 2YJXRFH75A;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 397WA8BG8W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Basterdz-iOS/Support/Info.plist";
@@ -1125,6 +1162,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.basterdz.basterdz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Basterdz-Debug";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

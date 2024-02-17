@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct RoomEntity {
+struct RoomEntity: Hashable {
     var name: String = ""
     var goal: String = ""
     var restrictAppType: RestrictApp = .none
     var restrictAppTime: Int = 0
-    var endTimeStamp: Date = Date()
+    var period: Int = 0
     var maxPeople: Int = 0
 }

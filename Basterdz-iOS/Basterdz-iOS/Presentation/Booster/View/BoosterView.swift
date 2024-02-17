@@ -18,8 +18,9 @@ struct BoosterView: View {
                 )
                 Spacer()
             }
-        }.navigationDestination(for: BoosterFlowPath.self) { _ in
-            EmptyView()
+            .navigationDestination(for: BoosterFlowPath.self) { _ in
+                EmptyView()
+            }
         }
     }
 }

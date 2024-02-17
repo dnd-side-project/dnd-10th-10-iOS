@@ -33,7 +33,7 @@ struct HomeView: View {
                 }
             }
             .fullScreenCover(isPresented: $plusButtonTap) {
-                RoomView(viewModel: CreateRoomViewModel())
+                RoomView(coordinator: RoomCoordinator())
             }
         }
        

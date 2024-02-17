@@ -20,18 +20,18 @@ struct SelectEndDateBottomView: View {
                 .foregroundStyle(Color(.mainBlack))
                 .padding(20)
            
-            DatePicker(
-                selection: $viewModel.roomEntity.endTimeStamp,
-                in: Date()...,
-                displayedComponents: .date,
-                label: {EmptyView()}
-            )
-            .datePickerStyle(.wheel)
+            Picker("", selection: $viewModel.roomEntity.period) {
+                ForEach(1...31, id: \.self) {
+                     Text("\($0)일")
+                   }
+                 }
+                 .pickerStyle(.wheel)
+                 .padding()
             
             Spacer()
             HStack {
                 BasterdzBorderButton(title: "닫기", action: {
-                    viewModel.roomEntity.endTimeStamp = Date()
+                    viewModel.roomEntity.period = 0
                     showModal.toggle()
                 })
                 BasterdzCommonButton(

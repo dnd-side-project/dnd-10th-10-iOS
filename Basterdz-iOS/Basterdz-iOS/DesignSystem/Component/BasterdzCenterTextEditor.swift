@@ -11,20 +11,20 @@ struct BasterdzCenterTextEditor: View {
     
     @Binding var text: String
     private let placeholder: String
-    @Binding var textError: Bool
+    private var textError: Bool
     
     init(
         text: Binding<String>,
         placeholder: String,
-        textError: Binding<Bool>
+        textError: Bool
     ) {
         self._text = text
         self.placeholder = placeholder
-        self._textError = textError
+        self.textError = textError
     }
     
     var body: some View {
-        TextEditor(text: $text)
+        TextField("", text: $text)
             .autocorrectionDisabled()
             .font(.pretendardB(20))
             .foregroundStyle(

@@ -9,13 +9,13 @@ import Foundation
 import SwiftUI
 
 struct ShowInviteCodeView: View {
-    @StateObject var viewModel: CreateRoomViewModel
+    @StateObject var viewModel: AfterCreateRoomViewModel
     
     var body: some View {
         VStack {
             BasterdzNavigationBar(
                 leadingItem: (.arrow_back, {
-                    viewModel.path.removeLast()
+                    viewModel.coordinator?.path.removeLast()
                 })
             )
             .padding(.bottom, 50)

@@ -39,7 +39,6 @@ struct BasterdzOptionButton<T: Hashable>: View {
                 Image(image, bundle: nil)
                     .resizable()
                     .scaledToFit()
-                    .foregroundStyle(Color(.grey4))
                     .frame(width: 14, height: 14)
             }.padding()
         })

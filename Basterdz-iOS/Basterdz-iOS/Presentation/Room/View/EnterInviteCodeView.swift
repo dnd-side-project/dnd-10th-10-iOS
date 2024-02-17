@@ -9,19 +9,19 @@ import SwiftUI
 
 struct EnterInviteCodeView: View {
     
-    @ObservedObject private var viewModel: CreateRoomViewModel
+//    @ObservedObject private var viewModel: CreateRoomViewModel
     @State private var inviteCode: String = ""
     @FocusState private var isFocused: Bool
     
-    init(viewModel: CreateRoomViewModel) {
-        self._viewModel = ObservedObject(wrappedValue: viewModel)
-    }
+//    init(viewModel: CreateRoomViewModel) {
+//        self._viewModel = ObservedObject(wrappedValue: viewModel)
+//    }
     
     var body: some View {
         VStack {
             BasterdzNavigationBar(
                 leadingItem: (.arrow_back, {
-                    viewModel.path.removeLast()
+//                    viewModel.path.removeLast()
                 })
             )
             .padding(.bottom, 50)
@@ -60,8 +60,8 @@ struct EnterInviteCodeView: View {
     }
 }
 
-struct EnterView_Previews: PreviewProvider {
-    static var previews: some View {
-        EnterInviteCodeView(viewModel: CreateRoomViewModel())
-    }
-}
+//struct EnterView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        EnterInviteCodeView(viewModel: CreateRoomViewModel())
+//    }
+//}

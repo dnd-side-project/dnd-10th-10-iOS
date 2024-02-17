@@ -24,7 +24,6 @@ struct EnterRoomDescriptionView: View {
     
     init(viewModel: CreateRoomViewModel) {
         self.viewModel = viewModel
-        self.focusState = .goal
     }
     
     var body: some View {
@@ -32,7 +31,7 @@ struct EnterRoomDescriptionView: View {
             BasterdzNavigationBar(
                 centerTitle: "방만들기",
                 leadingItem: (BasterdzImage.arrow_back, {
-                    viewModel.path.removeLast()
+                    viewModel.coordinator?.pop()
                 })
             )
             VStack(spacing: 16) {
@@ -44,7 +43,7 @@ struct EnterRoomDescriptionView: View {
                 )
                 BasterdzTextField(
                     text: $viewModel.roomEntity.goal,
-                    isActive: focusState != .goal && viewModel.roomEntity.goal.isNotEmpty,
+                    isActive: focusState != .goal && viewModel.roomEntity.goal.isEmpty,
                     isFocused: $focusState,
                     focusValue: .goal,
                     placeholder: "도전하는 목표를 작성해보세요",
@@ -71,15 +70,15 @@ struct EnterRoomDescriptionView: View {
                     numberView(
                         number: 3,
                         title: "스크린 타임 제한 기간 설정",
-                        isActive: viewModel.roomEntity.endTimeStamp > Date()
+                        isActive: viewModel.roomEntity.period != 0
                     )
                     BasterdzOptionButton(
-                        isActive: viewModel.roomEntity.endTimeStamp > Date(),
+                        isActive: viewModel.roomEntity.period == 0,
                         action: {
                             showContent = .endTime
                             showModal = true
                         },
-                        label: viewModel.roomEntity.endTimeStamp > Date() ? viewModel.roomEntity.endTimeStamp.toDateFormmated : "종료일을 설정해보세요",
+                        label:  viewModel.roomEntity.period != 0  ? "\(viewModel.roomEntity.period)일" : "디데이 기간을 설정해보세요",
                         image: BasterdzImage.calendar.rawValue
                     )
                     .focused($focusState, equals: .restrictTime)
@@ -132,7 +131,7 @@ struct EnterRoomDescriptionView: View {
                     title: "방 생성하기",
                     style: .red,
                     action: {
-                        viewModel.reduce(.roomDescriptionButtonTap)
+                        viewModel.reduce(.bottomButtonTap)
                     },
                     isActive: viewModel.isCreateRoomButtonActive
                 )
@@ -144,6 +143,10 @@ struct EnterRoomDescriptionView: View {
                     [.height(UIScreen.main.bounds.height * 0.5)]
                 )
         })
+        .onAppear {
+            focusState = .goal
+        }
+        .hideKeyboardOnTapBackground()
     }
     
     // modal 보여주는 뷰

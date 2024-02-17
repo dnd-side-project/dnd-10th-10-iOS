@@ -8,10 +8,15 @@
 import SwiftUI
 
 struct CreateRoomSuccessView: View {
-    @StateObject var viewModel: CreateRoomViewModel
+    @StateObject var viewModel: AfterCreateRoomViewModel
     
     var body: some View {
         VStack {
+            BasterdzNavigationBar(
+                leadingItem: (.arrow_back, {
+                    viewModel.coordinator?.path.removeLast()
+                })
+            )
             Spacer()
             Text("새로운 방이 생성되었어요!"
                 .applyVariousFont(
@@ -20,18 +25,22 @@ struct CreateRoomSuccessView: View {
             )
             .font(.pretendardB(20))
             .foregroundStyle(Color(.white))
+            .padding(.bottom, 35)
             
             Image.init(BasterdzImage.createRoomSuccess)
                 .resizable()
                 .scaledToFit()
                 .padding(.horizontal, 80)
+                .padding(.bottom, 45)
             
             Text(viewModel.roomEntity.name)
                 .font(.pretendardM(24))
                 .foregroundStyle(Color(.white))
+                .padding(.bottom, 6)
             Text(viewModel.roomEntity.goal)
                 .font(.pretendardM(13))
                 .foregroundStyle(Color(.grey1))
+                .padding(.bottom, 20)
             
             HStack {
                 HStack {

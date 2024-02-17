@@ -40,42 +40,44 @@ struct BasterdzTextField<T: Hashable>: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
-            TextField(placeholder, text: $text)
-                .autocorrectionDisabled()
-                .font(.pretendardB(16))
-                .foregroundStyle(Color(.mainBlack))
-                .focused(isFocused, equals: focusValue)
-                .padding(.horizontal, 16)
-                .frame(height: 56)
-                .background(
-                    isActive ? Color(.white) : Color(.grey1)
+            HStack {
+                TextField(placeholder, text: $text)
+                    .autocorrectionDisabled()
+                    .font(.pretendardB(16))
+                    .foregroundStyle(Color(.mainBlack))
+                    .focused(isFocused, equals: focusValue)
+                    .padding(.horizontal, 16)
+                    .frame(height: 56)
+            }
+            .background(
+                isActive ? Color(.white) : Color(.grey1)
+            )
+            .clipShape(RoundedRectangle(cornerRadius: 15))
+            .roundedBorder(
+                isFocused.wrappedValue == focusValue ?
+                (
+                    errorMessage.isNotEmpty ?
+                    BasterdzColor.mainRed.color :
+                        BasterdzColor.mainBlack.color
                 )
-                .clipShape(RoundedRectangle(cornerRadius: 15))
-                .roundedBorder(
-                    isFocused.wrappedValue == focusValue ?
-                    (
-                        errorMessage.isNotEmpty ?
-                        BasterdzColor.mainRed.color :
-                            BasterdzColor.mainBlack.color
-                    )
-                    :   BasterdzColor.grey3.color
-                )
-                .overlay(alignment: .trailing) {
-                    if let trailingText {
-                        Text(trailingText)
-                            .font(.pretendardM(13))
-                            .foregroundStyle(Color(.mainBlack))
-                            .padding(.horizontal, 16)
-                    }
-                    if let trailingButton {
-                        Button(action: trailingButton.1, label: {
-                            Image(trailingButton.0)
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 16, height: 16)
-                        })
-                    }
+                :   BasterdzColor.grey3.color
+            )
+            .overlay(alignment: .trailing) {
+                if let trailingText {
+                    Text(trailingText)
+                        .font(.pretendardM(13))
+                        .foregroundStyle(Color(.mainBlack))
+                        .padding(.horizontal, 16)
                 }
+                if let trailingButton {
+                    Button(action: trailingButton.1, label: {
+                        Image(trailingButton.0)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 16, height: 16)
+                    })
+                }
+            }
             if errorMessage.isNotEmpty {
                 Text(errorMessage)
                     .font(.pretendardM(13))

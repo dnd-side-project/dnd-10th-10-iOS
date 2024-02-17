@@ -9,17 +9,17 @@ import SwiftUI
 
 struct RoomView: View {
     
-    @StateObject var viewModel: CreateRoomViewModel
+    @StateObject var coordinator: RoomCoordinator
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
-        NavigationStack(path: $viewModel.path) {
+        NavigationStack(path: $coordinator.path) {
             BasterdzNavigationBar(
                 leadingItem: (BasterdzImage.arrow_back, {
                     dismiss()
                 })
             )
-            VStack {
+            VStack(spacing: 32){
                 Text("도파민 탈출, 바스터즈와\n함께 시작해볼까요?"
                     .applyVariousFont(
                         targetStringList: ["바스터즈"],
@@ -35,7 +35,7 @@ struct RoomView: View {
                         title: "방만들기",
                         description: "내가 방을 만들거에요!",
                         action: {
-                            viewModel.reduce(.createRoomButtonTap)
+                            coordinator.push(.createRoom)
                         }
                     )
                     BasterdzLargeButton(
@@ -43,7 +43,7 @@ struct RoomView: View {
                         title: "초대코드",
                         description: "친구 방에 들어갈거에요!",
                         action: {
-                            viewModel.reduce(.enterInviteCodeButtonTap)
+                            coordinator.push(.enterInviteCode)
                         }
                     )
                 }.padding(.horizontal, 16)
@@ -51,7 +51,7 @@ struct RoomView: View {
             }
             .navigationBarBackButtonHidden()
             .navigationDestination(for: RoomCoordinatorAction.self) { path in
-                viewModel.setView(path)
+                coordinator.setView(path)
                     .toolbar(.hidden, for: .navigationBar)
                     .toolbar(.hidden, for: .tabBar)
             }

@@ -24,7 +24,8 @@ struct TabbarView: View {
                 }
                 .font(.headline)
                 .accentColor(BasterdzColor.mainBlack.color)
-        }
+        }  
+//        .padding(EdgeInsets(top: 32, leading: 0, bottom: 0, trailing: 32))
     }
     
     @ViewBuilder func tabItem(image: BasterdzImage, title: String) -> some View {
