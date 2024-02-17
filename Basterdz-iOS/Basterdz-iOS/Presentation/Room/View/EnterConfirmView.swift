@@ -1,5 +1,5 @@
 //
-//  ConfirmPopUpView.swift
+//  EnterConfirmView.swift
 //  Basterdz-iOS
 //
 //  Created by EUNJU on 2/17/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ConfirmPopUpView: View {
+struct EnterConfirmView: View {
     
     var body: some View {
         VStack {
