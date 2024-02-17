@@ -203,7 +203,3 @@ struct EnterRoomDescriptionView: View {
         }
     }
 }
-
-#Preview {
-    EnterRoomDescriptionView(viewModel: CreateRoomViewModel())
-}
