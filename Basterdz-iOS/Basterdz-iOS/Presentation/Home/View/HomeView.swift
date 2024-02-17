@@ -31,15 +31,14 @@ struct HomeView: View {
                     .padding(20)
                 }
             }
-        }.navigationDestination(for: HomeFlowPath.self) { path in
-            switch path {
-            case .plusButton:
-                RoomView(viewModel: RoomViewModel())
+            .navigationDestination(for: HomeFlowPath.self) { path in
+                switch path {
+                case .plusButton:
+                    RoomView(viewModel: RoomViewModel())
+                        .toolbar(.hidden, for: .tabBar)
+                        .navigationBarBackButtonHidden()
+                }
             }
         }
     }
-}
-
-#Preview {
-    HomeView(viewModel: HomeViewModel())
 }
