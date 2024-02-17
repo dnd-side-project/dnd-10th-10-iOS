@@ -15,6 +15,10 @@ enum BasterdzImage: String {
     case home
     case plus
     case booster
+    case x
+    case timer
+    case timeroff
+    case appblocking
     
     // image
     case createRoom
