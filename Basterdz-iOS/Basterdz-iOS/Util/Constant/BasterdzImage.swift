@@ -18,6 +18,11 @@ enum BasterdzImage: String {
     case calendar
     case copy
     
+    case x
+    case timer
+    case timeroff
+    case appblocking
+    
     // image
     case createRoom
     case enterInviteCode
