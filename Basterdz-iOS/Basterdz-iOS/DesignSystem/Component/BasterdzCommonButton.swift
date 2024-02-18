@@ -9,7 +9,7 @@ import SwiftUI
 /// CommonButton, button의 사이즈의 경우 width는 뷰에 따라 달라져서 infinity로 설정
 struct BasterdzCommonButton: View {
     private let title: String
-    private let image: Image?
+    private let image: BasterdzImage?
     private let size: CommonButtonSize
     private let style: CommonButtonColor
     private let isActive: Bool
@@ -17,8 +17,8 @@ struct BasterdzCommonButton: View {
     
     init(
         title: String,
-        image: Image? = .none,
-        size: CommonButtonSize = .large,
+        image: BasterdzImage? = .none,
+        size: CommonButtonSize = .small,
         style: CommonButtonColor = .black,
         action: @escaping () -> Void,
         isActive: Bool = false
@@ -33,11 +33,12 @@ struct BasterdzCommonButton: View {
     
     var body: some View {
         Button(action: {
+            guard isActive else { return }
             action()
         }, label: {
             HStack(spacing: 8) {
                 if let image {
-                    image
+                    Image(image)
                         .resizable()
                         .scaledToFit()
                         .frame(width: 28, height: 28)
@@ -75,12 +76,18 @@ struct CommonButtonStyle: ButtonStyle {
         configuration.label
             .foregroundStyle(
                 isActive ?
-                color.activeForeground :
+                (configuration.isPressed ?
+                 color.activePressedForeground :
+                    color.activeForeground
+                ) :
                     color.inactiveForeground
             )
             .background(
                 isActive ?
-                color.activeBackground :
+                (configuration.isPressed ?
+                 color.activePressedBackground :
+                    color.activeBackground
+                ) :
                     color.inactiveBackground
             )
             .cornerRadius(radius)
@@ -94,6 +101,15 @@ enum CommonButtonColor {
     var inactiveForeground: Color {
         switch self {
         case .black:
+            return BasterdzColor.grey5.color
+        case .red:
+            return BasterdzColor.white.color
+        }
+    }
+    
+    var activePressedForeground: Color {
+        switch self {
+        case .black:
             return BasterdzColor.white.color
         case .red:
             return BasterdzColor.white.color
@@ -103,7 +119,7 @@ enum CommonButtonColor {
     var activeForeground: Color {
         switch self {
         case .black:
-            return BasterdzColor.white.color
+            return BasterdzColor.grey5.color
         case .red:
             return BasterdzColor.white.color
         }
@@ -118,10 +134,19 @@ enum CommonButtonColor {
         }
     }
     
-    var activeBackground: Color {
+    var activePressedBackground: Color {
         switch self {
         case .black:
             return BasterdzColor.mainBlack.color
+        case .red:
+            return BasterdzColor.red2.color
+        }
+    }
+    
+    var activeBackground: Color {
+        switch self {
+        case .black:
+            return BasterdzColor.grey1.color
         case .red:
             return BasterdzColor.mainRed.color
         }

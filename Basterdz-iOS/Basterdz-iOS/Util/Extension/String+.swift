@@ -2,13 +2,15 @@
 //  String+.swift
 //  Basterdz-iOS
 //
-//  Created by EUNJU on 2/12/24.
 //
 
 import SwiftUI
 
 extension String {
-    
+    var isNotEmpty: Bool {
+        return !(self.isEmpty)
+    }
+
     /// 일부 글자만 다른 폰트 적용하는 메서드
     func applyVariousFont(targetStringList: [String], font: Font) -> AttributedString {
         var text = AttributedString(self)

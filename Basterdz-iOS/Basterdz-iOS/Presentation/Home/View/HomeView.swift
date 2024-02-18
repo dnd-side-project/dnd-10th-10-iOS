@@ -11,6 +11,7 @@ struct HomeView: View {
     
     @StateObject var viewModel: HomeViewModel
     @State var currentTab: TabItem = .progressRoom
+    @State private var plusButtonTap = false
     
     @Namespace var animation
     let columns: [GridItem] = Array(repeating: .init(spacing: 16), count: 4)
@@ -30,11 +31,7 @@ struct HomeView: View {
         NavigationStack(path: $viewModel.path) {
             VStack {
                 BasterdzNavigationBar(
-                    leadingItem: (.basterdz, {}),
-                    trailingItemList: [
-                        (.mypage, {
-                        })
-                    ]
+                    leadingItem: (.basterdz, {})
                 )
                 LazyVStack(pinnedViews: [.sectionHeaders], content: {
                     Section {
@@ -44,10 +41,24 @@ struct HomeView: View {
                     }
                 })
                 Spacer()
+                
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        plusButtonTap.toggle()
+                    }, label: {
+                        Image(BasterdzImage.plus)
+                            .resizable()
+                            .frame(width: 48, height: 48)
+                    })
+                    .padding(20)
+                }
             }
-        }.navigationDestination(for: BoosterFlowPath.self) { _ in
-            EmptyView()
+            .fullScreenCover(isPresented: $plusButtonTap) {
+                RoomView(coordinator: RoomCoordinator())
+            }
         }
+       
     }
 }
 

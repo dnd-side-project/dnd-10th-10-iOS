@@ -15,6 +15,9 @@ enum BasterdzImage: String {
     case home
     case plus
     case booster
+    case calendar
+    case copy
+    
     case x
     case timer
     case timeroff
@@ -26,4 +29,10 @@ enum BasterdzImage: String {
     case basterdz
     case inviteCode
     case emptyRoom
+    case createRoomSuccess
+    case instagram
+    case netflix
+    case youtube
+    case tictok
+    case twitter
 }
