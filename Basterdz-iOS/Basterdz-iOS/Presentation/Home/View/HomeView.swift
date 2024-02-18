@@ -45,8 +45,6 @@ struct HomeView: View {
                     }
                     .frame(maxHeight: .infinity)
                 }
-                
-                
                 HStack {
                     Spacer()
                     Button(action: {
@@ -161,7 +159,6 @@ private extension HomeView {
                         .scaledToFit()
                         .frame(width: 14, height: 14)
                         .foregroundStyle(Color(.grey4))
-                    
                 })
             }
             .padding(16)
@@ -172,7 +169,6 @@ private extension HomeView {
                         viewModel.action(.roomTap(room))
                     }
             }.padding(.horizontal, 16)
-            
         }
     }
     

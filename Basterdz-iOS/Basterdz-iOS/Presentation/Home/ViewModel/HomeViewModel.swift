@@ -42,7 +42,8 @@ final class HomeViewModel: ViewModelable {
                 state.progressRoomList = state.fullRoomList.filter {$0.status != .finish && $0.restrictAppType == restrictApp}
                 state.finishRoomList = state.fullRoomList.filter {$0.status == .finish && $0.restrictAppType == restrictApp}
             }
-        case .roomTap(let room): break
+        case .roomTap(let room):
+            coordinator?.push(.detail)
         case .plusButtonTap:
             coordinator?.push(.plusButton)
         }
