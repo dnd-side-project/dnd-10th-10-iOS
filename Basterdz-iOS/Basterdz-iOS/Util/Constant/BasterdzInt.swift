@@ -8,6 +8,6 @@
 import Foundation
 
 enum BasterdzInt: Int {
-    case roomNmaeCount = 15
+    case roomNameCount = 15
     case goalNameCount = 20
 }
