@@ -39,8 +39,12 @@ final class HomeViewModel: ViewModelable {
                 state.progressRoomList = state.fullRoomList.filter {$0.status != .finish}
                 state.finishRoomList = state.fullRoomList.filter {$0.status == .finish}
             } else {
-                state.progressRoomList = state.fullRoomList.filter {$0.status != .finish && $0.restrictAppType == restrictApp}
-                state.finishRoomList = state.fullRoomList.filter {$0.status == .finish && $0.restrictAppType == restrictApp}
+                state.progressRoomList = state.fullRoomList.filter {
+                    $0.status != .finish && $0.restrictAppType == restrictApp
+                }
+                state.finishRoomList = state.fullRoomList.filter {
+                    $0.status == .finish && $0.restrictAppType == restrictApp
+                }
             }
         case .roomTap(let room):
             coordinator?.push(.detail)
