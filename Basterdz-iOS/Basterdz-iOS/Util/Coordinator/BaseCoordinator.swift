@@ -5,7 +5,6 @@
 //  Created by 현수빈 on 2/18/24.
 //
 
-import Foundation
 import SwiftUI
 
 class BaseCoordinator<FlowPath: Hashable>: ObservableObject {

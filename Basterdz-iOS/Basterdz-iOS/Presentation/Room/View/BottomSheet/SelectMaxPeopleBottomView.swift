@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SelectMaxPeopleBottomView: View {
     
-    @StateObject var viewModel: CreateRoomViewModel
+    @StateObject var viewModel: EnterRoomDescriptionViewModel
     @Binding var showModal: Bool
     
     var columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
@@ -25,8 +25,8 @@ struct SelectMaxPeopleBottomView: View {
                     BasterdzCommonButton(
                         title: "\(item)인",
                         action: {
-                            viewModel.roomEntity.maxPeople = item
-                        }, 
+                            viewModel.action(.maxPeopleConfirmButtonTap(item))
+                        },
                         isActive: true
                     )
                 }
@@ -36,7 +36,7 @@ struct SelectMaxPeopleBottomView: View {
             Spacer()
             HStack {
                 BasterdzBorderButton(title: "닫기", action: {
-                    viewModel.roomEntity.maxPeople = 0
+                    viewModel.action(.maxPeopleCancelButtonTap)
                     showModal.toggle()
                 })
                 BasterdzCommonButton(

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SelectRestrictAppBottomView: View {
     
-    @StateObject var viewModel: CreateRoomViewModel
+    @StateObject var viewModel: EnterRoomDescriptionViewModel
     @Binding var showModal: Bool
     
     var columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
@@ -26,7 +26,7 @@ struct SelectRestrictAppBottomView: View {
                             title: item.rawValue,
                             image: item.image,
                             action: {
-                                viewModel.roomEntity.restrictAppType = item
+                                viewModel.action(.restrictAppConfirmButtonTap(item))
                             },
                             isActive: true
                         )
@@ -39,7 +39,7 @@ struct SelectRestrictAppBottomView: View {
             Spacer()
             HStack {
                 BasterdzBorderButton(title: "닫기", action: {
-                    viewModel.roomEntity.restrictAppType = .none
+                    viewModel.action(.restrictAppCancelButtonTap)
                     showModal.toggle()
                 })
                 BasterdzCommonButton(

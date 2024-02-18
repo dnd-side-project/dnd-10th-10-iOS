@@ -32,12 +32,12 @@
 		7798FD712B6BBFCF0053A556 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD702B6BBFCF0053A556 /* LoginViewModel.swift */; };
 		7798FD742B6BBFE30053A556 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD732B6BBFE30053A556 /* LoginCoordinator.swift */; };
 		7798FD762B6BBFF10053A556 /* RoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD752B6BBFF10053A556 /* RoomView.swift */; };
-		7798FD782B6BBFFD0053A556 /* CreateRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD772B6BBFFD0053A556 /* CreateRoomViewModel.swift */; };
+		7798FD782B6BBFFD0053A556 /* EnterRoomDescriptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD772B6BBFFD0053A556 /* EnterRoomDescriptionViewModel.swift */; };
 		7798FD7A2B6BC0060053A556 /* RoomCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD792B6BC0060053A556 /* RoomCoordinator.swift */; };
 		7798FD7C2B6BC0120053A556 /* BoosterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD7B2B6BC0120053A556 /* BoosterView.swift */; };
 		7798FD7E2B6BC01E0053A556 /* BoosterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD7D2B6BC01E0053A556 /* BoosterViewModel.swift */; };
 		7798FD802B6BC0290053A556 /* BoosterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD7F2B6BC0290053A556 /* BoosterCoordinator.swift */; };
-		7798FD822B6BC12B0053A556 /* HomeVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD812B6BC12B0053A556 /* HomeVIewModel.swift */; };
+		7798FD822B6BC12B0053A556 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD812B6BC12B0053A556 /* HomeViewModel.swift */; };
 		7798FD842B6BC1380053A556 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD832B6BC1380053A556 /* HomeCoordinator.swift */; };
 		7798FD872B6BC15D0053A556 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD862B6BC15D0053A556 /* AppCoordinator.swift */; };
 		7798FD942B6CA97A0053A556 /* ShapeStyle+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD932B6CA97A0053A556 /* ShapeStyle+.swift */; };
@@ -57,7 +57,7 @@
 		D66E9E192B720FF700B8ED92 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66E9E182B720FF700B8ED92 /* String+.swift */; };
 		D67157482B80B339002BA1E5 /* ShowInviteCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67157472B80B339002BA1E5 /* ShowInviteCodeView.swift */; };
 		D671574C2B80C2CB002BA1E5 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671574B2B80C2CB002BA1E5 /* Date+.swift */; };
-		D671574E2B80C30D002BA1E5 /* SelectEndDateBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671574D2B80C30D002BA1E5 /* SelectEndDateBottomView.swift */; };
+		D671574E2B80C30D002BA1E5 /* SelectPeriodBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671574D2B80C30D002BA1E5 /* SelectPeriodBottomView.swift */; };
 		D6CE28662B80F92300E23264 /* EnterRoomNameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CE28652B80F92300E23264 /* EnterRoomNameViewModel.swift */; };
 		D6CE28682B80F96A00E23264 /* EnterInviteCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CE28672B80F96A00E23264 /* EnterInviteCodeViewModel.swift */; };
 		D6CE286A2B80FFEE00E23264 /* AfterCreateRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CE28692B80FFEE00E23264 /* AfterCreateRoomViewModel.swift */; };
@@ -71,7 +71,6 @@
 		D6E737952B7271AC005FB8CA /* SelectRestrictTimeBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E737922B7271AB005FB8CA /* SelectRestrictTimeBottomView.swift */; };
 		D6E7379A2B727A12005FB8CA /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E737992B727A12005FB8CA /* MyPageView.swift */; };
 		D6F139C12B8083BE007EF029 /* ViewModelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F139C02B8083BE007EF029 /* ViewModelable.swift */; };
-		D6F139C42B808405007EF029 /* Redueable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F139C32B808405007EF029 /* Redueable.swift */; };
 		D6F139C82B80950D007EF029 /* CreateRoomSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F139C72B80950D007EF029 /* CreateRoomSuccessView.swift */; };
 		D6F139CA2B809B62007EF029 /* BasterdzBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F139C92B809B62007EF029 /* BasterdzBorderButton.swift */; };
 /* End PBXBuildFile section */
@@ -129,12 +128,12 @@
 		7798FD702B6BBFCF0053A556 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		7798FD732B6BBFE30053A556 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		7798FD752B6BBFF10053A556 /* RoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomView.swift; sourceTree = "<group>"; };
-		7798FD772B6BBFFD0053A556 /* CreateRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomViewModel.swift; sourceTree = "<group>"; };
+		7798FD772B6BBFFD0053A556 /* EnterRoomDescriptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterRoomDescriptionViewModel.swift; sourceTree = "<group>"; };
 		7798FD792B6BC0060053A556 /* RoomCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomCoordinator.swift; sourceTree = "<group>"; };
 		7798FD7B2B6BC0120053A556 /* BoosterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoosterView.swift; sourceTree = "<group>"; };
 		7798FD7D2B6BC01E0053A556 /* BoosterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoosterViewModel.swift; sourceTree = "<group>"; };
 		7798FD7F2B6BC0290053A556 /* BoosterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoosterCoordinator.swift; sourceTree = "<group>"; };
-		7798FD812B6BC12B0053A556 /* HomeVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVIewModel.swift; sourceTree = "<group>"; };
+		7798FD812B6BC12B0053A556 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		7798FD832B6BC1380053A556 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		7798FD862B6BC15D0053A556 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		7798FD882B6BC17E0053A556 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
@@ -157,7 +156,7 @@
 		D66E9E182B720FF700B8ED92 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		D67157472B80B339002BA1E5 /* ShowInviteCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowInviteCodeView.swift; sourceTree = "<group>"; };
 		D671574B2B80C2CB002BA1E5 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
-		D671574D2B80C30D002BA1E5 /* SelectEndDateBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectEndDateBottomView.swift; sourceTree = "<group>"; };
+		D671574D2B80C30D002BA1E5 /* SelectPeriodBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPeriodBottomView.swift; sourceTree = "<group>"; };
 		D6CE28652B80F92300E23264 /* EnterRoomNameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterRoomNameViewModel.swift; sourceTree = "<group>"; };
 		D6CE28672B80F96A00E23264 /* EnterInviteCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterInviteCodeViewModel.swift; sourceTree = "<group>"; };
 		D6CE28692B80FFEE00E23264 /* AfterCreateRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterCreateRoomViewModel.swift; sourceTree = "<group>"; };
@@ -171,7 +170,6 @@
 		D6E737922B7271AB005FB8CA /* SelectRestrictTimeBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectRestrictTimeBottomView.swift; sourceTree = "<group>"; };
 		D6E737992B727A12005FB8CA /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 		D6F139C02B8083BE007EF029 /* ViewModelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelable.swift; sourceTree = "<group>"; };
-		D6F139C32B808405007EF029 /* Redueable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Redueable.swift; sourceTree = "<group>"; };
 		D6F139C72B80950D007EF029 /* CreateRoomSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomSuccessView.swift; sourceTree = "<group>"; };
 		D6F139C92B809B62007EF029 /* BasterdzBorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzBorderButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -392,7 +390,7 @@
 		7798FD2F2B6BB2890053A556 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				7798FD812B6BC12B0053A556 /* HomeVIewModel.swift */,
+				7798FD812B6BC12B0053A556 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -675,7 +673,7 @@
 			isa = PBXGroup;
 			children = (
 				D6CE28652B80F92300E23264 /* EnterRoomNameViewModel.swift */,
-				7798FD772B6BBFFD0053A556 /* CreateRoomViewModel.swift */,
+				7798FD772B6BBFFD0053A556 /* EnterRoomDescriptionViewModel.swift */,
 				D6CE28692B80FFEE00E23264 /* AfterCreateRoomViewModel.swift */,
 			);
 			path = CreateRoom;
@@ -698,7 +696,7 @@
 				D6E737902B7271AB005FB8CA /* SelectRestrictAppBottomView.swift */,
 				D6E737912B7271AB005FB8CA /* SelectMaxPeopleBottomView.swift */,
 				D6E737922B7271AB005FB8CA /* SelectRestrictTimeBottomView.swift */,
-				D671574D2B80C30D002BA1E5 /* SelectEndDateBottomView.swift */,
+				D671574D2B80C30D002BA1E5 /* SelectPeriodBottomView.swift */,
 			);
 			path = BottomSheet;
 			sourceTree = "<group>";
@@ -731,7 +729,6 @@
 			isa = PBXGroup;
 			children = (
 				D6F139C02B8083BE007EF029 /* ViewModelable.swift */,
-				D6F139C32B808405007EF029 /* Redueable.swift */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -910,14 +907,14 @@
 				772025572B79202F00439CFD /* EnterInviteCodeView.swift in Sources */,
 				D6CE286D2B8102A100E23264 /* BaseCoordinator.swift in Sources */,
 				D6F139CA2B809B62007EF029 /* BasterdzBorderButton.swift in Sources */,
-				7798FD822B6BC12B0053A556 /* HomeVIewModel.swift in Sources */,
+				7798FD822B6BC12B0053A556 /* HomeViewModel.swift in Sources */,
 				D6CE28682B80F96A00E23264 /* EnterInviteCodeViewModel.swift in Sources */,
 				7798FD6F2B6BBFBD0053A556 /* LoginView.swift in Sources */,
 				D66E9DEA2B70A79700B8ED92 /* Image+.swift in Sources */,
 				7798FD872B6BC15D0053A556 /* AppCoordinator.swift in Sources */,
 				D6E737942B7271AC005FB8CA /* SelectMaxPeopleBottomView.swift in Sources */,
 				D66E9DE82B70A75E00B8ED92 /* RestrictApp.swift in Sources */,
-				D671574E2B80C30D002BA1E5 /* SelectEndDateBottomView.swift in Sources */,
+				D671574E2B80C30D002BA1E5 /* SelectPeriodBottomView.swift in Sources */,
 				D64ED51B2B6E35AF00A64D68 /* BasterdzTextField.swift in Sources */,
 				D6E7378E2B72719F005FB8CA /* EnterRoomNameView.swift in Sources */,
 				D671574C2B80C2CB002BA1E5 /* Date+.swift in Sources */,
@@ -951,10 +948,9 @@
 				D64ED5192B6E327000A64D68 /* BasterdzCenterTextEditor.swift in Sources */,
 				D64ED5132B6E22C800A64D68 /* TabView.swift in Sources */,
 				7720255B2B79F3C000439CFD /* String+.swift in Sources */,
-				D6F139C42B808405007EF029 /* Redueable.swift in Sources */,
-				7798FD782B6BBFFD0053A556 /* CreateRoomViewModel.swift in Sources */,
+				7798FD782B6BBFFD0053A556 /* EnterRoomDescriptionViewModel.swift in Sources */,
 				7720256D2B80AF3300439CFD /* BasterdzPopUpView.swift in Sources */,
-				7798FD782B6BBFFD0053A556 /* RoomViewModel.swift in Sources */,
+				7798FD782B6BBFFD0053A556 /* EnterRoomDescriptionViewModel.swift in Sources */,
 				7798FD1F2B6BB0570053A556 /* SceneDelegate.swift in Sources */,
 				D64ED5212B6E408300A64D68 /* RoomEntity.swift in Sources */,
 				D6E7379A2B727A12005FB8CA /* MyPageView.swift in Sources */,

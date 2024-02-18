@@ -6,6 +6,11 @@
 //
 import Combine
 
-public protocol ViewModelable: Reduceable, ObservableObject {
-    
+protocol ViewModelable: ObservableObject {
+  associatedtype Action
+  associatedtype State
+  
+  var state: State { get }
+  
+  func action(_ action: Action)
 }

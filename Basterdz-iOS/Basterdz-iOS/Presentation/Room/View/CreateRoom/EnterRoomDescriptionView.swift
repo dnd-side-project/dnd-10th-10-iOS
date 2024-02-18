@@ -9,20 +9,14 @@ import SwiftUI
 
 struct EnterRoomDescriptionView: View {
     
-    @ObservedObject var viewModel: CreateRoomViewModel
+    @ObservedObject var viewModel: EnterRoomDescriptionViewModel
     @FocusState var focusState: FocusItem?
-    @State var showModal: Bool = false
-    @State var showContent: BottomSheetContent = .restrictApp
     
     enum FocusItem {
         case goal, restrictApp, time, restrictTime, maxPeopleCount
     }
     
-    enum BottomSheetContent {
-        case restrictApp, endTime, restrictTime, maxPeople
-    }
-    
-    init(viewModel: CreateRoomViewModel) {
+    init(viewModel: EnterRoomDescriptionViewModel) {
         self.viewModel = viewModel
     }
     
@@ -39,29 +33,31 @@ struct EnterRoomDescriptionView: View {
                 numberView(
                     number: 1,
                     title: "목표 한마디",
-                    isActive: viewModel.roomEntity.goal.isNotEmpty
+                    isActive: viewModel.state.isGoalButtonActive
                 )
                 BasterdzTextField(
-                    text: $viewModel.roomEntity.goal,
-                    isActive: focusState != .goal && viewModel.roomEntity.goal.isEmpty,
+                    text: $viewModel.state.roomEntity.goal,
+                    isActive: focusState != .goal && !viewModel.state.isGoalButtonActive,
                     isFocused: $focusState,
                     focusValue: .goal,
                     placeholder: "도전하는 목표를 작성해보세요",
-                    trailingText: "\(viewModel.roomEntity.goal.count)/20",
-                    errorMessage: viewModel.goalErrorMessage
+                    trailingText: "\(viewModel.state.roomEntity.goal.count)/20",
+                    errorMessage: viewModel.state.goalErrorMessage
                 )
                 .focused($focusState, equals: .goal)
                 
                 // MARK: 2번 제한 앱 설정
-                numberView(number: 2, title: "제한 앱 설정", isActive: viewModel.roomEntity.restrictAppType != .none)
+                numberView(
+                    number: 2,
+                    title: "제한 앱 설정",
+                    isActive: viewModel.state.isRestrictAppButtonActive)
                 
                 BasterdzOptionButton(
-                    isActive: viewModel.roomEntity.restrictAppType == .none,
+                    isActive: !viewModel.state.isRestrictAppButtonActive,
                     action: {
-                        showContent = .restrictApp
-                        showModal = true
+                        viewModel.action(.restrictAppModalButtonTap)
                     },
-                    label: viewModel.roomEntity.restrictAppType.rawValue
+                    label: viewModel.state.roomEntity.restrictAppType.rawValue
                 )
                 .focused($focusState, equals: .restrictApp)
                 
@@ -70,15 +66,14 @@ struct EnterRoomDescriptionView: View {
                     numberView(
                         number: 3,
                         title: "스크린 타임 제한 기간 설정",
-                        isActive: viewModel.roomEntity.period != 0
+                        isActive: viewModel.state.isPeriodButtonActive
                     )
                     BasterdzOptionButton(
-                        isActive: viewModel.roomEntity.period == 0,
+                        isActive: !viewModel.state.isPeriodButtonActive,
                         action: {
-                            showContent = .endTime
-                            showModal = true
+                            viewModel.action(.periodModalButtonTap)
                         },
-                        label:  viewModel.roomEntity.period != 0  ? "\(viewModel.roomEntity.period)일" : "디데이 기간을 설정해보세요",
+                        label:  viewModel.state.roomEntity.period != 0  ? "\(viewModel.state.roomEntity.period)일" : "디데이 기간을 설정해보세요",
                         image: BasterdzImage.calendar.rawValue
                     )
                     .focused($focusState, equals: .restrictTime)
@@ -90,16 +85,15 @@ struct EnterRoomDescriptionView: View {
                     numberView(
                         number: 4,
                         title: "하루 총 제한 시간",
-                        isActive: viewModel.roomEntity.restrictAppTime != 0
+                        isActive: viewModel.state.isRestrictTimeButtonActive
                     )
                     BasterdzOptionButton(
-                        isActive: viewModel.roomEntity.restrictAppTime == 0,
+                        isActive: !viewModel.state.isRestrictTimeButtonActive,
                         action: {
-                            showContent = .restrictTime
-                            showModal = true
+                            viewModel.action(.restrictTimeModalButtonTap)
                         },
-                        label: viewModel.roomEntity.restrictAppTime == 0 ? "":
-                            "\(viewModel.roomEntity.restrictAppTime)시간"
+                        label: viewModel.state.roomEntity.restrictAppTime == 0 ? "":
+                            "\(viewModel.state.roomEntity.restrictAppTime)시간"
                     )
                     .frame(width: 124)
                 }
@@ -111,33 +105,32 @@ struct EnterRoomDescriptionView: View {
                         number: 5,
                         title: "참여 정원",
                         subtitle: "최대 6명",
-                        isActive: viewModel.roomEntity.maxPeople != 0
+                        isActive: viewModel.state.isMaxPeopleButtonActive
                     )
                     BasterdzOptionButton(
-                        isActive: viewModel.roomEntity.maxPeople == 0,
+                        isActive: !viewModel.state.isMaxPeopleButtonActive,
                         action: {
-                            showContent = .maxPeople
-                            showModal = true
-                        }, label: viewModel.roomEntity.maxPeople == 0 ? "" :
-                            "\(viewModel.roomEntity.maxPeople)명"
+                            viewModel.action(.maxPeopleModalButtonTap)
+                        },
+                        label: viewModel.state.roomEntity.maxPeople == 0 ? "" :
+                            "\(viewModel.state.roomEntity.maxPeople)명"
                     )
                     .frame(width: 124)
                 }
                 .focused($focusState, equals: .maxPeopleCount)
                 
                 Spacer()
-                
                 BasterdzCommonButton(
                     title: "방 생성하기",
                     style: .red,
                     action: {
-                        viewModel.reduce(.bottomButtonTap)
+                        viewModel.action(.bottomButtonTap)
                     },
-                    isActive: viewModel.isCreateRoomButtonActive
+                    isActive: viewModel.state.isBottomButtonActive
                 )
             }.padding(.horizontal, 16)
         }
-        .sheet(isPresented: $showModal, content: {
+        .sheet(isPresented: $viewModel.state.showModal, content: {
             showModalContent()
                 .presentationDetents(
                     [.height(UIScreen.main.bounds.height * 0.5)]
@@ -151,15 +144,15 @@ struct EnterRoomDescriptionView: View {
     
     // modal 보여주는 뷰
     @ViewBuilder func showModalContent() -> some View {
-        switch showContent {
+        switch viewModel.state.showContent {
         case .restrictApp:
-            SelectRestrictAppBottomView(viewModel: viewModel, showModal: $showModal)
+            SelectRestrictAppBottomView(viewModel: viewModel, showModal: $viewModel.state.showModal)
         case .restrictTime:
-            SelectRestrictTimeBottomView(viewModel: viewModel, showModal: $showModal)
+            SelectRestrictTimeBottomView(viewModel: viewModel, showModal: $viewModel.state.showModal)
         case .maxPeople:
-            SelectMaxPeopleBottomView(viewModel: viewModel, showModal: $showModal)
-        case .endTime:
-            SelectEndDateBottomView(viewModel: viewModel, showModal: $showModal)
+            SelectMaxPeopleBottomView(viewModel: viewModel, showModal: $viewModel.state.showModal)
+        case .period:
+            SelectPeriodBottomView(viewModel: viewModel, showModal: $viewModel.state.showModal)
         }
     }
     

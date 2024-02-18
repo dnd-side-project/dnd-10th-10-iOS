@@ -50,7 +50,7 @@ struct RoomView: View {
                 Spacer()
             }
             .navigationBarBackButtonHidden()
-            .navigationDestination(for: RoomCoordinatorAction.self) { path in
+            .navigationDestination(for: RoomCoordinatorFlow.self) { path in
                 coordinator.setView(path)
                     .toolbar(.hidden, for: .navigationBar)
                     .toolbar(.hidden, for: .tabBar)

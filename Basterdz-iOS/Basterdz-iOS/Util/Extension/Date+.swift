@@ -9,7 +9,7 @@ import Foundation
 
 extension Date {
     
-    /// timestamp를 날짜로 변경하는 메소드
+    /// timestamp를 날짜로 변경하는 연산 프로퍼티
     var toDateFormmated: String {
         let date = Date.init(timeIntervalSince1970: self.timeIntervalSince1970)
         let dateFormatt = DateFormatter()

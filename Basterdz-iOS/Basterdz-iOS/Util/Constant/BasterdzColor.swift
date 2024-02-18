@@ -5,7 +5,6 @@
 //  Created by EUNJU on 2024/02/02.
 //
 
-import UIKit
 import SwiftUI
 
 enum BasterdzColor: String {

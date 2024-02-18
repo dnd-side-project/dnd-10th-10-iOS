@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SelectRestrictTimeBottomView: View {
-    @StateObject var viewModel: CreateRoomViewModel
+    @StateObject var viewModel: EnterRoomDescriptionViewModel
     @Binding var showModal: Bool
     
     var columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
@@ -24,7 +24,7 @@ struct SelectRestrictTimeBottomView: View {
                     BasterdzCommonButton(
                         title: "\(item)",
                         action: {
-                            viewModel.roomEntity.restrictAppTime = item
+                            viewModel.action(.restrictTimeConfirmButtonTap(item))
                         },
                         isActive: true
                     )
@@ -34,7 +34,7 @@ struct SelectRestrictTimeBottomView: View {
             Spacer()
             HStack {
                 BasterdzBorderButton(title: "닫기", action: {
-                    viewModel.roomEntity.restrictAppTime = 0
+                    viewModel.action(.restrictTimeCancelButtonTap)
                     showModal.toggle()
                 })
                 BasterdzCommonButton(

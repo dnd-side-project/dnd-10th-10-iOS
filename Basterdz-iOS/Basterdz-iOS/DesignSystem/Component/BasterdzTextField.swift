@@ -40,29 +40,14 @@ struct BasterdzTextField<T: Hashable>: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
-            HStack {
+            HStack(spacing: 4) {
                 TextField(placeholder, text: $text)
                     .autocorrectionDisabled()
                     .font(.pretendardB(16))
                     .foregroundStyle(Color(.mainBlack))
                     .focused(isFocused, equals: focusValue)
                     .padding(.horizontal, 16)
-                    .frame(height: 56)
-            }
-            .background(
-                isActive ? Color(.white) : Color(.grey1)
-            )
-            .clipShape(RoundedRectangle(cornerRadius: 15))
-            .roundedBorder(
-                isFocused.wrappedValue == focusValue ?
-                (
-                    errorMessage.isNotEmpty ?
-                    BasterdzColor.mainRed.color :
-                        BasterdzColor.mainBlack.color
-                )
-                :   BasterdzColor.grey3.color
-            )
-            .overlay(alignment: .trailing) {
+                    .frame(width: .infinity, height: 56)
                 if let trailingText {
                     Text(trailingText)
                         .font(.pretendardM(13))
@@ -78,6 +63,19 @@ struct BasterdzTextField<T: Hashable>: View {
                     })
                 }
             }
+            .background(
+                isActive ? Color(.white) : Color(.grey1)
+            )
+            .clipShape(RoundedRectangle(cornerRadius: 15))
+            .roundedBorder(
+                isFocused.wrappedValue == focusValue ?
+                (
+                    errorMessage.isNotEmpty ?
+                    BasterdzColor.mainRed.color :
+                        BasterdzColor.mainBlack.color
+                )
+                :   BasterdzColor.grey3.color
+            )
             if errorMessage.isNotEmpty {
                 Text(errorMessage)
                     .font(.pretendardM(13))

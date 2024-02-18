@@ -31,17 +31,17 @@ struct EnterRoomNameView: View {
                 .multilineTextAlignment(.center)
             VStack(alignment: .trailing, spacing: 12) {
                 BasterdzCenterTextEditor(
-                    text: $viewModel.roomName,
+                    text: $viewModel.state.roomName,
                     placeholder: "방 이름 입력하기",
-                    textError: viewModel.roomNameErrorMessage.isNotEmpty
+                    textError: viewModel.state.roomNameErrorMessage.isNotEmpty
                 )
-                if viewModel.roomNameErrorMessage.isEmpty {
-                    Text("\(viewModel.roomName.count)/\(BasterdzInt.roomNmaeCount.rawValue)자 이내")
+                if viewModel.state.roomNameErrorMessage.isEmpty {
+                    Text("\(viewModel.state.roomName.count)/\(BasterdzInt.roomNmaeCount.rawValue)자 이내")
                         .font(.pretendardM(14))
                         .foregroundStyle(Color(.grey3))
                         .padding(.trailing, 16)
                 } else {
-                    Text(viewModel.roomNameErrorMessage)
+                    Text(viewModel.state.roomNameErrorMessage)
                         .font(.pretendardM(14))
                         .foregroundStyle(Color(.mainRed))
                         .padding(.trailing, 16)
@@ -53,9 +53,9 @@ struct EnterRoomNameView: View {
                 title: "다음으로",
                 style: .red,
                 action: {
-                    viewModel.reduce(.bottomButtonTap)
+                    viewModel.action(.bottomButtonTap)
                 },
-                isActive: viewModel.roomName.isNotEmpty && viewModel.roomNameErrorMessage.isEmpty
+                isActive: viewModel.state.bottomButtonActive
             )
             .padding(20)
         }

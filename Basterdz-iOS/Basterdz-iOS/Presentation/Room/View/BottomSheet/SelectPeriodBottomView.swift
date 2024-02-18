@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct SelectEndDateBottomView: View {
+struct SelectPeriodBottomView: View {
     
-    @StateObject var viewModel: CreateRoomViewModel
+    @StateObject var viewModel: EnterRoomDescriptionViewModel
     @Binding var showModal: Bool
     
     var columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
@@ -20,7 +20,7 @@ struct SelectEndDateBottomView: View {
                 .foregroundStyle(Color(.mainBlack))
                 .padding(20)
            
-            Picker("", selection: $viewModel.roomEntity.period) {
+            Picker("", selection: $viewModel.state.roomEntity.period) {
                 ForEach(1...31, id: \.self) {
                      Text("\($0)일")
                    }
@@ -31,7 +31,7 @@ struct SelectEndDateBottomView: View {
             Spacer()
             HStack {
                 BasterdzBorderButton(title: "닫기", action: {
-                    viewModel.roomEntity.period = 0
+                    viewModel.state.roomEntity.period = 0
                     showModal.toggle()
                 })
                 BasterdzCommonButton(
