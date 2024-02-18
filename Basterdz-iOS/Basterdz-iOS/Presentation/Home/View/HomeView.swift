@@ -127,7 +127,7 @@ private extension HomeView {
         // header
         VStack {
             ScrollView(.horizontal) {
-                LazyHGrid(rows: chipRows, spacing: 16) {
+                LazyHGrid(rows: chipRows, spacing: 4) {
                     ForEach(RestrictApp.allCases, id: \.self) { item in
                         if item == .none {
                             BasterdzChipButton(title: "전체") {
@@ -140,6 +140,7 @@ private extension HomeView {
                         }
                     }
                 }
+                .padding(.horizontal, 16)
                 .frame(height: 40)
             }
             .scrollIndicators(.never)

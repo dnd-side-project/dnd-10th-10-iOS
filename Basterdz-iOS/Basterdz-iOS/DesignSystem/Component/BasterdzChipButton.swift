@@ -83,7 +83,7 @@ struct BasterdzChipButton: View {
             case .small:
                 return CGSize(width: 12, height: 12)
             case .default:
-                return CGSize(width: 20, height: 20)
+                return CGSize(width: 19.38, height: 19.38)
             }
         }
     }
