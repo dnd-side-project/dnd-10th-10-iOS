@@ -14,21 +14,22 @@ struct Profile: Hashable {
 
 struct WaitingRoomView: View {
     
-    private let enabledTitle: AttributedString = "초대한 인원들을\n조금만 기다려주세요!".applyVariousFont(targetStringList: ["조금만 기다려주세요!"], font: .pretendardB(24))
-    private let dummyData: [Profile] = [
+    private let disabledTitle: AttributedString = "초대한 인원들을\n조금만 기다려주세요!".applyVariousFont(targetStringList: ["조금만 기다려주세요!"], font: .pretendardB(24))
+    private let enabledTitle: AttributedString = "초대한 인원이\n다 모였어요!".applyVariousFont(targetStringList: ["다 모였어요!"], font: .pretendardB(24))
+    private let firstRow: [Profile] = [
         Profile(nickname: "익명의 바스터", profileImageTitle: BasterdzImage.profile_enabled.rawValue),
         Profile(nickname: "익명의 바스터", profileImageTitle: BasterdzImage.profile_enabled.rawValue),
         Profile(nickname: "익명의 바스터", profileImageTitle: BasterdzImage.profile_enabled.rawValue)
     ]
     
-    private let dummyData2: [Profile] = [
+    private let secondRow: [Profile] = [
         Profile(nickname: "익명의 바스터", profileImageTitle: BasterdzImage.profile_enabled.rawValue),
         Profile(nickname: "익명의 바스터", profileImageTitle: BasterdzImage.profile_enabled.rawValue)
     ]
     
     var body: some View {
         VStack {
-            Text(enabledTitle)
+            Text(disabledTitle)
                 .font(.pretendardM(24))
                 .multilineTextAlignment(.center)
                 .padding(.top, 167)
@@ -36,25 +37,15 @@ struct WaitingRoomView: View {
             
             VStack {
                 HStack(spacing: 20) {
-                    ForEach(dummyData, id: \.self) { element in
-                        VStack(alignment: .center, spacing: 10) {
-                            Image(element.profileImageTitle)
-                            Text(element.nickname)
-                                .font(.pretendardB(14))
-                                .foregroundStyle(Color(.grey5))
-                        }
+                    ForEach(firstRow, id: \.self) { element in
+                        ProfileCellView(profile: element)
                     }
                 }
                 .padding(.bottom, 24)
                 
                 HStack(spacing: 20) {
-                    ForEach(dummyData2, id: \.self) { element in
-                        VStack(alignment: .center, spacing: 10) {
-                            Image(element.profileImageTitle)
-                            Text(element.nickname)
-                                .font(.pretendardB(14))
-                                .foregroundStyle(Color(.grey5))
-                        }
+                    ForEach(secondRow, id: \.self) { element in
+                        ProfileCellView(profile: element)
                     }
                 }
             }
@@ -68,6 +59,20 @@ struct WaitingRoomView: View {
     }
 }
 
-#Preview {
-    WaitingRoomView()
+struct ProfileCellView: View {
+    
+    private let profile: Profile
+    
+    init(profile: Profile) {
+        self.profile = profile
+    }
+    
+    var body: some View {
+        VStack(alignment: .center, spacing: 10) {
+            Image(profile.profileImageTitle)
+            Text(profile.nickname)
+                .font(.pretendardB(14))
+                .foregroundStyle(Color(.grey5))
+        }
+    }
 }
