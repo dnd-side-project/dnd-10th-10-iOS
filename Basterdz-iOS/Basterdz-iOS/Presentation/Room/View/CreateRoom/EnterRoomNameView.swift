@@ -36,7 +36,7 @@ struct EnterRoomNameView: View {
                     textError: viewModel.state.roomNameErrorMessage.isNotEmpty
                 )
                 if viewModel.state.roomNameErrorMessage.isEmpty {
-                    Text("\(viewModel.state.roomName.count)/\(BasterdzInt.roomNmaeCount.rawValue)자 이내")
+                    Text("\(viewModel.state.roomName.count)/\(BasterdzInt.roomNameCount.rawValue)자 이내")
                         .font(.pretendardM(14))
                         .foregroundStyle(Color(.grey3))
                         .padding(.trailing, 16)

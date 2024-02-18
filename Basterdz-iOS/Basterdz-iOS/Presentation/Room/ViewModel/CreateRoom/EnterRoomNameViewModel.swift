@@ -26,8 +26,8 @@ class EnterRoomNameViewModel: ViewModelable {
         var roomName: String
         
         var roomNameErrorMessage: String {
-            if  self.roomName.count > BasterdzInt.roomNmaeCount.rawValue {
-                return "\(BasterdzInt.roomNmaeCount.rawValue)자 이하만 입력가능합니다"
+            if  self.roomName.count > BasterdzInt.roomNameCount.rawValue {
+                return "\(BasterdzInt.roomNameCount.rawValue)자 이하만 입력가능합니다"
             } else {
                 return ""
             }
