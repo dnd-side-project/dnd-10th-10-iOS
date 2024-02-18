@@ -11,6 +11,7 @@
 		7720255B2B79F3C000439CFD /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7720255A2B79F3C000439CFD /* String+.swift */; };
 		7720256D2B80AF3300439CFD /* BasterdzPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7720256C2B80AF3300439CFD /* BasterdzPopUpView.swift */; };
 		77761FF72B80EEC200178937 /* EnterConfirmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77761FF62B80EEC200178937 /* EnterConfirmView.swift */; };
+		77761FF92B810C4800178937 /* WaitingRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77761FF82B810C4800178937 /* WaitingRoomView.swift */; };
 		779677572B739B72007315E8 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 779677562B739B72007315E8 /* .swiftlint.yml */; };
 		779677592B73A54D007315E8 /* BasterdzImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779677582B73A54D007315E8 /* BasterdzImage.swift */; };
 		7798FCF42B6B9C050053A556 /* Basterdz_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FCF32B6B9C050053A556 /* Basterdz_iOSApp.swift */; };
@@ -98,6 +99,7 @@
 		7720255A2B79F3C000439CFD /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		7720256C2B80AF3300439CFD /* BasterdzPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzPopUpView.swift; sourceTree = "<group>"; };
 		77761FF62B80EEC200178937 /* EnterConfirmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterConfirmView.swift; sourceTree = "<group>"; };
+		77761FF82B810C4800178937 /* WaitingRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingRoomView.swift; sourceTree = "<group>"; };
 		779677562B739B72007315E8 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		779677582B73A54D007315E8 /* BasterdzImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzImage.swift; sourceTree = "<group>"; };
 		7798FCF02B6B9C050053A556 /* Basterdz-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Basterdz-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -474,6 +476,7 @@
 				D6E7378A2B72719F005FB8CA /* CreateRoom */,
 				772025562B79202F00439CFD /* EnterInviteCodeView.swift */,
 				77761FF62B80EEC200178937 /* EnterConfirmView.swift */,
+				77761FF82B810C4800178937 /* WaitingRoomView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -923,6 +926,7 @@
 				D6E7378E2B72719F005FB8CA /* EnterRoomNameView.swift in Sources */,
 				D671574C2B80C2CB002BA1E5 /* Date+.swift in Sources */,
 				D64ED51B2B6E35AF00A64D68 /* BasterdzTextField.swift in Sources */,
+				77761FF92B810C4800178937 /* WaitingRoomView.swift in Sources */,
 				D64ED50E2B6E1A2900A64D68 /* BasterdzCommonButton.swift in Sources */,
 				D64ED51F2B6E3DB500A64D68 /* BasterdzOptionButton.swift in Sources */,
 				7798FCF62B6B9C050053A556 /* HomeView.swift in Sources */,
