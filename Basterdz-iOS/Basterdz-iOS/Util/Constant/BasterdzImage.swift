@@ -37,4 +37,11 @@ enum BasterdzImage: String {
     case youtube
     case tictok
     case twitter
+    case profile_enabled
+    case profile_red
+    case profile_yellow
+    case profile_green
+    case profile_blue
+    case profile_pink
+    case profile_purple
 }
