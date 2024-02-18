@@ -43,20 +43,10 @@ struct CreateRoomSuccessView: View {
                 .padding(.bottom, 20)
             
             HStack {
-                HStack {
-                    Image(viewModel.roomEntity.restrictAppType.image)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 20, height: 20)
-                    
-                    Text(viewModel.roomEntity.restrictAppType.rawValue)
-                        .font(.pretendardM(13))
-                        .foregroundStyle(Color(.grey1))
-                }
-                .padding(10)
-                .background(Color(.grey6))
-                .clipShape(RoundedRectangle(cornerRadius: 20))
-                .frame(height: 30)
+                BasterdzChipButton(
+                    title: viewModel.roomEntity.restrictAppType.rawValue,
+                    image: viewModel.roomEntity.restrictAppType.image
+                )
                 
                 Text("\(viewModel.roomEntity.restrictAppTime)시간")
                     .font(.pretendardM(13))

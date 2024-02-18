@@ -8,24 +8,33 @@
 import SwiftUI
 
 struct TabbarView: View {
+    
     var body: some View {
-        TabView {
-            BoosterView(viewModel: BoosterViewModel())
-                .tabItem {
-                    tabItem(image: .booster, title: "부스터")
-                }
-            HomeView(viewModel: HomeViewModel())
-                .tabItem {
-                    tabItem(image: .home, title: "홈")
-                }
-            MyPageView()
-                .tabItem {
-                    tabItem(image: .mypage, title: "마이 페이지")
-                }
-                .font(.headline)
-                .accentColor(BasterdzColor.mainBlack.color)
-        }  
-//        .padding(EdgeInsets(top: 32, leading: 0, bottom: 0, trailing: 32))
+        ZStack {
+            TabView {
+                BoosterView(viewModel: BoosterViewModel())
+                    .tabItem {
+                        tabItem(image: .booster, title: "부스터")
+                    }
+                HomeView(viewModel: HomeViewModel(coordinator: HomeCoordinator()))
+                    .tabItem {
+                        tabItem(image: .home, title: "홈")
+                    }
+                MyPageView()
+                    .tabItem {
+                        tabItem(image: .mypage, title: "마이 페이지")
+                    }
+                    .font(.headline)
+                    .accentColor(BasterdzColor.mainBlack.color)
+            }
+            VStack {
+                Spacer()
+                Rectangle()
+                    .frame(maxWidth: .infinity, maxHeight: 1)
+                    .foregroundColor(Color(.grey1))
+                    .padding(.bottom, 50)
+            }
+        }
     }
     
     @ViewBuilder func tabItem(image: BasterdzImage, title: String) -> some View {
