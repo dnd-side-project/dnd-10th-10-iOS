@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-enum RoomCoordinatorFlow: Hashable {
+enum RoomFlow: Hashable {
     case createRoom,
          enterInviteCode,
          enterRoomDescription(roomName: String),
          successCreateRoom(room: RoomEntity, inviteCode: String)
 }
 
-class RoomCoordinator: BaseCoordinator<RoomCoordinatorFlow> {
+class RoomCoordinator: BaseCoordinator<RoomFlow> {
     
-    @ViewBuilder func setView(_ action: RoomCoordinatorFlow) -> some View {
+    @ViewBuilder func setView(_ action: RoomFlow) -> some View {
         switch action {
         case .createRoom:
             let viewModel = EnterRoomNameViewModel(coordinator: self)
