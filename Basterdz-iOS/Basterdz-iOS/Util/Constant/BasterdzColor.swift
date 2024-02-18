@@ -5,7 +5,6 @@
 //  Created by EUNJU on 2024/02/02.
 //
 
-import UIKit
 import SwiftUI
 
 enum BasterdzColor: String {
@@ -17,7 +16,10 @@ enum BasterdzColor: String {
     case grey2
     case grey3
     case grey4
+    case grey5
+    case grey6
     case white
+    case red2
     
     var color: Color {
         Color(UIColor(named: rawValue)!)

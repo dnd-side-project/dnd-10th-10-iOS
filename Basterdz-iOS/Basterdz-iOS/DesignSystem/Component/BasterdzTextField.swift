@@ -10,23 +10,26 @@ import SwiftUI
 struct BasterdzTextField<T: Hashable>: View {
     
     @Binding var text: String
+    private let isActive: Bool
     private let isFocused: FocusState<T>.Binding
     private let focusValue: T
     private let placeholder: String
     private let trailingText: String?
-    private let trailingButton: (String, () -> Void)? // 지금은 미사용이지만 나중에 들어갈까봐 일단 추가해놓음
-    private let errorMessage: String?
+    private let trailingButton: (String, () -> Void)?
+    private let errorMessage: String
     
     init(
         text: Binding<String>,
+        isActive: Bool,
         isFocused: FocusState<T>.Binding,
         focusValue: T = true,
         placeholder: String,
         trailingText: String? = .none,
         trailingButton: (String, () -> Void)? = .none,
-        errorMessage: String? = .none
+        errorMessage: String = ""
     ) {
         self._text = text
+        self.isActive = isActive
         self.isFocused = isFocused
         self.focusValue = focusValue
         self.placeholder = placeholder
@@ -37,40 +40,47 @@ struct BasterdzTextField<T: Hashable>: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
-            TextField(placeholder, text: $text)
-                .font(.pretendardB(16))
-                .foregroundStyle(Color(.mainBlack))
-                .focused(isFocused, equals: focusValue)
-                .padding(.horizontal, 16)
-                .frame(height: 56)
-                .background(Color(.grey1))
-                .clipShape(RoundedRectangle(cornerRadius: 15))
-                .roundedBorder(
-                    isFocused.wrappedValue == focusValue ?
-                    BasterdzColor.mainBlack.color :
-                        BasterdzColor.white.color
-                )
-                .overlay(alignment: .trailing) {
-                    if let trailingText {
-                        Text(trailingText)
-                            .font(.pretendardM(13))
-                            .foregroundStyle(Color(.mainBlack))
-                            .padding(.horizontal, 16)
-                    }
-                    if let trailingButton {
-                        Button(action: trailingButton.1, label: {
-                            Image(trailingButton.0)
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 16, height: 16)
-                        })
-                    }
+            HStack(spacing: 4) {
+                TextField(placeholder, text: $text)
+                    .autocorrectionDisabled()
+                    .font(.pretendardB(16))
+                    .foregroundStyle(Color(.mainBlack))
+                    .focused(isFocused, equals: focusValue)
+                    .padding(.horizontal, 16)
+                    .frame(width: .infinity, height: 56)
+                if let trailingText {
+                    Text(trailingText)
+                        .font(.pretendardM(13))
+                        .foregroundStyle(Color(.mainBlack))
+                        .padding(.horizontal, 16)
                 }
-            if let errorMessage {
+                if let trailingButton {
+                    Button(action: trailingButton.1, label: {
+                        Image(trailingButton.0)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 16, height: 16)
+                    })
+                }
+            }
+            .background(
+                isActive ? Color(.white) : Color(.grey1)
+            )
+            .clipShape(RoundedRectangle(cornerRadius: 15))
+            .roundedBorder(
+                isFocused.wrappedValue == focusValue ?
+                (
+                    errorMessage.isNotEmpty ?
+                    BasterdzColor.mainRed.color :
+                        BasterdzColor.mainBlack.color
+                )
+                :   BasterdzColor.grey3.color
+            )
+            if errorMessage.isNotEmpty {
                 Text(errorMessage)
                     .font(.pretendardM(13))
                     .foregroundStyle(Color(.mainRed))
-                    .frame(height: 16)
+                    .frame(height: 16, alignment: .trailing)
             }
         }
         .frame(maxWidth: .infinity)

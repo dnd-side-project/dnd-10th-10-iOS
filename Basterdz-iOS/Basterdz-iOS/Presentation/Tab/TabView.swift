@@ -8,34 +8,24 @@
 import SwiftUI
 
 struct TabbarView: View {
-    
     var body: some View {
         TabView {
-            HomeView(viewModel: HomeViewModel())
-                .tabItem {
-                    tabItem(image: .home, title: "홈")
-                }
-            RoomView(viewModel: RoomViewModel())
-                .tabItem {
-                    VStack(spacing: 4) {
-                        Image(systemName: "plus.circle.fill")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 48, height: 48)
-                            .background(Color.red)
-                            .foregroundStyle(Color(.mainBlack))
-                        Text("방만들기")
-                            .font(.pretendardB(12))
-                            .foregroundStyle(Color(.mainBlack))
-                    }
-                }
             BoosterView(viewModel: BoosterViewModel())
                 .tabItem {
                     tabItem(image: .booster, title: "부스터")
                 }
-        }
-        .font(.headline)
-        .accentColor(BasterdzColor.mainBlack.color)
+            HomeView(viewModel: HomeViewModel())
+                .tabItem {
+                    tabItem(image: .home, title: "홈")
+                }
+            MyPageView()
+                .tabItem {
+                    tabItem(image: .mypage, title: "마이 페이지")
+                }
+                .font(.headline)
+                .accentColor(BasterdzColor.mainBlack.color)
+        }  
+//        .padding(EdgeInsets(top: 32, leading: 0, bottom: 0, trailing: 32))
     }
     
     @ViewBuilder func tabItem(image: BasterdzImage, title: String) -> some View {

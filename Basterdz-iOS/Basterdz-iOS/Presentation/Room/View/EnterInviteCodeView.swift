@@ -9,19 +9,19 @@ import SwiftUI
 
 struct EnterInviteCodeView: View {
     
-    @ObservedObject private var viewModel: RoomViewModel
+//    @ObservedObject private var viewModel: CreateRoomViewModel
     @State private var inviteCode: String = ""
     @FocusState private var isFocused: Bool
     
-    init(viewModel: RoomViewModel) {
-        self._viewModel = ObservedObject(wrappedValue: viewModel)
-    }
+//    init(viewModel: CreateRoomViewModel) {
+//        self._viewModel = ObservedObject(wrappedValue: viewModel)
+//    }
     
     var body: some View {
         VStack {
             BasterdzNavigationBar(
                 leadingItem: (.arrow_back, {
-                    viewModel.path.removeLast()
+//                    viewModel.path.removeLast()
                 })
             )
             .padding(.bottom, 50)
@@ -53,18 +53,15 @@ struct EnterInviteCodeView: View {
             
             BasterdzCommonButton(title: "다음", action: {
                 // TODO: - 팝업 띄우기로 액션 수정 예정
-                viewModel.path.append(RoomFlowPath.enterRoomDescription)
             })
             .padding(.leading, 17)
             .padding(.trailing, 17)
         }
-        .toolbar(.hidden, for: .navigationBar)
-        .toolbar(.hidden, for: .tabBar)
     }
 }
 
-struct EnterView_Previews: PreviewProvider {
-    static var previews: some View {
-        EnterInviteCodeView(viewModel: RoomViewModel())
-    }
-}
+//struct EnterView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        EnterInviteCodeView(viewModel: CreateRoomViewModel())
+//    }
+//}

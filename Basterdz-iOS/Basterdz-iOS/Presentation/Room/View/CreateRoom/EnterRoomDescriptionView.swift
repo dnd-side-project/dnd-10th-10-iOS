@@ -9,97 +9,154 @@ import SwiftUI
 
 struct EnterRoomDescriptionView: View {
     
-    @ObservedObject var viewModel: RoomViewModel
+    @ObservedObject var viewModel: EnterRoomDescriptionViewModel
     @FocusState var focusState: FocusItem?
-    @State var showModal: Bool = false
-    @State var showContent: BottomSheetContent = .restrictApp
     
     enum FocusItem {
         case goal, restrictApp, time, restrictTime, maxPeopleCount
     }
     
-    enum BottomSheetContent {
-        case restrictApp, restrictTime, maxPeople
-    }
-    
-    init(viewModel: RoomViewModel) {
+    init(viewModel: EnterRoomDescriptionViewModel) {
         self.viewModel = viewModel
-        self.focusState = .goal
     }
     
     var body: some View {
-        ScrollView {
+        VStack {
+            BasterdzNavigationBar(
+                centerTitle: "방만들기",
+                leadingItem: (BasterdzImage.arrow_back, {
+                    viewModel.coordinator?.pop()
+                })
+            )
             VStack(spacing: 16) {
+                // MARK: 1번 목표 한마디
                 numberView(
                     number: 1,
                     title: "목표 한마디",
-                    isActive: false
+                    isActive: viewModel.state.isGoalButtonActive
                 )
-                TextInputView(
-                    text: $viewModel.roomEntity.goal,
+                BasterdzTextField(
+                    text: $viewModel.state.roomEntity.goal,
+                    isActive: focusState != .goal && !viewModel.state.isGoalButtonActive,
                     isFocused: $focusState,
                     focusValue: .goal,
                     placeholder: "도전하는 목표를 작성해보세요",
-                    trailingText: "\(viewModel.roomEntity.goal.count)/20"
+                    trailingText: "\(viewModel.state.roomEntity.goal.count)/20",
+                    errorMessage: viewModel.state.goalErrorMessage
                 )
+                .focused($focusState, equals: .goal)
                 
-                numberView(number: 2, title: "제한 앱 설정", isActive: false)
+                // MARK: 2번 제한 앱 설정
+                numberView(
+                    number: 2,
+                    title: "제한 앱 설정",
+                    isActive: viewModel.state.isRestrictAppButtonActive)
                 
-                InputButton(isActive: false, action: {
-                    showModal.toggle()
-                    showContent = .restrictApp
-                }, label: "인스타그램")
-        
-                numberView(number: 3, title: "기간을 설정해주세요", isActive: false)
-                // TODO
+                BasterdzOptionButton(
+                    isActive: !viewModel.state.isRestrictAppButtonActive,
+                    action: {
+                        viewModel.action(.restrictAppModalButtonTap)
+                    },
+                    label: viewModel.state.roomEntity.restrictAppType.rawValue
+                )
+                .focused($focusState, equals: .restrictApp)
+                
+                // MARK: 3번 스크린 타임 제한 기간 설정
+                VStack {
+                    numberView(
+                        number: 3,
+                        title: "스크린 타임 제한 기간 설정",
+                        isActive: viewModel.state.isPeriodButtonActive
+                    )
+                    BasterdzOptionButton(
+                        isActive: !viewModel.state.isPeriodButtonActive,
+                        action: {
+                            viewModel.action(.periodModalButtonTap)
+                        },
+                        label:  viewModel.state.roomEntity.period != 0  ? "\(viewModel.state.roomEntity.period)일" : "디데이 기간을 설정해보세요",
+                        image: BasterdzImage.calendar.rawValue
+                    )
+                    .focused($focusState, equals: .restrictTime)
+                    
+                }
+                
+                // MARK: 4번 하루 총 제한 시간
                 HStack {
                     numberView(
                         number: 4,
                         title: "하루 총 제한 시간",
-                        isActive: false
+                        isActive: viewModel.state.isRestrictTimeButtonActive
                     )
-                    InputButton(isActive: false, action: {
-                        showModal.toggle()
-                        showContent = .restrictTime
-                    }, label: "1시간")
-                        .frame(width: 124)
+                    BasterdzOptionButton(
+                        isActive: !viewModel.state.isRestrictTimeButtonActive,
+                        action: {
+                            viewModel.action(.restrictTimeModalButtonTap)
+                        },
+                        label: viewModel.state.roomEntity.restrictAppTime == 0 ? "":
+                            "\(viewModel.state.roomEntity.restrictAppTime)시간"
+                    )
+                    .frame(width: 124)
                 }
+                .focused($focusState, equals: .restrictTime)
+                
+                // MARK: 5번 참여 정원
                 HStack {
                     numberView(
                         number: 5,
                         title: "참여 정원",
                         subtitle: "최대 6명",
-                        isActive: false
+                        isActive: viewModel.state.isMaxPeopleButtonActive
                     )
-                    InputButton(isActive: false, action: {
-                        showModal.toggle()
-                        showContent = .maxPeople
-                    }, label: "1명")
-                        .frame(width: 124)
+                    BasterdzOptionButton(
+                        isActive: !viewModel.state.isMaxPeopleButtonActive,
+                        action: {
+                            viewModel.action(.maxPeopleModalButtonTap)
+                        },
+                        label: viewModel.state.roomEntity.maxPeople == 0 ? "" :
+                            "\(viewModel.state.roomEntity.maxPeople)명"
+                    )
+                    .frame(width: 124)
                 }
-            }
-            .padding(20)
+                .focused($focusState, equals: .maxPeopleCount)
+                
+                Spacer()
+                BasterdzCommonButton(
+                    title: "방 생성하기",
+                    style: .red,
+                    action: {
+                        viewModel.action(.bottomButtonTap)
+                    },
+                    isActive: viewModel.state.isBottomButtonActive
+                )
+            }.padding(.horizontal, 16)
         }
-        .sheet(isPresented: $showModal, content: {
+        .sheet(isPresented: $viewModel.state.showModal, content: {
             showModalContent()
                 .presentationDetents(
-                    [.height(UIScreen.main.bounds.height * 0.4)]
+                    [.height(UIScreen.main.bounds.height * 0.5)]
                 )
         })
-        
+        .onAppear {
+            focusState = .goal
+        }
+        .hideKeyboardOnTapBackground()
     }
-   
+    
+    // modal 보여주는 뷰
     @ViewBuilder func showModalContent() -> some View {
-        switch showContent {
+        switch viewModel.state.showContent {
         case .restrictApp:
-            SelectRestrictAppView()
+            SelectRestrictAppBottomView(viewModel: viewModel, showModal: $viewModel.state.showModal)
         case .restrictTime:
-            SelectRestrictTimeView()
+            SelectRestrictTimeBottomView(viewModel: viewModel, showModal: $viewModel.state.showModal)
         case .maxPeople:
-            SelectMaxPeopleView()
+            SelectMaxPeopleBottomView(viewModel: viewModel, showModal: $viewModel.state.showModal)
+        case .period:
+            SelectPeriodBottomView(viewModel: viewModel, showModal: $viewModel.state.showModal)
         }
     }
     
+    // number 뷰
     @ViewBuilder func numberView(
         number: Int,
         title: String,
@@ -127,7 +184,7 @@ struct EnterRoomDescriptionView: View {
                 .foregroundStyle(
                     isActive ?
                     Color(.mainBlack) :
-                    Color(.grey3)
+                        Color(.grey3)
                 )
             if let subtitle {
                 Text(subtitle)
@@ -135,7 +192,7 @@ struct EnterRoomDescriptionView: View {
                     .foregroundStyle(
                         isActive ?
                         Color(.mainBlack) :
-                        Color(.grey3)
+                            Color(.grey3)
                     )
             }
             Spacer()

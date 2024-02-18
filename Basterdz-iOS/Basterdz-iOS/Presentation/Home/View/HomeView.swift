@@ -10,21 +10,32 @@ import SwiftUI
 struct HomeView: View {
     
     @StateObject var viewModel: HomeViewModel
+    @State private var plusButtonTap = false
     
     var body: some View {
         NavigationStack(path: $viewModel.path) {
             VStack {
                 BasterdzNavigationBar(
-                    leadingItem: (.basterdz, {}),
-                    trailingItemList: [
-                        (.mypage, {
-                        })
-                    ]
+                    leadingItem: (.basterdz, {})
                 )
                 Spacer()
+                
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        plusButtonTap.toggle()
+                    }, label: {
+                        Image(BasterdzImage.plus)
+                            .resizable()
+                            .frame(width: 48, height: 48)
+                    })
+                    .padding(20)
+                }
             }
-        }.navigationDestination(for: BoosterFlowPath.self) { _ in
-            EmptyView()
+            .fullScreenCover(isPresented: $plusButtonTap) {
+                RoomView(coordinator: RoomCoordinator())
+            }
         }
+       
     }
 }
