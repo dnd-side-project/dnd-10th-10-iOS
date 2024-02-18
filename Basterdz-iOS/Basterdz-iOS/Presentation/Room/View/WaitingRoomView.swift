@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// TODO: 서버 response에 따라서 해당 모델 바뀔 수 있음. 확정 시 전역으로 빼기
 struct Profile: Hashable {
     let nickname: String
     let profileImageTitle: String
