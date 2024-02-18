@@ -11,12 +11,14 @@ enum BasterdzImage: String {
     // icon
     case arrow_down
     case arrow_back
+    case arrow_right
     case mypage
     case home
     case plus
     case booster
     case calendar
     case copy
+    case person
     
     case x
     case timer
