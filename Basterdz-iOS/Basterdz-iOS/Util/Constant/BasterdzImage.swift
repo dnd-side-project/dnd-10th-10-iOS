@@ -37,4 +37,5 @@ enum BasterdzImage: String {
     case youtube
     case tictok
     case twitter
+    case fire
 }
