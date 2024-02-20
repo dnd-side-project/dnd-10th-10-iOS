@@ -10,7 +10,6 @@ import SwiftUI
 struct BoosterView: View {
     @StateObject var viewModel: BoosterViewModel
     let columns = [GridItem(.flexible()), GridItem(.flexible())]
-    let list = RoomEntity.mocks
     
     var body: some View {
         NavigationStack(path: $viewModel.path) {
@@ -49,7 +48,7 @@ struct BoosterView: View {
                         .frame(alignment: .leading)
                         
                         LazyVGrid(columns: columns) {
-                            ForEach(list, id: \.self) {
+                            ForEach(viewModel.roomList, id: \.self) {
                                 roomCell(entity: $0)
                             }
                         }.padding()
