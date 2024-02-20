@@ -32,16 +32,16 @@ struct MyPageView: View {
                 RoundedRectangle(cornerRadius: 15)
                     .foregroundStyle(Color(.grey1))
                     .frame(height: 120)
-                    .padding(16)
+                    .padding(.vertical, 12)
                 
                 HStack {
-                    summeryCell(boosternum: 23, title: "이번달")
+                    summeryCell(boosternum: 46, title: "이번달")
                     summeryCell(boosternum: 23, title: "지난주")
-                    summeryCell(boosternum: 23, title: "오늘")
+                    summeryCell(boosternum: 3, title: "오늘")
                 }
             }
             .padding()
-            .roundedBorder(Color(.grey1))
+            .roundedBorder(Color(.grey2))
             .padding(.horizontal, 16)
             .padding(.vertical, 32)
             .frame(maxWidth: .infinity)
@@ -63,6 +63,7 @@ struct MyPageView: View {
                 .foregroundStyle(Color(.mainBlack))
         }
         .padding()
+        .frame(maxWidth: .infinity)
         .background(Color(.grey1))
         .clipShape(RoundedRectangle(cornerRadius: 10))
     }
@@ -84,8 +85,4 @@ struct MyPageView: View {
             Divider()
         }.padding(.horizontal, 16)
     }
-}
-
-#Preview {
-    MyPageView()
 }

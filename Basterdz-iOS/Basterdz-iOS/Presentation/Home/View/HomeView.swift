@@ -52,7 +52,7 @@ struct HomeView: View {
                     }, label: {
                         Image(BasterdzImage.plus)
                             .resizable()
-                            .frame(width: 48, height: 48)
+                            .frame(width: 50, height: 50)
                     })
                     .padding(20)
                 }

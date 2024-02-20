@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BoosterView: View {
     @StateObject var viewModel: BoosterViewModel
-    let columns = [GridItem(.flexible()), GridItem(.flexible())]
+    let columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
     
     var body: some View {
         NavigationStack(path: $viewModel.path) {
@@ -26,8 +26,10 @@ struct BoosterView: View {
                         HStack {
                             boosterSummeryCell(boosternum: 34, title: "보유 부스터")
                             Divider()
+                                .padding(.horizontal, 8)
                             boosterSummeryCell(boosternum: 20, title: "받은 부스터")
                             Divider()
+                                .padding(.horizontal, 8)
                             boosterSummeryCell(boosternum: 23, title: "보낸 부스터")
                         }
                         .padding(32)
@@ -96,6 +98,7 @@ struct BoosterView: View {
                 Text(entity.name)
                     .font(.pretendardB(16))
                     .foregroundStyle(Color(.mainBlack))
+                    .frame(width: 105)
                 
                 HStack {
                     Spacer()
@@ -104,14 +107,12 @@ struct BoosterView: View {
                         .scaledToFit()
                         .frame(width: 50, height: 50)
                 }
-               
             }
         }
         .padding(16)
-        .roundedBorder(Color(.grey1))
+        .roundedBorder(Color(.grey2))
+        .aspectRatio(1, contentMode: .fill)
+        .clipped()
+        
     }
-}
-
-#Preview {
-    BoosterView(viewModel: BoosterViewModel())
 }
