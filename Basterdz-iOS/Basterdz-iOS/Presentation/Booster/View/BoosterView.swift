@@ -39,7 +39,7 @@ struct BoosterView: View {
                                 .font(.pretendardB(20))
                                 .foregroundStyle(Color(.mainBlack))
                                 .frame(alignment: .leading)
-                            Text("4")
+                            Text("\(viewModel.roomList.count)")
                                 .font(.pretendardB(20))
                                 .foregroundStyle(Color(.mainRed))
                             Spacer()

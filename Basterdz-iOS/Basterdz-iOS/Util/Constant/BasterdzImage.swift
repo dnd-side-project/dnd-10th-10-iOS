@@ -19,6 +19,7 @@ enum BasterdzImage: String {
     case calendar
     case copy
     case person
+    case alarm
     
     case x
     case timer
