@@ -210,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				777338912B857C6C00143672 /* BeforeStartView.swift */,
+				77761FF62B80EEC200178937 /* EnterConfirmView.swift */,
 			);
 			path = PopUp;
 			sourceTree = "<group>";
@@ -486,7 +487,6 @@
 				D6E7378F2B7271AB005FB8CA /* BottomSheet */,
 				D6E7378A2B72719F005FB8CA /* CreateRoom */,
 				772025562B79202F00439CFD /* EnterInviteCodeView.swift */,
-				77761FF62B80EEC200178937 /* EnterConfirmView.swift */,
 				77761FF82B810C4800178937 /* WaitingRoomView.swift */,
 			);
 			path = View;
