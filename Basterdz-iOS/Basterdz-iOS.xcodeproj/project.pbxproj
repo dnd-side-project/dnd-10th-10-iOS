@@ -10,6 +10,7 @@
 		772025572B79202F00439CFD /* EnterInviteCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772025562B79202F00439CFD /* EnterInviteCodeView.swift */; };
 		7720255B2B79F3C000439CFD /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7720255A2B79F3C000439CFD /* String+.swift */; };
 		7720256D2B80AF3300439CFD /* BasterdzPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7720256C2B80AF3300439CFD /* BasterdzPopUpView.swift */; };
+		777338922B857C6C00143672 /* BeforeStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777338912B857C6C00143672 /* BeforeStartView.swift */; };
 		77761FF72B80EEC200178937 /* EnterConfirmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77761FF62B80EEC200178937 /* EnterConfirmView.swift */; };
 		77761FF92B810C4800178937 /* WaitingRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77761FF82B810C4800178937 /* WaitingRoomView.swift */; };
 		779677572B739B72007315E8 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 779677562B739B72007315E8 /* .swiftlint.yml */; };
@@ -98,6 +99,7 @@
 		772025562B79202F00439CFD /* EnterInviteCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterInviteCodeView.swift; sourceTree = "<group>"; };
 		7720255A2B79F3C000439CFD /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		7720256C2B80AF3300439CFD /* BasterdzPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzPopUpView.swift; sourceTree = "<group>"; };
+		777338912B857C6C00143672 /* BeforeStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforeStartView.swift; sourceTree = "<group>"; };
 		77761FF62B80EEC200178937 /* EnterConfirmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterConfirmView.swift; sourceTree = "<group>"; };
 		77761FF82B810C4800178937 /* WaitingRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingRoomView.swift; sourceTree = "<group>"; };
 		779677562B739B72007315E8 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
@@ -204,6 +206,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		777338932B857C7200143672 /* PopUp */ = {
+			isa = PBXGroup;
+			children = (
+				777338912B857C6C00143672 /* BeforeStartView.swift */,
+				77761FF62B80EEC200178937 /* EnterConfirmView.swift */,
+			);
+			path = PopUp;
+			sourceTree = "<group>";
+		};
 		7798FCE72B6B9C050053A556 = {
 			isa = PBXGroup;
 			children = (
@@ -472,10 +483,10 @@
 			isa = PBXGroup;
 			children = (
 				7798FD752B6BBFF10053A556 /* RoomView.swift */,
+				777338932B857C7200143672 /* PopUp */,
 				D6E7378F2B7271AB005FB8CA /* BottomSheet */,
 				D6E7378A2B72719F005FB8CA /* CreateRoom */,
 				772025562B79202F00439CFD /* EnterInviteCodeView.swift */,
-				77761FF62B80EEC200178937 /* EnterConfirmView.swift */,
 				77761FF82B810C4800178937 /* WaitingRoomView.swift */,
 			);
 			path = View;
@@ -947,6 +958,7 @@
 				D6CE286F2B81041900E23264 /* BasterdzInt.swift in Sources */,
 				7798FD942B6CA97A0053A556 /* ShapeStyle+.swift in Sources */,
 				7798FD742B6BBFE30053A556 /* LoginCoordinator.swift in Sources */,
+				777338922B857C6C00143672 /* BeforeStartView.swift in Sources */,
 				7798FD762B6BBFF10053A556 /* RoomView.swift in Sources */,
 				77761FF72B80EEC200178937 /* EnterConfirmView.swift in Sources */,
 				7798FD802B6BC0290053A556 /* BoosterCoordinator.swift in Sources */,
