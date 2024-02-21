@@ -44,4 +44,5 @@ enum BasterdzImage: String {
     case profile_blue
     case profile_pink
     case profile_purple
+    case redBomb
 }
