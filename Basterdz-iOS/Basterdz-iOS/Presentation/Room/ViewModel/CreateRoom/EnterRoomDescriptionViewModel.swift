@@ -81,6 +81,9 @@ class EnterRoomDescriptionViewModel: ViewModelable {
     private var inviteCode = "YXKRN95"
     private var store = Set<AnyCancellable>()
     
+    // usecase
+    private let createRoom:
+    
     init(coordinator: RoomCoordinator, roomName: String) {
         self.coordinator = coordinator
         self.state.roomEntity.name = roomName

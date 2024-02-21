@@ -9,7 +9,7 @@ import Foundation
 
 
 final class HomeViewModel: ViewModelable {
-    weak var coordinator: HomeCoordinator?
+    var coordinator: HomeCoordinator
     @Published var state: State
     
     struct State {
@@ -17,6 +17,7 @@ final class HomeViewModel: ViewModelable {
         var progressRoomList: [RoomEntity]
         var finishRoomList: [RoomEntity]
     }
+    
     enum Action {
         case getDatas
         case chipButtonTap(RestrictApp)
@@ -47,9 +48,9 @@ final class HomeViewModel: ViewModelable {
                 }
             }
         case .roomTap(let room):
-            coordinator?.push(.detail)
+            coordinator.push(.detail)
         case .plusButtonTap:
-            coordinator?.push(.plusButton)
+            coordinator.push(.plusButton)
         }
     }
 }
