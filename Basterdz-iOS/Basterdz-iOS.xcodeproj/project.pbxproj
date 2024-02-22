@@ -46,6 +46,7 @@
 		7798FD9C2B6CB3C40053A556 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 7798FD9B2B6CB3C40053A556 /* Moya */; };
 		7798FD9F2B6CE4FA0053A556 /* BasterdzColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD9E2B6CE4FA0053A556 /* BasterdzColor.swift */; };
 		77A487082B8758A400C72EA6 /* BasterdzProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487072B8758A400C72EA6 /* BasterdzProgressBar.swift */; };
+		77A4870A2B8769AD00C72EA6 /* ChallengerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487092B8769AD00C72EA6 /* ChallengerEntity.swift */; };
 		D64ED50E2B6E1A2900A64D68 /* BasterdzCommonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED50D2B6E1A2900A64D68 /* BasterdzCommonButton.swift */; };
 		D64ED5132B6E22C800A64D68 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED5122B6E22C800A64D68 /* TabView.swift */; };
 		D64ED5192B6E327000A64D68 /* BasterdzCenterTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED5182B6E327000A64D68 /* BasterdzCenterTextEditor.swift */; };
@@ -149,6 +150,7 @@
 		7798FD9D2B6CB8390053A556 /* Basterdz-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Basterdz-iOS.entitlements"; sourceTree = "<group>"; };
 		7798FD9E2B6CE4FA0053A556 /* BasterdzColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzColor.swift; sourceTree = "<group>"; };
 		77A487072B8758A400C72EA6 /* BasterdzProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzProgressBar.swift; sourceTree = "<group>"; };
+		77A487092B8769AD00C72EA6 /* ChallengerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengerEntity.swift; sourceTree = "<group>"; };
 		D64ED50D2B6E1A2900A64D68 /* BasterdzCommonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzCommonButton.swift; sourceTree = "<group>"; };
 		D64ED5122B6E22C800A64D68 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		D64ED5182B6E327000A64D68 /* BasterdzCenterTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzCenterTextEditor.swift; sourceTree = "<group>"; };
@@ -296,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				D64ED5202B6E408300A64D68 /* RoomEntity.swift */,
+				77A487092B8769AD00C72EA6 /* ChallengerEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -941,6 +944,7 @@
 				D671574C2B80C2CB002BA1E5 /* Date+.swift in Sources */,
 				D64ED51B2B6E35AF00A64D68 /* BasterdzTextField.swift in Sources */,
 				77761FF92B810C4800178937 /* WaitingRoomView.swift in Sources */,
+				77A4870A2B8769AD00C72EA6 /* ChallengerEntity.swift in Sources */,
 				D64ED50E2B6E1A2900A64D68 /* BasterdzCommonButton.swift in Sources */,
 				D64ED51F2B6E3DB500A64D68 /* BasterdzOptionButton.swift in Sources */,
 				7798FCF62B6B9C050053A556 /* HomeView.swift in Sources */,
