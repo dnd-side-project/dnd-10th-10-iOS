@@ -59,7 +59,7 @@ struct BasterdzNavigationBar: View {
                             item.1()
                         }, label: {
                             Image(item.0)
-                                .frame(width: 48, height: 48)
+                                .frame(width: 24, height: 24)
                         })
                     }
                 }
