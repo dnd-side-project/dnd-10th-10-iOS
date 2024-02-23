@@ -10,30 +10,21 @@ import SwiftUI
 struct TabbarView: View {
     
     var body: some View {
-        ZStack {
-            TabView {
-                BoosterView(viewModel: BoosterViewModel())
-                    .tabItem {
-                        tabItem(image: .booster, title: "부스터")
-                    }
-                HomeView(viewModel: HomeViewModel(coordinator: HomeCoordinator()))
-                    .tabItem {
-                        tabItem(image: .home, title: "홈")
-                    }
-                MyPageView()
-                    .tabItem {
-                        tabItem(image: .mypage, title: "마이 페이지")
-                    }
-                    .font(.headline)
-                    .accentColor(BasterdzColor.mainBlack.color)
-            }
-            VStack {
-                Spacer()
-                Rectangle()
-                    .frame(maxWidth: .infinity, maxHeight: 1)
-                    .foregroundColor(Color(.grey1))
-                    .padding(.bottom, 50)
-            }
+        TabView {
+            BoosterView(viewModel: BoosterViewModel(coordinator: BoosterCoordinator()))
+                .tabItem {
+                    tabItem(image: .booster, title: "부스터")
+                }
+            HomeView(viewModel: HomeViewModel(coordinator: HomeCoordinator()))
+                .tabItem {
+                    tabItem(image: .home, title: "홈")
+                }
+            MyPageView()
+                .tabItem {
+                    tabItem(image: .mypage, title: "마이 페이지")
+                }
+                .font(.headline)
+                .accentColor(BasterdzColor.mainBlack.color)
         }
     }
     
