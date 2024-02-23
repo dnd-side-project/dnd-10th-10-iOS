@@ -9,19 +9,16 @@ import SwiftUI
 
 struct EnterInviteCodeView: View {
     
-//    @ObservedObject private var viewModel: CreateRoomViewModel
+    @StateObject var viewModel: EnterInviteCodeViewModel
+    @State private var showModal = false
     @State private var inviteCode: String = ""
     @FocusState private var isFocused: Bool
-    
-//    init(viewModel: CreateRoomViewModel) {
-//        self._viewModel = ObservedObject(wrappedValue: viewModel)
-//    }
     
     var body: some View {
         VStack {
             BasterdzNavigationBar(
                 leadingItem: (.arrow_back, {
-//                    viewModel.path.removeLast()
+                    viewModel.action(.backButtonDidTap)
                 })
             )
             .padding(.bottom, 50)
@@ -43,26 +40,31 @@ struct EnterInviteCodeView: View {
                 .frame(width: 205, height: 50)
                 .background(Color(.white))
                 .clipShape(RoundedRectangle(cornerRadius: 13))
-                .roundedBorder(Color(.mainBlack))
+                .multilineTextAlignment(.center)
+                .roundedBorder( viewModel.state.isErrorMessageHidden ? Color(.mainBlack) : Color(.mainRed))
                 .focused($isFocused)
+                .onChange(of: inviteCode) { _ in
+                    viewModel.state.inviteCode = inviteCode
+                }
                 .padding(8)
             
             Text("8자 이하만 입력 가능합니다")
                 .font(.pretendardM(14))
                 .foregroundStyle(Color(.mainRed))
+                .opacity(viewModel.state.isErrorMessageHidden ? 0 : 1)
             Spacer()
             
-            BasterdzCommonButton(title: "다음", action: {
-                // TODO: - 팝업 띄우기로 액션 수정 예정
-            })
+            BasterdzCommonButton(title: "다음",
+                                 style: .red,
+                                 action: {
+                                    viewModel.action(.nextButtonDidTap)
+                                    showModal.toggle() },
+                                 isActive: viewModel.state.isNextButtonActive)
             .padding(.leading, 17)
             .padding(.trailing, 17)
+            .fullScreenCover(isPresented: $showModal) {
+                BasterdzPopUpView(contentView: AnyView(EnterConfirmView()))
+            }
         }
     }
 }
-
-//struct EnterView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        EnterInviteCodeView(viewModel: CreateRoomViewModel())
-//    }
-//}
