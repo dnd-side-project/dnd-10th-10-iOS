@@ -9,8 +9,6 @@ import Foundation
 import Combine
 
 final class RoomAPIService: RoomNetworkable {
-    
-    
     private let service: APIService<RoomAPI>
     
     init() {

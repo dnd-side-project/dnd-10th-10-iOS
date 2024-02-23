@@ -42,8 +42,8 @@ extension RoomAPI: BaseAPI {
         switch self {
         case .createRoom:
             ""
-        case .getRoomUsingCode(let code):
-            "?inviteCode=\(code)"
+        case .getRoomUsingCode:
+            ""
         case .pendingRoomDetail(let id):
             "\(id)/members"
         case .progressRoomDetail(let id):
@@ -65,8 +65,10 @@ extension RoomAPI: BaseAPI {
                 "endDate": room.period,
                 "limitHour": room.restrictAppTime
             ]
-        case .getRoomUsingCode:
-            return .none
+        case .getRoomUsingCode(let code):
+            return [
+                "inviteCode": code
+            ]
         case .searchRoom:
             return .none
         case .pendingRoomDetail:

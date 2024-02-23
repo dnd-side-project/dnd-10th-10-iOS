@@ -18,8 +18,8 @@ class APIService<API: BaseAPI>: Requestable {
     func mapAPIResponse<T: Decodable>(api: API) -> AnyPublisher<T, ErrorResponse> {
         return provider.request(api)
             .tryMap { response in
-                print("decode 시작 \(response)")
                 let commonResponse = try JSONDecoder().decode(CommonResponse<T>.self, from: response.data)
+                print("response: \(commonResponse)")
                 if let data = commonResponse.data {
                     return data
                 } else if let error = commonResponse.error {

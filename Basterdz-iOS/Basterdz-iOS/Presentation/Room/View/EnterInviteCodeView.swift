@@ -52,8 +52,7 @@ struct EnterInviteCodeView: View {
             BasterdzCommonButton(title: "다음",
                                  style: .red,
                                  action: {
-                                    viewModel.action(.nextButtonDidTap)
-                viewModel.state.showModal.toggle() },
+                                    viewModel.action(.nextButtonDidTap) },
                                  isActive: viewModel.state.isNextButtonActive)
             .padding(.leading, 17)
             .padding(.trailing, 17)
