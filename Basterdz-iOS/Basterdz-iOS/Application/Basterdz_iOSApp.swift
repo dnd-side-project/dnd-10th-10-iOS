@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct Basterdz_iOSApp: App {
     
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     @StateObject private var appRootManager = AppRootManager()
     
     var body: some Scene {
