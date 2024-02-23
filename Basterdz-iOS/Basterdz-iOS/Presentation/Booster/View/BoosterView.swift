@@ -50,15 +50,18 @@ struct BoosterView: View {
                         .frame(alignment: .leading)
                         
                         LazyVGrid(columns: columns) {
-                            ForEach(viewModel.roomList, id: \.self) {
-                                roomCell(entity: $0)
+                            ForEach(viewModel.roomList, id: \.self) { room in
+                                roomCell(entity: room)
+                                    .onTapGesture {
+                                        viewModel.action(.selectRoom(room))
+                                    }
                             }
                         }.padding()
                     }
                 }
             }
-            .navigationDestination(for: BoosterFlowPath.self) { _ in
-                EmptyView()
+            .navigationDestination(for: BoosterFlow.self) {
+                viewModel.setView($0)
             }
         }
     }
