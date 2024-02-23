@@ -58,6 +58,7 @@
 		77A487272B889D9400C72EA6 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487262B889D9400C72EA6 /* APIService.swift */; };
 		77A4872C2B88E64F00C72EA6 /* EnterInviteCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A4872B2B88E64F00C72EA6 /* EnterInviteCodeViewModel.swift */; };
 		77A487322B891C6200C72EA6 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487312B891C6200C72EA6 /* SplashView.swift */; };
+		77A487392B893B9B00C72EA6 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 77A487382B893B9B00C72EA6 /* FirebaseMessaging */; };
 		D64ED50E2B6E1A2900A64D68 /* BasterdzCommonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED50D2B6E1A2900A64D68 /* BasterdzCommonButton.swift */; };
 		D64ED5132B6E22C800A64D68 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED5122B6E22C800A64D68 /* TabView.swift */; };
 		D64ED5192B6E327000A64D68 /* BasterdzCenterTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED5182B6E327000A64D68 /* BasterdzCenterTextEditor.swift */; };
@@ -226,6 +227,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77A487392B893B9B00C72EA6 /* FirebaseMessaging in Frameworks */,
 				77A4871F2B887BDA00C72EA6 /* Moya in Frameworks */,
 				77A4871D2B887BDA00C72EA6 /* CombineMoya in Frameworks */,
 			);
@@ -871,6 +873,7 @@
 			packageProductDependencies = (
 				77A4871C2B887BDA00C72EA6 /* CombineMoya */,
 				77A4871E2B887BDA00C72EA6 /* Moya */,
+				77A487382B893B9B00C72EA6 /* FirebaseMessaging */,
 			);
 			productName = "Basterdz-iOS";
 			productReference = 7798FCF02B6B9C050053A556 /* Basterdz-iOS.app */;
@@ -946,6 +949,7 @@
 			mainGroup = 7798FCE72B6B9C050053A556;
 			packageReferences = (
 				77A4871B2B887BDA00C72EA6 /* XCRemoteSwiftPackageReference "Moya" */,
+				77A487372B893B9A00C72EA6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 7798FCF12B6B9C050053A556 /* Products */;
 			projectDirPath = "";
@@ -1443,6 +1447,14 @@
 				minimumVersion = 15.0.0;
 			};
 		};
+		77A487372B893B9A00C72EA6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.21.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1455,6 +1467,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 77A4871B2B887BDA00C72EA6 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
+		};
+		77A487382B893B9B00C72EA6 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 77A487372B893B9A00C72EA6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
