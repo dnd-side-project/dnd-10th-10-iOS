@@ -52,7 +52,7 @@ struct HomeView: View {
                     }, label: {
                         Image(BasterdzImage.plus)
                             .resizable()
-                            .frame(width: 48, height: 48)
+                            .frame(width: 50, height: 50)
                     })
                     .padding(20)
                 }
@@ -183,7 +183,7 @@ private extension HomeView {
                             .foregroundStyle(Color(.white))
                     }
                     .padding(.horizontal, 7)
-                    .padding(.vertical , 3)
+                    .padding(.vertical, 3)
                     .background(Color(.mainRed))
                     .clipShape(RoundedRectangle(cornerRadius: 20))
                     .frame(width: 50, height: 20)

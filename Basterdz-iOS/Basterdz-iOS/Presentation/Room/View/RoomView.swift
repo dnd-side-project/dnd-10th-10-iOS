@@ -19,7 +19,7 @@ struct RoomView: View {
                     dismiss()
                 })
             )
-            VStack(spacing: 32){
+            VStack(spacing: 32) {
                 Text("도파민 탈출, 바스터즈와\n함께 시작해볼까요?"
                     .applyVariousFont(
                         targetStringList: ["바스터즈"],
