@@ -17,13 +17,27 @@ class RoomAPIService: Requestable {
     private let provider = NetworkProvider<Endpoint>()
     private var cancelable = Set<AnyCancellable>()
     
-    // TODO: 타입 부분 dto로 수정
-    func searchRoomAPI() -> <ErrorResponse?> {
+    func searchRoomAPI<T: Decodable>() -> AnyPublisher<T, ErrorResponse> {
         return provider.request(.searchRoom)
-            .sink(receiveCompletion: { completion in
-                
-            }, receiveValue: { result in
-                result.map(ErrorResponse.self)
-            })
+            .tryMap { response in
+                try JSONDecoder().decode(CommonResponse<T>.self, from: response.data)
+            }
+            .tryMap { responseData in
+                if let data = responseData.data {
+                    return data
+                } else if let error = responseData.error {
+                    throw error
+                } else {
+                    throw ErrorResponse.commonError
+                }
+            }
+            .mapError { error in
+                if let customError = error as? ErrorResponse {
+                    return customError
+                } else {
+                    return ErrorResponse.commonError
+                }
+            }
+            .eraseToAnyPublisher()
     }
 }

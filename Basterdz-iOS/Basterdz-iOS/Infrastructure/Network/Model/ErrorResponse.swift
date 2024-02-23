@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct ErrorResponse: Decodable {
+struct ErrorResponse: Decodable, Error {
     let code: String
     let message: String
+    
+    static let commonError = ErrorResponse(code: "700", message: "네트워크 실패")
 }
