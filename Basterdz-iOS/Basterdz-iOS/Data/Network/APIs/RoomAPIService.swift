@@ -13,7 +13,7 @@ final class RoomAPIService: RoomNetworkable {
     private let service: APIService<RoomAPI>
     
     init() {
-        self.service = APIService()
+        self.service = APIService<RoomAPI>()
     }
     
     func createRoom(room: RoomEntity) -> AnyPublisher<String, ErrorResponse> {

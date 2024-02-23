@@ -17,11 +17,4 @@ struct CommonResponse<T: Decodable>: Decodable {
         case data
         case error
     }
-    
-//    init(from decoder: Decoder) throws {
-//        let container = try decoder.container(keyedBy: CodingKeys.self)
-//        self.success = (try? container.decode(Bool.self, forKey: .success)) ?? false
-//        self.data = try container.decodeIfPresent(T.self, forKey: .data)
-//        self.error = try container.decodeIfPresent(ErrorResponse.self, forKey: .error)
-//    }
 }

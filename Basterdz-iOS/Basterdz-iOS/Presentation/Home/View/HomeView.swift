@@ -183,7 +183,7 @@ private extension HomeView {
                             .foregroundStyle(Color(.white))
                     }
                     .padding(.horizontal, 7)
-                    .padding(.vertical , 3)
+                    .padding(.vertical, 3)
                     .background(Color(.mainRed))
                     .clipShape(RoundedRectangle(cornerRadius: 20))
                     .frame(width: 50, height: 20)

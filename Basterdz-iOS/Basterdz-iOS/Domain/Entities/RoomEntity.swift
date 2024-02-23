@@ -21,7 +21,6 @@ struct RoomEntity: Hashable, Codable {
     
     var currentPeople: Int = 0
     var status: RoomStatus = .pending
-   
     
     static let mocks: [RoomEntity] = [
         RoomEntity(
