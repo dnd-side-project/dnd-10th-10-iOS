@@ -47,6 +47,7 @@
 		77A487082B8758A400C72EA6 /* BasterdzProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487072B8758A400C72EA6 /* BasterdzProgressBar.swift */; };
 		77A4870A2B8769AD00C72EA6 /* ChallengerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487092B8769AD00C72EA6 /* ChallengerEntity.swift */; };
 		77A4870F2B886B7B00C72EA6 /* NetworkEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A4870E2B886B7B00C72EA6 /* NetworkEnvironment.swift */; };
+		77A487112B886BFC00C72EA6 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487102B886BFC00C72EA6 /* NetworkError.swift */; };
 		77A487142B886C3700C72EA6 /* CommonResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487132B886C3700C72EA6 /* CommonResponse.swift */; };
 		77A487162B886F7600C72EA6 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487152B886F7600C72EA6 /* APIEndpoint.swift */; };
 		77A487182B88747C00C72EA6 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487172B88747C00C72EA6 /* Requestable.swift */; };
@@ -158,6 +159,7 @@
 		77A487072B8758A400C72EA6 /* BasterdzProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzProgressBar.swift; sourceTree = "<group>"; };
 		77A487092B8769AD00C72EA6 /* ChallengerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengerEntity.swift; sourceTree = "<group>"; };
 		77A4870E2B886B7B00C72EA6 /* NetworkEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEnvironment.swift; sourceTree = "<group>"; };
+		77A487102B886BFC00C72EA6 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		77A487132B886C3700C72EA6 /* CommonResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonResponse.swift; sourceTree = "<group>"; };
 		77A487152B886F7600C72EA6 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		77A487172B88747C00C72EA6 /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
@@ -685,6 +687,7 @@
 			isa = PBXGroup;
 			children = (
 				77A4870E2B886B7B00C72EA6 /* NetworkEnvironment.swift */,
+				77A487102B886BFC00C72EA6 /* NetworkError.swift */,
 				77A487172B88747C00C72EA6 /* Requestable.swift */,
 			);
 			path = Foundation;
@@ -1005,6 +1008,7 @@
 				77A487182B88747C00C72EA6 /* Requestable.swift in Sources */,
 				7798FD742B6BBFE30053A556 /* LoginCoordinator.swift in Sources */,
 				777338922B857C6C00143672 /* BeforeStartView.swift in Sources */,
+				77A487112B886BFC00C72EA6 /* NetworkError.swift in Sources */,
 				7798FD762B6BBFF10053A556 /* RoomView.swift in Sources */,
 				77A487212B8898DA00C72EA6 /* ErrorResponse.swift in Sources */,
 				77761FF72B80EEC200178937 /* EnterConfirmView.swift in Sources */,
