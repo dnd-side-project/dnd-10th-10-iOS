@@ -54,6 +54,7 @@
 		77A4871D2B887BDA00C72EA6 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 77A4871C2B887BDA00C72EA6 /* CombineMoya */; };
 		77A4871F2B887BDA00C72EA6 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 77A4871E2B887BDA00C72EA6 /* Moya */; };
 		77A487212B8898DA00C72EA6 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487202B8898DA00C72EA6 /* ErrorResponse.swift */; };
+		77A487242B8899E500C72EA6 /* RoomAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487232B8899E500C72EA6 /* RoomAPI.swift */; };
 		D64ED50E2B6E1A2900A64D68 /* BasterdzCommonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED50D2B6E1A2900A64D68 /* BasterdzCommonButton.swift */; };
 		D64ED5132B6E22C800A64D68 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED5122B6E22C800A64D68 /* TabView.swift */; };
 		D64ED5192B6E327000A64D68 /* BasterdzCenterTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED5182B6E327000A64D68 /* BasterdzCenterTextEditor.swift */; };
@@ -164,6 +165,7 @@
 		77A487152B886F7600C72EA6 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		77A487172B88747C00C72EA6 /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
 		77A487202B8898DA00C72EA6 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		77A487232B8899E500C72EA6 /* RoomAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomAPI.swift; sourceTree = "<group>"; };
 		D64ED50D2B6E1A2900A64D68 /* BasterdzCommonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzCommonButton.swift; sourceTree = "<group>"; };
 		D64ED5122B6E22C800A64D68 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		D64ED5182B6E327000A64D68 /* BasterdzCenterTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzCenterTextEditor.swift; sourceTree = "<group>"; };
@@ -660,6 +662,7 @@
 			isa = PBXGroup;
 			children = (
 				77A487152B886F7600C72EA6 /* APIEndpoint.swift */,
+				77A487222B8899CB00C72EA6 /* API */,
 				77A487122B886C1B00C72EA6 /* Model */,
 			);
 			path = Network;
@@ -702,7 +705,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		77A487222B8899CB00C72EA6 /* API */ = {
+			isa = PBXGroup;
+			children = (
 				77A487152B886F7600C72EA6 /* APIEndpoint.swift */,
+				77A487232B8899E500C72EA6 /* RoomAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		D64ED50C2B6E1A1200A64D68 /* Component */ = {
 			isa = PBXGroup;
 			children = (
@@ -995,6 +1006,7 @@
 				D6CE28712B81074200E23264 /* UIApplication+.swift in Sources */,
 				77A487142B886C3700C72EA6 /* CommonResponse.swift in Sources */,
 				7798FD712B6BBFCF0053A556 /* LoginViewModel.swift in Sources */,
+				77A487242B8899E500C72EA6 /* RoomAPI.swift in Sources */,
 				77A4870F2B886B7B00C72EA6 /* NetworkEnvironment.swift in Sources */,
 				779677592B73A54D007315E8 /* BasterdzImage.swift in Sources */,
 				7798FCF42B6B9C050053A556 /* Basterdz_iOSApp.swift in Sources */,
