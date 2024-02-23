@@ -34,27 +34,16 @@ struct EnterConfirmView: View {
             .padding(.bottom, 25)
             
             HStack(spacing: 10) {
+                BasterdzBorderButton(title: "뒤로가기",
+                                     action: {})
+                .padding(.leading, 16)
                 
-                // TODO: 버튼 재사용 컴포넌트로 수정예정
-                Button {
-                    
-                } label: {
-                    Text("뒤로가기")
-                        .font(.pretendardB(16))
-                        .foregroundStyle(Color(.mainRed))
-                }
-                .frame(width: 150, height: 50)
-                .roundedBorder(Color(.mainRed))
+                BasterdzCommonButton(title: "입장하기",
+                                     style: .red,
+                                     action: {}, 
+                                     isActive: true)
+                .padding(.trailing, 16)
                 
-                Button {
-                    
-                } label: {
-                    Text("입장하기")
-                        .font(.pretendardB(16))
-                        .foregroundStyle(Color(.mainRed))
-                }
-                .frame(width: 150, height: 50)
-                .roundedBorder(Color(.mainRed))
             }
             .padding(.bottom, 20)
         }

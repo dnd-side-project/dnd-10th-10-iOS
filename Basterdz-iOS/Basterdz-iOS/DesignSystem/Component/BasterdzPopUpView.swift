@@ -10,11 +10,9 @@ import SwiftUI
 struct BasterdzPopUpView: View {
 
     private let contentView: AnyView
-    private let edgeInsets: NSDirectionalEdgeInsets
     
-    init(contentView: AnyView, edgeInsets: NSDirectionalEdgeInsets) {
+    init(contentView: AnyView) {
         self.contentView = contentView
-        self.edgeInsets = edgeInsets
     }
     
     var body: some View {
@@ -35,8 +33,9 @@ struct BasterdzPopUpView: View {
                 }
             }
             
+            // TODO: Margin 값 조정하기 (기기대응 필요)
             contentView
-                .padding(.init(edgeInsets))
+                .padding(.init(top: 24, leading: 32, bottom: 0, trailing: 32))
         }
     }
 }

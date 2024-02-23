@@ -10,6 +10,8 @@
 		772025572B79202F00439CFD /* EnterInviteCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772025562B79202F00439CFD /* EnterInviteCodeView.swift */; };
 		7720255B2B79F3C000439CFD /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7720255A2B79F3C000439CFD /* String+.swift */; };
 		7720256D2B80AF3300439CFD /* BasterdzPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7720256C2B80AF3300439CFD /* BasterdzPopUpView.swift */; };
+		774A384E2B858FF80004CFBF /* ChallengeRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774A384D2B858FF80004CFBF /* ChallengeRoomView.swift */; };
+		777338922B857C6C00143672 /* BeforeStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777338912B857C6C00143672 /* BeforeStartView.swift */; };
 		77761FF72B80EEC200178937 /* EnterConfirmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77761FF62B80EEC200178937 /* EnterConfirmView.swift */; };
 		77761FF92B810C4800178937 /* WaitingRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77761FF82B810C4800178937 /* WaitingRoomView.swift */; };
 		779677572B739B72007315E8 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 779677562B739B72007315E8 /* .swiftlint.yml */; };
@@ -27,7 +29,6 @@
 		7798FD462B6BBA2B0053A556 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7798FD452B6BBA2B0053A556 /* Pretendard-Bold.otf */; };
 		7798FD482B6BBA390053A556 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7798FD472B6BBA390053A556 /* Pretendard-Medium.otf */; };
 		7798FD4A2B6BBA430053A556 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7798FD492B6BBA430053A556 /* Pretendard-Regular.otf */; };
-		7798FD552B6BBE9B0053A556 /* network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD542B6BBE9B0053A556 /* network.swift */; };
 		7798FD572B6BBEBE0053A556 /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD562B6BBEBE0053A556 /* Font+.swift */; };
 		7798FD6F2B6BBFBD0053A556 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD6E2B6BBFBD0053A556 /* LoginView.swift */; };
 		7798FD712B6BBFCF0053A556 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD702B6BBFCF0053A556 /* LoginViewModel.swift */; };
@@ -42,8 +43,20 @@
 		7798FD842B6BC1380053A556 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD832B6BC1380053A556 /* HomeCoordinator.swift */; };
 		7798FD872B6BC15D0053A556 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD862B6BC15D0053A556 /* AppCoordinator.swift */; };
 		7798FD942B6CA97A0053A556 /* ShapeStyle+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD932B6CA97A0053A556 /* ShapeStyle+.swift */; };
-		7798FD9C2B6CB3C40053A556 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 7798FD9B2B6CB3C40053A556 /* Moya */; };
 		7798FD9F2B6CE4FA0053A556 /* BasterdzColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD9E2B6CE4FA0053A556 /* BasterdzColor.swift */; };
+		77A487082B8758A400C72EA6 /* BasterdzProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487072B8758A400C72EA6 /* BasterdzProgressBar.swift */; };
+		77A4870A2B8769AD00C72EA6 /* ChallengerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487092B8769AD00C72EA6 /* ChallengerEntity.swift */; };
+		77A4870F2B886B7B00C72EA6 /* NetworkEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A4870E2B886B7B00C72EA6 /* NetworkEnvironment.swift */; };
+		77A487112B886BFC00C72EA6 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487102B886BFC00C72EA6 /* NetworkError.swift */; };
+		77A487142B886C3700C72EA6 /* CommonResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487132B886C3700C72EA6 /* CommonResponse.swift */; };
+		77A487162B886F7600C72EA6 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487152B886F7600C72EA6 /* BaseAPI.swift */; };
+		77A487182B88747C00C72EA6 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487172B88747C00C72EA6 /* NetworkProvider.swift */; };
+		77A4871D2B887BDA00C72EA6 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 77A4871C2B887BDA00C72EA6 /* CombineMoya */; };
+		77A4871F2B887BDA00C72EA6 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 77A4871E2B887BDA00C72EA6 /* Moya */; };
+		77A487212B8898DA00C72EA6 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487202B8898DA00C72EA6 /* ErrorResponse.swift */; };
+		77A487242B8899E500C72EA6 /* RoomAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487232B8899E500C72EA6 /* RoomAPI.swift */; };
+		77A487272B889D9400C72EA6 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487262B889D9400C72EA6 /* APIService.swift */; };
+		77A4872C2B88E64F00C72EA6 /* EnterInviteCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A4872B2B88E64F00C72EA6 /* EnterInviteCodeViewModel.swift */; };
 		D64ED50E2B6E1A2900A64D68 /* BasterdzCommonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED50D2B6E1A2900A64D68 /* BasterdzCommonButton.swift */; };
 		D64ED5132B6E22C800A64D68 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED5122B6E22C800A64D68 /* TabView.swift */; };
 		D64ED5192B6E327000A64D68 /* BasterdzCenterTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED5182B6E327000A64D68 /* BasterdzCenterTextEditor.swift */; };
@@ -61,7 +74,6 @@
 		D671574E2B80C30D002BA1E5 /* SelectPeriodBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671574D2B80C30D002BA1E5 /* SelectPeriodBottomView.swift */; };
 		D6B350282B81C8F700A94FD1 /* BasterdzChipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B350272B81C8F700A94FD1 /* BasterdzChipButton.swift */; };
 		D6CE28662B80F92300E23264 /* EnterRoomNameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CE28652B80F92300E23264 /* EnterRoomNameViewModel.swift */; };
-		D6CE28682B80F96A00E23264 /* EnterInviteCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CE28672B80F96A00E23264 /* EnterInviteCodeViewModel.swift */; };
 		D6CE286A2B80FFEE00E23264 /* AfterCreateRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CE28692B80FFEE00E23264 /* AfterCreateRoomViewModel.swift */; };
 		D6CE286D2B8102A100E23264 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CE286C2B8102A100E23264 /* BaseCoordinator.swift */; };
 		D6CE286F2B81041900E23264 /* BasterdzInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CE286E2B81041900E23264 /* BasterdzInt.swift */; };
@@ -98,6 +110,8 @@
 		772025562B79202F00439CFD /* EnterInviteCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterInviteCodeView.swift; sourceTree = "<group>"; };
 		7720255A2B79F3C000439CFD /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		7720256C2B80AF3300439CFD /* BasterdzPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzPopUpView.swift; sourceTree = "<group>"; };
+		774A384D2B858FF80004CFBF /* ChallengeRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeRoomView.swift; sourceTree = "<group>"; };
+		777338912B857C6C00143672 /* BeforeStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforeStartView.swift; sourceTree = "<group>"; };
 		77761FF62B80EEC200178937 /* EnterConfirmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterConfirmView.swift; sourceTree = "<group>"; };
 		77761FF82B810C4800178937 /* WaitingRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingRoomView.swift; sourceTree = "<group>"; };
 		779677562B739B72007315E8 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
@@ -119,7 +133,6 @@
 		7798FD472B6BBA390053A556 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		7798FD492B6BBA430053A556 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		7798FD4B2B6BBADF0053A556 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7798FD542B6BBE9B0053A556 /* network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = network.swift; sourceTree = "<group>"; };
 		7798FD562B6BBEBE0053A556 /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
 		7798FD5C2B6BBF070053A556 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		7798FD5E2B6BBF230053A556 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
@@ -140,11 +153,21 @@
 		7798FD832B6BC1380053A556 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		7798FD862B6BC15D0053A556 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		7798FD882B6BC17E0053A556 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		7798FD8A2B6BC18A0053A556 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		7798FD8C2B6BC1960053A556 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		7798FD932B6CA97A0053A556 /* ShapeStyle+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShapeStyle+.swift"; sourceTree = "<group>"; };
 		7798FD9D2B6CB8390053A556 /* Basterdz-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Basterdz-iOS.entitlements"; sourceTree = "<group>"; };
 		7798FD9E2B6CE4FA0053A556 /* BasterdzColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzColor.swift; sourceTree = "<group>"; };
+		77A487072B8758A400C72EA6 /* BasterdzProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzProgressBar.swift; sourceTree = "<group>"; };
+		77A487092B8769AD00C72EA6 /* ChallengerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengerEntity.swift; sourceTree = "<group>"; };
+		77A4870E2B886B7B00C72EA6 /* NetworkEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEnvironment.swift; sourceTree = "<group>"; };
+		77A487102B886BFC00C72EA6 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		77A487132B886C3700C72EA6 /* CommonResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonResponse.swift; sourceTree = "<group>"; };
+		77A487152B886F7600C72EA6 /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
+		77A487172B88747C00C72EA6 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		77A487202B8898DA00C72EA6 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		77A487232B8899E500C72EA6 /* RoomAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomAPI.swift; sourceTree = "<group>"; };
+		77A487262B889D9400C72EA6 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		77A4872B2B88E64F00C72EA6 /* EnterInviteCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterInviteCodeViewModel.swift; sourceTree = "<group>"; };
 		D64ED50D2B6E1A2900A64D68 /* BasterdzCommonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzCommonButton.swift; sourceTree = "<group>"; };
 		D64ED5122B6E22C800A64D68 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		D64ED5182B6E327000A64D68 /* BasterdzCenterTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzCenterTextEditor.swift; sourceTree = "<group>"; };
@@ -162,7 +185,6 @@
 		D671574D2B80C30D002BA1E5 /* SelectPeriodBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPeriodBottomView.swift; sourceTree = "<group>"; };
 		D6B350272B81C8F700A94FD1 /* BasterdzChipButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzChipButton.swift; sourceTree = "<group>"; };
 		D6CE28652B80F92300E23264 /* EnterRoomNameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterRoomNameViewModel.swift; sourceTree = "<group>"; };
-		D6CE28672B80F96A00E23264 /* EnterInviteCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterInviteCodeViewModel.swift; sourceTree = "<group>"; };
 		D6CE28692B80FFEE00E23264 /* AfterCreateRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterCreateRoomViewModel.swift; sourceTree = "<group>"; };
 		D6CE286C2B8102A100E23264 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		D6CE286E2B81041900E23264 /* BasterdzInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzInt.swift; sourceTree = "<group>"; };
@@ -183,7 +205,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7798FD9C2B6CB3C40053A556 /* Moya in Frameworks */,
+				77A4871F2B887BDA00C72EA6 /* Moya in Frameworks */,
+				77A4871D2B887BDA00C72EA6 /* CombineMoya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +227,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		777338932B857C7200143672 /* PopUp */ = {
+			isa = PBXGroup;
+			children = (
+				777338912B857C6C00143672 /* BeforeStartView.swift */,
+				77761FF62B80EEC200178937 /* EnterConfirmView.swift */,
+			);
+			path = PopUp;
+			sourceTree = "<group>";
+		};
 		7798FCE72B6B9C050053A556 = {
 			isa = PBXGroup;
 			children = (
@@ -283,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				D64ED5202B6E408300A64D68 /* RoomEntity.swift */,
+				77A487092B8769AD00C72EA6 /* ChallengerEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -463,7 +496,6 @@
 			isa = PBXGroup;
 			children = (
 				D6CE286B2B81014600E23264 /* CreateRoom */,
-				D6CE28672B80F96A00E23264 /* EnterInviteCodeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -472,11 +504,12 @@
 			isa = PBXGroup;
 			children = (
 				7798FD752B6BBFF10053A556 /* RoomView.swift */,
+				777338932B857C7200143672 /* PopUp */,
 				D6E7378F2B7271AB005FB8CA /* BottomSheet */,
 				D6E7378A2B72719F005FB8CA /* CreateRoom */,
 				772025562B79202F00439CFD /* EnterInviteCodeView.swift */,
-				77761FF62B80EEC200178937 /* EnterConfirmView.swift */,
 				77761FF82B810C4800178937 /* WaitingRoomView.swift */,
+				774A384D2B858FF80004CFBF /* ChallengeRoomView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -604,7 +637,7 @@
 		7798FD4F2B6BBDDC0053A556 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				7798FD8A2B6BC18A0053A556 /* .gitkeep */,
+				77A4872A2B88DB5000C72EA6 /* APIs */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -628,7 +661,8 @@
 		7798FD522B6BBE2A0053A556 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				7798FD542B6BBE9B0053A556 /* network.swift */,
+				77A487122B886C1B00C72EA6 /* Model */,
+				77A4870B2B886AF500C72EA6 /* Foundation */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -651,6 +685,35 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		77A4870B2B886AF500C72EA6 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				77A487262B889D9400C72EA6 /* APIService.swift */,
+				77A487152B886F7600C72EA6 /* BaseAPI.swift */,
+				77A4870E2B886B7B00C72EA6 /* NetworkEnvironment.swift */,
+				77A487102B886BFC00C72EA6 /* NetworkError.swift */,
+				77A487172B88747C00C72EA6 /* NetworkProvider.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		77A487122B886C1B00C72EA6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				77A487132B886C3700C72EA6 /* CommonResponse.swift */,
+				77A487202B8898DA00C72EA6 /* ErrorResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		77A4872A2B88DB5000C72EA6 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				77A487232B8899E500C72EA6 /* RoomAPI.swift */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
 		D64ED50C2B6E1A1200A64D68 /* Component */ = {
 			isa = PBXGroup;
 			children = (
@@ -660,6 +723,7 @@
 				D64ED51E2B6E3DB500A64D68 /* BasterdzOptionButton.swift */,
 				D64ED5222B6E421E00A64D68 /* BasterdzLargeButton.swift */,
 				D66E9DFE2B70D2F500B8ED92 /* BasterdzNavigationBar.swift */,
+				77A487072B8758A400C72EA6 /* BasterdzProgressBar.swift */,
 				D6F139C92B809B62007EF029 /* BasterdzBorderButton.swift */,
 				7720256C2B80AF3300439CFD /* BasterdzPopUpView.swift */,
 				D6B350272B81C8F700A94FD1 /* BasterdzChipButton.swift */,
@@ -681,6 +745,7 @@
 				D6CE28652B80F92300E23264 /* EnterRoomNameViewModel.swift */,
 				7798FD772B6BBFFD0053A556 /* EnterRoomDescriptionViewModel.swift */,
 				D6CE28692B80FFEE00E23264 /* AfterCreateRoomViewModel.swift */,
+				77A4872B2B88E64F00C72EA6 /* EnterInviteCodeViewModel.swift */,
 			);
 			path = CreateRoom;
 			sourceTree = "<group>";
@@ -757,7 +822,8 @@
 			);
 			name = "Basterdz-iOS";
 			packageProductDependencies = (
-				7798FD9B2B6CB3C40053A556 /* Moya */,
+				77A4871C2B887BDA00C72EA6 /* CombineMoya */,
+				77A4871E2B887BDA00C72EA6 /* Moya */,
 			);
 			productName = "Basterdz-iOS";
 			productReference = 7798FCF02B6B9C050053A556 /* Basterdz-iOS.app */;
@@ -832,7 +898,7 @@
 			);
 			mainGroup = 7798FCE72B6B9C050053A556;
 			packageReferences = (
-				7798FD9A2B6CB3C40053A556 /* XCRemoteSwiftPackageReference "Moya" */,
+				77A4871B2B887BDA00C72EA6 /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			productRefGroup = 7798FCF12B6B9C050053A556 /* Products */;
 			projectDirPath = "";
@@ -915,7 +981,7 @@
 				D6F139CA2B809B62007EF029 /* BasterdzBorderButton.swift in Sources */,
 				D6B350282B81C8F700A94FD1 /* BasterdzChipButton.swift in Sources */,
 				7798FD822B6BC12B0053A556 /* HomeViewModel.swift in Sources */,
-				D6CE28682B80F96A00E23264 /* EnterInviteCodeViewModel.swift in Sources */,
+				77A487162B886F7600C72EA6 /* BaseAPI.swift in Sources */,
 				7798FD6F2B6BBFBD0053A556 /* LoginView.swift in Sources */,
 				D66E9DEA2B70A79700B8ED92 /* Image+.swift in Sources */,
 				7798FD872B6BC15D0053A556 /* AppCoordinator.swift in Sources */,
@@ -927,16 +993,22 @@
 				D671574C2B80C2CB002BA1E5 /* Date+.swift in Sources */,
 				D64ED51B2B6E35AF00A64D68 /* BasterdzTextField.swift in Sources */,
 				77761FF92B810C4800178937 /* WaitingRoomView.swift in Sources */,
+				77A4870A2B8769AD00C72EA6 /* ChallengerEntity.swift in Sources */,
 				D64ED50E2B6E1A2900A64D68 /* BasterdzCommonButton.swift in Sources */,
 				D64ED51F2B6E3DB500A64D68 /* BasterdzOptionButton.swift in Sources */,
 				7798FCF62B6B9C050053A556 /* HomeView.swift in Sources */,
+				77A487082B8758A400C72EA6 /* BasterdzProgressBar.swift in Sources */,
 				D6E7378D2B72719F005FB8CA /* EnterRoomDescriptionView.swift in Sources */,
 				7798FD7E2B6BC01E0053A556 /* BoosterViewModel.swift in Sources */,
-				7798FD552B6BBE9B0053A556 /* network.swift in Sources */,
+				774A384E2B858FF80004CFBF /* ChallengeRoomView.swift in Sources */,
 				D64ED5232B6E421E00A64D68 /* BasterdzLargeButton.swift in Sources */,
 				D6F139C82B80950D007EF029 /* CreateRoomSuccessView.swift in Sources */,
 				D6CE28712B81074200E23264 /* UIApplication+.swift in Sources */,
+				77A487142B886C3700C72EA6 /* CommonResponse.swift in Sources */,
+				77A487272B889D9400C72EA6 /* APIService.swift in Sources */,
 				7798FD712B6BBFCF0053A556 /* LoginViewModel.swift in Sources */,
+				77A487242B8899E500C72EA6 /* RoomAPI.swift in Sources */,
+				77A4870F2B886B7B00C72EA6 /* NetworkEnvironment.swift in Sources */,
 				779677592B73A54D007315E8 /* BasterdzImage.swift in Sources */,
 				7798FCF42B6B9C050053A556 /* Basterdz_iOSApp.swift in Sources */,
 				D6CE28662B80F92300E23264 /* EnterRoomNameViewModel.swift in Sources */,
@@ -946,8 +1018,12 @@
 				7798FD9F2B6CE4FA0053A556 /* BasterdzColor.swift in Sources */,
 				D6CE286F2B81041900E23264 /* BasterdzInt.swift in Sources */,
 				7798FD942B6CA97A0053A556 /* ShapeStyle+.swift in Sources */,
+				77A487182B88747C00C72EA6 /* NetworkProvider.swift in Sources */,
 				7798FD742B6BBFE30053A556 /* LoginCoordinator.swift in Sources */,
+				777338922B857C6C00143672 /* BeforeStartView.swift in Sources */,
+				77A487112B886BFC00C72EA6 /* NetworkError.swift in Sources */,
 				7798FD762B6BBFF10053A556 /* RoomView.swift in Sources */,
+				77A487212B8898DA00C72EA6 /* ErrorResponse.swift in Sources */,
 				77761FF72B80EEC200178937 /* EnterConfirmView.swift in Sources */,
 				7798FD802B6BC0290053A556 /* BoosterCoordinator.swift in Sources */,
 				7798FD572B6BBEBE0053A556 /* Font+.swift in Sources */,
@@ -955,6 +1031,7 @@
 				D6F139C12B8083BE007EF029 /* ViewModelable.swift in Sources */,
 				D64ED5192B6E327000A64D68 /* BasterdzCenterTextEditor.swift in Sources */,
 				D64ED5132B6E22C800A64D68 /* TabView.swift in Sources */,
+				77A4872C2B88E64F00C72EA6 /* EnterInviteCodeViewModel.swift in Sources */,
 				7720255B2B79F3C000439CFD /* String+.swift in Sources */,
 				7798FD782B6BBFFD0053A556 /* EnterRoomDescriptionViewModel.swift in Sources */,
 				7720256D2B80AF3300439CFD /* BasterdzPopUpView.swift in Sources */,
@@ -1300,20 +1377,25 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		7798FD9A2B6CB3C40053A556 /* XCRemoteSwiftPackageReference "Moya" */ = {
+		77A4871B2B887BDA00C72EA6 /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya.git";
 			requirement = {
-				branch = master;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		7798FD9B2B6CB3C40053A556 /* Moya */ = {
+		77A4871C2B887BDA00C72EA6 /* CombineMoya */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 7798FD9A2B6CB3C40053A556 /* XCRemoteSwiftPackageReference "Moya" */;
+			package = 77A4871B2B887BDA00C72EA6 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		77A4871E2B887BDA00C72EA6 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 77A4871B2B887BDA00C72EA6 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
 		};
 /* End XCSwiftPackageProductDependency section */
