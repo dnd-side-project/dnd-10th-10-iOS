@@ -7,16 +7,19 @@
 
 import SwiftUI
 
-enum HomeFlow: String, Hashable {
+enum HomeFlow: Hashable {
     case plusButton
-    case detail
+    case detail(RoomEntity)
 }
 
 final class HomeCoordinator: BaseCoordinator<HomeFlow> {
     
-    @ViewBuilder func setView(_ action: RoomFlow) -> some View {
-        // TODO
-        EmptyView()
+    @ViewBuilder func setView(_ action: HomeFlow) -> some View {
+        switch action {
+        case .plusButton: EmptyView()
+        case .detail(let room):
+            ChallengeRoomView()
+        }
     }
     
 }

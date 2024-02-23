@@ -19,4 +19,5 @@ final class RoomAPIService: RoomNetworkable {
     func createRoom(room: RoomEntity) -> AnyPublisher<CreateRoomResponseDTO, ErrorResponse> {
         return service.mapAPIResponse(api: .createRoom(room: room))
     }
+
 }

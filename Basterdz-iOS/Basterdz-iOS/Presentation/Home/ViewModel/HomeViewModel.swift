@@ -47,7 +47,7 @@ final class HomeViewModel: ViewModelable {
                 }
             }
         case .roomTap(let room):
-            coordinator.push(.detail)
+            coordinator.push(.detail(room))
         case .plusButtonTap:
             coordinator.push(.plusButton)
         }

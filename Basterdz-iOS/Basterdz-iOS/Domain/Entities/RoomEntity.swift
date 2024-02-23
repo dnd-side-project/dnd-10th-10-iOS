@@ -29,7 +29,7 @@ struct RoomEntity: Hashable, Codable {
             goal: "언제부터 인스타그램이 있었다고",
             restrictAppType: .instagram,
             restrictAppTime: 3,
-            period: 40,
+            period: 30,
             maxPeople: 4
         ),
         RoomEntity(

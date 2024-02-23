@@ -75,14 +75,19 @@
 		D671574E2B80C30D002BA1E5 /* SelectPeriodBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671574D2B80C30D002BA1E5 /* SelectPeriodBottomView.swift */; };
 		D681F9DE2B88E58800E9671F /* RoomAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9DD2B88E58800E9671F /* RoomAPIService.swift */; };
 		D681F9E02B88E91E00E9671F /* RoomNetworkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9DF2B88E91E00E9671F /* RoomNetworkable.swift */; };
-		D681F9ED2B892A4300E9671F /* CreateRoomResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9EC2B892A4300E9671F /* CreateRoomResponseDTO.swift */; };
-		D68C5B692B85CC270005FFD5 /* CreateRoomUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68C5B682B85CC270005FFD5 /* CreateRoomUseCase.swift */; };
-		D68C5B6D2B85CDD40005FFD5 /* MemberEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68C5B6C2B85CDD40005FFD5 /* MemberEntity.swift */; };
 		D681F9E22B8917BA00E9671F /* BoosterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9E12B8917BA00E9671F /* BoosterDetailView.swift */; };
 		D681F9E42B8917CB00E9671F /* SelectBoosterReceiverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9E32B8917CB00E9671F /* SelectBoosterReceiverView.swift */; };
 		D681F9E62B8917E000E9671F /* SelectBoosterMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9E52B8917E000E9671F /* SelectBoosterMessageView.swift */; };
 		D681F9E82B8917ED00E9671F /* BoosterSendSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9E72B8917ED00E9671F /* BoosterSendSuccessView.swift */; };
 		D681F9EA2B8920F300E9671F /* BoosterEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9E92B8920F300E9671F /* BoosterEntity.swift */; };
+		D681F9ED2B892A4300E9671F /* CreateRoomResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9EC2B892A4300E9671F /* CreateRoomResponseDTO.swift */; };
+		D681F9F32B89563F00E9671F /* ChallengeRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9F22B89563F00E9671F /* ChallengeRoomViewModel.swift */; };
+		D681F9F52B89579800E9671F /* GetProgressRoomInfoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9F42B89579800E9671F /* GetProgressRoomInfoUseCase.swift */; };
+		D681F9F72B8957F300E9671F /* GetRankUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9F62B8957F300E9671F /* GetRankUseCase.swift */; };
+		D681F9F92B89580D00E9671F /* GetRoomScreenTimeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9F82B89580D00E9671F /* GetRoomScreenTimeUseCase.swift */; };
+		D681F9FB2B8958EF00E9671F /* RankDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9FA2B8958EF00E9671F /* RankDTO.swift */; };
+		D68C5B692B85CC270005FFD5 /* CreateRoomUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68C5B682B85CC270005FFD5 /* CreateRoomUseCase.swift */; };
+		D68C5B6D2B85CDD40005FFD5 /* MemberEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68C5B6C2B85CDD40005FFD5 /* MemberEntity.swift */; };
 		D6B350282B81C8F700A94FD1 /* BasterdzChipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B350272B81C8F700A94FD1 /* BasterdzChipButton.swift */; };
 		D6CE28662B80F92300E23264 /* EnterRoomNameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CE28652B80F92300E23264 /* EnterRoomNameViewModel.swift */; };
 		D6CE286A2B80FFEE00E23264 /* AfterCreateRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CE28692B80FFEE00E23264 /* AfterCreateRoomViewModel.swift */; };
@@ -196,14 +201,19 @@
 		D671574D2B80C30D002BA1E5 /* SelectPeriodBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPeriodBottomView.swift; sourceTree = "<group>"; };
 		D681F9DD2B88E58800E9671F /* RoomAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomAPIService.swift; sourceTree = "<group>"; };
 		D681F9DF2B88E91E00E9671F /* RoomNetworkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomNetworkable.swift; sourceTree = "<group>"; };
-		D681F9EC2B892A4300E9671F /* CreateRoomResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomResponseDTO.swift; sourceTree = "<group>"; };
-		D68C5B682B85CC270005FFD5 /* CreateRoomUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomUseCase.swift; sourceTree = "<group>"; };
-		D68C5B6C2B85CDD40005FFD5 /* MemberEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberEntity.swift; sourceTree = "<group>"; };
 		D681F9E12B8917BA00E9671F /* BoosterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoosterDetailView.swift; sourceTree = "<group>"; };
 		D681F9E32B8917CB00E9671F /* SelectBoosterReceiverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBoosterReceiverView.swift; sourceTree = "<group>"; };
 		D681F9E52B8917E000E9671F /* SelectBoosterMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBoosterMessageView.swift; sourceTree = "<group>"; };
 		D681F9E72B8917ED00E9671F /* BoosterSendSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoosterSendSuccessView.swift; sourceTree = "<group>"; };
 		D681F9E92B8920F300E9671F /* BoosterEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoosterEntity.swift; sourceTree = "<group>"; };
+		D681F9EC2B892A4300E9671F /* CreateRoomResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomResponseDTO.swift; sourceTree = "<group>"; };
+		D681F9F22B89563F00E9671F /* ChallengeRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeRoomViewModel.swift; sourceTree = "<group>"; };
+		D681F9F42B89579800E9671F /* GetProgressRoomInfoUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProgressRoomInfoUseCase.swift; sourceTree = "<group>"; };
+		D681F9F62B8957F300E9671F /* GetRankUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRankUseCase.swift; sourceTree = "<group>"; };
+		D681F9F82B89580D00E9671F /* GetRoomScreenTimeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRoomScreenTimeUseCase.swift; sourceTree = "<group>"; };
+		D681F9FA2B8958EF00E9671F /* RankDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankDTO.swift; sourceTree = "<group>"; };
+		D68C5B682B85CC270005FFD5 /* CreateRoomUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomUseCase.swift; sourceTree = "<group>"; };
+		D68C5B6C2B85CDD40005FFD5 /* MemberEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberEntity.swift; sourceTree = "<group>"; };
 		D6B350272B81C8F700A94FD1 /* BasterdzChipButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzChipButton.swift; sourceTree = "<group>"; };
 		D6CE28652B80F92300E23264 /* EnterRoomNameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterRoomNameViewModel.swift; sourceTree = "<group>"; };
 		D6CE28692B80FFEE00E23264 /* AfterCreateRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterCreateRoomViewModel.swift; sourceTree = "<group>"; };
@@ -347,6 +357,9 @@
 			isa = PBXGroup;
 			children = (
 				D68C5B682B85CC270005FFD5 /* CreateRoomUseCase.swift */,
+				D681F9F42B89579800E9671F /* GetProgressRoomInfoUseCase.swift */,
+				D681F9F62B8957F300E9671F /* GetRankUseCase.swift */,
+				D681F9F82B89580D00E9671F /* GetRoomScreenTimeUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -525,6 +538,7 @@
 			isa = PBXGroup;
 			children = (
 				D6CE286B2B81014600E23264 /* CreateRoom */,
+				D681F9F22B89563F00E9671F /* ChallengeRoomViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -782,6 +796,7 @@
 			isa = PBXGroup;
 			children = (
 				D681F9EC2B892A4300E9671F /* CreateRoomResponseDTO.swift */,
+				D681F9FA2B8958EF00E9671F /* RankDTO.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1016,6 +1031,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D681F9F72B8957F300E9671F /* GetRankUseCase.swift in Sources */,
 				7798FD212B6BB0630053A556 /* AppDelegate.swift in Sources */,
 				7798FD7C2B6BC0120053A556 /* BoosterView.swift in Sources */,
 				7798FD7A2B6BC0060053A556 /* RoomCoordinator.swift in Sources */,
@@ -1031,9 +1047,12 @@
 				D6B350282B81C8F700A94FD1 /* BasterdzChipButton.swift in Sources */,
 				7798FD822B6BC12B0053A556 /* HomeViewModel.swift in Sources */,
 				77A487162B886F7600C72EA6 /* BaseAPI.swift in Sources */,
+				D681F9F32B89563F00E9671F /* ChallengeRoomViewModel.swift in Sources */,
 				D681F9E62B8917E000E9671F /* SelectBoosterMessageView.swift in Sources */,
 				7798FD6F2B6BBFBD0053A556 /* LoginView.swift in Sources */,
+				D681F9F92B89580D00E9671F /* GetRoomScreenTimeUseCase.swift in Sources */,
 				D66E9DEA2B70A79700B8ED92 /* Image+.swift in Sources */,
+				D681F9FB2B8958EF00E9671F /* RankDTO.swift in Sources */,
 				7798FD872B6BC15D0053A556 /* AppCoordinator.swift in Sources */,
 				D6E737942B7271AC005FB8CA /* SelectMaxPeopleBottomView.swift in Sources */,
 				D66E9DE82B70A75E00B8ED92 /* RestrictApp.swift in Sources */,
@@ -1056,6 +1075,7 @@
 				D64ED5232B6E421E00A64D68 /* BasterdzLargeButton.swift in Sources */,
 				D6F139C82B80950D007EF029 /* CreateRoomSuccessView.swift in Sources */,
 				D6CE28712B81074200E23264 /* UIApplication+.swift in Sources */,
+				D681F9F52B89579800E9671F /* GetProgressRoomInfoUseCase.swift in Sources */,
 				77A487142B886C3700C72EA6 /* CommonResponse.swift in Sources */,
 				77A487272B889D9400C72EA6 /* APIService.swift in Sources */,
 				7798FD712B6BBFCF0053A556 /* LoginViewModel.swift in Sources */,
