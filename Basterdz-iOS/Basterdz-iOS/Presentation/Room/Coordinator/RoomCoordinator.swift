@@ -11,7 +11,8 @@ enum RoomFlow: Hashable {
     case createRoom,
          enterInviteCode,
          enterRoomDescription(roomName: String),
-         successCreateRoom(room: RoomEntity, inviteCode: String)
+         successCreateRoom(room: RoomEntity, inviteCode: String),
+         showInviteCode(room: RoomEntity, inviteCode: String)
 }
 
 class RoomCoordinator: BaseCoordinator<RoomFlow> {
@@ -30,6 +31,9 @@ class RoomCoordinator: BaseCoordinator<RoomFlow> {
         case .successCreateRoom(let room, let inviteCode):
             let viewModel = AfterCreateRoomViewModel(coordinator: self, roomEntity: room, inviteCode: inviteCode)
             CreateRoomSuccessView(viewModel: viewModel)
+        case .showInviteCode(let room, let inviteCode):
+            let viewModel = AfterCreateRoomViewModel(coordinator: self, roomEntity: room, inviteCode: inviteCode)
+            ShowInviteCodeView(viewModel: viewModel)
         }
     }
 }

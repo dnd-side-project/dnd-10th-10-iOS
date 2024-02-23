@@ -73,6 +73,7 @@
 		D671574E2B80C30D002BA1E5 /* SelectPeriodBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671574D2B80C30D002BA1E5 /* SelectPeriodBottomView.swift */; };
 		D681F9DE2B88E58800E9671F /* RoomAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9DD2B88E58800E9671F /* RoomAPIService.swift */; };
 		D681F9E02B88E91E00E9671F /* RoomNetworkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9DF2B88E91E00E9671F /* RoomNetworkable.swift */; };
+		D681F9ED2B892A4300E9671F /* CreateRoomResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9EC2B892A4300E9671F /* CreateRoomResponseDTO.swift */; };
 		D68C5B692B85CC270005FFD5 /* CreateRoomUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68C5B682B85CC270005FFD5 /* CreateRoomUseCase.swift */; };
 		D68C5B6D2B85CDD40005FFD5 /* MemberEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68C5B6C2B85CDD40005FFD5 /* MemberEntity.swift */; };
 		D6B350282B81C8F700A94FD1 /* BasterdzChipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B350272B81C8F700A94FD1 /* BasterdzChipButton.swift */; };
@@ -187,6 +188,7 @@
 		D671574D2B80C30D002BA1E5 /* SelectPeriodBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPeriodBottomView.swift; sourceTree = "<group>"; };
 		D681F9DD2B88E58800E9671F /* RoomAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomAPIService.swift; sourceTree = "<group>"; };
 		D681F9DF2B88E91E00E9671F /* RoomNetworkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomNetworkable.swift; sourceTree = "<group>"; };
+		D681F9EC2B892A4300E9671F /* CreateRoomResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomResponseDTO.swift; sourceTree = "<group>"; };
 		D68C5B682B85CC270005FFD5 /* CreateRoomUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomUseCase.swift; sourceTree = "<group>"; };
 		D68C5B6C2B85CDD40005FFD5 /* MemberEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberEntity.swift; sourceTree = "<group>"; };
 		D6B350272B81C8F700A94FD1 /* BasterdzChipButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzChipButton.swift; sourceTree = "<group>"; };
@@ -647,6 +649,7 @@
 		7798FD4F2B6BBDDC0053A556 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D681F9EB2B892A3B00E9671F /* Model */,
 				77A4872A2B88DB5000C72EA6 /* APIs */,
 			);
 			path = Network;
@@ -748,6 +751,14 @@
 				D64ED5122B6E22C800A64D68 /* TabView.swift */,
 			);
 			path = Tab;
+			sourceTree = "<group>";
+		};
+		D681F9EB2B892A3B00E9671F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D681F9EC2B892A4300E9671F /* CreateRoomResponseDTO.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		D6CE286B2B81014600E23264 /* CreateRoom */ = {
@@ -987,6 +998,7 @@
 				D6E737952B7271AC005FB8CA /* SelectRestrictTimeBottomView.swift in Sources */,
 				D68C5B6D2B85CDD40005FFD5 /* MemberEntity.swift in Sources */,
 				D64ED51D2B6E377B00A64D68 /* View+.swift in Sources */,
+				D681F9ED2B892A4300E9671F /* CreateRoomResponseDTO.swift in Sources */,
 				772025572B79202F00439CFD /* EnterInviteCodeView.swift in Sources */,
 				D6CE286D2B8102A100E23264 /* BaseCoordinator.swift in Sources */,
 				D6F139CA2B809B62007EF029 /* BasterdzBorderButton.swift in Sources */,

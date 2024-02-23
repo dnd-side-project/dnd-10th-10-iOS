@@ -15,7 +15,7 @@ final class CreateRoomUseCase {
         self.network = network
     }
     
-    func execute(room: RoomEntity) -> AnyPublisher<String, ErrorResponse> {
+    func execute(room: RoomEntity) -> AnyPublisher<CreateRoomResponseDTO, ErrorResponse> {
         network.createRoom(room: room)
     }
 }

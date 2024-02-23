@@ -127,8 +127,9 @@ class EnterRoomDescriptionViewModel: ViewModelable {
                 .sink(receiveCompletion: { error in
                     print("finish \(error)")
                 }, receiveValue: { response in
-                    print(response)
-                    self.coordinator?.push(.successCreateRoom(room: self.state.roomEntity, inviteCode: self.inviteCode))
+                    self.state.roomEntity.id = response.id
+                    self.coordinator?.push(.successCreateRoom(room: self.state.roomEntity, inviteCode: response.inviteCode))
+                    
                 }).store(in: &store)
         }
     }

@@ -9,5 +9,5 @@ import Foundation
 import Combine
 
 protocol RoomNetworkable {
-    func createRoom(room: RoomEntity) -> AnyPublisher<String, ErrorResponse>
+    func createRoom(room: RoomEntity) -> AnyPublisher<CreateRoomResponseDTO, ErrorResponse>
 }

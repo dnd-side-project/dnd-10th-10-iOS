@@ -57,7 +57,8 @@ struct ShowInviteCodeView: View {
                 style: .red,
                 action: {
                 // TODO: - 다음 뷰 필요
-            })
+                })
+            .padding(17)
         }
     }
 }

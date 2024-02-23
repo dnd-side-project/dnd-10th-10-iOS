@@ -16,7 +16,7 @@ final class RoomAPIService: RoomNetworkable {
         self.service = APIService<RoomAPI>()
     }
     
-    func createRoom(room: RoomEntity) -> AnyPublisher<String, ErrorResponse> {
+    func createRoom(room: RoomEntity) -> AnyPublisher<CreateRoomResponseDTO, ErrorResponse> {
         return service.mapAPIResponse(api: .createRoom(room: room))
     }
 }

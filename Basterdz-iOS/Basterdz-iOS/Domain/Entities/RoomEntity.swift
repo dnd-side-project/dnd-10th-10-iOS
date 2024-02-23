@@ -12,6 +12,8 @@ enum RoomStatus: Codable {
 }
 
 struct RoomEntity: Hashable, Codable {
+    
+    var id: Int = 0
     var name: String = ""
     var goal: String = ""
     var restrictAppType: RestrictApp = .none

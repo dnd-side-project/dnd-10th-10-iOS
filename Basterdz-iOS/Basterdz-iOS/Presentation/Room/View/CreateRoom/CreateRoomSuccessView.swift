@@ -58,5 +58,8 @@ struct CreateRoomSuccessView: View {
             }
             Spacer()
         }.background(Color(.mainBlack))
+            .onAppear {
+                viewModel.onAppear()
+            }
     }
 }
