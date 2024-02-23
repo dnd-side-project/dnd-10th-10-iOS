@@ -47,7 +47,7 @@ struct BasterdzTextField<T: Hashable>: View {
                     .foregroundStyle(Color(.mainBlack))
                     .focused(isFocused, equals: focusValue)
                     .padding(.horizontal, 16)
-                    .frame(width: .infinity, height: 56)
+                    .frame(height: 56)
                 if let trailingText {
                     Text(trailingText)
                         .font(.pretendardM(13))

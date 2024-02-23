@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 final class CreateRoomUseCase {
     private let network: any RoomNetworkable
@@ -14,8 +15,7 @@ final class CreateRoomUseCase {
         self.network = network
     }
     
-    func execute(member: MemberEntity, room: RoomEntity) {
-        // TODO
-        network.createRoom(member: member, roomEntity: room)
+    func execute(room: RoomEntity) -> AnyPublisher<String, ErrorResponse> {
+        network.createRoom(room: room)
     }
 }

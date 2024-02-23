@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 final class HomeViewModel: ViewModelable {
     var coordinator: HomeCoordinator
     @Published var state: State

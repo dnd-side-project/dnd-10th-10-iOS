@@ -43,7 +43,7 @@ class EnterRoomDescriptionViewModel: ViewModelable {
             }
         }
         // 각 버튼의 active 표시를 위한 연산 프로퍼티
-        var isGoalButtonActive: Bool{
+        var isGoalButtonActive: Bool {
             self.roomEntity.goal.isNotEmpty
         }
         var isRestrictAppButtonActive: Bool {
@@ -82,7 +82,7 @@ class EnterRoomDescriptionViewModel: ViewModelable {
     private var store = Set<AnyCancellable>()
     
     // usecase
-    private let createRoom:
+    private let createRoom: CreateRoomUseCase = CreateRoomUseCase(network: RoomAPIService())
     
     init(coordinator: RoomCoordinator, roomName: String) {
         self.coordinator = coordinator
@@ -123,7 +123,13 @@ class EnterRoomDescriptionViewModel: ViewModelable {
             state.roomEntity.period = 0
             
         case .bottomButtonTap:
-            coordinator?.push(.successCreateRoom(room: state.roomEntity, inviteCode: inviteCode))
+            createRoom.execute(room: state.roomEntity)
+                .sink(receiveCompletion: { error in
+                    print("finish \(error)")
+                }, receiveValue: { response in
+                    print(response)
+                    self.coordinator?.push(.successCreateRoom(room: self.state.roomEntity, inviteCode: self.inviteCode))
+                }).store(in: &store)
         }
     }
 }

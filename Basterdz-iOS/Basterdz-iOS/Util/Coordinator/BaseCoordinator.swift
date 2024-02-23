@@ -10,6 +10,8 @@ import SwiftUI
 class BaseCoordinator<FlowPath: Hashable>: ObservableObject {
     @Published var path: [FlowPath] = []
     
+    var childCoodinator: [BaseCoordinator] = []
+    
     func push(_ action: FlowPath) {
         path.append(action)
     }

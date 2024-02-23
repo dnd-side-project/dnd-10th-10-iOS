@@ -7,11 +7,11 @@
 
 import Foundation
 
-enum RoomStatus {
+enum RoomStatus: Codable {
     case pending, finish, progress
 }
 
-struct RoomEntity: Hashable {
+struct RoomEntity: Hashable, Codable {
     var name: String = ""
     var goal: String = ""
     var restrictAppType: RestrictApp = .none

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum RestrictApp: String, CaseIterable {
+enum RestrictApp: String, CaseIterable, Codable {
     case none = "제한 앱을 선택해보세요"
     case instagram = "인스타그램"
     case youtube = "유투브"
@@ -29,6 +29,23 @@ enum RestrictApp: String, CaseIterable {
             BasterdzImage.netflix
         case .twitter:
             BasterdzImage.twitter
+        }
+    }
+    
+    var toDictionaryString: String {
+        switch self {
+        case .none:
+            return ""
+        case .instagram:
+            return "INSTAGRAM"
+        case .youtube:
+            return "YOUTUBE"
+        case .tictok:
+            return "TICTOK"
+        case .netflix:
+            return "NETFLIX"
+        case .twitter:
+            return "X"
         }
     }
 }
