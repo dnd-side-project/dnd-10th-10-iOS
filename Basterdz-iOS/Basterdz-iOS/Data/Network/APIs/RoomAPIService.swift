@@ -9,7 +9,6 @@ import Foundation
 import Combine
 
 final class RoomAPIService: RoomNetworkable {
-    
     private let service: APIService<RoomAPI>
     
     init() {
@@ -18,5 +17,9 @@ final class RoomAPIService: RoomNetworkable {
     
     func createRoom(room: RoomEntity) -> AnyPublisher<CreateRoomResponseDTO, ErrorResponse> {
         return service.mapAPIResponse(api: .createRoom(room: room))
+    }
+    
+    func getRoom(inviteCode: String) -> AnyPublisher<GetRoomDTO, ErrorResponse> {
+        return service.mapAPIResponse(api: .getRoomUsingCode(code: inviteCode))
     }
 }

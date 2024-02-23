@@ -10,4 +10,6 @@ import Combine
 
 protocol RoomNetworkable {
     func createRoom(room: RoomEntity) -> AnyPublisher<CreateRoomResponseDTO, ErrorResponse>
+    
+    func getRoom(inviteCode: String) -> AnyPublisher<GetRoomDTO, ErrorResponse>
 }

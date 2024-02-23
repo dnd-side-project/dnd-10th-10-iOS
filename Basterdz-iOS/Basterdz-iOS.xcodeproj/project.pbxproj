@@ -75,14 +75,16 @@
 		D671574E2B80C30D002BA1E5 /* SelectPeriodBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671574D2B80C30D002BA1E5 /* SelectPeriodBottomView.swift */; };
 		D681F9DE2B88E58800E9671F /* RoomAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9DD2B88E58800E9671F /* RoomAPIService.swift */; };
 		D681F9E02B88E91E00E9671F /* RoomNetworkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9DF2B88E91E00E9671F /* RoomNetworkable.swift */; };
-		D681F9ED2B892A4300E9671F /* CreateRoomResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9EC2B892A4300E9671F /* CreateRoomResponseDTO.swift */; };
-		D68C5B692B85CC270005FFD5 /* CreateRoomUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68C5B682B85CC270005FFD5 /* CreateRoomUseCase.swift */; };
-		D68C5B6D2B85CDD40005FFD5 /* MemberEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68C5B6C2B85CDD40005FFD5 /* MemberEntity.swift */; };
 		D681F9E22B8917BA00E9671F /* BoosterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9E12B8917BA00E9671F /* BoosterDetailView.swift */; };
 		D681F9E42B8917CB00E9671F /* SelectBoosterReceiverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9E32B8917CB00E9671F /* SelectBoosterReceiverView.swift */; };
 		D681F9E62B8917E000E9671F /* SelectBoosterMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9E52B8917E000E9671F /* SelectBoosterMessageView.swift */; };
 		D681F9E82B8917ED00E9671F /* BoosterSendSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9E72B8917ED00E9671F /* BoosterSendSuccessView.swift */; };
 		D681F9EA2B8920F300E9671F /* BoosterEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9E92B8920F300E9671F /* BoosterEntity.swift */; };
+		D681F9ED2B892A4300E9671F /* CreateRoomResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9EC2B892A4300E9671F /* CreateRoomResponseDTO.swift */; };
+		D681F9EF2B89375700E9671F /* GetRoomUsingInviteCodeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9EE2B89375700E9671F /* GetRoomUsingInviteCodeUseCase.swift */; };
+		D681F9F12B8937E200E9671F /* GetRoomDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9F02B8937E200E9671F /* GetRoomDTO.swift */; };
+		D68C5B692B85CC270005FFD5 /* CreateRoomUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68C5B682B85CC270005FFD5 /* CreateRoomUseCase.swift */; };
+		D68C5B6D2B85CDD40005FFD5 /* MemberEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68C5B6C2B85CDD40005FFD5 /* MemberEntity.swift */; };
 		D6B350282B81C8F700A94FD1 /* BasterdzChipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B350272B81C8F700A94FD1 /* BasterdzChipButton.swift */; };
 		D6CE28662B80F92300E23264 /* EnterRoomNameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CE28652B80F92300E23264 /* EnterRoomNameViewModel.swift */; };
 		D6CE286A2B80FFEE00E23264 /* AfterCreateRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CE28692B80FFEE00E23264 /* AfterCreateRoomViewModel.swift */; };
@@ -196,14 +198,16 @@
 		D671574D2B80C30D002BA1E5 /* SelectPeriodBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPeriodBottomView.swift; sourceTree = "<group>"; };
 		D681F9DD2B88E58800E9671F /* RoomAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomAPIService.swift; sourceTree = "<group>"; };
 		D681F9DF2B88E91E00E9671F /* RoomNetworkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomNetworkable.swift; sourceTree = "<group>"; };
-		D681F9EC2B892A4300E9671F /* CreateRoomResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomResponseDTO.swift; sourceTree = "<group>"; };
-		D68C5B682B85CC270005FFD5 /* CreateRoomUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomUseCase.swift; sourceTree = "<group>"; };
-		D68C5B6C2B85CDD40005FFD5 /* MemberEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberEntity.swift; sourceTree = "<group>"; };
 		D681F9E12B8917BA00E9671F /* BoosterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoosterDetailView.swift; sourceTree = "<group>"; };
 		D681F9E32B8917CB00E9671F /* SelectBoosterReceiverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBoosterReceiverView.swift; sourceTree = "<group>"; };
 		D681F9E52B8917E000E9671F /* SelectBoosterMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBoosterMessageView.swift; sourceTree = "<group>"; };
 		D681F9E72B8917ED00E9671F /* BoosterSendSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoosterSendSuccessView.swift; sourceTree = "<group>"; };
 		D681F9E92B8920F300E9671F /* BoosterEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoosterEntity.swift; sourceTree = "<group>"; };
+		D681F9EC2B892A4300E9671F /* CreateRoomResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomResponseDTO.swift; sourceTree = "<group>"; };
+		D681F9EE2B89375700E9671F /* GetRoomUsingInviteCodeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRoomUsingInviteCodeUseCase.swift; sourceTree = "<group>"; };
+		D681F9F02B8937E200E9671F /* GetRoomDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRoomDTO.swift; sourceTree = "<group>"; };
+		D68C5B682B85CC270005FFD5 /* CreateRoomUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomUseCase.swift; sourceTree = "<group>"; };
+		D68C5B6C2B85CDD40005FFD5 /* MemberEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberEntity.swift; sourceTree = "<group>"; };
 		D6B350272B81C8F700A94FD1 /* BasterdzChipButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzChipButton.swift; sourceTree = "<group>"; };
 		D6CE28652B80F92300E23264 /* EnterRoomNameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterRoomNameViewModel.swift; sourceTree = "<group>"; };
 		D6CE28692B80FFEE00E23264 /* AfterCreateRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterCreateRoomViewModel.swift; sourceTree = "<group>"; };
@@ -347,6 +351,7 @@
 			isa = PBXGroup;
 			children = (
 				D68C5B682B85CC270005FFD5 /* CreateRoomUseCase.swift */,
+				D681F9EE2B89375700E9671F /* GetRoomUsingInviteCodeUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -782,6 +787,7 @@
 			isa = PBXGroup;
 			children = (
 				D681F9EC2B892A4300E9671F /* CreateRoomResponseDTO.swift */,
+				D681F9F02B8937E200E9671F /* GetRoomDTO.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1027,8 +1033,10 @@
 				D681F9ED2B892A4300E9671F /* CreateRoomResponseDTO.swift in Sources */,
 				772025572B79202F00439CFD /* EnterInviteCodeView.swift in Sources */,
 				D6CE286D2B8102A100E23264 /* BaseCoordinator.swift in Sources */,
+				D681F9F12B8937E200E9671F /* GetRoomDTO.swift in Sources */,
 				D6F139CA2B809B62007EF029 /* BasterdzBorderButton.swift in Sources */,
 				D6B350282B81C8F700A94FD1 /* BasterdzChipButton.swift in Sources */,
+				D681F9EF2B89375700E9671F /* GetRoomUsingInviteCodeUseCase.swift in Sources */,
 				7798FD822B6BC12B0053A556 /* HomeViewModel.swift in Sources */,
 				77A487162B886F7600C72EA6 /* BaseAPI.swift in Sources */,
 				D681F9E62B8917E000E9671F /* SelectBoosterMessageView.swift in Sources */,
