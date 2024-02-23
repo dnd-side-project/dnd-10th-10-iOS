@@ -48,6 +48,7 @@
 		77A4870A2B8769AD00C72EA6 /* ChallengerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487092B8769AD00C72EA6 /* ChallengerEntity.swift */; };
 		77A487142B886C3700C72EA6 /* CommonResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487132B886C3700C72EA6 /* CommonResponse.swift */; };
 		77A487162B886F7600C72EA6 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487152B886F7600C72EA6 /* APIEndpoint.swift */; };
+		77A487182B88747C00C72EA6 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487172B88747C00C72EA6 /* Requestable.swift */; };
 		77A4871D2B887BDA00C72EA6 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 77A4871C2B887BDA00C72EA6 /* CombineMoya */; };
 		77A4871F2B887BDA00C72EA6 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 77A4871E2B887BDA00C72EA6 /* Moya */; };
 		77A487212B8898DA00C72EA6 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487202B8898DA00C72EA6 /* ErrorResponse.swift */; };
@@ -157,6 +158,7 @@
 		77A487092B8769AD00C72EA6 /* ChallengerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengerEntity.swift; sourceTree = "<group>"; };
 		77A487132B886C3700C72EA6 /* CommonResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonResponse.swift; sourceTree = "<group>"; };
 		77A487152B886F7600C72EA6 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
+		77A487172B88747C00C72EA6 /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
 		77A487202B8898DA00C72EA6 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		D64ED50D2B6E1A2900A64D68 /* BasterdzCommonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzCommonButton.swift; sourceTree = "<group>"; };
 		D64ED5122B6E22C800A64D68 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
@@ -677,6 +679,7 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+				77A487172B88747C00C72EA6 /* Requestable.swift */,
 		77A487122B886C1B00C72EA6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -988,6 +991,7 @@
 				7798FD9F2B6CE4FA0053A556 /* BasterdzColor.swift in Sources */,
 				D6CE286F2B81041900E23264 /* BasterdzInt.swift in Sources */,
 				7798FD942B6CA97A0053A556 /* ShapeStyle+.swift in Sources */,
+				77A487182B88747C00C72EA6 /* Requestable.swift in Sources */,
 				7798FD742B6BBFE30053A556 /* LoginCoordinator.swift in Sources */,
 				777338922B857C6C00143672 /* BeforeStartView.swift in Sources */,
 				7798FD762B6BBFF10053A556 /* RoomView.swift in Sources */,
