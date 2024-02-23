@@ -44,7 +44,6 @@ struct EnterConfirmView: View {
                                      isActive: true)
                 .padding(.trailing, 16)
                 
-                
             }
             .padding(.bottom, 20)
         }
