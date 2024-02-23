@@ -12,29 +12,24 @@ import Moya
 
 class APIService<API: BaseAPI>: Requestable {
 
-    private let api: API
-    private let provider = NetworkProvider<API>()
-    private var cancelable = Set<AnyCancellable>()
+    let provider = NetworkProvider<API>()
+    var cancelable = Set<AnyCancellable>()
     
-    init(api: API) {
-        self.api = api
-    }
-    
-    func mapAPIResponse<T: Decodable>() -> AnyPublisher<T, ErrorResponse> {
+    func mapAPIResponse<T: Decodable>(api: API) -> AnyPublisher<T, ErrorResponse> {
         return provider.request(api)
             .tryMap { response in
-                try JSONDecoder().decode(CommonResponse<T>.self, from: response.data)
-            }
-            .tryMap { responseData in
-                if let data = responseData.data {
+                print("decode 시작 \(response)")
+                let commonResponse = try JSONDecoder().decode(CommonResponse<T>.self, from: response.data)
+                if let data = commonResponse.data {
                     return data
-                } else if let error = responseData.error {
+                } else if let error = commonResponse.error {
                     throw error
                 } else {
                     throw ErrorResponse.commonError
                 }
             }
             .mapError { error in
+                print("error: \(error)")
                 if let customError = error as? ErrorResponse {
                     return customError
                 } else {

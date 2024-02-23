@@ -81,6 +81,9 @@ class EnterRoomDescriptionViewModel: ViewModelable {
     private var inviteCode = "YXKRN95"
     private var store = Set<AnyCancellable>()
     
+    // usecase
+    private let createRoom: CreateRoomUseCase = CreateRoomUseCase(network: RoomAPIService())
+    
     init(coordinator: RoomCoordinator, roomName: String) {
         self.coordinator = coordinator
         self.state.roomEntity.name = roomName
@@ -120,7 +123,14 @@ class EnterRoomDescriptionViewModel: ViewModelable {
             state.roomEntity.period = 0
             
         case .bottomButtonTap:
-            coordinator?.push(.successCreateRoom(room: state.roomEntity, inviteCode: inviteCode))
+            createRoom.execute(room: state.roomEntity)
+                .sink(receiveCompletion: { error in
+                    print("finish \(error)")
+                }, receiveValue: { response in
+                    self.state.roomEntity.id = response.id
+                    self.coordinator?.push(.successCreateRoom(room: self.state.roomEntity, inviteCode: response.inviteCode))
+                    
+                }).store(in: &store)
         }
     }
 }

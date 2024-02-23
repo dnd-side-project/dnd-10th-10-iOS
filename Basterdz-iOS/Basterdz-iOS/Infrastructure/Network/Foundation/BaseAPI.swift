@@ -37,7 +37,7 @@ parameters : Request에 사용될 Paramter - 기본적으로 JSONEncoding 방식
  */
 protocol BaseAPI: TargetType {
     var domain: BasterdzDomain { get }
-    var path: String { get }
+    var urlPath: String { get }
     var error: [Int: NetworkError]? { get }
     var parameters: [String: Any]? { get }
 }
@@ -49,7 +49,7 @@ extension BaseAPI {
     }
     
     var path: String {
-        return domain.url + path
+        return domain.url + urlPath
     }
     
     var validationType: ValidationType {

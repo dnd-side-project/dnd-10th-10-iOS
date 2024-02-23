@@ -36,6 +36,5 @@ final class NetworkProvider<API: BaseAPI>: Requestable {
     
     func request(_ api: API) -> AnyPublisher<Response, MoyaError> {
         return provider.requestPublisher(api)
-            .filterSuccessfulStatusCodes()
     }
 }

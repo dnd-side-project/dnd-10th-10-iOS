@@ -7,11 +7,13 @@
 
 import Foundation
 
-enum RoomStatus {
+enum RoomStatus: Codable {
     case pending, finish, progress
 }
 
-struct RoomEntity: Hashable {
+struct RoomEntity: Hashable, Codable {
+    
+    var id: Int = 0
     var name: String = ""
     var goal: String = ""
     var restrictAppType: RestrictApp = .none
@@ -21,7 +23,6 @@ struct RoomEntity: Hashable {
     
     var currentPeople: Int = 0
     var status: RoomStatus = .pending
-   
     static let mocks: [RoomEntity] = [
         RoomEntity(
             name: "우리들의 도파민 탈출기",

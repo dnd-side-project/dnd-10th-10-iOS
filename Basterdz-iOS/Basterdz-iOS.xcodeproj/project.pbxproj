@@ -73,6 +73,11 @@
 		D67157482B80B339002BA1E5 /* ShowInviteCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67157472B80B339002BA1E5 /* ShowInviteCodeView.swift */; };
 		D671574C2B80C2CB002BA1E5 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671574B2B80C2CB002BA1E5 /* Date+.swift */; };
 		D671574E2B80C30D002BA1E5 /* SelectPeriodBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671574D2B80C30D002BA1E5 /* SelectPeriodBottomView.swift */; };
+		D681F9DE2B88E58800E9671F /* RoomAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9DD2B88E58800E9671F /* RoomAPIService.swift */; };
+		D681F9E02B88E91E00E9671F /* RoomNetworkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9DF2B88E91E00E9671F /* RoomNetworkable.swift */; };
+		D681F9ED2B892A4300E9671F /* CreateRoomResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9EC2B892A4300E9671F /* CreateRoomResponseDTO.swift */; };
+		D68C5B692B85CC270005FFD5 /* CreateRoomUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68C5B682B85CC270005FFD5 /* CreateRoomUseCase.swift */; };
+		D68C5B6D2B85CDD40005FFD5 /* MemberEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68C5B6C2B85CDD40005FFD5 /* MemberEntity.swift */; };
 		D681F9E22B8917BA00E9671F /* BoosterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9E12B8917BA00E9671F /* BoosterDetailView.swift */; };
 		D681F9E42B8917CB00E9671F /* SelectBoosterReceiverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9E32B8917CB00E9671F /* SelectBoosterReceiverView.swift */; };
 		D681F9E62B8917E000E9671F /* SelectBoosterMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9E52B8917E000E9671F /* SelectBoosterMessageView.swift */; };
@@ -144,7 +149,6 @@
 		7798FD5E2B6BBF230053A556 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		7798FD602B6BBF2E0053A556 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		7798FD642B6BBF480053A556 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		7798FD6A2B6BBF8B0053A556 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		7798FD6C2B6BBF980053A556 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		7798FD6E2B6BBFBD0053A556 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		7798FD702B6BBFCF0053A556 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -190,6 +194,11 @@
 		D67157472B80B339002BA1E5 /* ShowInviteCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowInviteCodeView.swift; sourceTree = "<group>"; };
 		D671574B2B80C2CB002BA1E5 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		D671574D2B80C30D002BA1E5 /* SelectPeriodBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPeriodBottomView.swift; sourceTree = "<group>"; };
+		D681F9DD2B88E58800E9671F /* RoomAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomAPIService.swift; sourceTree = "<group>"; };
+		D681F9DF2B88E91E00E9671F /* RoomNetworkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomNetworkable.swift; sourceTree = "<group>"; };
+		D681F9EC2B892A4300E9671F /* CreateRoomResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomResponseDTO.swift; sourceTree = "<group>"; };
+		D68C5B682B85CC270005FFD5 /* CreateRoomUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomUseCase.swift; sourceTree = "<group>"; };
+		D68C5B6C2B85CDD40005FFD5 /* MemberEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberEntity.swift; sourceTree = "<group>"; };
 		D681F9E12B8917BA00E9671F /* BoosterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoosterDetailView.swift; sourceTree = "<group>"; };
 		D681F9E32B8917CB00E9671F /* SelectBoosterReceiverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBoosterReceiverView.swift; sourceTree = "<group>"; };
 		D681F9E52B8917E000E9671F /* SelectBoosterMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBoosterMessageView.swift; sourceTree = "<group>"; };
@@ -327,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				D64ED5202B6E408300A64D68 /* RoomEntity.swift */,
+				D68C5B6C2B85CDD40005FFD5 /* MemberEntity.swift */,
 				77A487092B8769AD00C72EA6 /* ChallengerEntity.swift */,
 				D681F9E92B8920F300E9671F /* BoosterEntity.swift */,
 			);
@@ -336,7 +346,7 @@
 		7798FD242B6BB09D0053A556 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				7798FD6A2B6BBF8B0053A556 /* .gitkeep */,
+				D68C5B682B85CC270005FFD5 /* CreateRoomUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -345,6 +355,7 @@
 			isa = PBXGroup;
 			children = (
 				7798FD262B6BB0CC0053A556 /* Repositories */,
+				D681F9DF2B88E91E00E9671F /* RoomNetworkable.swift */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -655,6 +666,7 @@
 		7798FD4F2B6BBDDC0053A556 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D681F9EB2B892A3B00E9671F /* Model */,
 				77A4872A2B88DB5000C72EA6 /* APIs */,
 			);
 			path = Network;
@@ -728,6 +740,7 @@
 			isa = PBXGroup;
 			children = (
 				77A487232B8899E500C72EA6 /* RoomAPI.swift */,
+				D681F9DD2B88E58800E9671F /* RoomAPIService.swift */,
 			);
 			path = APIs;
 			sourceTree = "<group>";
@@ -763,6 +776,14 @@
 				D64ED5122B6E22C800A64D68 /* TabView.swift */,
 			);
 			path = Tab;
+			sourceTree = "<group>";
+		};
+		D681F9EB2B892A3B00E9671F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D681F9EC2B892A4300E9671F /* CreateRoomResponseDTO.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		D6CE286B2B81014600E23264 /* CreateRoom */ = {
@@ -1001,7 +1022,9 @@
 				D6E737932B7271AC005FB8CA /* SelectRestrictAppBottomView.swift in Sources */,
 				7798FD842B6BC1380053A556 /* HomeCoordinator.swift in Sources */,
 				D6E737952B7271AC005FB8CA /* SelectRestrictTimeBottomView.swift in Sources */,
+				D68C5B6D2B85CDD40005FFD5 /* MemberEntity.swift in Sources */,
 				D64ED51D2B6E377B00A64D68 /* View+.swift in Sources */,
+				D681F9ED2B892A4300E9671F /* CreateRoomResponseDTO.swift in Sources */,
 				772025572B79202F00439CFD /* EnterInviteCodeView.swift in Sources */,
 				D6CE286D2B8102A100E23264 /* BaseCoordinator.swift in Sources */,
 				D6F139CA2B809B62007EF029 /* BasterdzBorderButton.swift in Sources */,
@@ -1018,6 +1041,7 @@
 				D671574E2B80C30D002BA1E5 /* SelectPeriodBottomView.swift in Sources */,
 				D64ED51B2B6E35AF00A64D68 /* BasterdzTextField.swift in Sources */,
 				D6E7378E2B72719F005FB8CA /* EnterRoomNameView.swift in Sources */,
+				D681F9E02B88E91E00E9671F /* RoomNetworkable.swift in Sources */,
 				D671574C2B80C2CB002BA1E5 /* Date+.swift in Sources */,
 				D64ED51B2B6E35AF00A64D68 /* BasterdzTextField.swift in Sources */,
 				77761FF92B810C4800178937 /* WaitingRoomView.swift in Sources */,
@@ -1060,6 +1084,7 @@
 				7798FD802B6BC0290053A556 /* BoosterCoordinator.swift in Sources */,
 				7798FD572B6BBEBE0053A556 /* Font+.swift in Sources */,
 				D66E9DFF2B70D2F500B8ED92 /* BasterdzNavigationBar.swift in Sources */,
+				D681F9DE2B88E58800E9671F /* RoomAPIService.swift in Sources */,
 				D6F139C12B8083BE007EF029 /* ViewModelable.swift in Sources */,
 				D64ED5192B6E327000A64D68 /* BasterdzCenterTextEditor.swift in Sources */,
 				D64ED5132B6E22C800A64D68 /* TabView.swift in Sources */,
@@ -1068,6 +1093,7 @@
 				7798FD782B6BBFFD0053A556 /* EnterRoomDescriptionViewModel.swift in Sources */,
 				7720256D2B80AF3300439CFD /* BasterdzPopUpView.swift in Sources */,
 				7798FD782B6BBFFD0053A556 /* EnterRoomDescriptionViewModel.swift in Sources */,
+				D68C5B692B85CC270005FFD5 /* CreateRoomUseCase.swift in Sources */,
 				7798FD1F2B6BB0570053A556 /* SceneDelegate.swift in Sources */,
 				D64ED5212B6E408300A64D68 /* RoomEntity.swift in Sources */,
 				D6E7379A2B727A12005FB8CA /* MyPageView.swift in Sources */,

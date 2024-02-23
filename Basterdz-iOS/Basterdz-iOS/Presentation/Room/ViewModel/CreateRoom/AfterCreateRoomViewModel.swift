@@ -18,4 +18,13 @@ final class AfterCreateRoomViewModel: ObservableObject {
         self.roomEntity = roomEntity
         self.inviteCode = inviteCode
     }
+    
+    func onAppear() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.coordinator?.push(.showInviteCode(
+                room: self.roomEntity,
+                inviteCode: self.inviteCode
+            ))
+        }
+    }
 }
