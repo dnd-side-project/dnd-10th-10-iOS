@@ -29,7 +29,6 @@
 		7798FD462B6BBA2B0053A556 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7798FD452B6BBA2B0053A556 /* Pretendard-Bold.otf */; };
 		7798FD482B6BBA390053A556 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7798FD472B6BBA390053A556 /* Pretendard-Medium.otf */; };
 		7798FD4A2B6BBA430053A556 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7798FD492B6BBA430053A556 /* Pretendard-Regular.otf */; };
-		7798FD552B6BBE9B0053A556 /* network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD542B6BBE9B0053A556 /* network.swift */; };
 		7798FD572B6BBEBE0053A556 /* Font+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD562B6BBEBE0053A556 /* Font+.swift */; };
 		7798FD6F2B6BBFBD0053A556 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD6E2B6BBFBD0053A556 /* LoginView.swift */; };
 		7798FD712B6BBFCF0053A556 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD702B6BBFCF0053A556 /* LoginViewModel.swift */; };
@@ -126,7 +125,6 @@
 		7798FD472B6BBA390053A556 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		7798FD492B6BBA430053A556 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		7798FD4B2B6BBADF0053A556 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7798FD542B6BBE9B0053A556 /* network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = network.swift; sourceTree = "<group>"; };
 		7798FD562B6BBEBE0053A556 /* Font+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+.swift"; sourceTree = "<group>"; };
 		7798FD5C2B6BBF070053A556 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		7798FD5E2B6BBF230053A556 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
@@ -649,7 +647,7 @@
 		7798FD522B6BBE2A0053A556 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				7798FD542B6BBE9B0053A556 /* network.swift */,
+				77A487152B886F7600C72EA6 /* APIEndpoint.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -958,7 +956,6 @@
 				D6E7378D2B72719F005FB8CA /* EnterRoomDescriptionView.swift in Sources */,
 				7798FD7E2B6BC01E0053A556 /* BoosterViewModel.swift in Sources */,
 				774A384E2B858FF80004CFBF /* ChallengeRoomView.swift in Sources */,
-				7798FD552B6BBE9B0053A556 /* network.swift in Sources */,
 				D64ED5232B6E421E00A64D68 /* BasterdzLargeButton.swift in Sources */,
 				D6F139C82B80950D007EF029 /* CreateRoomSuccessView.swift in Sources */,
 				D6CE28712B81074200E23264 /* UIApplication+.swift in Sources */,
