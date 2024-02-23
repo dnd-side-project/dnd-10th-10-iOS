@@ -7,24 +7,35 @@
 
 import SwiftUI
 
+enum Tab {
+    case booster
+    case home
+    case mypage
+}
+
 struct TabbarView: View {
     
+    @State var selection = Tab.home
+    
     var body: some View {
-        TabView {
+        TabView(selection: $selection) {
             BoosterView(viewModel: BoosterViewModel(coordinator: BoosterCoordinator()))
                 .tabItem {
                     tabItem(image: .booster, title: "부스터")
                 }
+                .tag(Tab.booster)
             HomeView(viewModel: HomeViewModel(coordinator: HomeCoordinator()))
                 .tabItem {
                     tabItem(image: .home, title: "홈")
                 }
+                .tag(Tab.home)
             MyPageView()
                 .tabItem {
                     tabItem(image: .mypage, title: "마이 페이지")
                 }
                 .font(.headline)
                 .accentColor(BasterdzColor.mainBlack.color)
+                .tag(Tab.mypage)
         }
     }
     
