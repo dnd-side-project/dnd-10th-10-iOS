@@ -9,10 +9,31 @@ import SwiftUI
 
 @main
 struct Basterdz_iOSApp: App {
+    
+    @StateObject private var appRootManager = AppRootManager()
+    
     var body: some Scene {
         WindowGroup {
-            TabbarView()
-                .accentColor(Color(.mainBlack))
+            Group {
+                switch appRootManager.currentRoot {
+                case .splash:
+                    SplashView()
+                case .main:
+                    TabbarView()
+                        .accentColor(Color(.mainBlack))
+                }
+            }
+            .environmentObject(appRootManager)
         }
+    }
+}
+
+final class AppRootManager: ObservableObject {
+    
+    @Published var currentRoot: AppRoot = .splash
+    
+    enum AppRoot {
+        case splash
+        case main
     }
 }
