@@ -10,6 +10,7 @@
 		772025572B79202F00439CFD /* EnterInviteCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772025562B79202F00439CFD /* EnterInviteCodeView.swift */; };
 		7720255B2B79F3C000439CFD /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7720255A2B79F3C000439CFD /* String+.swift */; };
 		7720256D2B80AF3300439CFD /* BasterdzPopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7720256C2B80AF3300439CFD /* BasterdzPopUpView.swift */; };
+		774A384E2B858FF80004CFBF /* ChallengeRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774A384D2B858FF80004CFBF /* ChallengeRoomView.swift */; };
 		777338922B857C6C00143672 /* BeforeStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777338912B857C6C00143672 /* BeforeStartView.swift */; };
 		77761FF72B80EEC200178937 /* EnterConfirmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77761FF62B80EEC200178937 /* EnterConfirmView.swift */; };
 		77761FF92B810C4800178937 /* WaitingRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77761FF82B810C4800178937 /* WaitingRoomView.swift */; };
@@ -45,6 +46,8 @@
 		7798FD942B6CA97A0053A556 /* ShapeStyle+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD932B6CA97A0053A556 /* ShapeStyle+.swift */; };
 		7798FD9C2B6CB3C40053A556 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 7798FD9B2B6CB3C40053A556 /* Moya */; };
 		7798FD9F2B6CE4FA0053A556 /* BasterdzColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD9E2B6CE4FA0053A556 /* BasterdzColor.swift */; };
+		77A487082B8758A400C72EA6 /* BasterdzProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487072B8758A400C72EA6 /* BasterdzProgressBar.swift */; };
+		77A4870A2B8769AD00C72EA6 /* ChallengerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487092B8769AD00C72EA6 /* ChallengerEntity.swift */; };
 		D64ED50E2B6E1A2900A64D68 /* BasterdzCommonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED50D2B6E1A2900A64D68 /* BasterdzCommonButton.swift */; };
 		D64ED5132B6E22C800A64D68 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED5122B6E22C800A64D68 /* TabView.swift */; };
 		D64ED5192B6E327000A64D68 /* BasterdzCenterTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED5182B6E327000A64D68 /* BasterdzCenterTextEditor.swift */; };
@@ -99,6 +102,7 @@
 		772025562B79202F00439CFD /* EnterInviteCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterInviteCodeView.swift; sourceTree = "<group>"; };
 		7720255A2B79F3C000439CFD /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		7720256C2B80AF3300439CFD /* BasterdzPopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzPopUpView.swift; sourceTree = "<group>"; };
+		774A384D2B858FF80004CFBF /* ChallengeRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeRoomView.swift; sourceTree = "<group>"; };
 		777338912B857C6C00143672 /* BeforeStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforeStartView.swift; sourceTree = "<group>"; };
 		77761FF62B80EEC200178937 /* EnterConfirmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterConfirmView.swift; sourceTree = "<group>"; };
 		77761FF82B810C4800178937 /* WaitingRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingRoomView.swift; sourceTree = "<group>"; };
@@ -147,6 +151,8 @@
 		7798FD932B6CA97A0053A556 /* ShapeStyle+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShapeStyle+.swift"; sourceTree = "<group>"; };
 		7798FD9D2B6CB8390053A556 /* Basterdz-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Basterdz-iOS.entitlements"; sourceTree = "<group>"; };
 		7798FD9E2B6CE4FA0053A556 /* BasterdzColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzColor.swift; sourceTree = "<group>"; };
+		77A487072B8758A400C72EA6 /* BasterdzProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzProgressBar.swift; sourceTree = "<group>"; };
+		77A487092B8769AD00C72EA6 /* ChallengerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengerEntity.swift; sourceTree = "<group>"; };
 		D64ED50D2B6E1A2900A64D68 /* BasterdzCommonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzCommonButton.swift; sourceTree = "<group>"; };
 		D64ED5122B6E22C800A64D68 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		D64ED5182B6E327000A64D68 /* BasterdzCenterTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzCenterTextEditor.swift; sourceTree = "<group>"; };
@@ -294,6 +300,7 @@
 			isa = PBXGroup;
 			children = (
 				D64ED5202B6E408300A64D68 /* RoomEntity.swift */,
+				77A487092B8769AD00C72EA6 /* ChallengerEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -488,6 +495,7 @@
 				D6E7378A2B72719F005FB8CA /* CreateRoom */,
 				772025562B79202F00439CFD /* EnterInviteCodeView.swift */,
 				77761FF82B810C4800178937 /* WaitingRoomView.swift */,
+				774A384D2B858FF80004CFBF /* ChallengeRoomView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -671,6 +679,7 @@
 				D64ED51E2B6E3DB500A64D68 /* BasterdzOptionButton.swift */,
 				D64ED5222B6E421E00A64D68 /* BasterdzLargeButton.swift */,
 				D66E9DFE2B70D2F500B8ED92 /* BasterdzNavigationBar.swift */,
+				77A487072B8758A400C72EA6 /* BasterdzProgressBar.swift */,
 				D6F139C92B809B62007EF029 /* BasterdzBorderButton.swift */,
 				7720256C2B80AF3300439CFD /* BasterdzPopUpView.swift */,
 				D6B350272B81C8F700A94FD1 /* BasterdzChipButton.swift */,
@@ -938,11 +947,14 @@
 				D671574C2B80C2CB002BA1E5 /* Date+.swift in Sources */,
 				D64ED51B2B6E35AF00A64D68 /* BasterdzTextField.swift in Sources */,
 				77761FF92B810C4800178937 /* WaitingRoomView.swift in Sources */,
+				77A4870A2B8769AD00C72EA6 /* ChallengerEntity.swift in Sources */,
 				D64ED50E2B6E1A2900A64D68 /* BasterdzCommonButton.swift in Sources */,
 				D64ED51F2B6E3DB500A64D68 /* BasterdzOptionButton.swift in Sources */,
 				7798FCF62B6B9C050053A556 /* HomeView.swift in Sources */,
+				77A487082B8758A400C72EA6 /* BasterdzProgressBar.swift in Sources */,
 				D6E7378D2B72719F005FB8CA /* EnterRoomDescriptionView.swift in Sources */,
 				7798FD7E2B6BC01E0053A556 /* BoosterViewModel.swift in Sources */,
+				774A384E2B858FF80004CFBF /* ChallengeRoomView.swift in Sources */,
 				7798FD552B6BBE9B0053A556 /* network.swift in Sources */,
 				D64ED5232B6E421E00A64D68 /* BasterdzLargeButton.swift in Sources */,
 				D6F139C82B80950D007EF029 /* CreateRoomSuccessView.swift in Sources */,

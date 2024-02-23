@@ -19,6 +19,14 @@ enum BasterdzImage: String {
     case calendar
     case copy
     case person
+    case backButton_white
+    case pencil
+    case questionMark
+    case calendar_enabled
+    case setting
+    case bubble
+    case backButtonGrey
+    case nextButtonGrey
     
     case x
     case timer
@@ -45,4 +53,10 @@ enum BasterdzImage: String {
     case profile_pink
     case profile_purple
     case redBomb
+    case roomBackground
+    case bombWithMedal
+    case bombLevel1
+    case bombLevel2
+    case bombLevel4
+    case spark
 }

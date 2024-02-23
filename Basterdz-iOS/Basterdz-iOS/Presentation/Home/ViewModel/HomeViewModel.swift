@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 final class HomeViewModel: ViewModelable {
     weak var coordinator: HomeCoordinator?
     @Published var state: State
