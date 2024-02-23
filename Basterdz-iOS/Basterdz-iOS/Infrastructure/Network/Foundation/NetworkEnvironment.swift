@@ -16,7 +16,7 @@ extension NetworkEnvironment {
     enum HTTPHeaderFields {
         static let `default`: [String: String] = [
             "Content-Type": "application/json",
-            "Authorization": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJiYXN0ZXJkeiIsImlhdCI6MTcwODcxMTY3MywiZXhwIjoxNzA5NzEyOTgxLCJtZW1iZXJJZCI6MX0.DGPFDD3as56wXdVNrdHC7hayrvLBJdHKbWbvmhCH1hI"
+            "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJiYXN0ZXJkeiIsImlhdCI6MTcwODcxMTY3MywiZXhwIjoxNzA5NzEyOTgxLCJtZW1iZXJJZCI6MX0.DGPFDD3as56wXdVNrdHC7hayrvLBJdHKbWbvmhCH1hI"
         ]
     }
 }
