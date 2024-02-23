@@ -27,6 +27,7 @@ struct EnterInviteCodeView: View {
             .padding(.bottom, 50)
             
             Text("친구에게 받은\n초대코드를 입력해보세요!".applyVariousFont(targetStringList: ["초대코드"], font: .pretendardB(20)))
+                .frame(minHeight: 48)
                 .font(.pretendardM(20))
                 .multilineTextAlignment(.center)
                 .padding(14)
