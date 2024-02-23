@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SplashView: View {
     
+    @EnvironmentObject private var appRootManager: AppRootManager
+    
     var body: some View {
         ZStack {
             Color(.mainBlack)
@@ -31,6 +33,7 @@ struct SplashView: View {
         .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 withAnimation {
+                    appRootManager.currentRoot = .main
                 }
             }
         }
