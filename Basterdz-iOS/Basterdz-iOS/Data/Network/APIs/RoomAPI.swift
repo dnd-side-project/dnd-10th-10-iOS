@@ -63,7 +63,8 @@ extension RoomAPI: BaseAPI {
                 "restrictApp": room.restrictAppType.toDictionaryString,
                 "startDate": room.period,
                 "endDate": room.period,
-                "limitHour": room.restrictAppTime
+                "limitHour": room.restrictAppTime,
+                "targetDay": room.period
             ]
         case .getRoomUsingCode(let code):
             return [
