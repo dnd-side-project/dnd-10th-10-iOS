@@ -9,12 +9,11 @@ import Foundation
 
 import Moya
 
-// RoomEndpoint라고 네이밍수정하기
 enum RoomAPI {
     case searchRoom
 }
 
-extension RoomAPI: APIEndpoint {
+extension RoomAPI: BaseAPI {
     
     var domain: BasterdzDomain {
         return .room

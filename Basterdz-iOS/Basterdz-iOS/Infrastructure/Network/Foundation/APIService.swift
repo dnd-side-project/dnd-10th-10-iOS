@@ -10,15 +10,18 @@ import Foundation
 import Combine
 import Moya
 
-class RoomAPIService: Requestable {
-    
-    typealias Endpoint = RoomAPI
-    
-    private let provider = NetworkProvider<Endpoint>()
+class APIService<API: BaseAPI>: Requestable {
+
+    private let api: API
+    private let provider = NetworkProvider<API>()
     private var cancelable = Set<AnyCancellable>()
     
-    func searchRoomAPI<T: Decodable>() -> AnyPublisher<T, ErrorResponse> {
-        return provider.request(.searchRoom)
+    init(api: API) {
+        self.api = api
+    }
+    
+    func mapAPIResponse<T: Decodable>() -> AnyPublisher<T, ErrorResponse> {
+        return provider.request(api)
             .tryMap { response in
                 try JSONDecoder().decode(CommonResponse<T>.self, from: response.data)
             }
