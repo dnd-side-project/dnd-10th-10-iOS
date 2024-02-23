@@ -11,7 +11,7 @@ struct ChallengeRoomView: View {
     
     var body: some View {
         ScrollView {
-            VStack {
+            LazyVStack {
                 RoomHeaderView()
                     .padding(.bottom, 31)
                 RankingView()
