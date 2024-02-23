@@ -46,6 +46,7 @@
 		7798FD9F2B6CE4FA0053A556 /* BasterdzColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7798FD9E2B6CE4FA0053A556 /* BasterdzColor.swift */; };
 		77A487082B8758A400C72EA6 /* BasterdzProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487072B8758A400C72EA6 /* BasterdzProgressBar.swift */; };
 		77A4870A2B8769AD00C72EA6 /* ChallengerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487092B8769AD00C72EA6 /* ChallengerEntity.swift */; };
+		77A4870F2B886B7B00C72EA6 /* NetworkEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A4870E2B886B7B00C72EA6 /* NetworkEnvironment.swift */; };
 		77A487142B886C3700C72EA6 /* CommonResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487132B886C3700C72EA6 /* CommonResponse.swift */; };
 		77A487162B886F7600C72EA6 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487152B886F7600C72EA6 /* APIEndpoint.swift */; };
 		77A487182B88747C00C72EA6 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487172B88747C00C72EA6 /* Requestable.swift */; };
@@ -156,6 +157,7 @@
 		7798FD9E2B6CE4FA0053A556 /* BasterdzColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzColor.swift; sourceTree = "<group>"; };
 		77A487072B8758A400C72EA6 /* BasterdzProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzProgressBar.swift; sourceTree = "<group>"; };
 		77A487092B8769AD00C72EA6 /* ChallengerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengerEntity.swift; sourceTree = "<group>"; };
+		77A4870E2B886B7B00C72EA6 /* NetworkEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEnvironment.swift; sourceTree = "<group>"; };
 		77A487132B886C3700C72EA6 /* CommonResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonResponse.swift; sourceTree = "<group>"; };
 		77A487152B886F7600C72EA6 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		77A487172B88747C00C72EA6 /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
@@ -679,7 +681,15 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		77A4870B2B886AF500C72EA6 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				77A4870E2B886B7B00C72EA6 /* NetworkEnvironment.swift */,
 				77A487172B88747C00C72EA6 /* Requestable.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
 		77A487122B886C1B00C72EA6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -982,6 +992,7 @@
 				D6CE28712B81074200E23264 /* UIApplication+.swift in Sources */,
 				77A487142B886C3700C72EA6 /* CommonResponse.swift in Sources */,
 				7798FD712B6BBFCF0053A556 /* LoginViewModel.swift in Sources */,
+				77A4870F2B886B7B00C72EA6 /* NetworkEnvironment.swift in Sources */,
 				779677592B73A54D007315E8 /* BasterdzImage.swift in Sources */,
 				7798FCF42B6B9C050053A556 /* Basterdz_iOSApp.swift in Sources */,
 				D6CE28662B80F92300E23264 /* EnterRoomNameViewModel.swift in Sources */,
