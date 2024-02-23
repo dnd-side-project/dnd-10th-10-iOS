@@ -62,6 +62,7 @@ enum BasterdzImage: String {
     case bombLevel2
     case bombLevel4
     case spark
+    case boosterSendSuccess
     case basterdzIcon
     case basterdz_white
 }

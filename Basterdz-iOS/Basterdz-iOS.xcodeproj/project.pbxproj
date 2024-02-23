@@ -73,6 +73,11 @@
 		D67157482B80B339002BA1E5 /* ShowInviteCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67157472B80B339002BA1E5 /* ShowInviteCodeView.swift */; };
 		D671574C2B80C2CB002BA1E5 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671574B2B80C2CB002BA1E5 /* Date+.swift */; };
 		D671574E2B80C30D002BA1E5 /* SelectPeriodBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671574D2B80C30D002BA1E5 /* SelectPeriodBottomView.swift */; };
+		D681F9E22B8917BA00E9671F /* BoosterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9E12B8917BA00E9671F /* BoosterDetailView.swift */; };
+		D681F9E42B8917CB00E9671F /* SelectBoosterReceiverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9E32B8917CB00E9671F /* SelectBoosterReceiverView.swift */; };
+		D681F9E62B8917E000E9671F /* SelectBoosterMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9E52B8917E000E9671F /* SelectBoosterMessageView.swift */; };
+		D681F9E82B8917ED00E9671F /* BoosterSendSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9E72B8917ED00E9671F /* BoosterSendSuccessView.swift */; };
+		D681F9EA2B8920F300E9671F /* BoosterEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9E92B8920F300E9671F /* BoosterEntity.swift */; };
 		D6B350282B81C8F700A94FD1 /* BasterdzChipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B350272B81C8F700A94FD1 /* BasterdzChipButton.swift */; };
 		D6CE28662B80F92300E23264 /* EnterRoomNameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CE28652B80F92300E23264 /* EnterRoomNameViewModel.swift */; };
 		D6CE286A2B80FFEE00E23264 /* AfterCreateRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CE28692B80FFEE00E23264 /* AfterCreateRoomViewModel.swift */; };
@@ -185,6 +190,11 @@
 		D67157472B80B339002BA1E5 /* ShowInviteCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowInviteCodeView.swift; sourceTree = "<group>"; };
 		D671574B2B80C2CB002BA1E5 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		D671574D2B80C30D002BA1E5 /* SelectPeriodBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPeriodBottomView.swift; sourceTree = "<group>"; };
+		D681F9E12B8917BA00E9671F /* BoosterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoosterDetailView.swift; sourceTree = "<group>"; };
+		D681F9E32B8917CB00E9671F /* SelectBoosterReceiverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBoosterReceiverView.swift; sourceTree = "<group>"; };
+		D681F9E52B8917E000E9671F /* SelectBoosterMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBoosterMessageView.swift; sourceTree = "<group>"; };
+		D681F9E72B8917ED00E9671F /* BoosterSendSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoosterSendSuccessView.swift; sourceTree = "<group>"; };
+		D681F9E92B8920F300E9671F /* BoosterEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoosterEntity.swift; sourceTree = "<group>"; };
 		D6B350272B81C8F700A94FD1 /* BasterdzChipButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzChipButton.swift; sourceTree = "<group>"; };
 		D6CE28652B80F92300E23264 /* EnterRoomNameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterRoomNameViewModel.swift; sourceTree = "<group>"; };
 		D6CE28692B80FFEE00E23264 /* AfterCreateRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterCreateRoomViewModel.swift; sourceTree = "<group>"; };
@@ -318,6 +328,7 @@
 			children = (
 				D64ED5202B6E408300A64D68 /* RoomEntity.swift */,
 				77A487092B8769AD00C72EA6 /* ChallengerEntity.swift */,
+				D681F9E92B8920F300E9671F /* BoosterEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -473,6 +484,10 @@
 			isa = PBXGroup;
 			children = (
 				7798FD7B2B6BC0120053A556 /* BoosterView.swift */,
+				D681F9E12B8917BA00E9671F /* BoosterDetailView.swift */,
+				D681F9E32B8917CB00E9671F /* SelectBoosterReceiverView.swift */,
+				D681F9E52B8917E000E9671F /* SelectBoosterMessageView.swift */,
+				D681F9E72B8917ED00E9671F /* BoosterSendSuccessView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -993,11 +1008,13 @@
 				D6B350282B81C8F700A94FD1 /* BasterdzChipButton.swift in Sources */,
 				7798FD822B6BC12B0053A556 /* HomeViewModel.swift in Sources */,
 				77A487162B886F7600C72EA6 /* BaseAPI.swift in Sources */,
+				D681F9E62B8917E000E9671F /* SelectBoosterMessageView.swift in Sources */,
 				7798FD6F2B6BBFBD0053A556 /* LoginView.swift in Sources */,
 				D66E9DEA2B70A79700B8ED92 /* Image+.swift in Sources */,
 				7798FD872B6BC15D0053A556 /* AppCoordinator.swift in Sources */,
 				D6E737942B7271AC005FB8CA /* SelectMaxPeopleBottomView.swift in Sources */,
 				D66E9DE82B70A75E00B8ED92 /* RestrictApp.swift in Sources */,
+				D681F9E82B8917ED00E9671F /* BoosterSendSuccessView.swift in Sources */,
 				D671574E2B80C30D002BA1E5 /* SelectPeriodBottomView.swift in Sources */,
 				D64ED51B2B6E35AF00A64D68 /* BasterdzTextField.swift in Sources */,
 				D6E7378E2B72719F005FB8CA /* EnterRoomNameView.swift in Sources */,
@@ -1018,7 +1035,9 @@
 				77A487142B886C3700C72EA6 /* CommonResponse.swift in Sources */,
 				77A487272B889D9400C72EA6 /* APIService.swift in Sources */,
 				7798FD712B6BBFCF0053A556 /* LoginViewModel.swift in Sources */,
+				D681F9E22B8917BA00E9671F /* BoosterDetailView.swift in Sources */,
 				77A487242B8899E500C72EA6 /* RoomAPI.swift in Sources */,
+				D681F9EA2B8920F300E9671F /* BoosterEntity.swift in Sources */,
 				77A4870F2B886B7B00C72EA6 /* NetworkEnvironment.swift in Sources */,
 				779677592B73A54D007315E8 /* BasterdzImage.swift in Sources */,
 				7798FCF42B6B9C050053A556 /* Basterdz_iOSApp.swift in Sources */,
@@ -1036,6 +1055,7 @@
 				77A487112B886BFC00C72EA6 /* NetworkError.swift in Sources */,
 				7798FD762B6BBFF10053A556 /* RoomView.swift in Sources */,
 				77A487212B8898DA00C72EA6 /* ErrorResponse.swift in Sources */,
+				D681F9E42B8917CB00E9671F /* SelectBoosterReceiverView.swift in Sources */,
 				77761FF72B80EEC200178937 /* EnterConfirmView.swift in Sources */,
 				7798FD802B6BC0290053A556 /* BoosterCoordinator.swift in Sources */,
 				7798FD572B6BBEBE0053A556 /* Font+.swift in Sources */,

@@ -2,7 +2,21 @@
 //  BoosterCoordinator.swift
 //  Basterdz-iOS
 //
-//  Created by EUNJU on 2024/02/01.
+//  Created by subin on 2024/02/01.
 //
 
-import Foundation
+import SwiftUI
+
+enum BoosterFlow: Hashable {
+    case selectRoom
+    case selectBooster
+    case selectBoosterReceiver
+    case enterMessage
+    case pushSuccess
+}
+
+final class BoosterCoordinator: BaseCoordinator<BoosterFlow> {
+  
+    
+    
+}
