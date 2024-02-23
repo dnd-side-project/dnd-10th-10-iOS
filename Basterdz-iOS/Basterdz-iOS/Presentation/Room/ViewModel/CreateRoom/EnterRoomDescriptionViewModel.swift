@@ -43,7 +43,7 @@ class EnterRoomDescriptionViewModel: ViewModelable {
             }
         }
         // 각 버튼의 active 표시를 위한 연산 프로퍼티
-        var isGoalButtonActive: Bool{
+        var isGoalButtonActive: Bool {
             self.roomEntity.goal.isNotEmpty
         }
         var isRestrictAppButtonActive: Bool {

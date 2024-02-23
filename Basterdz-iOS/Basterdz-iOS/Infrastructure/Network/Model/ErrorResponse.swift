@@ -15,4 +15,3 @@ struct ErrorResponse: Decodable {
 extension ErrorResponse: Error {
     static let commonError = ErrorResponse(code: "500", message: "네트워크 실패")
 }
-

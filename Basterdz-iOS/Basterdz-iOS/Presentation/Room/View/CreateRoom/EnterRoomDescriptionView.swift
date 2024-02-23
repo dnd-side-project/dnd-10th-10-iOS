@@ -73,7 +73,7 @@ struct EnterRoomDescriptionView: View {
                         action: {
                             viewModel.action(.periodModalButtonTap)
                         },
-                        label:  viewModel.state.roomEntity.period != 0  ? "\(viewModel.state.roomEntity.period)일" : "디데이 기간을 설정해보세요",
+                        label: viewModel.state.roomEntity.period != 0  ? "\(viewModel.state.roomEntity.period)일" : "디데이 기간을 설정해보세요",
                         image: BasterdzImage.calendar.rawValue
                     )
                     .focused($focusState, equals: .restrictTime)
