@@ -47,6 +47,7 @@
 		77A487082B8758A400C72EA6 /* BasterdzProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487072B8758A400C72EA6 /* BasterdzProgressBar.swift */; };
 		77A4870A2B8769AD00C72EA6 /* ChallengerEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487092B8769AD00C72EA6 /* ChallengerEntity.swift */; };
 		77A487142B886C3700C72EA6 /* CommonResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487132B886C3700C72EA6 /* CommonResponse.swift */; };
+		77A487162B886F7600C72EA6 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487152B886F7600C72EA6 /* APIEndpoint.swift */; };
 		77A4871D2B887BDA00C72EA6 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 77A4871C2B887BDA00C72EA6 /* CombineMoya */; };
 		77A4871F2B887BDA00C72EA6 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 77A4871E2B887BDA00C72EA6 /* Moya */; };
 		77A487212B8898DA00C72EA6 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487202B8898DA00C72EA6 /* ErrorResponse.swift */; };
@@ -155,6 +156,7 @@
 		77A487072B8758A400C72EA6 /* BasterdzProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzProgressBar.swift; sourceTree = "<group>"; };
 		77A487092B8769AD00C72EA6 /* ChallengerEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengerEntity.swift; sourceTree = "<group>"; };
 		77A487132B886C3700C72EA6 /* CommonResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonResponse.swift; sourceTree = "<group>"; };
+		77A487152B886F7600C72EA6 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		77A487202B8898DA00C72EA6 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		D64ED50D2B6E1A2900A64D68 /* BasterdzCommonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzCommonButton.swift; sourceTree = "<group>"; };
 		D64ED5122B6E22C800A64D68 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
@@ -684,6 +686,7 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+				77A487152B886F7600C72EA6 /* APIEndpoint.swift */,
 		D64ED50C2B6E1A1200A64D68 /* Component */ = {
 			isa = PBXGroup;
 			children = (
@@ -950,6 +953,7 @@
 				D6F139CA2B809B62007EF029 /* BasterdzBorderButton.swift in Sources */,
 				D6B350282B81C8F700A94FD1 /* BasterdzChipButton.swift in Sources */,
 				7798FD822B6BC12B0053A556 /* HomeViewModel.swift in Sources */,
+				77A487162B886F7600C72EA6 /* APIEndpoint.swift in Sources */,
 				D6CE28682B80F96A00E23264 /* EnterInviteCodeViewModel.swift in Sources */,
 				7798FD6F2B6BBFBD0053A556 /* LoginView.swift in Sources */,
 				D66E9DEA2B70A79700B8ED92 /* Image+.swift in Sources */,
