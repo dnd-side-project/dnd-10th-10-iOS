@@ -22,8 +22,8 @@ class RoomCoordinator: BaseCoordinator<RoomFlow> {
             let viewModel = EnterRoomNameViewModel(coordinator: self)
             EnterRoomNameView(viewModel: viewModel)
         case .enterInviteCode:
-            // TODO: viewModel DI 필요
-            EnterInviteCodeView()
+            let viewModel = EnterInviteCodeViewModel(coordinator: self)
+            EnterInviteCodeView(viewModel: viewModel)
         case .enterRoomDescription(let roomName):
             let viewModel = EnterRoomDescriptionViewModel(coordinator: self, roomName: roomName)
             EnterRoomDescriptionView(viewModel: viewModel)
