@@ -58,6 +58,7 @@
 		77A487272B889D9400C72EA6 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487262B889D9400C72EA6 /* APIService.swift */; };
 		77A4872C2B88E64F00C72EA6 /* EnterInviteCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A4872B2B88E64F00C72EA6 /* EnterInviteCodeViewModel.swift */; };
 		77A487322B891C6200C72EA6 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487312B891C6200C72EA6 /* SplashView.swift */; };
+		77A487362B89398600C72EA6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77A487352B89398600C72EA6 /* GoogleService-Info.plist */; };
 		77A487392B893B9B00C72EA6 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 77A487382B893B9B00C72EA6 /* FirebaseMessaging */; };
 		D64ED50E2B6E1A2900A64D68 /* BasterdzCommonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED50D2B6E1A2900A64D68 /* BasterdzCommonButton.swift */; };
 		D64ED5132B6E22C800A64D68 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED5122B6E22C800A64D68 /* TabView.swift */; };
@@ -76,14 +77,14 @@
 		D671574E2B80C30D002BA1E5 /* SelectPeriodBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D671574D2B80C30D002BA1E5 /* SelectPeriodBottomView.swift */; };
 		D681F9DE2B88E58800E9671F /* RoomAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9DD2B88E58800E9671F /* RoomAPIService.swift */; };
 		D681F9E02B88E91E00E9671F /* RoomNetworkable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9DF2B88E91E00E9671F /* RoomNetworkable.swift */; };
-		D681F9ED2B892A4300E9671F /* CreateRoomResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9EC2B892A4300E9671F /* CreateRoomResponseDTO.swift */; };
-		D68C5B692B85CC270005FFD5 /* CreateRoomUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68C5B682B85CC270005FFD5 /* CreateRoomUseCase.swift */; };
-		D68C5B6D2B85CDD40005FFD5 /* MemberEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68C5B6C2B85CDD40005FFD5 /* MemberEntity.swift */; };
 		D681F9E22B8917BA00E9671F /* BoosterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9E12B8917BA00E9671F /* BoosterDetailView.swift */; };
 		D681F9E42B8917CB00E9671F /* SelectBoosterReceiverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9E32B8917CB00E9671F /* SelectBoosterReceiverView.swift */; };
 		D681F9E62B8917E000E9671F /* SelectBoosterMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9E52B8917E000E9671F /* SelectBoosterMessageView.swift */; };
 		D681F9E82B8917ED00E9671F /* BoosterSendSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9E72B8917ED00E9671F /* BoosterSendSuccessView.swift */; };
 		D681F9EA2B8920F300E9671F /* BoosterEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9E92B8920F300E9671F /* BoosterEntity.swift */; };
+		D681F9ED2B892A4300E9671F /* CreateRoomResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D681F9EC2B892A4300E9671F /* CreateRoomResponseDTO.swift */; };
+		D68C5B692B85CC270005FFD5 /* CreateRoomUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68C5B682B85CC270005FFD5 /* CreateRoomUseCase.swift */; };
+		D68C5B6D2B85CDD40005FFD5 /* MemberEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D68C5B6C2B85CDD40005FFD5 /* MemberEntity.swift */; };
 		D6B350282B81C8F700A94FD1 /* BasterdzChipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B350272B81C8F700A94FD1 /* BasterdzChipButton.swift */; };
 		D6CE28662B80F92300E23264 /* EnterRoomNameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CE28652B80F92300E23264 /* EnterRoomNameViewModel.swift */; };
 		D6CE286A2B80FFEE00E23264 /* AfterCreateRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6CE28692B80FFEE00E23264 /* AfterCreateRoomViewModel.swift */; };
@@ -180,6 +181,7 @@
 		77A487262B889D9400C72EA6 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		77A4872B2B88E64F00C72EA6 /* EnterInviteCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterInviteCodeViewModel.swift; sourceTree = "<group>"; };
 		77A487312B891C6200C72EA6 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		77A487352B89398600C72EA6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D64ED50D2B6E1A2900A64D68 /* BasterdzCommonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzCommonButton.swift; sourceTree = "<group>"; };
 		D64ED5122B6E22C800A64D68 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		D64ED5182B6E327000A64D68 /* BasterdzCenterTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzCenterTextEditor.swift; sourceTree = "<group>"; };
@@ -197,14 +199,14 @@
 		D671574D2B80C30D002BA1E5 /* SelectPeriodBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPeriodBottomView.swift; sourceTree = "<group>"; };
 		D681F9DD2B88E58800E9671F /* RoomAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomAPIService.swift; sourceTree = "<group>"; };
 		D681F9DF2B88E91E00E9671F /* RoomNetworkable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomNetworkable.swift; sourceTree = "<group>"; };
-		D681F9EC2B892A4300E9671F /* CreateRoomResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomResponseDTO.swift; sourceTree = "<group>"; };
-		D68C5B682B85CC270005FFD5 /* CreateRoomUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomUseCase.swift; sourceTree = "<group>"; };
-		D68C5B6C2B85CDD40005FFD5 /* MemberEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberEntity.swift; sourceTree = "<group>"; };
 		D681F9E12B8917BA00E9671F /* BoosterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoosterDetailView.swift; sourceTree = "<group>"; };
 		D681F9E32B8917CB00E9671F /* SelectBoosterReceiverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBoosterReceiverView.swift; sourceTree = "<group>"; };
 		D681F9E52B8917E000E9671F /* SelectBoosterMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBoosterMessageView.swift; sourceTree = "<group>"; };
 		D681F9E72B8917ED00E9671F /* BoosterSendSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoosterSendSuccessView.swift; sourceTree = "<group>"; };
 		D681F9E92B8920F300E9671F /* BoosterEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoosterEntity.swift; sourceTree = "<group>"; };
+		D681F9EC2B892A4300E9671F /* CreateRoomResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomResponseDTO.swift; sourceTree = "<group>"; };
+		D68C5B682B85CC270005FFD5 /* CreateRoomUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoomUseCase.swift; sourceTree = "<group>"; };
+		D68C5B6C2B85CDD40005FFD5 /* MemberEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberEntity.swift; sourceTree = "<group>"; };
 		D6B350272B81C8F700A94FD1 /* BasterdzChipButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzChipButton.swift; sourceTree = "<group>"; };
 		D6CE28652B80F92300E23264 /* EnterRoomNameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterRoomNameViewModel.swift; sourceTree = "<group>"; };
 		D6CE28692B80FFEE00E23264 /* AfterCreateRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterCreateRoomViewModel.swift; sourceTree = "<group>"; };
@@ -643,6 +645,7 @@
 			isa = PBXGroup;
 			children = (
 				7798FD4B2B6BBADF0053A556 /* Info.plist */,
+				77A487352B89398600C72EA6 /* GoogleService-Info.plist */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -968,6 +971,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7798FD442B6BB8C90053A556 /* Color.xcassets in Resources */,
+				77A487362B89398600C72EA6 /* GoogleService-Info.plist in Resources */,
 				7798FD4A2B6BBA430053A556 /* Pretendard-Regular.otf in Resources */,
 				7798FD482B6BBA390053A556 /* Pretendard-Medium.otf in Resources */,
 				779677572B739B72007315E8 /* .swiftlint.yml in Resources */,
@@ -1267,10 +1271,12 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Basterdz-iOS/Support/Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1302,10 +1308,12 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Basterdz-iOS/Support/Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
