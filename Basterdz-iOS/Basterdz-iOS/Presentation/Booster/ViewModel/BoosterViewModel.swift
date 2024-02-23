@@ -15,4 +15,5 @@ enum BoosterFlowPath {
 
 final class BoosterViewModel: ObservableObject {
     @Published var path: [BoosterFlowPath] = []
+    let roomList = RoomEntity.mocks
 }
