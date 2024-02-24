@@ -33,36 +33,43 @@ struct HomeView: View {
     }
     
     var body: some View {
-        VStack(spacing: 16) {
-            BasterdzNavigationBar(
-                leadingItem: (.basterdz, {})
-            )
-            ZStack {
-                VStack {
-                    tabBar()
-                    ScrollView {
-                        tabContent(currentTab)
+        NavigationStack(path: $viewModel.coordinator.path) {
+            VStack(spacing: 16) {
+                BasterdzNavigationBar(
+                    leadingItem: (.basterdz, {})
+                )
+                ZStack {
+                    VStack {
+                        tabBar()
+                        ScrollView {
+                            tabContent(currentTab)
+                        }
+                        .frame(maxHeight: .infinity)
                     }
-                    .frame(maxHeight: .infinity)
+                    HStack {
+                        Spacer()
+                        Button(action: {
+                            plusButtonTap.toggle()
+                        }, label: {
+                            Image(BasterdzImage.plus)
+                                .resizable()
+                                .frame(width: 50, height: 50)
+                        })
+                        .padding(20)
+                    }
+                    .offset(y: (self.screenSize?.height ?? 100) * 0.35 )
                 }
-                HStack {
-                    Spacer()
-                    Button(action: {
-                        plusButtonTap.toggle()
-                    }, label: {
-                        Image(BasterdzImage.plus)
-                            .resizable()
-                            .frame(width: 50, height: 50)
-                    })
-                    .padding(20)
-                }
-                .offset(y: (self.screenSize?.height ?? 100) * 0.35 )
+            }
+            .fullScreenCover(isPresented: $plusButtonTap) {
+                RoomView(coordinator: RoomCoordinator())
+            }
+            .onAppear {viewModel.action(.getDatas)}
+            .navigationDestination(for: HomeFlow.self) {
+                viewModel.coordinator.setView($0)
+                    .toolbar(.hidden, for: .navigationBar)
+                    .toolbar(.hidden, for: .tabBar)
             }
         }
-        .fullScreenCover(isPresented: $plusButtonTap) {
-            RoomView(coordinator: RoomCoordinator())
-        }
-        .onAppear {viewModel.action(.getDatas)}
     }
 }
 

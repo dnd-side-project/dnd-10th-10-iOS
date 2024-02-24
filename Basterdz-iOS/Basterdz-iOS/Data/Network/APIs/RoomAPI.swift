@@ -14,7 +14,10 @@ enum RoomAPI {
     case getRoomUsingCode(code: String)
     case searchRoom
     case pendingRoomDetail(id: String)
+    
     case progressRoomDetail(id: String)
+    case getRank(id: String, date: String)
+    case getScreenTime(id: String, date: String)
 }
 
 extension RoomAPI: BaseAPI {
@@ -35,6 +38,10 @@ extension RoomAPI: BaseAPI {
             return .get
         case .progressRoomDetail:
             return .get
+        case .getRank:
+            return .get
+        case .getScreenTime:
+            return .get
         }
     }
     
@@ -46,10 +53,14 @@ extension RoomAPI: BaseAPI {
             ""
         case .pendingRoomDetail(let id):
             "\(id)/members"
-        case .progressRoomDetail(let id):
-            "\(id)"
         case .searchRoom:
             ""
+        case .progressRoomDetail(let id):
+            "/\(id)"
+        case .getRank(id: let id, date: _):
+            "/\(id)/rank"
+        case .getScreenTime(id: let id, date: _):
+            "/\(id)/screen-time"
         }
     }
     
@@ -75,6 +86,12 @@ extension RoomAPI: BaseAPI {
         case .pendingRoomDetail:
             return .none
         case .progressRoomDetail:
+            return .none
+        case .getRank(id: _, date: let date):
+            return [
+                "date": date
+            ]
+        case .getScreenTime:
             return .none
         }
     }
