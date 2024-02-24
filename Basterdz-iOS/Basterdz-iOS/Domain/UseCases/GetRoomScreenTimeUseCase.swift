@@ -6,3 +6,16 @@
 //
 
 import Foundation
+import Combine
+
+final class GetRoomScreenTimeUseCase {
+    private let network: any RoomNetworkable
+    
+    init(network: any RoomNetworkable) {
+        self.network = network
+    }
+    
+    func execute(id: String) -> AnyPublisher<[ScreenTimeDTO], ErrorResponse> {
+        network.getScreenTime(id: id)
+    }
+}

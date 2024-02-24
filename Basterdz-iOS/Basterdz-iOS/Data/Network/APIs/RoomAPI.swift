@@ -11,8 +11,10 @@ import Moya
 
 enum RoomAPI {
     case createRoom(room: RoomEntity)
+    case getRoomUsingCode(code: String)
     case searchRoom
     case pendingRoomDetail(id: String)
+    
     case progressRoomDetail(id: String)
     case getRank(id: String, date: String)
     case getScreenTime(id: String, date: String)
@@ -28,6 +30,8 @@ extension RoomAPI: BaseAPI {
         switch self {
         case .createRoom:
             return .post
+        case .getRoomUsingCode:
+            return .get
         case .searchRoom:
             return .get
         case .pendingRoomDetail:
@@ -45,16 +49,18 @@ extension RoomAPI: BaseAPI {
         switch self {
         case .createRoom:
             ""
+        case .getRoomUsingCode:
+            ""
         case .pendingRoomDetail(let id):
             "\(id)/members"
-        case .progressRoomDetail(let id):
-            "\(id)"
         case .searchRoom:
             ""
+        case .progressRoomDetail(let id):
+            "/\(id)"
         case .getRank(id: let id, date: _):
-            "\(id)/rank"
+            "/\(id)/rank"
         case .getScreenTime(id: let id, date: _):
-            "\(id)/screen-time"
+            "/\(id)/screen-time"
         }
     }
     
@@ -68,7 +74,12 @@ extension RoomAPI: BaseAPI {
                 "restrictApp": room.restrictAppType.toDictionaryString,
                 "startDate": room.period,
                 "endDate": room.period,
-                "limitHour": room.restrictAppTime
+                "limitHour": room.restrictAppTime,
+                "targetDay": room.period
+            ]
+        case .getRoomUsingCode(let code):
+            return [
+                "inviteCode": code
             ]
         case .searchRoom:
             return .none
@@ -80,7 +91,7 @@ extension RoomAPI: BaseAPI {
             return [
                 "date": date
             ]
-        case .getScreenTime(id: _, date: _):
+        case .getScreenTime:
             return .none
         }
     }

@@ -9,9 +9,11 @@ import SwiftUI
 
 struct EnterConfirmView: View {
     
+    @StateObject var viewModel: EnterInviteCodeViewModel
+    
     var body: some View {
         VStack {
-            Text("‘우리들의 도파민 탈출기'\n방에 입장해볼까요?"
+            Text("‘\(viewModel.state.room.name)'\n방에 입장해볼까요?"
                 .applyVariousFont(targetStringList: ["방에 입장해볼까요?"], font: .pretendardB(20)))
                 .font(.pretendardM(20))
                 .multilineTextAlignment(.center)
@@ -25,9 +27,9 @@ struct EnterConfirmView: View {
                     .padding(.trailing, 16)
                 
                 VStack(alignment: .leading, spacing: 17) {
-                    ChallengeInfo(key: "제한 앱", value: "인스타그램", icon: .appblocking)
-                    ChallengeInfo(key: "스크린타임 제한 시간", value: "하루 2시간", icon: .timer)
-                    ChallengeInfo(key: "종료일", value: "2024.01.23", icon: .timeroff)
+                    ChallengeInfo(key: "제한 앱", value: viewModel.state.room.restrictAppType.rawValue, icon: .appblocking)
+                    ChallengeInfo(key: "스크린타임 제한 시간", value: "하루 \(viewModel.state.room.restrictAppTime)시간", icon: .timer)
+                    ChallengeInfo(key: "종료일", value: "\(viewModel.state.room.period)", icon: .timeroff)
                 }
                 .offset(x: 49, y: 0)
             }

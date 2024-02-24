@@ -40,7 +40,8 @@ final class BoosterViewModel: BaseCoordinator<BoosterFlow>, ViewModelable {
             receiver: ChallengerEntity(
                 nickname: "바밤바",
                 message: "",
-                screenTime: ""
+                screenTime: "",
+                percent: 0.0
             ),
             message: "hi"
         )
@@ -56,7 +57,7 @@ final class BoosterViewModel: BaseCoordinator<BoosterFlow>, ViewModelable {
             state.selectBooster = booster
             push(BoosterFlow.selectBooster)
         case .selectReceiver(let nickname):
-            state.receiver = ChallengerEntity(nickname: nickname, message: "", screenTime: "")
+            state.receiver = ChallengerEntity(nickname: nickname, message: "", screenTime: "", percent: 0.0)
             push(BoosterFlow.enterMessage)
         case .selectMessage:
             push(BoosterFlow.pushSuccess)

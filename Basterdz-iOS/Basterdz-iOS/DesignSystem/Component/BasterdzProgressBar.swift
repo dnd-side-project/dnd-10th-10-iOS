@@ -31,7 +31,7 @@ struct BasterdzProgressBar: View {
         ZStack(alignment: .leading) {
             RoundedRectangle(cornerRadius: 29)
                 .foregroundColor(Color(backgroundColor))
-                .frame(width: .infinity, height: height)
+                .frame(height: height)
             
             RoundedRectangle(cornerRadius: 29)
                 .foregroundColor(Color(foregroundColor))

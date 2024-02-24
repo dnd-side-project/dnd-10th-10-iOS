@@ -13,4 +13,5 @@ struct ChallengerEntity: Identifiable {
     let nickname: String
     let message: String
     let screenTime: String
+    let percent: Double
 }

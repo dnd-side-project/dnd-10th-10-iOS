@@ -8,24 +8,15 @@
 import SwiftUI
 
 struct ChallengeRoomView: View {
+    @StateObject var viewModel: ChallengeRoomViewModel
     
     var body: some View {
         ScrollView {
             LazyVStack {
-                RoomHeaderView()
+                roomHeaderView(room: viewModel.state.room)
                     .padding(.bottom, 31)
-                RankingView()
-                MemberListView(dummyData: [
-                    ChallengerEntity(nickname: "바밤바",
-                               message: "오늘 디지털 디톡스 1등이시네요! :)",
-                               screenTime: "02:40"),
-                    ChallengerEntity(nickname: "하이",
-                               message: "할 수 있어요! 조금 더 분발해봅시다~!",
-                               screenTime: "02:40"),
-                    ChallengerEntity(nickname: "은주",
-                               message: "부스터 조심하세요!!!!",
-                               screenTime: "02:40")
-                ])
+                RankingView(rankingList: viewModel.state.rankList)
+                MemberListView(dummyData: viewModel.state.challengeList)
                 Text("업데이트 시각 : 매일 00시 30분")
                     .font(.pretendardM(12))
                     .foregroundColor(Color(.grey4))
@@ -34,6 +25,83 @@ struct ChallengeRoomView: View {
             }
         }
         .ignoresSafeArea()
+        .onAppear {viewModel.action(.getData)}
+    }
+    
+    @ViewBuilder func roomHeaderView(room: GetProgressRoomDTO) -> some View {
+        ZStack {
+            Image(BasterdzImage.roomBackground)
+                .resizable()
+                .frame(maxWidth: .infinity)
+                .frame(height: 366 * ((screenSize?.height ?? 0) / 812))
+            upperContentView(
+                period: room.memberCount,
+                title: room.title,
+                subTitle: room.goal,
+                goalTime: room.limitHour,
+                restrictApp: RestrictApp(serverString: room.restrictApp)
+            )
+                .offset(y: 13)
+        }
+    }
+    
+    @ViewBuilder func upperContentView(period: Int, title: String, subTitle: String, goalTime: Int, restrictApp: RestrictApp) -> some View {
+        VStack {
+            BasterdzNavigationBar(
+                leadingItem: (BasterdzImage.backButton_white, {
+                    viewModel.coordinator?.pop()
+                }),
+                trailingItemList: [(BasterdzImage.questionMark, {}),
+                                   (BasterdzImage.pencil, {}),
+                                   (BasterdzImage.setting, {})]
+            )
+            Spacer()
+                .frame(height: 1)
+                .padding(.bottom, 6)
+            
+            ZStack {
+                RoundedRectangle(cornerRadius: 40)
+                    .fill(Color(.mainRed))
+                    .frame(width: 50, height: 20)
+                
+                Text("D-\(period)")
+                    .font(.pretendardB(12))
+                    .foregroundStyle(Color(.grey1))
+            }
+            
+            Text(title)
+                .font(.pretendardM(24))
+                .foregroundColor(Color(.white))
+                .padding(.bottom, 8)
+            
+            Text(subTitle)
+                .foregroundColor(Color(.grey3))
+                .font(.pretendardM(13))
+                .padding(.bottom, 20)
+            
+            HStack(spacing: 10) {
+                ZStack {
+                    RoundedRectangle(cornerRadius: 40)
+                        .fill(Color(.grey6))
+                        .frame(width: 100, height: 30)
+                    Text(restrictApp.rawValue)
+                        .font(.pretendardB(12))
+                        .foregroundStyle(Color(.grey1))
+                }
+                
+                ZStack {
+                    RoundedRectangle(cornerRadius: 40)
+                        .fill(Color(.grey6))
+                        .frame(width: 70, height: 30)
+                    Text("\(goalTime)시간")
+                        .font(.pretendardB(12))
+                        .foregroundStyle(Color(.grey1))
+                }
+            }
+            .padding(.bottom, 22)
+            
+            ProgressView()
+        }
     }
 }
 
@@ -42,15 +110,14 @@ struct MemberListItemView: View {
     private let message: String
     private let screenTime: String
     private let strokeColor: BasterdzColor
+    private let percent: Double
     
-    init(nickname: String,
-         message: String,
-         screenTime: String,
-         strokeColor: BasterdzColor) {
+    init(nickname: String, message: String, screenTime: String, strokeColor: BasterdzColor, percent: Double) {
         self.nickname = nickname
         self.message = message
         self.screenTime = screenTime
         self.strokeColor = strokeColor
+        self.percent = percent
     }
     
     var body: some View {
@@ -85,7 +152,7 @@ struct MemberListItemView: View {
                     HStack(spacing: 5) {
                         BasterdzProgressBar(height: 5,
                                             width: 175,
-                                            rate: 0.5,
+                                            rate: percent,
                                             backgroundColor: .grey2,
                                             forgroundColor: .mainBlack)
                         .frame(width: 175)
@@ -99,21 +166,13 @@ struct MemberListItemView: View {
     }
 }
 
-struct RoomHeaderView: View {
-    
-    var body: some View {
-        ZStack {
-            Image(BasterdzImage.roomBackground)
-                .resizable()
-                .frame(maxWidth: .infinity)
-                .frame(height: 366 * ((screenSize?.height ?? 0) / 812))
-            UpperContentView()
-                .offset(y: 13)
-        }
-    }
-}
 
 struct RankingView: View {
+    private let rankingList: [RankDTO]
+    
+    init(rankingList: [RankDTO]) {
+        self.rankingList = rankingList
+    }
     
     var body: some View {
         VStack {
@@ -139,12 +198,22 @@ struct RankingView: View {
             }
             .padding(.bottom, 27)
             
-            EmptyChartView()
-                .padding(.bottom, 30)
-            
+            if rankingList.isEmpty {
+                EmptyChartView()
+                    .padding(.bottom, 30)
+            } else {
+                ForEach(rankingList, id: \.ranking) { item in
+                    HStack {
+                        Text("\(item.ranking)위")
+                            .font(.pretendardB(24))
+                        Text(item.nickname)
+                            .font(.pretendardB(16))
+                    }
+                }
+            }
             Rectangle()
                 .foregroundColor(Color(.grey1))
-                .frame(width: .infinity, height: 2)
+                .frame(height: 2)
                 .padding(.bottom, 40)
         }
     }
@@ -173,7 +242,9 @@ struct MemberListView: View {
                 MemberListItemView(nickname: data.nickname,
                                    message: data.message,
                                    screenTime: data.screenTime,
-                                   strokeColor: .mainRed)
+                                   strokeColor: .mainRed,
+                                   percent: data.percent
+                )
                     .padding(.bottom, 16)
             }
         }
@@ -234,69 +305,4 @@ struct ProgressView: View {
     }
 }
 
-struct UpperContentView: View {
-    private var period: Int = 0
-    private var title: String = "우리들의 도파민 탈출기"
-    private var subTitle: String = "도파민 중독 파괴하자~!"
-    private var goalTime: Int = 0
-    private var restrictApp: RestrictApp = .instagram
-    
-    var body: some View {
-        
-        VStack {
-            BasterdzNavigationBar(
-                leadingItem: (BasterdzImage.backButton_white, {
-                }),
-                trailingItemList: [(BasterdzImage.questionMark, {}),
-                                   (BasterdzImage.pencil, {}),
-                                   (BasterdzImage.setting, {})]
-            )
-            Spacer()
-                .frame(height: 1)
-                .padding(.bottom, 6)
-            
-            ZStack {
-                RoundedRectangle(cornerRadius: 40)
-                    .fill(Color(.mainRed))
-                    .frame(width: 50, height: 20)
-                
-                Text("D-\(period)")
-                    .font(.pretendardB(12))
-                    .foregroundStyle(Color(.grey1))
-            }
-            
-            Text(title)
-                .font(.pretendardM(24))
-                .foregroundColor(Color(.white))
-                .padding(.bottom, 8)
-            
-            Text(subTitle)
-                .foregroundColor(Color(.grey3))
-                .font(.pretendardM(13))
-                .padding(.bottom, 20)
-            
-            HStack(spacing: 10) {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 40)
-                        .fill(Color(.grey6))
-                        .frame(width: 100, height: 30)
-                    Text(restrictApp.rawValue)
-                        .font(.pretendardB(12))
-                        .foregroundStyle(Color(.grey1))
-                }
-                
-                ZStack {
-                    RoundedRectangle(cornerRadius: 40)
-                        .fill(Color(.grey6))
-                        .frame(width: 70, height: 30)
-                    Text("\(goalTime)시간")
-                        .font(.pretendardB(12))
-                        .foregroundStyle(Color(.grey1))
-                }
-            }
-            .padding(.bottom, 22)
-            
-            ProgressView()
-        }
-    }
-}
+

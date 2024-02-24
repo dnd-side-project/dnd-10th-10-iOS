@@ -18,7 +18,7 @@ final class HomeCoordinator: BaseCoordinator<HomeFlow> {
         switch action {
         case .plusButton: EmptyView()
         case .detail(let room):
-            ChallengeRoomView()
+            ChallengeRoomView(viewModel: ChallengeRoomViewModel(id: "17", coordinator: self))
         }
     }
     

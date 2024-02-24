@@ -6,3 +6,16 @@
 //
 
 import Foundation
+import Combine
+
+final class GetRankUseCase {
+    private let network: any RoomNetworkable
+    
+    init(network: any RoomNetworkable) {
+        self.network = network
+    }
+    
+    func execute(id: String) -> AnyPublisher<[RankDTO], ErrorResponse> {
+        network.getRank(id: id)
+    }
+}

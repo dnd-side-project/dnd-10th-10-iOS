@@ -10,8 +10,6 @@ import SwiftUI
 struct EnterInviteCodeView: View {
     
     @StateObject var viewModel: EnterInviteCodeViewModel
-    @State private var showModal = false
-    @State private var inviteCode: String = ""
     @FocusState private var isFocused: Bool
     
     var body: some View {
@@ -34,7 +32,7 @@ struct EnterInviteCodeView: View {
                 .frame(width: 150, height: 150)
                 .padding(7)
             
-            TextField("", text: $inviteCode)
+            TextField("", text: $viewModel.state.inviteCode)
                 .font(.pretendardB(20))
                 .foregroundStyle(Color(.mainBlack))
                 .frame(width: 205, height: 50)
@@ -43,9 +41,6 @@ struct EnterInviteCodeView: View {
                 .multilineTextAlignment(.center)
                 .roundedBorder( viewModel.state.isErrorMessageHidden ? Color(.mainBlack) : Color(.mainRed))
                 .focused($isFocused)
-                .onChange(of: inviteCode) { _ in
-                    viewModel.state.inviteCode = inviteCode
-                }
                 .padding(8)
             
             Text("8자 이하만 입력 가능합니다")
@@ -57,13 +52,12 @@ struct EnterInviteCodeView: View {
             BasterdzCommonButton(title: "다음",
                                  style: .red,
                                  action: {
-                                    viewModel.action(.nextButtonDidTap)
-                                    showModal.toggle() },
+                                    viewModel.action(.nextButtonDidTap) },
                                  isActive: viewModel.state.isNextButtonActive)
             .padding(.leading, 17)
             .padding(.trailing, 17)
-            .fullScreenCover(isPresented: $showModal) {
-                BasterdzPopUpView(contentView: AnyView(EnterConfirmView()))
+            .fullScreenCover(isPresented: $viewModel.state.showModal) {
+                BasterdzPopUpView(contentView: AnyView(EnterConfirmView(viewModel: viewModel)))
             }
         }
     }

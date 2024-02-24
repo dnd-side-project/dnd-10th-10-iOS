@@ -49,3 +49,15 @@ enum RestrictApp: String, CaseIterable, Codable {
         }
     }
 }
+
+extension RestrictApp {
+    init(serverString: String) {
+        switch serverString {
+        case "INSTAGRAM": self = .instagram
+        case "YOUTUBE": self = .youtube
+        case "TICTOK": self = .tictok
+        case "NETFLIX": self = .netflix
+        default: self = .twitter
+        }
+    }
+}
