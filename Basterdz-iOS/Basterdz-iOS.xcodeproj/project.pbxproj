@@ -58,6 +58,8 @@
 		77A487272B889D9400C72EA6 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487262B889D9400C72EA6 /* APIService.swift */; };
 		77A4872C2B88E64F00C72EA6 /* EnterInviteCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A4872B2B88E64F00C72EA6 /* EnterInviteCodeViewModel.swift */; };
 		77A487322B891C6200C72EA6 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77A487312B891C6200C72EA6 /* SplashView.swift */; };
+		77A487362B89398600C72EA6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77A487352B89398600C72EA6 /* GoogleService-Info.plist */; };
+		77A487392B893B9B00C72EA6 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 77A487382B893B9B00C72EA6 /* FirebaseMessaging */; };
 		D64ED50E2B6E1A2900A64D68 /* BasterdzCommonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED50D2B6E1A2900A64D68 /* BasterdzCommonButton.swift */; };
 		D64ED5132B6E22C800A64D68 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED5122B6E22C800A64D68 /* TabView.swift */; };
 		D64ED5192B6E327000A64D68 /* BasterdzCenterTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64ED5182B6E327000A64D68 /* BasterdzCenterTextEditor.swift */; };
@@ -181,6 +183,7 @@
 		77A487262B889D9400C72EA6 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		77A4872B2B88E64F00C72EA6 /* EnterInviteCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterInviteCodeViewModel.swift; sourceTree = "<group>"; };
 		77A487312B891C6200C72EA6 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		77A487352B89398600C72EA6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D64ED50D2B6E1A2900A64D68 /* BasterdzCommonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzCommonButton.swift; sourceTree = "<group>"; };
 		D64ED5122B6E22C800A64D68 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		D64ED5182B6E327000A64D68 /* BasterdzCenterTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasterdzCenterTextEditor.swift; sourceTree = "<group>"; };
@@ -230,6 +233,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77A487392B893B9B00C72EA6 /* FirebaseMessaging in Frameworks */,
 				77A4871F2B887BDA00C72EA6 /* Moya in Frameworks */,
 				77A4871D2B887BDA00C72EA6 /* CombineMoya in Frameworks */,
 			);
@@ -646,6 +650,7 @@
 			isa = PBXGroup;
 			children = (
 				7798FD4B2B6BBADF0053A556 /* Info.plist */,
+				77A487352B89398600C72EA6 /* GoogleService-Info.plist */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -877,6 +882,7 @@
 			packageProductDependencies = (
 				77A4871C2B887BDA00C72EA6 /* CombineMoya */,
 				77A4871E2B887BDA00C72EA6 /* Moya */,
+				77A487382B893B9B00C72EA6 /* FirebaseMessaging */,
 			);
 			productName = "Basterdz-iOS";
 			productReference = 7798FCF02B6B9C050053A556 /* Basterdz-iOS.app */;
@@ -952,6 +958,7 @@
 			mainGroup = 7798FCE72B6B9C050053A556;
 			packageReferences = (
 				77A4871B2B887BDA00C72EA6 /* XCRemoteSwiftPackageReference "Moya" */,
+				77A487372B893B9A00C72EA6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 7798FCF12B6B9C050053A556 /* Products */;
 			projectDirPath = "";
@@ -970,6 +977,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7798FD442B6BB8C90053A556 /* Color.xcassets in Resources */,
+				77A487362B89398600C72EA6 /* GoogleService-Info.plist in Resources */,
 				7798FD4A2B6BBA430053A556 /* Pretendard-Regular.otf in Resources */,
 				7798FD482B6BBA390053A556 /* Pretendard-Medium.otf in Resources */,
 				779677572B739B72007315E8 /* .swiftlint.yml in Resources */,
@@ -1271,10 +1279,12 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Basterdz-iOS/Support/Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1306,10 +1316,12 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Basterdz-iOS/Support/Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1451,6 +1463,14 @@
 				minimumVersion = 15.0.0;
 			};
 		};
+		77A487372B893B9A00C72EA6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.21.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1463,6 +1483,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 77A4871B2B887BDA00C72EA6 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
+		};
+		77A487382B893B9B00C72EA6 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 77A487372B893B9A00C72EA6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
