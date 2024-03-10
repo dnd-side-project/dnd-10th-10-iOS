@@ -34,27 +34,38 @@ struct BoosterDetailView: View {
                     viewModel.pop()
                 })
             )
-            ZStack {
-                VStack {
-                    Image(BasterdzImage.profile_red)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 24, height: 24)
+            VStack {
+                VStack(spacing: 6) {
+                    HStack(spacing: -6) {
+                        ForEach(0..<3, id: \.self) { _ in
+                            Image(BasterdzImage.profile_red)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 24, height: 24)
+                                .roundedBorder(Color(.white), radius: 12)
+                        }
+                        Spacer()
+                    }
+                    .frame(height: 34)
                     
-                    Text("우리들의 도파민 탈출기")
+                    Text(viewModel.state.room.name)
                         .font(.pretendardB(24))
                         .foregroundStyle(Color(.mainBlack))
+                        .frame(maxWidth: .infinity, alignment: .leading)
                     
-                    Text("언제부터 인스타그램이 있었다고..")
+                    Text(viewModel.state.room.goal)
                         .font(.pretendardM(16))
                         .foregroundStyle(Color(.grey5))
-                    
-                    tabBar()
-                    ScrollView {
-                        tabContent(currentTab)
-                    }
-                    .frame(maxHeight: .infinity)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                 }
+                .frame(maxWidth: .infinity)
+                .padding(16)
+                
+                tabBar()
+                ScrollView {
+                    tabContent(currentTab)
+                }
+                .frame(maxHeight: .infinity)
             }
         }
     }
@@ -64,14 +75,23 @@ private extension BoosterDetailView {
     @ViewBuilder func tabBar() -> some View {
         LazyVGrid(columns: columns, content: {
             ForEach(SendBoosterTabItem.allCases, id: \.title) { tab in
-                Text(tab.title)
-                    .tag(tab)
-                    .font(.pretendardB(16))
-                    .foregroundStyle(
-                        currentTab == tab
-                        ? Color(.mainBlack)
-                        : Color(.grey3)
-                    )
+                HStack {
+                    Text(tab.title)
+                        .tag(tab)
+                        .font(.pretendardB(16))
+                        .foregroundStyle(
+                            currentTab == tab
+                            ? Color(.mainBlack)
+                            : Color(.grey3)
+                        )
+                    Text("3")
+                        .font(.pretendardB(16))
+                        .foregroundStyle(
+                            currentTab == tab
+                            ? Color(.mainRed)
+                            : Color(.grey3)
+                        )
+                }
                     .frame(height: 48)
                     .onTapGesture {
                         withAnimation { currentTab = tab }
@@ -119,7 +139,7 @@ private extension BoosterDetailView {
         VStack {
             // 리스트
             ForEach(list, id: \.name) { booster in
-                roomItem(room: booster, isFinish: isFinish)
+                boosterItem(booster: booster, isFinish: isFinish)
                     .onTapGesture {
                         viewModel.action(.selectBooster(booster))
                     }
@@ -127,41 +147,58 @@ private extension BoosterDetailView {
         }
     }
     
-    @ViewBuilder func roomItem(room: BoosterEntity, isFinish: Bool) -> some View {
+    @ViewBuilder func boosterItem(booster: BoosterEntity, isFinish: Bool) -> some View {
         VStack(alignment: .leading, spacing: 18) {
             VStack(alignment: .leading, spacing: 6) {
                 HStack {
-                    HStack(spacing: 4) {
-                        Text("D-7")
-                            .font(.pretendardB(12))
-                            .foregroundStyle(Color(.white))
+                    VStack {
+                        HStack(spacing: 4) {
+                            Text("D-7")
+                                .font(.pretendardB(12))
+                                .foregroundStyle(Color(.white))
+                        }
+                        .padding(.horizontal, 10)
+                        .padding(.vertical, 3)
+                        .frame(width: 50, height: 20)
+                        .background(Color(.mainRed))
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                        
+                        Text(booster.name)
+                            .font(.pretendardB(20))
+                            .foregroundStyle(Color(.mainBlack))
                     }
-                    .padding(.horizontal, 7)
-                    .padding(.vertical, 3)
-                    .background(Color(.mainRed))
-                    .clipShape(RoundedRectangle(cornerRadius: 20))
-                    .frame(width: 50, height: 20)
-                    
-                }
-                HStack {
-                    Text(room.name)
-                        .font(.pretendardB(20))
-                        .foregroundStyle(Color(.mainBlack))
                     Spacer()
-                    Image(BasterdzImage.arrow_right)
+                    Image(BasterdzImage.fire)
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 20, height: 20)
+                        .frame(width: 50, height: 50)
                 }
             }
             HStack {
                 Text("2024.01.11 ~ 2024.02.11")
                     .font(.pretendardB(12))
-                    .foregroundStyle(Color(.grey4))
+                    .foregroundStyle(Color(.grey3))
+                Spacer()
+                Button(action: {
+                    
+                }, label: {
+                    Text("발송하기")
+                        .font(.pretendardB(14))
+                        .foregroundStyle(Color(.mainBlack))
+                    Image(BasterdzImage.arrow_right)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 16, height: 16)
+                })
             }
         }
         .padding(16)
-        .roundedBorder(Color(.grey2))
+        .overlay {
+            RoundedRectangle(cornerRadius: 10)
+                .foregroundStyle(Color.clear)
+                .roundedBorder(Color(.grey2))
+                .shadow(color: Color(.grey2), radius: 3, x: 0, y: 2)
+        }
     }
     
     @ViewBuilder func emptyTabContent() -> some View {
