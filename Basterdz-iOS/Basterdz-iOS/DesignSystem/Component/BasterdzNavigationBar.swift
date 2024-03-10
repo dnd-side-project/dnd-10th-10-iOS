@@ -11,16 +11,19 @@ struct BasterdzNavigationBar: View {
 
     private let leadingTitle: String?
     private let centerTitle: String?
+    private let leadingTitleItem: (BasterdzImage, () -> Void)?
     private let leadingItem: (BasterdzImage, () -> Void)?
     private let trailingItemList: [(BasterdzImage, () -> Void)]?
     
     init(
         leadingTitle: String? = .none,
+        leadingTitleItem:(BasterdzImage, () -> Void)? = .none,
         centerTitle: String? = .none,
         leadingItem: (BasterdzImage, () -> Void)? = .none,
         trailingItemList: [(BasterdzImage, () -> Void)]? = .none
     ) {
         self.leadingTitle = leadingTitle
+        self.leadingTitleItem = leadingTitleItem
         self.centerTitle = centerTitle
         self.leadingItem = leadingItem
         self.trailingItemList = trailingItemList
@@ -50,6 +53,12 @@ struct BasterdzNavigationBar: View {
                 Text(leadingTitle)
                     .font(.pretendardB(24))
                     .foregroundStyle(Color(.mainBlack))
+                
+                if let leadingTitleItem {
+                    Button(action: leadingTitleItem.1, 
+                           label: { Image(leadingTitleItem.0)}
+                    )
+                }
             }
             Spacer()
             if let trailingItemList {

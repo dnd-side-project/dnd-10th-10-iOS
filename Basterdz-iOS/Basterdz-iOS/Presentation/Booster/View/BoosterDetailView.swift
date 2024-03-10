@@ -180,3 +180,7 @@ private extension BoosterDetailView {
         .frame(maxHeight: .infinity)
     }
 }
+
+#Preview {
+    BoosterDetailView(viewModel: BoosterViewModel(coordinator: BoosterCoordinator()))
+}
