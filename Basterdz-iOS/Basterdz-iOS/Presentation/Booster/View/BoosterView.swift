@@ -12,7 +12,7 @@ struct BoosterView: View {
     let columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
     
     var body: some View {
-        NavigationStack(path: $viewModel.path) {
+        NavigationStack(path: $viewModel.coordinator.path) {
             ScrollView {
                 VStack(alignment: .leading, spacing: 24) {
                     BasterdzNavigationBar(
@@ -37,9 +37,9 @@ struct BoosterView: View {
                                     .foregroundStyle(Color(.grey3))
                                 boosterSummeryCell(boosternum: 23, title: "보낸 부스터")
                             }
-                            .frame(width: .infinity)
+                            .frame(maxWidth: .infinity)
                         }
-                        .frame(width: .infinity)
+                        .frame(maxWidth: .infinity)
                         .padding(32)
                         .background(Color(.grey1))
                         .clipShape(RoundedRectangle(cornerRadius: 10))
@@ -70,7 +70,7 @@ struct BoosterView: View {
                 }
             }
             .navigationDestination(for: BoosterFlow.self) {
-                viewModel.setView($0)
+                viewModel.coordinator.setView($0)
             }
         }
     }

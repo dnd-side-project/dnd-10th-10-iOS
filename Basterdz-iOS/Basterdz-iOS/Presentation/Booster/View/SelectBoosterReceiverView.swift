@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SelectBoosterReceiverView: View {
-    @StateObject var viewModel: BoosterViewModel
+    @StateObject var viewModel: SendBoosterViewModel
     
     private let title: AttributedString = "누구에게 부스터를 보낼까요?".applyVariousFont(targetStringList: ["부스터"], font: .pretendardB(24))
     
@@ -27,11 +27,11 @@ struct SelectBoosterReceiverView: View {
         VStack {
             BasterdzNavigationBar(
                 leadingItem: (BasterdzImage.arrow_back, {
-                        viewModel.pop()
+                    viewModel.coordinator?.pop()
                 }),
                 trailingItemList: [
                     (BasterdzImage.x, {
-                        viewModel.popToRoot()})
+                        viewModel.coordinator?.popToRoot()})
                 ]
 
             )
@@ -45,6 +45,9 @@ struct SelectBoosterReceiverView: View {
                 HStack(spacing: 20) {
                     ForEach(firstRow, id: \.self) { element in
                         ProfileCellView(profile: element)
+                            .onTapGesture {
+                                viewModel.action(.selectReceiver(element.nickname))
+                            }
                     }
                 }
                 .padding(.bottom, 24)

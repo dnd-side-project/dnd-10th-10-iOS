@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MemberEntity: Codable {
+struct MemberEntity: Codable {
     let createdAt: String
     let modifiedAt: String
     let id: Int

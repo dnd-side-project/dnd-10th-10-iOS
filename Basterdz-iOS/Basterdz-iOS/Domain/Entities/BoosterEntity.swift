@@ -23,3 +23,13 @@ extension BoosterEntity {
         BoosterEntity(name: "부스터3")
     ]
 }
+
+extension BoosterEntity: Hashable {
+    static func == (lhs: BoosterEntity, rhs: BoosterEntity) -> Bool {
+        lhs.name == rhs.name
+    }
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(name)
+    }
+    
+}

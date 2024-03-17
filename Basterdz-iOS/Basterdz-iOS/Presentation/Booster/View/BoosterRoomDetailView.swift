@@ -1,5 +1,5 @@
 //
-//  BoosterDetailView.swift
+//  BoosterRoomDetailView.swift
 //  Basterdz-iOS
 //
 //  Created by 현수빈 on 2/24/24.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct BoosterDetailView: View {
-    @StateObject var viewModel: BoosterViewModel
+struct BoosterRoomDetailView: View {
+    @StateObject var viewModel: BoosterRoomViewModel
     
     @State private var currentTab: SendBoosterTabItem = .available
     
@@ -21,8 +21,8 @@ struct BoosterDetailView: View {
         
         var title: String {
             switch self {
-            case .available: "사용 가능"
-            case .done: "사용 완료"
+            case .available: "사용가능"
+            case .done: "사용완료"
             }
         }
     }
@@ -31,7 +31,7 @@ struct BoosterDetailView: View {
         VStack(spacing: 16) {
             BasterdzNavigationBar(
                 leadingItem: (.arrow_back, {
-                    viewModel.pop()
+                    viewModel.coordinator?.pop()
                 })
             )
             VStack {
@@ -71,7 +71,7 @@ struct BoosterDetailView: View {
     }
 }
 
-private extension BoosterDetailView {
+private extension BoosterRoomDetailView {
     @ViewBuilder func tabBar() -> some View {
         LazyVGrid(columns: columns, content: {
             ForEach(SendBoosterTabItem.allCases, id: \.title) { tab in
@@ -106,6 +106,21 @@ private extension BoosterDetailView {
                         }
                     }
             }
+            Spacer()
+            Menu {
+                Button("최신순", action: {})
+                Button("임박순", action: {})
+            } label: {
+                HStack {
+                    Text("최신순")
+                        .font(.pretendardM(13))
+                    Image(.arrow_down)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 14, height: 14)
+                }
+                .foregroundStyle(Color(.grey5))
+            }
         })
         .padding(.horizontal, 12)
         .overlay(alignment: .bottom) {
@@ -135,14 +150,9 @@ private extension BoosterDetailView {
     
     @ViewBuilder func boosterListTabContent(list: [BoosterEntity], isFinish: Bool) -> some View {
         // TODO: api 오는 형태보고 id 변경 필요
-        // header
         VStack {
-            // 리스트
             ForEach(list, id: \.name) { booster in
                 boosterItem(booster: booster, isFinish: isFinish)
-                    .onTapGesture {
-                        viewModel.action(.selectBooster(booster))
-                    }
             }.padding(.horizontal, 16)
         }
     }
@@ -180,7 +190,7 @@ private extension BoosterDetailView {
                     .foregroundStyle(Color(.grey3))
                 Spacer()
                 Button(action: {
-                    
+                    viewModel.action(.selectBooster(booster))
                 }, label: {
                     Text("발송하기")
                         .font(.pretendardB(14))
@@ -216,8 +226,4 @@ private extension BoosterDetailView {
         }
         .frame(maxHeight: .infinity)
     }
-}
-
-#Preview {
-    BoosterDetailView(viewModel: BoosterViewModel(coordinator: BoosterCoordinator()))
 }
