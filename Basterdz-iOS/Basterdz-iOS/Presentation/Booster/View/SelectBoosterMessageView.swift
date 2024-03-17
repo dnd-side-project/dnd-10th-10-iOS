@@ -44,7 +44,8 @@ struct SelectBoosterMessageView: View {
                             size: .large,
                             action: {
                                 self.message = message
-                            }
+                            },
+                            isActive: true
                         )
                     }
                     
@@ -94,11 +95,12 @@ struct SelectBoosterMessageView: View {
             Spacer()
             BasterdzCommonButton(
                 title: "부스터 보내기",
-                size: .large,
+                size: .large, 
+                style: .red,
                 action: {
                     viewModel.action(.sendButtonTap)
                 },
-                isActive: true
+                isActive: message.isNotEmpty
             ).padding(17)
         }
         

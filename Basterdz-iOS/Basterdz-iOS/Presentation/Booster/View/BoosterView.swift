@@ -9,10 +9,12 @@ import SwiftUI
 
 struct BoosterView: View {
     @StateObject var viewModel: BoosterViewModel
+    @EnvironmentObject var coordinator: BoosterCoordinator
+    
     let columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
     
     var body: some View {
-        NavigationStack(path: $viewModel.coordinator.path) {
+        NavigationStack(path: $coordinator.path) {
             ScrollView {
                 VStack(alignment: .leading, spacing: 24) {
                     BasterdzNavigationBar(
@@ -63,6 +65,7 @@ struct BoosterView: View {
                                 roomCell(entity: room)
                                     .onTapGesture {
                                         viewModel.action(.selectRoom(room))
+                                        coordinator.push(.selectRoom(room))
                                     }
                             }
                         }.padding()
@@ -70,7 +73,9 @@ struct BoosterView: View {
                 }
             }
             .navigationDestination(for: BoosterFlow.self) {
-                viewModel.coordinator.setView($0)
+                coordinator.setView($0)
+                    .toolbar(.hidden, for: .navigationBar)
+                    .toolbar(.hidden, for: .tabBar)
             }
         }
     }

@@ -9,7 +9,7 @@ import Foundation
 import Combine
 import SwiftUI
 
-final class SendBoosterViewModel: BaseCoordinator<BoosterFlow>, ViewModelable {
+final class SendBoosterViewModel: ViewModelable {
     weak var coordinator: BoosterCoordinator?
     
     @Published var state: State
@@ -34,21 +34,21 @@ final class SendBoosterViewModel: BaseCoordinator<BoosterFlow>, ViewModelable {
                 selectBooster: state.selectBooster,
                 receiver: state.receiver,
                 message: state.message
-        )
-        self.coordinator = coordinator
-    }
+            )
+            self.coordinator = coordinator
+        }
     
     func action(_ action: Action) {
         switch action {
         case .selectReceiver(let nickname):
             state.receiver = ChallengerEntity(nickname: nickname, message: "", screenTime: "", percent: 0.0)
-            push(BoosterFlow.selectMessage(state.selectBooster, state.receiver))
+            coordinator?.push(.selectMessage(state.selectBooster, state.receiver))
         case .createMessage:
-            push(BoosterFlow.createMessage(state.selectBooster, state.receiver))
+            coordinator?.push(.createMessage(state.selectBooster, state.receiver))
         case .selectMessage:
-            push(BoosterFlow.selectMessage(state.selectBooster, state.receiver))
+            coordinator?.push(.selectMessage(state.selectBooster, state.receiver))
         case .sendButtonTap:
-            push(BoosterFlow.pushSuccess(state.receiver))
+            coordinator?.push(.pushSuccess(state.receiver))
         }
     }
     

@@ -92,19 +92,19 @@ private extension BoosterRoomDetailView {
                             : Color(.grey3)
                         )
                 }
-                    .frame(height: 48)
-                    .onTapGesture {
-                        withAnimation { currentTab = tab }
+                .frame(height: 48)
+                .onTapGesture {
+                    withAnimation { currentTab = tab }
+                }
+                .overlay(alignment: .bottom) {
+                    if currentTab == tab {
+                        Rectangle()
+                            .frame(height: 2)
+                            .frame(maxWidth: .infinity)
+                            .foregroundStyle(Color(.mainBlack))
+                            .matchedGeometryEffect(id: "underline", in: animation)
                     }
-                    .overlay(alignment: .bottom) {
-                        if currentTab == tab {
-                            Rectangle()
-                                .frame(height: 2)
-                                .frame(maxWidth: .infinity)
-                                .foregroundStyle(Color(.mainBlack))
-                                .matchedGeometryEffect(id: "underline", in: animation)
-                        }
-                    }
+                }
             }
             Spacer()
             Menu {

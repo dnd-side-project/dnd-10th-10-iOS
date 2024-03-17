@@ -94,6 +94,7 @@ struct CreateCustomBoosterView: View {
             BasterdzCommonButton(
                 title: "부스터 보내기",
                 size: .large,
+                style: .red,
                 action: {
                     viewModel.action(.sendButtonTap)
                 },

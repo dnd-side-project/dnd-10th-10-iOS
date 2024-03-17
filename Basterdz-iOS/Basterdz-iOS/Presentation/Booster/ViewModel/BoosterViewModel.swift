@@ -10,7 +10,7 @@ import Combine
 import SwiftUI
 
 final class BoosterViewModel: ViewModelable {
-    var coordinator: BoosterCoordinator
+//    var coordinator: BoosterCoordinator
     
     @Published var state: State
     let roomList = RoomEntity.mocks
@@ -26,20 +26,20 @@ final class BoosterViewModel: ViewModelable {
         
     }
     
-    init(coordinator: BoosterCoordinator) {
+    init() { //(coordinator: BoosterCoordinator) {
         self.state = State(
             boosterList: BoosterEntity.mocks,
             selectBooster: BoosterEntity.mocks.first!,
             room: RoomEntity.mocks.first!
         )
-        self.coordinator = coordinator
+//        self.coordinator = coordinator
     }
     
     func action(_ action: Action) {
         switch action {
         case .selectRoom(let roomEntity):
             state.room = roomEntity
-            coordinator.push(BoosterFlow.selectRoom(roomEntity))
+//            coordinator.push(BoosterFlow.selectRoom(roomEntity))
         }
     }
 }
