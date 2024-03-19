@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct BoosterSendSuccessView: View {
-    @StateObject var viewModel: BoosterViewModel
+    @StateObject var viewModel: SendBoosterViewModel
     
     var body: some View {
         BasterdzNavigationBar(
             trailingItemList: [
                 (BasterdzImage.x, {
-                    viewModel.popToRoot()
+                    viewModel.coordinator?.popToRoot()
                 })
             ]
         )

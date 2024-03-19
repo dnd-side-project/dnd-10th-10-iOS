@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SelectBoosterMessageView: View {
-    @StateObject var viewModel: BoosterViewModel
+    @StateObject var viewModel: SendBoosterViewModel
     
     private let messageList = [
     "빨리 핸드폰 끄시게~",
@@ -22,20 +22,20 @@ struct SelectBoosterMessageView: View {
             BasterdzNavigationBar(
                 leadingItem: (
                     BasterdzImage.arrow_back, {
-                        viewModel.pop()
+                        viewModel.coordinator?.pop()
                     }
                 ),
                 trailingItemList: [
                     (BasterdzImage.x, {
-                        viewModel.popToRoot()
+                        viewModel.coordinator?.popToRoot()
                     })
                 ]
             )
-            Spacer()
+            
             ZStack {
                 VStack {
                     Rectangle()
-                        .foregroundStyle(Color(.white))
+                        .foregroundStyle(Color(.clear))
                         .frame(height: 100)
                     
                     ForEach(messageList, id: \.self) { message in
@@ -44,10 +44,35 @@ struct SelectBoosterMessageView: View {
                             size: .large,
                             action: {
                                 self.message = message
-                            }
+                            },
+                            isActive: true
                         )
                     }
                     
+                    Button(action: {
+                        viewModel.action(.createMessage)
+                    }, label: {
+                        VStack(spacing: 6) {
+                            HStack {
+                                Image(systemName: "plus")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 14, height: 14)
+                                Text("직접 입력하기")
+                                    .font(.pretendardB(16))
+                            }
+                            .foregroundStyle(Color(.mainBlack))
+                            Text("친구를 자극할 메세지를 입력해주세요!")
+                                .font(.pretendardB(14))
+                                .foregroundStyle(Color(.grey3))
+                                .frame(maxWidth: .infinity)
+                        }
+                        .padding(.horizontal, 48)
+                        .padding(.vertical, 18)
+                        .roundedBorder(BasterdzColor.mainBlack.color)
+                        
+                    })
+                    .padding(.top, 32)
                 }
                 .padding()
                 .roundedBorder(Color(.grey3))
@@ -63,18 +88,19 @@ struct SelectBoosterMessageView: View {
                         .font(.pretendardB(18))
                         .foregroundStyle(Color(.mainBlack))
                 }
-                .offset(y: -150)
+                .offset(y: -200)
                 
             }
             
             Spacer()
             BasterdzCommonButton(
                 title: "부스터 보내기",
-                size: .large,
+                size: .large, 
+                style: .red,
                 action: {
-                    viewModel.action(.selectMessage)
+                    viewModel.action(.sendButtonTap)
                 },
-                isActive: true
+                isActive: message.isNotEmpty
             ).padding(17)
         }
         

@@ -9,32 +9,43 @@ import SwiftUI
 
 struct BoosterView: View {
     @StateObject var viewModel: BoosterViewModel
+    @EnvironmentObject var coordinator: BoosterCoordinator
+    
     let columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
     
     var body: some View {
-        NavigationStack(path: $viewModel.path) {
+        NavigationStack(path: $coordinator.path) {
             ScrollView {
                 VStack(alignment: .leading, spacing: 24) {
                     BasterdzNavigationBar(
-                        leadingTitle: "부스터"
+                        leadingTitle: "부스터",
+                        leadingTitleItem: (BasterdzImage.info, {})
                     )
                     VStack(spacing: 24) {
-                        Text("나의 부스터 현황")
-                            .font(.pretendardB(16))
-                            .foregroundStyle(Color(.mainBlack))
-                        
-                        HStack {
-                            boosterSummeryCell(boosternum: 34, title: "보유 부스터")
-                            Divider()
-                                .padding(.horizontal, 8)
-                            boosterSummeryCell(boosternum: 20, title: "받은 부스터")
-                            Divider()
-                                .padding(.horizontal, 8)
-                            boosterSummeryCell(boosternum: 23, title: "보낸 부스터")
+                        VStack(spacing: 12) {
+                            Text("나의 부스터 현황")
+                                .font(.pretendardB(16))
+                                .foregroundStyle(Color(.mainBlack))
+                                .frame(maxWidth: .infinity)
+                            
+                            HStack {
+                                boosterSummeryCell(boosternum: 34, title: "보유 부스터")
+                                Divider()
+                                    .padding(.horizontal, 8)
+                                    .foregroundStyle(Color(.grey3))
+                                boosterSummeryCell(boosternum: 20, title: "받은 부스터")
+                                Divider()
+                                    .padding(.horizontal, 8)
+                                    .foregroundStyle(Color(.grey3))
+                                boosterSummeryCell(boosternum: 23, title: "보낸 부스터")
+                            }
+                            .frame(maxWidth: .infinity)
                         }
+                        .frame(maxWidth: .infinity)
                         .padding(32)
                         .background(Color(.grey1))
                         .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .padding(.horizontal, 16)
                         
                         HStack(spacing: 4) {
                             Text("참여 중인 방")
@@ -54,6 +65,7 @@ struct BoosterView: View {
                                 roomCell(entity: room)
                                     .onTapGesture {
                                         viewModel.action(.selectRoom(room))
+                                        coordinator.push(.selectRoom(room))
                                     }
                             }
                         }.padding()
@@ -61,7 +73,9 @@ struct BoosterView: View {
                 }
             }
             .navigationDestination(for: BoosterFlow.self) {
-                viewModel.setView($0)
+                coordinator.setView($0)
+                    .toolbar(.hidden, for: .navigationBar)
+                    .toolbar(.hidden, for: .tabBar)
             }
         }
     }

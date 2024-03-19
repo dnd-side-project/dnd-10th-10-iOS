@@ -17,13 +17,17 @@ struct TabbarView: View {
     
     @State var selection = Tab.home
     
+    
     var body: some View {
         TabView(selection: $selection) {
-            BoosterView(viewModel: BoosterViewModel(coordinator: BoosterCoordinator()))
-                .tabItem {
-                    tabItem(image: .booster, title: "부스터")
-                }
-                .tag(Tab.booster)
+            BoosterView(
+                viewModel: BoosterViewModel()
+            )
+            .environmentObject(BoosterCoordinator())
+            .tabItem {
+                tabItem(image: .booster, title: "부스터")
+            }
+            .tag(Tab.booster)
             HomeView(viewModel: HomeViewModel(coordinator: HomeCoordinator()))
                 .tabItem {
                     tabItem(image: .home, title: "홈")

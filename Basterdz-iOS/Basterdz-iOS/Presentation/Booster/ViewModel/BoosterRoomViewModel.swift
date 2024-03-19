@@ -1,22 +1,21 @@
 //
-//  BoosterViewModel.swift
+//  BoosterRoomViewModel.swift
 //  Basterdz-iOS
 //
-//  Created by subin on 2024/02/01.
+//  Created by 현수빈 on 3/17/24.
 //
 
 import Foundation
 import Combine
 import SwiftUI
 
-final class BoosterViewModel: ViewModelable {
-//    var coordinator: BoosterCoordinator
+final class BoosterRoomViewModel: ViewModelable {
+    weak var coordinator: BoosterCoordinator?
     
     @Published var state: State
-    let roomList = RoomEntity.mocks
     
     enum Action {
-        case selectRoom(RoomEntity)
+        case selectBooster(BoosterEntity)
     }
     
     struct State {
@@ -26,20 +25,19 @@ final class BoosterViewModel: ViewModelable {
         
     }
     
-    init() { //(coordinator: BoosterCoordinator) {
+    init(coordinator: BoosterCoordinator, room: RoomEntity) {
         self.state = State(
             boosterList: BoosterEntity.mocks,
             selectBooster: BoosterEntity.mocks.first!,
-            room: RoomEntity.mocks.first!
+            room: room
         )
-//        self.coordinator = coordinator
+        self.coordinator = coordinator
     }
     
     func action(_ action: Action) {
         switch action {
-        case .selectRoom(let roomEntity):
-            state.room = roomEntity
-//            coordinator.push(BoosterFlow.selectRoom(roomEntity))
+        case .selectBooster(let booster):
+            coordinator?.push(BoosterFlow.selectBoosterReceiver(booster))
         }
     }
 }
